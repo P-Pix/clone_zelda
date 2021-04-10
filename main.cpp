@@ -1,66 +1,54 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-
-
-sf::Texture open_texture(const char *NAME_IMAGE)
-{
-    sf:: Texture TEXTURE;
-    if(!TEXTURE.loadFromFile(NAME_IMAGE))
-    {
-        std::cout << "error image " << NAME_IMAGE << std::endl;
-    }
-    return TEXTURE;
-}
-
-sf::Vector2f move_direct()
-{
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-    {
-        return sf::Vector2f(-2.f, 0.f);
-    }
-    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-    {
-        return sf::Vector2f(2.f, 0.f);
-    }
-    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-    {
-        return sf::Vector2f(0.f, -2.f);
-    }
-    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-    {
-        return sf::Vector2f(0.f, 2.f);
-    }
-    return sf::Vector2f(0.f, 0.f);
-}
-
-sf::Font open_font(const char *NAME_FONT)
-{
-    sf::Font font;
-    if(!font.loadFromFile(NAME_FONT))
-    {
-        std::cout << "error font " << NAME_FONT << std::endl;
-    }
-    return font;
-}
+#include "data/opening.cpp"
+#include "data/move.cpp"
 
 int main()
 {
-    const char *NAME_IMAGE = "skin/heros1.png";
-    const char *NAME_FONT_2 = "font/SuperLegendBoy.ttf";
+    const char 
+        *HERO = "skin/heros1.png", 
+        *BLOC = "skin/bloc.png",
+        *TREE = "skin/tree.png",
+        *CAVERN = "skin/cavern.png",
+        *GROUND = "skin/ground.png",
+        *FONT = "font/SuperLegendBoy.ttf";
 
-    sf::Texture IMAGE_1;
-    sf::Sprite SPRITE;
+    sf::Texture THERO, TBLOC, TTREE, TCAVERN, TGROUND;
+    sf::Sprite SHERO, SBLOC, STREE, SGROUND, SCAVERN;
     sf::Font FONT_LEMON, FONT_8BIT;
     sf::Text TEXTE("Hello SFML", FONT_8BIT, 150); 
-    sf::RenderWindow WINDOW(sf::VideoMode(1080, 720), "Zelda_Like");
-    //sf::Vector2f VECTOR = (1.f, 1.f);
 
-    IMAGE_1 = open_texture(NAME_IMAGE);
-    SPRITE.setTexture(IMAGE_1);
+    //(16* 64) * (11 * 64) = 1024 * 704
+    sf::RenderWindow WINDOW(sf::VideoMode(1024, 704), "Zelda_Like"); 
 
-    FONT_8BIT = open_font(NAME_FONT_2);
+    // Hero def
+    THERO = openTexture(HERO);
+    SHERO.setTexture(THERO);
+    SHERO.setScale(2, 2);
 
-    WINDOW.setFramerateLimit(60);
+    // Bloc def
+    TBLOC = openTexture(BLOC);
+    SBLOC.setTexture(TBLOC);
+    SBLOC.move(sf::Vector2f(64.f, 64.f));
+
+    // Tree def
+    TTREE = openTexture(TREE);
+    STREE.setTexture(TTREE);
+    STREE.move(sf::Vector2f(0.f, 64.f));
+
+    // Cavern def
+    TCAVERN = openTexture(CAVERN);
+    SCAVERN.setTexture(TCAVERN);
+    SCAVERN.move(sf::Vector2f(64.f, 0.f));
+
+    // Ground def
+    TGROUND = openTexture(GROUND);
+    SGROUND.setTexture(TGROUND);
+    SGROUND.move(sf::Vector2f(0.f, 0.f));
+
+    FONT_8BIT = openFont(FONT);
+
+    WINDOW.setFramerateLimit(120);
 
     while(WINDOW.isOpen())
     {
@@ -72,9 +60,13 @@ int main()
                 WINDOW.close();
             }
         }
-        SPRITE.move(move_direct());
+        SHERO.move(moveDirect());
         WINDOW.clear();
-        WINDOW.draw(SPRITE);
+        WINDOW.draw(SBLOC);
+        WINDOW.draw(STREE);
+        WINDOW.draw(SCAVERN);
+        WINDOW.draw(SGROUND);
+        WINDOW.draw(SHERO);
         //WINDOW.draw(TEXTE);
         WINDOW.display();
     }
