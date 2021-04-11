@@ -20,3 +20,12 @@ sf::Font openFont(const char *NAME_FONT)
     }
     return font;
 }
+
+sf::Sprite loadSprite(const char *NAME, sf::Vector2f VECTOR, sf::Texture *TEXTURE)
+{
+    sf::Sprite SPRITE;
+    *TEXTURE = openTexture(NAME);
+    SPRITE.setTexture(*TEXTURE);
+    SPRITE.move(VECTOR);
+    return SPRITE;
+}
