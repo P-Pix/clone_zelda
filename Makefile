@@ -6,7 +6,13 @@ FLAGS = -lsfml-window -lsfml-system -lsfml-graphics
 
 NAME = main
 
-$(NAME): $(OBJ)
-	@(g++ -o $(NAME) $(OBJ) $(FLAGS)) > /dev/null
+#$(NAME): $(OBJ)
+#	@(valgrind g++ -o $(NAME) $(OBJ) $(FLAGS)) > /dev/null
+#
+#all: $(NAME)
 
-all: $(NAME)
+val:
+	@(valgrind g++ -o $(NAME) $(OBJ) $(FLAGS)) > /dev/null
+
+cpp:
+	@(g++ -o $(NAME) $(OBJ) $(FLAGS)) > /dev/null
