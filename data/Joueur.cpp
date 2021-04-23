@@ -40,3 +40,23 @@ void Joueur::loadTexture(const char *NAME)
         std::cout << "error image " << NAME << std::endl;
     }
 }
+
+void Joueur::animationMoveDown()
+{
+    if(m_MoveDown % 4 == 0)
+    {
+        loadTexture(m_NCF1);
+    }
+    else if(m_MoveDown % 4 == 1)
+    {
+        loadTexture(m_NCF2);
+    }
+    else if(m_MoveDown % 4 == 2)
+    {
+        loadTexture(m_NCF3);
+    }
+    else
+    {
+        loadTexture(m_NCF4);
+    }
+}

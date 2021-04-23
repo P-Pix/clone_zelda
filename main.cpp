@@ -88,11 +88,10 @@ int main()
     std::cout << WINDOW.isRunning() << std::endl;
     while(WINDOW.isRunning())
     {
-        WINDOW.controlWindow();
+        WINDOW.controlWindow(joueur);
 
         WINDOW.updateWindow(joueur.sprite());
         /*
-        //std::cout << &WINDOW;
         //drawHeart(SVCOEUR, SQCOEUR, SCOEUR, boost, COEURPOSITION, &WINDOW);
         WINDOW.clear();
         SHERO.move(moveDirect());

@@ -33,10 +33,10 @@ bool GamesWindow::isRunning()
 
 // Function public
 
-void GamesWindow::updateWindow(sf::Sprite SPRITE)
+void GamesWindow::updateWindow(sf::Sprite SHEROS)
 {
     this -> m_Window -> clear();
-    drawElement(SPRITE);
+    drawElement(SHEROS);
     this -> m_Window -> display();
 }
 
@@ -45,12 +45,12 @@ void GamesWindow::renderWindow()
 
 }
 
-void GamesWindow::controlWindow()
+void GamesWindow::controlWindow(Joueur joueur)
 {
-    this -> pollEvent();
+    this -> pollEvent(joueur);
 }
 
-void GamesWindow::pollEvent()
+void GamesWindow::pollEvent(Joueur joueur)
 {
     while(this -> m_Window -> pollEvent(this -> event))
     {
@@ -63,6 +63,23 @@ void GamesWindow::pollEvent()
             if(this -> event.key.code == sf::Keyboard::Escape)
             {
                 this -> m_Window -> close();
+            }
+            else if(this -> event.key.code == sf::Keyboard::Down)
+            {
+                std::cout << "down arrow" << std::endl;
+                joueur.animationMoveDown();
+            }
+            else if(this -> event.key.code == sf::Keyboard::Up)
+            {
+                std::cout << "Up arrow" << std::endl;
+            }
+            else if(this -> event.key.code == sf::Keyboard::Left)
+            {
+                std::cout << "left arrow" << std::endl;
+            }
+            else if(this -> event.key.code == sf::Keyboard::Right)
+            {
+                std::cout << "right arrow" << std::endl;
             }
         }
     }

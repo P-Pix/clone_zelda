@@ -13,7 +13,12 @@ class Joueur
         
         // Accessor 
             sf::Sprite sprite();
-
+        
+        // Function
+            void animationMoveDown();
+            void animationMoveUp();
+            void animationMoveLeft();
+            void animationMoveRight();
         
     private:
         // Varible
@@ -23,6 +28,12 @@ class Joueur
                     *m_NCF2 = "skin/heros12.png",
                     *m_NCF3 = "skin/heros13.png",
                     *m_NCF4 = "skin/heros14.png";
+                
+                int 
+                    m_MoveDown = 0,
+                    m_MoveUp = 0,
+                    m_MoveLeft = 0,
+                    m_MoveRight = 0;
 
             // SFML/Graphics
                 sf::Texture m_Thero;

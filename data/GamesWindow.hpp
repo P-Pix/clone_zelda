@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Joueur.hpp"
 
 class GamesWindow
 {
@@ -16,10 +17,9 @@ class GamesWindow
             bool isRunning();
 
         // function
-            void controlWindow();
+            void controlWindow(Joueur joueur);
             void updateWindow(sf::Sprite SPRITE);
             void renderWindow();
-            void pollEvent();
     
     private:
 
@@ -35,6 +35,7 @@ class GamesWindow
 
         //Function
             void drawElement(sf::Sprite SPRITE);
+            void pollEvent(Joueur joueur);
 };
 
 #endif
