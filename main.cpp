@@ -3,11 +3,19 @@
 #include "data/opening.cpp"
 #include "data/move.cpp"
 #include "data/screen.cpp"
+#include "data/Monster.hpp"
+#include "data/GamesWindow.hpp"
+#include "data/Joueur.hpp"
 
 int main()
 {
+    Monster M, M2, M3;
+
     const char 
-        *HERO = "skin/heros1.png", 
+        *HERO11 = "skin/heros11.png", 
+        *HERO12 = "skin/heros12.png", 
+        *HERO13 = "skin/heros13.png", 
+        *HERO14 = "skin/heros14.png", 
         *BLOC = "skin/bloc.png",
         *TREE = "skin/tree.png",
         *CAVERN = "skin/cavern.png",
@@ -17,10 +25,13 @@ int main()
         *VCOEUR = "skin/coeurvide.png",
         *FONT = "font/SuperLegendBoy.ttf";
     
-    int boost = 1;
+    int boost = 1, animationheros = 0;
 
     sf::Texture 
-        THERO,
+        THERO11,
+        THERO12,
+        THERO13,
+        THERO14,
         TBLOC,
         TTREE,
         TCAVERN,
@@ -51,11 +62,16 @@ int main()
     sf::Text TEXTE("Hello SFML", FONT_8BIT, 150);
 
     //((16* 64) + 64) * (11 * 64) = (1024 + 64) * 704
-    sf::RenderWindow WINDOW(sf::VideoMode(1088, 704), "Zelda_Like"); 
-    sf::RenderTarget TWINDOW.getSize(WINDOW);
+    //sf::RenderWindow WINDOW(sf::VideoMode(1088, 704), "Zelda_Like"); 
+
+    GamesWindow WINDOW;
+    Joueur joueur;
 
     // SPRITE
-    SHERO = loadSprite(HERO, sf::Vector2f(128.f, 128.f), &THERO);
+    SHERO = loadSprite(HERO11, sf::Vector2f(128.f, 128.f), &THERO11);
+    THERO12 = openTexture(HERO12);
+    THERO13 = openTexture(HERO13);
+    THERO14 = openTexture(HERO14);
     SHERO.setScale(2, 2);
     SBLOC = loadSprite(BLOC, sf::Vector2f(64.f, 128.f), &TBLOC);
     STREE = loadSprite(TREE, sf::Vector2f(0.f, 128.f), &TTREE);
@@ -65,25 +81,23 @@ int main()
     SQCOEUR = loadSprite(QUARTCOEUR, sf::Vector2f(0.f, 0.f), &TQCOEUR);
     SVCOEUR = loadSprite(VCOEUR, sf::Vector2f(0.f, 0.f), &TVCOEUR);
 
-    /* setPosition */
-
-
     FONT_8BIT = openFont(FONT);
 
-    WINDOW.setFramerateLimit(60);
+    //WINDOW.setFramerateLimit(4);
 
-    while(WINDOW.isOpen())
+    std::cout << WINDOW.isRunning() << std::endl;
+    while(WINDOW.isRunning())
     {
-        sf::Event event;
-        while(WINDOW.pollEvent(event))
-        {
-            if(event.type == sf::Event::Closed)
-            {
-                WINDOW.close();
-            }
-        }
-        drawHeart(SVCOEUR, SQCOEUR, SCOEUR, boost, COEURPOSITION, sf::RenderTarget WINDOW.getSize());
+        WINDOW.controlWindow();
+
+        WINDOW.updateWindow(SHERO);
+        /*
+        //std::cout << &WINDOW;
+        //drawHeart(SVCOEUR, SQCOEUR, SCOEUR, boost, COEURPOSITION, &WINDOW);
+        WINDOW.clear();
         SHERO.move(moveDirect());
+        SHERO = animationHeros(animationheros, SHERO, &THERO11, &THERO12, &THERO13, &THERO14);
+        animationheros ++;
         WINDOW.draw(SCOEUR);
         WINDOW.draw(SBLOC);
         WINDOW.draw(STREE);
@@ -91,5 +105,8 @@ int main()
         WINDOW.draw(SGROUND);
         WINDOW.draw(SHERO);
         WINDOW.display();
+        */
     }
+    std::cout << WINDOW.isRunning() << std::endl;
+    return 0;
 }

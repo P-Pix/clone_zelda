@@ -4,6 +4,8 @@ OBJ = $(SRC:.cpp = .o)
 
 FLAGS = -lsfml-window -lsfml-system -lsfml-graphics
 
+DATA = data/Monster.cpp data/GamesWindow.cpp data/Joueur.cpp
+
 NAME = main
 
 #$(NAME): $(OBJ)
@@ -12,7 +14,7 @@ NAME = main
 #all: $(NAME)
 
 val:
-	@(valgrind g++ -o $(NAME) $(OBJ) $(FLAGS)) > /dev/null
+	@(valgrind g++ -o $(NAME) $(OBJ) $(DATA) $(FLAGS)) > /dev/null
 
 cpp:
-	@(g++ -o $(NAME) $(OBJ) $(FLAGS)) > /dev/null
+	@(g++ -o $(NAME) $(OBJ) $(DATA) $(FLAGS)) > /dev/null
