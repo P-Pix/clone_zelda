@@ -68,11 +68,11 @@ int main()
     Joueur joueur;
 
     // SPRITE
-    SHERO = loadSprite(HERO11, sf::Vector2f(128.f, 128.f), &THERO11);
-    THERO12 = openTexture(HERO12);
-    THERO13 = openTexture(HERO13);
-    THERO14 = openTexture(HERO14);
-    SHERO.setScale(2, 2);
+    //SHERO = loadSprite(HERO11, sf::Vector2f(128.f, 128.f), &THERO11);
+    //THERO12 = openTexture(HERO12);
+    //THERO13 = openTexture(HERO13);
+    //THERO14 = openTexture(HERO14);
+    //SHERO.setScale(2, 2);
     SBLOC = loadSprite(BLOC, sf::Vector2f(64.f, 128.f), &TBLOC);
     STREE = loadSprite(TREE, sf::Vector2f(0.f, 128.f), &TTREE);
     SCAVERN = loadSprite(CAVERN, sf::Vector2f(64.f, 64.f), &TCAVERN);
@@ -90,7 +90,7 @@ int main()
     {
         WINDOW.controlWindow();
 
-        WINDOW.updateWindow(SHERO);
+        WINDOW.updateWindow(joueur.sprite());
         /*
         //std::cout << &WINDOW;
         //drawHeart(SVCOEUR, SQCOEUR, SCOEUR, boost, COEURPOSITION, &WINDOW);
