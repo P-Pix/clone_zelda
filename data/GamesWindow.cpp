@@ -45,12 +45,12 @@ void GamesWindow::renderWindow()
 
 }
 
-void GamesWindow::controlWindow(Joueur joueur)
+void GamesWindow::controlWindow()
 {
-    this -> pollEvent(joueur);
+    this -> pollEvent();
 }
 
-void GamesWindow::pollEvent(Joueur joueur)
+void GamesWindow::pollEvent()
 {
     while(this -> m_Window -> pollEvent(this -> event))
     {
@@ -67,7 +67,6 @@ void GamesWindow::pollEvent(Joueur joueur)
             else if(this -> event.key.code == sf::Keyboard::Down)
             {
                 std::cout << "down arrow" << std::endl;
-                joueur.animationMoveDown();
             }
             else if(this -> event.key.code == sf::Keyboard::Up)
             {

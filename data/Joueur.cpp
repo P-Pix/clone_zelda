@@ -30,6 +30,7 @@ sf::Sprite Joueur::loadSprite(const char *NAME, sf::Vector2f VECTOR)
     loadTexture(NAME);
     SPRITE.setTexture(m_Thero);
     SPRITE.setPosition(VECTOR);
+    SPRITE.setScale(2, 2);
     return SPRITE;
 }
 
@@ -59,4 +60,6 @@ void Joueur::animationMoveDown()
     {
         loadTexture(m_NCF4);
     }
+    m_MoveDown ++;
+    std::cout << m_MoveDown << std::endl;
 }

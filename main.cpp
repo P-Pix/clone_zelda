@@ -12,10 +12,6 @@ int main()
     Monster M, M2, M3;
 
     const char 
-        *HERO11 = "skin/heros11.png", 
-        *HERO12 = "skin/heros12.png", 
-        *HERO13 = "skin/heros13.png", 
-        *HERO14 = "skin/heros14.png", 
         *BLOC = "skin/bloc.png",
         *TREE = "skin/tree.png",
         *CAVERN = "skin/cavern.png",
@@ -28,10 +24,6 @@ int main()
     int boost = 1, animationheros = 0;
 
     sf::Texture 
-        THERO11,
-        THERO12,
-        THERO13,
-        THERO14,
         TBLOC,
         TTREE,
         TCAVERN,
@@ -40,8 +32,7 @@ int main()
         TQCOEUR,
         TVCOEUR;
 
-    sf::Sprite 
-        SHERO,
+    sf::Sprite
         SBLOC,
         STREE,
         SGROUND,
@@ -62,17 +53,11 @@ int main()
     sf::Text TEXTE("Hello SFML", FONT_8BIT, 150);
 
     //((16* 64) + 64) * (11 * 64) = (1024 + 64) * 704
-    //sf::RenderWindow WINDOW(sf::VideoMode(1088, 704), "Zelda_Like"); 
-
+    
     GamesWindow WINDOW;
     Joueur joueur;
 
     // SPRITE
-    //SHERO = loadSprite(HERO11, sf::Vector2f(128.f, 128.f), &THERO11);
-    //THERO12 = openTexture(HERO12);
-    //THERO13 = openTexture(HERO13);
-    //THERO14 = openTexture(HERO14);
-    //SHERO.setScale(2, 2);
     SBLOC = loadSprite(BLOC, sf::Vector2f(64.f, 128.f), &TBLOC);
     STREE = loadSprite(TREE, sf::Vector2f(0.f, 128.f), &TTREE);
     SCAVERN = loadSprite(CAVERN, sf::Vector2f(64.f, 64.f), &TCAVERN);
@@ -88,12 +73,11 @@ int main()
     std::cout << WINDOW.isRunning() << std::endl;
     while(WINDOW.isRunning())
     {
-        WINDOW.controlWindow(joueur);
+        WINDOW.controlWindow();
 
         WINDOW.updateWindow(joueur.sprite());
         /*
         //drawHeart(SVCOEUR, SQCOEUR, SCOEUR, boost, COEURPOSITION, &WINDOW);
-        WINDOW.clear();
         SHERO.move(moveDirect());
         SHERO = animationHeros(animationheros, SHERO, &THERO11, &THERO12, &THERO13, &THERO14);
         animationheros ++;
@@ -103,7 +87,6 @@ int main()
         WINDOW.draw(SCAVERN);
         WINDOW.draw(SGROUND);
         WINDOW.draw(SHERO);
-        WINDOW.display();
         */
     }
     std::cout << WINDOW.isRunning() << std::endl;

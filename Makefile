@@ -1,12 +1,16 @@
-SRC = main.cpp\
+SRC = 	main.cpp\
 
-OBJ = $(SRC:.cpp = .o)
+OBJ = 	$(SRC:.cpp = .o)
 
-FLAGS = -lsfml-window -lsfml-system -lsfml-graphics
+FLAGS = -lsfml-window\
+		-lsfml-system\
+		-lsfml-graphics\
 
-DATA = data/Monster.cpp data/GamesWindow.cpp data/Joueur.cpp
+DATA = 	data/Monster.cpp\
+		data/GamesWindow.cpp\
+		data/Joueur.cpp\
 
-NAME = main
+NAME = 	main
 
 #$(NAME): $(OBJ)
 #	@(valgrind g++ -o $(NAME) $(OBJ) $(FLAGS)) > /dev/null
