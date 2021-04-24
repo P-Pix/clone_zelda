@@ -11,6 +11,7 @@ Wall::Wall()
 
 Wall::Wall(const char *nametxt)
 {
+    std::cout << "wall with name create " << this << std::endl;
     this -> m_NameTexture = nametxt;
     this -> m_SWall = loadSprite();
 }

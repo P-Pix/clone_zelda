@@ -16,9 +16,10 @@ class GamesWindow
             bool isRunning();
 
         // function
-            void controlWindow();
+            void controlWindow(sf::Sprite SHEROS);
             void updateWindow(sf::Sprite SPRITE);
             void renderWindow();
+            void limitFramerate(int frame);
     
     private:
 
@@ -34,7 +35,7 @@ class GamesWindow
 
         //Function
             void drawElement(sf::Sprite SPRITE);
-            void pollEvent();
+            void pollEvent(sf::Sprite SHEROS);
 };
 
 #endif

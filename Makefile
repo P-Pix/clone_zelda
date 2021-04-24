@@ -9,6 +9,7 @@ FLAGS = -lsfml-window\
 DATA = 	data/Monster.cpp\
 		data/GamesWindow.cpp\
 		data/Joueur.cpp\
+		data/Wall.cpp\
 
 NAME = 	main
 

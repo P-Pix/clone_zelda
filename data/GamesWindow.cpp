@@ -33,6 +33,11 @@ bool GamesWindow::isRunning()
 
 // Function public
 
+void GamesWindow::limitFramerate(int frame)
+{
+    this -> m_Window -> setFramerateLimit(frame);
+}
+
 void GamesWindow::updateWindow(sf::Sprite SHEROS)
 {
     this -> m_Window -> clear();
@@ -45,12 +50,12 @@ void GamesWindow::renderWindow()
 
 }
 
-void GamesWindow::controlWindow()
+void GamesWindow::controlWindow(sf::Sprite SHEROS)
 {
-    this -> pollEvent();
+    this -> pollEvent(SHEROS);
 }
 
-void GamesWindow::pollEvent()
+void GamesWindow::pollEvent(sf::Sprite SHEROS)
 {
     while(this -> m_Window -> pollEvent(this -> event))
     {
@@ -66,18 +71,22 @@ void GamesWindow::pollEvent()
             }
             else if(this -> event.key.code == sf::Keyboard::Down)
             {
+                SHEROS.move(sf::Vector2f(1.f, 0.f));
                 std::cout << "down arrow" << std::endl;
             }
             else if(this -> event.key.code == sf::Keyboard::Up)
             {
+                SHEROS.move(sf::Vector2f(-1.f, 0.f));
                 std::cout << "Up arrow" << std::endl;
             }
             else if(this -> event.key.code == sf::Keyboard::Left)
             {
+                SHEROS.move(sf::Vector2f(0.f, -1.f));
                 std::cout << "left arrow" << std::endl;
             }
             else if(this -> event.key.code == sf::Keyboard::Right)
             {
+                SHEROS.move(sf::Vector2f(0.f, 1.f));
                 std::cout << "right arrow" << std::endl;
             }
         }

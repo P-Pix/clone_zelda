@@ -6,6 +6,7 @@
 #include "data/Monster.hpp"
 #include "data/GamesWindow.hpp"
 #include "data/Joueur.hpp"
+#include "data/Wall.hpp"
 
 int main()
 {
@@ -20,12 +21,8 @@ int main()
         *QUARTCOEUR = "skin/quartcoeur.png",
         *VCOEUR = "skin/coeurvide.png",
         *FONT = "font/SuperLegendBoy.ttf";
-    
-    int boost = 1, animationheros = 0;
 
     sf::Texture 
-        TBLOC,
-        TTREE,
         TCAVERN,
         TGROUND,
         TCOEUR,
@@ -33,8 +30,6 @@ int main()
         TVCOEUR;
 
     sf::Sprite
-        SBLOC,
-        STREE,
         SGROUND,
         SCAVERN,
         SCOEUR,
@@ -56,10 +51,9 @@ int main()
     
     GamesWindow WINDOW;
     Joueur joueur;
+    Wall tree(TREE), bloc(BLOC);
 
     // SPRITE
-    SBLOC = loadSprite(BLOC, sf::Vector2f(64.f, 128.f), &TBLOC);
-    STREE = loadSprite(TREE, sf::Vector2f(0.f, 128.f), &TTREE);
     SCAVERN = loadSprite(CAVERN, sf::Vector2f(64.f, 64.f), &TCAVERN);
     SGROUND = loadSprite(GROUND, sf::Vector2f(0.f, 64.f), &TGROUND);
     SCOEUR = loadSprite(COEUR, sf::Vector2f(0.f, 0.f), &TCOEUR);
@@ -68,13 +62,16 @@ int main()
 
     FONT_8BIT = openFont(FONT);
 
-    //WINDOW.setFramerateLimit(4);
+    WINDOW.limitFramerate(4);
 
     std::cout << WINDOW.isRunning() << std::endl;
     while(WINDOW.isRunning())
     {
-        WINDOW.controlWindow();
-
+        WINDOW.controlWindow(joueur.sprite());
+        /*
+        WINDOW.updateWindow(bloc.sprite());
+        WINDOW.updateWindow(tree.sprite());
+        */
         WINDOW.updateWindow(joueur.sprite());
         /*
         //drawHeart(SVCOEUR, SQCOEUR, SCOEUR, boost, COEURPOSITION, &WINDOW);
@@ -82,11 +79,8 @@ int main()
         SHERO = animationHeros(animationheros, SHERO, &THERO11, &THERO12, &THERO13, &THERO14);
         animationheros ++;
         WINDOW.draw(SCOEUR);
-        WINDOW.draw(SBLOC);
-        WINDOW.draw(STREE);
         WINDOW.draw(SCAVERN);
         WINDOW.draw(SGROUND);
-        WINDOW.draw(SHERO);
         */
     }
     std::cout << WINDOW.isRunning() << std::endl;
