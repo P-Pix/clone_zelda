@@ -41,8 +41,8 @@ class Joueur
                 sf::Vector2f m_Spown;
 
         //Function
-        sf::Sprite loadSprite(const char *NAME, sf::Vector2f VECTOR);
-        void loadTexture(const char *NAME);
+            sf::Sprite loadSprite(const char *NAME, sf::Vector2f VECTOR);
+            void loadTexture(const char *NAME);
             
 
 
