@@ -1,20 +1,22 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "GamesWindow.hpp"
+#include "Joueur.hpp"
 
 // Constructor / Destructor
 
 GamesWindow::GamesWindow()
 {
     this -> m_Window = nullptr;
+    //((16* 64) + 64) * (11 * 64) = (1024 + 64) * 704
     this -> m_Window = new sf::RenderWindow(sf::VideoMode(1088, 704), "Zelda Like");
-    std::cout << "window create" << std::endl; 
+    std::cout << "window create " << this << std::endl;
 }
 
 GamesWindow::~GamesWindow()
 {
     delete this -> m_Window;
-    std::cout << "window destroy" << std::endl;
+    std::cout << "window destroy " << this << std::endl;
 }
 
 // Function private
@@ -24,6 +26,11 @@ void GamesWindow::drawElement(sf::Sprite SPRITE)
     this -> m_Window -> draw(SPRITE);
 }
 
+void GamesWindow::newPlayer()
+{
+    //m_Player = Joueur player;
+}
+
 // Accessor public
 
 bool GamesWindow::isRunning()
@@ -31,33 +38,47 @@ bool GamesWindow::isRunning()
     return m_Window -> isOpen();
 }
 
+sf::Sprite GamesWindow::getPlayerSprite()
+{
+    return m_Player.getSprite();
+}
+
 // Function public
+
+
+void GamesWindow::setDrawing(sf::Sprite SPRITE)
+{
+    drawElement(SPRITE);
+}
 
 void GamesWindow::limitFramerate(int frame)
 {
     this -> m_Window -> setFramerateLimit(frame);
 }
 
-void GamesWindow::updateWindow(sf::Sprite SHEROS)
+void GamesWindow::clearWindow()
 {
     this -> m_Window -> clear();
-    drawElement(SHEROS);
+}
+
+void GamesWindow::updateWindow()
+{
     this -> m_Window -> display();
 }
 
 void GamesWindow::renderWindow()
 {
-
+    std::cout << "prout" << std::endl;
 }
 
-void GamesWindow::controlWindow(sf::Sprite SHEROS)
+void GamesWindow::controlWindow()
 {
-    this -> pollEvent(SHEROS);
+    this -> pollEvent();
 }
 
-void GamesWindow::pollEvent(sf::Sprite SHEROS)
+void GamesWindow::pollEvent()
 {
-    while(this -> m_Window -> pollEvent(this -> event))
+    if(this -> m_Window -> pollEvent(this -> event))
     {
         if(this -> event.type == sf::Event::Closed)
         {
@@ -71,23 +92,19 @@ void GamesWindow::pollEvent(sf::Sprite SHEROS)
             }
             else if(this -> event.key.code == sf::Keyboard::Down)
             {
-                SHEROS.move(sf::Vector2f(1.f, 0.f));
-                std::cout << "down arrow" << std::endl;
+                m_Player.animationMoveDown();
             }
             else if(this -> event.key.code == sf::Keyboard::Up)
             {
-                SHEROS.move(sf::Vector2f(-1.f, 0.f));
-                std::cout << "Up arrow" << std::endl;
+                m_Player.animationMoveUp();
             }
             else if(this -> event.key.code == sf::Keyboard::Left)
             {
-                SHEROS.move(sf::Vector2f(0.f, -1.f));
-                std::cout << "left arrow" << std::endl;
+                m_Player.animationMoveLeft();
             }
             else if(this -> event.key.code == sf::Keyboard::Right)
             {
-                SHEROS.move(sf::Vector2f(0.f, 1.f));
-                std::cout << "right arrow" << std::endl;
+                m_Player.animationMoveRight();
             }
         }
     }

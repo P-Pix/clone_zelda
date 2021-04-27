@@ -7,19 +7,146 @@
 Joueur::Joueur()
 {
     this -> m_Shero = loadSprite(m_NCF1, m_Spown);
-    std::cout << "perso create " << this << m_NCF1 << std::endl;
+    std::cout << "player create " << this << std::endl;
 }
 
 Joueur::~Joueur()
 {
-    std::cout << "perso delete " << this << std::endl;
+    std::cout << "player delete " << this << std::endl;
 }
 
 // Accessor
 
-sf::Sprite Joueur::sprite()
+sf::Sprite Joueur::getSprite()
 {
     return m_Shero;
+}
+
+Joueur *Joueur::getAdress()
+{
+    return this;
+}
+
+int Joueur::getLife()
+{
+    return m_Life;
+}
+
+int Joueur::getMaxLife()
+{
+    return m_MaxLife;
+}
+
+// Function public
+
+void Joueur::setDamage(int power)
+{
+    m_Life -= power;
+}
+
+void Joueur::animationMoveRight()
+{
+    if(m_MoveRight % 4 == 0)
+    {
+        loadTexture(m_NCF1);
+    }
+    else if(m_MoveRight % 4 == 1)
+    {
+        loadTexture(m_NCF2);
+    }
+    else if(m_MoveRight % 4 == 2)
+    {
+        loadTexture(m_NCF3);
+    }
+    else
+    {
+        loadTexture(m_NCF4);
+    }
+    m_MoveRight ++;
+    this -> m_Shero.move(sf::Vector2f(m_Vitesse * 1.f, 0.f));
+}
+
+void Joueur::animationMoveLeft()
+{
+    if(m_MoveLeft % 4 == 0)
+    {
+        loadTexture(m_NCF1);
+    }
+    else if(m_MoveLeft % 4 == 1)
+    {
+        loadTexture(m_NCF2);
+    }
+    else if(m_MoveLeft % 4 == 2)
+    {
+        loadTexture(m_NCF3);
+    }
+    else
+    {
+        loadTexture(m_NCF4);
+    }
+    m_MoveLeft ++;
+    this -> m_Shero.move(sf::Vector2f(m_Vitesse * -1.f, 0.f));
+}
+
+void Joueur::animationMoveUp()
+{
+    if(m_MoveUp % 4 == 0)
+    {
+        loadTexture(m_NCF1);
+    }
+    else if(m_MoveUp % 4 == 1)
+    {
+        loadTexture(m_NCF2);
+    }
+    else if(m_MoveUp % 4 == 2)
+    {
+        loadTexture(m_NCF3);
+    }
+    else
+    {
+        loadTexture(m_NCF4);
+    }
+    m_MoveUp ++;
+    this -> m_Shero.move(sf::Vector2f(0.f, m_Vitesse * -1.f));
+}
+
+void Joueur::animationMoveDown()
+{
+    if(m_MoveDown % 8 == 0)
+    {
+        loadTexture(m_NCF0);
+        m_MoveDown = 0;
+    }
+    else if(m_MoveDown % 8 == 1)
+    {
+        loadTexture(m_NCF1);
+    }
+    else if(m_MoveDown % 8 == 2)
+    {
+        loadTexture(m_NCF2);
+    }
+    else if(m_MoveDown % 8 == 3)
+    {
+        loadTexture(m_NCF3);
+    }
+    else if(m_MoveDown % 8 == 4)
+    {
+        loadTexture(m_NCF4);
+    }
+    else if(m_MoveDown % 8 == 5)
+    {
+        loadTexture(m_NCF5);
+    }
+    else if(m_MoveDown % 8 == 6)
+    {
+        loadTexture(m_NCF6);
+    }
+    else
+    {
+        loadTexture(m_NCF7);
+    }
+    m_MoveDown ++;
+    this -> m_Shero.move(sf::Vector2f(0.f, m_Vitesse * 1.f));
 }
 
 // Fonction Private
@@ -40,26 +167,4 @@ void Joueur::loadTexture(const char *NAME)
     {
         std::cout << "error image " << NAME << std::endl;
     }
-}
-
-void Joueur::animationMoveDown()
-{
-    if(m_MoveDown % 4 == 0)
-    {
-        loadTexture(m_NCF1);
-    }
-    else if(m_MoveDown % 4 == 1)
-    {
-        loadTexture(m_NCF2);
-    }
-    else if(m_MoveDown % 4 == 2)
-    {
-        loadTexture(m_NCF3);
-    }
-    else
-    {
-        loadTexture(m_NCF4);
-    }
-    m_MoveDown ++;
-    std::cout << m_MoveDown << std::endl;
 }

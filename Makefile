@@ -10,6 +10,8 @@ DATA = 	data/Monster.cpp\
 		data/GamesWindow.cpp\
 		data/Joueur.cpp\
 		data/Wall.cpp\
+		data/Ground.cpp\
+		data/Heart.cpp\
 
 NAME = 	main
 

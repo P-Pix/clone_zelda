@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Joueur.hpp"
 
 class GamesWindow
 {
@@ -14,12 +15,15 @@ class GamesWindow
         
         // Accessor
             bool isRunning();
+            sf::Sprite getPlayerSprite();
 
         // function
-            void controlWindow(sf::Sprite SHEROS);
-            void updateWindow(sf::Sprite SPRITE);
+            void controlWindow();
+            void clearWindow();
+            void updateWindow();
             void renderWindow();
             void limitFramerate(int frame);
+            void setDrawing(sf::Sprite SPRITE);
     
     private:
 
@@ -33,9 +37,13 @@ class GamesWindow
                 sf::Event event;
                 sf::VideoMode m_VideoMode;
 
+            // Joueur
+                Joueur m_Player;
+
         //Function
             void drawElement(sf::Sprite SPRITE);
-            void pollEvent(sf::Sprite SHEROS);
+            void pollEvent();
+            void newPlayer();
 };
 
 #endif

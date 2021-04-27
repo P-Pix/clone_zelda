@@ -14,7 +14,10 @@ class Wall
             ~Wall();
 
         // Accessor 
-            sf::Sprite sprite();
+            sf::Sprite getSprite();
+
+        // Function
+            void setPosition(sf::Vector2f POSITION);
 
     private:
         // Variable
@@ -27,7 +30,7 @@ class Wall
         
         // Function
             sf::Sprite loadSprite();
-            void loadTexture(const char *NAME);
+            void loadTexture();
 };
 
 #endif

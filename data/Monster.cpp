@@ -4,10 +4,10 @@
 
 Monster::Monster()
 {
-    std::cout << "object created adress = " << this << std::endl;
+    std::cout << "Monster create " << this << std::endl;
 }
 
 Monster::~Monster()
 {
-    std::cout << "object distroy adress = " << this << std::endl;
+    std::cout << "Monster delete " << this << std::endl;
 }
