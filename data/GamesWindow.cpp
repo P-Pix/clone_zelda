@@ -16,7 +16,7 @@ GamesWindow::GamesWindow()
 GamesWindow::~GamesWindow()
 {
     delete this -> m_Window;
-    std::cout << "window destroy " << this << std::endl;
+    std::cout << "window delete " << this << std::endl;
 }
 
 // Function private

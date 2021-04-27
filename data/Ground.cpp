@@ -7,14 +7,14 @@
 Ground::Ground()
 {
     initSprite();
-    std::cout << "Ground load " << this << std::endl;
+    std::cout << "Ground create " << this << std::endl;
 }
 
 Ground::Ground(const char *name)
 {
     this -> m_Name = name;
     initSprite();
-    std::cout << "Ground load " << this << std::endl;
+    std::cout << "Ground create " << this << std::endl;
 }
 
 Ground::~Ground()
