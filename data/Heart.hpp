@@ -2,6 +2,8 @@
 #define __HEART__
 
 #include <SFML/Graphics.hpp>
+
+#include <vector>
 #include <list>
 
 class Heart
@@ -12,7 +14,7 @@ class Heart
             ~Heart();
 
         // Accessor
-            std::list<sf::Sprite> getListHeart();
+            std::vector<sf::Sprite> getListHeart();
 
         // Function
             void updateHeart(int life, int maxlife);
@@ -39,7 +41,7 @@ class Heart
                             m_S3Heart,
                             m_S4Heart;
 
-                std::list<sf::Sprite> m_list[];
+                std::vector<sf::Sprite> m_list;
         
         // Function
             void listeHeartConstructor(int life);

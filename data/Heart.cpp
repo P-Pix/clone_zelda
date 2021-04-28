@@ -1,7 +1,10 @@
 #include "Heart.hpp"
 #include <iostream>
 #include <SFML/Graphics.hpp>
+
+#include <queue>
 #include <list>
+#include <vector>
 
 // Consructor / Destructor
 
@@ -22,7 +25,7 @@ Heart::~Heart()
 
 // Accessor
 
-std::list<sf::Sprite> Heart::getListHeart()
+std::vector<sf::Sprite> Heart::getListHeart()
 {
     return m_list;
 }
@@ -33,29 +36,37 @@ void Heart::updateHeart(int life, int maxlife)
 {
     int numberheart = life / 4;
     int lastheart = life % 4;
-    this -> m_list[(maxlife / 4) + 1];
-    std::list<sf::Sprite> listeheart[(maxlife / 4) + 1];
-    for(int counter = 0; counter < maxlife / 4; counter ++)
+    int taillist = (maxlife / 4) + 1;
+    this -> m_list.clear();
+    std::vector<sf::Sprite> listelife(lastheart, m_S0Heart);
+    std::vector<sf::Sprite> listeheart(taillist, m_S0Heart);
+    std::vector<sf::Sprite>::iterator it;
+
+    for(it = listeheart.begin(); it != listeheart.end(); it ++)
     {
-        this -> m_list[counter] = m_S0Heart;
+        this -> m_list.push_back(m_S0Heart);
     }
-    for(int counter = 0; counter < numberheart; counter ++)
+    for(it = listeheart.begin(); it != listelife.end(); it ++)
     {
-        m_list[counter] = m_S4Heart;
+        this -> m_list.erase(it);
+        this -> m_list.insert(it, m_S4Heart);
     }
+    it++;
     if(lastheart == 1)
     {
-        m_list[numberheart] = m_S1Heart;
+        this -> m_list.erase(it);
+        this -> m_list.insert(it, m_S1Heart);
     }
     else if(lastheart == 2)
     {
-        m_list[numberheart] = m_S2Heart;
+        this -> m_list.erase(it);
+        this -> m_list.insert(it, m_S2Heart);
     }
     else if(lastheart == 3)
     {
-        m_list[numberheart] = m_S3Heart;
+        this -> m_list.erase(it);
+        this -> m_list.insert(it, m_S3Heart);
     }
-    m_list[] = listeheart;
 }
 
 // Function private
