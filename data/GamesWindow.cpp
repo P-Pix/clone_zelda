@@ -7,30 +7,17 @@
 
 // Constructor / Destructor
 
-GamesWindow::GamesWindow()
+GamesWindow::GamesWindow(): m_bloc(m_Bloc), m_cavern(m_Cavern)
 {
     this -> m_Window = nullptr;
     //((16* 64) + 64) * (11 * 64) = (1024 + 64) * 704
     this -> m_Window = new sf::RenderWindow(sf::VideoMode(1088, 704), "Zelda Like");
-    std::cout << "window create " << this << std::endl;
+    //std::cout << "window create " << this << std::endl;
 }
 
 GamesWindow::~GamesWindow()
 {
-    delete this -> m_Window;
-    std::cout << "window delete " << this << std::endl;
-}
-
-// Function private
-
-void GamesWindow::drawElement(sf::Sprite SPRITE)
-{
-    this -> m_Window -> draw(SPRITE);
-}
-
-void GamesWindow::newPlayer()
-{
-    //m_Player = Joueur player;
+    //std::cout << "window delete " << this << std::endl;
 }
 
 // Accessor public
@@ -40,42 +27,18 @@ bool GamesWindow::isRunning()
     return m_Window -> isOpen();
 }
 
-sf::Sprite GamesWindow::getPlayerSprite()
-{
-    return m_Player.getSprite();
-}
-
 // Function public
-
-void GamesWindow::modifiHeart()
-{
-    this -> m_Heart.updateHeart(12, 14);
-}
-
-void GamesWindow::setDrawing(sf::Sprite SPRITE)
-{
-    drawElement(SPRITE);
-}
 
 void GamesWindow::limitFramerate(int frame)
 {
     this -> m_Window -> setFramerateLimit(frame);
 }
 
-void GamesWindow::clearWindow()
-{
-    this -> m_Window -> clear();
-}
-void GamesWindow::drawLife()
-{
-    for(std::vector<sf::Sprite>::iterator it = m_Heart.getListHeart().begin(); it != m_Heart.getListHeart().end(); it ++)
-    {
-        drawElement(*it);
-    }
-}
-
 void GamesWindow::updateWindow()
 {
+    this -> m_Window -> clear();
+    modifiHeart();
+    allDrawWindow();
     this -> m_Window -> display();
 }
 
@@ -87,6 +50,50 @@ void GamesWindow::renderWindow()
 void GamesWindow::controlWindow()
 {
     this -> pollEvent();
+}
+
+// Function private
+
+void GamesWindow::setDrawing(sf::Sprite SPRITE)
+{
+    drawElement(SPRITE);
+}
+
+void GamesWindow::modifiHeart()
+{
+    this -> m_Heart.updateHeart(m_Player.getLife(), m_Player.getMaxLife());
+}
+
+void GamesWindow::drawElement(sf::Sprite SPRITE)
+{
+    this -> m_Window -> draw(SPRITE);
+}
+
+void GamesWindow::setPosition()
+{
+    m_bloc.setPosition(sf::Vector2f(0.f, 64.f));
+    m_tree.setPosition(sf::Vector2f(0.f, 128.f));
+    m_ground.setPosition(sf::Vector2f(64.f, 64.f));
+    m_cavern.setPosition(sf::Vector2f(64.f, 128.f));
+}
+
+void GamesWindow::allDrawWindow()
+{
+    drawLife();
+    setPosition();
+    setDrawing(m_bloc.getSprite());
+    setDrawing(m_tree.getSprite());
+    setDrawing(m_ground.getSprite());
+    setDrawing(m_cavern.getSprite());
+    setDrawing(m_Player.getSprite());
+}
+
+void GamesWindow::drawLife()
+{
+    for(std::vector<sf::Sprite>::iterator it = m_Heart.getListHeart().begin(); it != m_Heart.getListHeart().end(); it ++)
+    {
+        drawElement(*it);
+    }
 }
 
 void GamesWindow::pollEvent()

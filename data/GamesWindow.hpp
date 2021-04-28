@@ -3,8 +3,12 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+
 #include "Joueur.hpp"
 #include "Heart.hpp"
+#include "Wall.hpp"
+#include "Ground.hpp"
+#include "Monster.hpp"
 
 class GamesWindow
 {
@@ -16,38 +20,52 @@ class GamesWindow
         
         // Accessor
             bool isRunning();
-            sf::Sprite getPlayerSprite();
 
         // function
-            void drawLife();
-            void modifiHeart();
+            void limitFramerate(int frame);
             void controlWindow();
-            void clearWindow();
             void updateWindow();
             void renderWindow();
-            void limitFramerate(int frame);
-            void setDrawing(sf::Sprite SPRITE);
     
     private:
 
         //Variable
             // iostream
-                const int m_WindowWidth = 1088;
-                const int m_WindowHeight = 704;
+                const int   m_WindowWidth = 1088,
+                            m_WindowHeight = 704;
+                
+                const char  *m_Bloc = "skin/bloc.png",
+                            *m_Cavern = "skin/cavern.png";
 
             // SFML            
-                sf::RenderWindow *m_Window;
-                sf::Event event;
-                sf::VideoMode m_VideoMode;
+                sf::RenderWindow    *m_Window;
+                sf::Event   event;
+                sf::VideoMode   m_VideoMode;
 
-            // Joueur
-                Joueur m_Player;
-                Heart m_Heart;
+            // class
+                Joueur  m_Player;
+
+                Heart   m_Heart;
+
+                Monster m_M, 
+                        m_M2, 
+                        m_M3;
+
+                Wall    m_tree,
+                        m_bloc;
+
+                Ground  m_ground, 
+                        m_cavern; 
+
 
         //Function
+            void setPosition();
             void drawElement(sf::Sprite SPRITE);
             void pollEvent();
-            void newPlayer();
+            void drawLife();
+            void modifiHeart();
+            void allDrawWindow();
+            void setDrawing(sf::Sprite SPRITE);
 };
 
 #endif

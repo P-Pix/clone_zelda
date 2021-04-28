@@ -15,12 +15,12 @@ Heart::Heart()
     loadSprite(m_T2Heart, m_S2Heart, m_name2);
     loadSprite(m_T3Heart, m_S3Heart, m_name3);
     loadSprite(m_T4Heart, m_S4Heart, m_name4);
-    std::cout << "heart create " << this << std::endl;
+    //std::cout << "heart create " << this << std::endl;
 }
 
 Heart::~Heart()
 {
-    std::cout << "heart delete " << this << std::endl;
+    //std::cout << "heart delete " << this << std::endl;
 }
 
 // Accessor

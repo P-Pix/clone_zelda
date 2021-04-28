@@ -7,12 +7,12 @@
 Joueur::Joueur()
 {
     this -> m_Shero = loadSprite(m_NCF1, m_Spown);
-    std::cout << "player create " << this << std::endl;
+    //std::cout << "player create " << this << std::endl;
 }
 
 Joueur::~Joueur()
 {
-    std::cout << "player delete " << this << std::endl;
+    //std::cout << "player delete " << this << std::endl;
 }
 
 // Accessor
