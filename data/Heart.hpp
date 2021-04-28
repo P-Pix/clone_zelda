@@ -15,6 +15,7 @@ class Heart
 
         // Accessor
             std::vector<sf::Sprite> getListHeart();
+            //sf::Sprite getOneSprite(std::vector<sf::Sprite>::iterator it);
 
         // Function
             void updateHeart(int life, int maxlife);

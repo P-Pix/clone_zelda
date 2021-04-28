@@ -11,21 +11,8 @@ int main()
     const char 
         *BLOC = "skin/bloc.png",
         *CAVERN = "skin/cavern.png",
-        *COEUR = "skin/coeur.png",
-        *QUARTCOEUR = "skin/quartcoeur.png",
-        *VCOEUR = "skin/coeurvide.png",
         *FONT = "font/SuperLegendBoy.ttf";
-
-    sf::Texture 
-        TCOEUR,
-        TQCOEUR,
-        TVCOEUR;
-
-    sf::Sprite
-        SCOEUR,
-        SQCOEUR,
-        SVCOEUR;
-
+    
     sf::Vector2f COEURPOSITION[4] = 
     {
         sf::Vector2f(0.f, 0.f),
@@ -43,13 +30,7 @@ int main()
     Ground ground, cavern(CAVERN); // de base l'image load est ground
 
     // SPRITE
-    /*
-    SCOEUR = loadSprite(COEUR, sf::Vector2f(0.f, 0.f), &TCOEUR);
-    SQCOEUR = loadSprite(QUARTCOEUR, sf::Vector2f(0.f, 0.f), &TQCOEUR);
-    SVCOEUR = loadSprite(VCOEUR, sf::Vector2f(0.f, 0.f), &TVCOEUR);
-
-    FONT_8BIT = openFont(FONT);
-    */
+    //FONT_8BIT = openFont(FONT);
 
     WINDOW.limitFramerate(60);
     bloc.setPosition(sf::Vector2f(64.f, 0.f));
@@ -66,7 +47,9 @@ int main()
 
         // Update Window
 
+        WINDOW.modifiHeart();
         WINDOW.clearWindow();
+        WINDOW.drawLife();
         WINDOW.setDrawing(bloc.getSprite());
         WINDOW.setDrawing(tree.getSprite());
         WINDOW.setDrawing(ground.getSprite());

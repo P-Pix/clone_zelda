@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Joueur.hpp"
+#include "Heart.hpp"
 
 class GamesWindow
 {
@@ -18,6 +19,8 @@ class GamesWindow
             sf::Sprite getPlayerSprite();
 
         // function
+            void drawLife();
+            void modifiHeart();
             void controlWindow();
             void clearWindow();
             void updateWindow();
@@ -39,6 +42,7 @@ class GamesWindow
 
             // Joueur
                 Joueur m_Player;
+                Heart m_Heart;
 
         //Function
             void drawElement(sf::Sprite SPRITE);

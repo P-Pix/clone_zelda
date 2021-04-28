@@ -46,7 +46,7 @@ void Heart::updateHeart(int life, int maxlife)
     {
         this -> m_list.push_back(m_S0Heart);
     }
-    for(it = listeheart.begin(); it != listelife.end(); it ++)
+    for(it = listelife.begin(); it != listelife.end(); it ++)
     {
         this -> m_list.erase(it);
         this -> m_list.insert(it, m_S4Heart);

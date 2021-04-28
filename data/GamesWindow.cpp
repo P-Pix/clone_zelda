@@ -2,6 +2,8 @@
 #include <SFML/Graphics.hpp>
 #include "GamesWindow.hpp"
 #include "Joueur.hpp"
+#include "Heart.hpp"
+#include <vector>
 
 // Constructor / Destructor
 
@@ -45,6 +47,10 @@ sf::Sprite GamesWindow::getPlayerSprite()
 
 // Function public
 
+void GamesWindow::modifiHeart()
+{
+    this -> m_Heart.updateHeart(12, 14);
+}
 
 void GamesWindow::setDrawing(sf::Sprite SPRITE)
 {
@@ -59,6 +65,13 @@ void GamesWindow::limitFramerate(int frame)
 void GamesWindow::clearWindow()
 {
     this -> m_Window -> clear();
+}
+void GamesWindow::drawLife()
+{
+    for(std::vector<sf::Sprite>::iterator it = m_Heart.getListHeart().begin(); it != m_Heart.getListHeart().end(); it ++)
+    {
+        drawElement(*it);
+    }
 }
 
 void GamesWindow::updateWindow()
