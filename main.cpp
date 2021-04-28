@@ -1,9 +1,6 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "data/Monster.hpp"
 #include "data/GamesWindow.hpp"
-#include "data/Wall.hpp"
-#include "data/Ground.hpp"
 
 int main()
 {
