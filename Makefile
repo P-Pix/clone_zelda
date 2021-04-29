@@ -12,6 +12,7 @@ DATA = 	data/Monster.cpp\
 		data/Wall.cpp\
 		data/Ground.cpp\
 		data/Heart.cpp\
+		data/MapGenerator.cpp\
 
 NAME = 	main
 

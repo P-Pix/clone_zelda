@@ -9,6 +9,7 @@
 #include "Wall.hpp"
 #include "Ground.hpp"
 #include "Monster.hpp"
+#include "MapGenerator.hpp"
 
 class GamesWindow
 {
@@ -56,7 +57,9 @@ class GamesWindow
                         m_bloc;
 
                 Ground  m_ground, 
-                        m_cavern; 
+                        m_cavern;
+                
+                MapGenerator m_map;
 
 
         //Function

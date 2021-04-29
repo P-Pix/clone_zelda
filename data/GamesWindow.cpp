@@ -10,7 +10,7 @@
 GamesWindow::GamesWindow(): m_bloc(m_Bloc), m_cavern(m_Cavern)
 {
     this -> m_Window = nullptr;
-    //((16* 64) + 64) * (11 * 64) = (1024 + 64) * 704
+    //(17* 64) * ((10 * 64) + 64) = 1088 * 704
     this -> m_Window = new sf::RenderWindow(sf::VideoMode(1088, 704), "Zelda Like");
     //std::cout << "window create " << this << std::endl;
 }

@@ -54,7 +54,6 @@ class Joueur
         //Function
             sf::Sprite loadSprite(const char *NAME, sf::Vector2f VECTOR);
             void loadTexture(const char *NAME);
-            
 };
 
 #endif
