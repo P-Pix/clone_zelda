@@ -6,4 +6,6 @@
 *.synctex.gz
 *.toc
 
+.vscode
+
 main
