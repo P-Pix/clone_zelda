@@ -7,124 +7,108 @@
 
 // Constructor / Destructor
 
-GamesWindow::GamesWindow(): m_Bloc(m_bloc), m_Cavern(m_cavern)
-{
-    this -> m_Window = nullptr;
-    //(17* 64) * ((10 * 64) + 64) = 1088 * 704
-    this -> m_Window = new sf::RenderWindow(sf::VideoMode(1088, 704), "Zelda Like");
-    //std::cout << "window create " << this << std::endl;
-}
+    // Constructor
+        GamesWindow::GamesWindow(): m_Bloc(m_bloc), m_Cavern(m_cavern)
+        {
+            this -> m_Window = nullptr;
+            //(17* 64) * ((10 * 64) + 64) = 1088 * 704
+            this -> m_Window = new sf::RenderWindow(sf::VideoMode(1088, 704), "Zelda Like");
+            //std::cout << "window create " << this << std::endl;
+            setMapUpdate();
+        }
 
-GamesWindow::~GamesWindow()
-{
-    //std::cout << "window delete " << this << std::endl;
-}
+    // Destructor
+        GamesWindow::~GamesWindow()
+        {
+            //std::cout << "window delete " << this << std::endl;
+        }
 
 // Accessor
 
-bool GamesWindow::isRunning()
+    // Window Open
+        bool GamesWindow::isRunning()
 {
     return m_Window -> isOpen();
 }
 
 // Function public
 
-void GamesWindow::setMapUpdate()
-{
-    loadNewMap();
-    setBackground();
-}
-
-void GamesWindow::limitFramerate(int frame)
+    // Controls options
+        void GamesWindow::limitFramerate(int frame)
 {
     this -> m_Window -> setFramerateLimit(frame);
 }
 
-void GamesWindow::updateWindow()
-{
-    this -> m_Window -> clear();
-    modifiHeart();
-    allDrawWindow();
-    this -> m_Window -> display();
-}
-
-void GamesWindow::tchecWindow()
-{
-    switchMap();
-}
-
-void GamesWindow::controlWindow()
+    // Always call in the main
+        void GamesWindow::updateWindow()
+        {
+            this -> m_Window -> clear();
+            modifiHeart();
+            allDrawWindow();
+            this -> m_Window -> display();
+        }
+        void GamesWindow::tchecWindow()
+        {
+            switchMap();
+        }
+        void GamesWindow::controlWindow()
 {
     this -> pollEvent();
 }
 
-void GamesWindow::setDrawing(sf::Sprite SPRITE)
-{
-    drawElement(SPRITE);
-}
-
 // Function private
 
-void GamesWindow::switchMap()
-{
-    if(m_Player.getPosition().x < 0)
+    // New Map
+        void GamesWindow::setMapUpdate()
+        {
+            loadNewMap();
+            setBackground();
+        }
+        void GamesWindow::switchMap()
+        {
+            if(m_Player.getPosition().x < 0)
+            {
+                m_Map.setMapLeft();
+                setMapUpdate();
+                m_Player.setPositionLeft();
+            }
+            else if(m_Player.getPosition().x > 1088)
+            {
+                m_Map.setMapRight();
+                setMapUpdate();
+                m_Player.setPositionRight();
+            }
+            else if(m_Player.getPosition().y < 64)
+            {
+                m_Map.setMapUp();
+                setMapUpdate();
+                m_Player.setPositionUp();
+            }
+            if(m_Player.getPosition().y > 704)
+            {
+                m_Map.setMapDown();
+                setMapUpdate();
+                m_Player.setPositionDown();
+            }
+        }
+        void GamesWindow::loadNewMap()
     {
-        m_Map.setMapLeft();
-        setMapUpdate();
-        m_Player.setPositionLeft();
+        m_Map.generateMap();
     }
-    else if(m_Player.getPosition().x > 1088)
+        void GamesWindow::setBackground()
     {
-        m_Map.setMapRight();
-        setMapUpdate();
-        m_Player.setPositionRight();
+        m_Bloc.setPositionVector(m_Map.getListPositionWallInt());
+        m_Cavern.setPositionVector(m_Map.getListPositionGroundInt());
+        m_Tree.setPositionVector(m_Map.getListPositionWallExt());
+        m_Ground.setPositionVector(m_Map.getListPositionGroundExt());
     }
-    else if(m_Player.getPosition().y < 64)
-    {
-        m_Map.setMapUp();
-        setMapUpdate();
-        m_Player.setPositionUp();
-    }
-    if(m_Player.getPosition().y > 704)
-    {
-        m_Map.setMapDown();
-        setMapUpdate();
-        m_Player.setPositionDown();
-    }
-}
 
-void GamesWindow::loadNewMap()
-{
-    m_Map.generateMap();
-}
-
-void GamesWindow::setBackground()
-{
-    m_Bloc.setPositionVector(m_Map.getListPositionWallInt());
-    m_Cavern.setPositionVector(m_Map.getListPositionGroundInt());
-    m_Tree.setPositionVector(m_Map.getListPositionWallExt());
-    m_Ground.setPositionVector(m_Map.getListPositionGroundExt());
-}
-
-void GamesWindow::modifiHeart()
-{
-    this -> m_Heart.updateHeart(m_Player.getLife(), m_Player.getMaxLife());
-}
-
-void GamesWindow::drawElement(sf::Sprite SPRITE)
-{
-    this -> m_Window -> draw(SPRITE);
-}
-
-void GamesWindow::setPosition()
-{
-    m_Bloc.setPosition(sf::Vector2f(0.f, 192.f));
-    m_Tree.setPosition(sf::Vector2f(0.f, 128.f));
-    m_Ground.setPosition(sf::Vector2f(64.f, 64.f));
-    m_Cavern.setPosition(sf::Vector2f(64.f, 128.f));
-}
-
-void GamesWindow::allDrawWindow()
+    // Drawing
+        void GamesWindow::drawElement(sf::Sprite SPRITE)
+        {
+            this -> m_Window -> draw(SPRITE);
+        }
+        void GamesWindow::allDrawWindow()
 {
     drawVector(m_Heart.getListHeart());
 
@@ -135,8 +119,7 @@ void GamesWindow::allDrawWindow()
 
     drawElement(m_Player.getSprite());
 }
-
-void GamesWindow::drawVector(std::vector<sf::Sprite> vector)
+        void GamesWindow::drawVector(std::vector<sf::Sprite> vector)
 {
     for(int number = 0;  number < vector.size(); number ++)
     {
@@ -144,7 +127,8 @@ void GamesWindow::drawVector(std::vector<sf::Sprite> vector)
     }
 }
 
-void GamesWindow::pollEvent()
+    // Controls
+        void GamesWindow::pollEvent()
 {
     if(this -> m_Window -> pollEvent(this -> event))
     {
@@ -160,20 +144,42 @@ void GamesWindow::pollEvent()
             }
             else if(this -> event.key.code == sf::Keyboard::Down)
             {
+                if(!m_Player.getOrientationDown())
+                {
+                    m_Player.setOrientationDown();
+                }
                 m_Player.animationMoveDown();
             }
             else if(this -> event.key.code == sf::Keyboard::Up)
             {
+                if(!m_Player.getOrientationUp())
+                {
+                    m_Player.setOrientationUp();
+                }
                 m_Player.animationMoveUp();
             }
             else if(this -> event.key.code == sf::Keyboard::Left)
             {
+                if(!m_Player.getOrientationLeft())
+                {
+                    m_Player.setOrientationLeft();
+                }
                 m_Player.animationMoveLeft();
             }
             else if(this -> event.key.code == sf::Keyboard::Right)
             {
+                if(!m_Player.getOrientationRight())
+                {
+                    m_Player.setOrientationRight();
+                }
                 m_Player.animationMoveRight();
             }
         }
     }
+}
+
+    // Life
+        void GamesWindow::modifiHeart()
+{
+    this -> m_Heart.updateHeart(m_Player.getLife(), m_Player.getMaxLife());
 }

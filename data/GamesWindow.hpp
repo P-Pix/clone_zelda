@@ -23,12 +23,10 @@ class GamesWindow
             bool isRunning();
 
         // function
-            void setMapUpdate(); 
             void limitFramerate(int frame);
             void controlWindow();
             void updateWindow();
             void tchecWindow();
-            void setDrawing(sf::Sprite SPRITE);
     
     private:
 
@@ -64,10 +62,10 @@ class GamesWindow
 
 
         //Function
+            void setMapUpdate(); 
             void switchMap();
             void loadNewMap();
             void setBackground();
-            void setPosition();
             void drawElement(sf::Sprite SPRITE);
             void pollEvent();
             void drawVector(std::vector<sf::Sprite> vector);

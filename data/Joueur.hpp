@@ -19,16 +19,26 @@ class Joueur
 
             int getLife();
             int getMaxLife();
+
+            bool getOrientationUp();
+            bool getOrientationDown();
+            bool getOrientationLeft();
+            bool getOrientationRight();
         
         // Function
-            void setPositionUp();
-            void setPositionDown();
-            void setPositionLeft();
-            void setPositionRight();
+            void setOrientationUp();
+            void setOrientationDown();
+            void setOrientationRight();
+            void setOrientationLeft();
 
             void setMaxLifeUp();
             void setHeart();
             void setDamage(int power);
+            
+            void setPositionUp();
+            void setPositionDown();
+            void setPositionLeft();
+            void setPositionRight();
 
             void animationMoveDown();
             void animationMoveUp();
@@ -54,6 +64,11 @@ class Joueur
                     m_Vitesse = 10,
                     m_MaxLife = 80,
                     m_Life = 69;
+                
+                bool    m_OrientationRight = false,
+                        m_OrientationUp = false,
+                        m_OrientationLeft = false,
+                        m_OrientationDown = true;
 
             // SFML/Graphics
                 sf::Texture m_Thero;

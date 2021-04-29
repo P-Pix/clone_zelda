@@ -5,21 +5,17 @@
 int main()
 {
     GamesWindow WINDOW;
-    WINDOW.limitFramerate(60);
-    WINDOW.setMapUpdate();
 
+    WINDOW.limitFramerate(60);  // nombre de fram limite
     std::cout << "Window Open" << std::endl;
+
     while(WINDOW.isRunning())
     {
-        // Controls
-        WINDOW.controlWindow();
-
-        // Update Window
-        WINDOW.updateWindow();
-
-        // multi test
-        WINDOW.tchecWindow();
+        WINDOW.controlWindow(); // Controls User
+        WINDOW.updateWindow();  // Update Window
+        WINDOW.tchecWindow();   // Multi test
     }
+
     std::cout << "Window Close" << std::endl;
     return 0;
 }
