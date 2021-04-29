@@ -39,6 +39,21 @@ int Joueur::getMaxLife()
 
 // Function public
 
+void Joueur::setMaxLifeUp()
+{
+    m_MaxLife += 4;
+    m_Life = m_MaxLife;
+}
+
+void Joueur::setHeart()
+{
+    m_Life += 4;
+    if(m_Life > m_MaxLife)
+    {
+        m_Life = m_MaxLife;
+    }
+}
+
 void Joueur::setDamage(int power)
 {
     m_Life -= power;

@@ -72,7 +72,7 @@ void GamesWindow::drawElement(sf::Sprite SPRITE)
 
 void GamesWindow::setPosition()
 {
-    m_bloc.setPosition(sf::Vector2f(0.f, 64.f));
+    m_bloc.setPosition(sf::Vector2f(0.f, 192.f));
     m_tree.setPosition(sf::Vector2f(0.f, 128.f));
     m_ground.setPosition(sf::Vector2f(64.f, 64.f));
     m_cavern.setPosition(sf::Vector2f(64.f, 128.f));

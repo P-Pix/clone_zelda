@@ -40,19 +40,46 @@ sf::Sprite Heart::getASprite()
 
 void Heart::updateHeart(int life, int maxlife)
 {
-    int numberheart = life / 4;
-    int lastheart = life % 4;
-    int taillist = maxlife / 4;
-    int positionx = 0;
-    int positiony = 0;
+    int numberheart = life / 4,
+        lastheart = life % 4,
+        taillist = maxlife / 4,
+        positionx = 0,
+        positiony = 0,
+        size = 0;
 
     this -> m_list.clear();
 
-    std::vector<sf::Sprite> listelife(lastheart, m_S0Heart);
-    std::vector<sf::Sprite> listeheart(taillist, m_S0Heart);
-    std::vector<sf::Sprite>::iterator it;
+    std::vector<sf::Sprite> listelife(numberheart, m_S0Heart),
+                            listeheart(taillist, m_S0Heart);
 
-    for(it = listeheart.begin(); it != listeheart.end(); it ++)
+    // full heart
+    for(size = 0; size < listelife.size(); size ++)
+    {
+        this -> m_list.push_back(setSpritePosition(m_S4Heart, sf::Vector2f(positionx * 32.f, positiony * 32.f)));
+        positionx ++;
+        if(positionx == 10)
+        {
+            positionx = 0;
+            positiony ++;
+        }
+    }
+    
+    // quart heart
+    if(lastheart == 1)
+    {
+        this -> m_list.push_back(setSpritePosition(m_S1Heart, sf::Vector2f(positionx * 32.f, positiony * 32.f)));
+    }
+    else if(lastheart == 2)
+    {
+        this -> m_list.push_back(setSpritePosition(m_S2Heart, sf::Vector2f(positionx * 32.f, positiony * 32.f)));
+    }
+    else if(lastheart == 3)
+    {
+        this -> m_list.push_back(setSpritePosition(m_S3Heart, sf::Vector2f(positionx * 32.f, positiony * 32.f)));
+    }
+
+    // empty heart
+    for(size = size; size < listeheart.size(); size ++)
     {
         this -> m_list.push_back(setSpritePosition(m_S0Heart, sf::Vector2f(positionx * 32.f, positiony * 32.f)));
         positionx ++;
@@ -61,41 +88,6 @@ void Heart::updateHeart(int life, int maxlife)
             positionx = 0;
             positiony ++;
         }
-    }
-    positionx = 0;
-    positiony = 0;
-    for(it = listelife.begin(); it != listelife.end(); it ++)
-    {
-        this -> m_list.erase(it);
-        this -> m_list.insert(it, setSpritePosition(m_S0Heart, sf::Vector2f(positionx * 32.f, positiony * 32.f)));
-        positionx ++;
-        if(positionx == 10)
-        {
-            positionx = 0;
-            positiony ++;
-        }
-    }
-    it ++;
-    positionx ++;
-    if(positionx == 10)
-    {
-        positionx = 0;
-        positiony ++;
-    }
-    if(lastheart == 1)
-    {
-        this -> m_list.erase(it);
-        this -> m_list.insert(it, setSpritePosition(m_S0Heart, sf::Vector2f(positionx * 32.f, positiony * 32.f)));
-    }
-    else if(lastheart == 2)
-    {
-        this -> m_list.erase(it);
-        this -> m_list.insert(it, setSpritePosition(m_S0Heart, sf::Vector2f(positionx * 32.f, positiony * 32.f)));
-    }
-    else if(lastheart == 3)
-    {
-        this -> m_list.erase(it);
-        this -> m_list.insert(it, setSpritePosition(m_S0Heart, sf::Vector2f(positionx * 32.f, positiony * 32.f)));
     }
 }
 
