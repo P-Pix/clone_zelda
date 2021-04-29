@@ -43,7 +43,7 @@ class Joueur
                     m_MoveLeft = 0,
                     m_MoveRight = 0,
                     m_Vitesse = 10,
-                    m_MaxLife = 12,
+                    m_MaxLife = 80,
                     m_Life = 12;
 
             // SFML/Graphics

@@ -15,7 +15,8 @@ class Heart
 
         // Accessor
             std::vector<sf::Sprite> getListHeart();
-            //sf::Sprite getOneSprite(std::vector<sf::Sprite>::iterator it);
+            sf::Sprite getOneSprite(int number);
+            sf::Sprite getASprite();
 
         // Function
             void updateHeart(int life, int maxlife);
@@ -45,10 +46,11 @@ class Heart
                 std::vector<sf::Sprite> m_list;
         
         // Function
+            sf::Sprite setSpritePosition(sf::Sprite sprite, sf::Vector2f position);
+            void setPosition(sf::Sprite sprite, sf::Vector2f position);
             void listeHeartConstructor(int life);
             void heartConstructor(int partie);
-            void loadSprite(sf::Texture texture, sf::Sprite sprite, const char *name);
-            void loadTexture(sf::Texture texture, const char *name);
+            void initConstructor();
 
 };
 

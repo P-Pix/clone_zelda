@@ -52,12 +52,13 @@ void GamesWindow::controlWindow()
     this -> pollEvent();
 }
 
-// Function private
-
 void GamesWindow::setDrawing(sf::Sprite SPRITE)
 {
     drawElement(SPRITE);
 }
+
+// Function private
+
 
 void GamesWindow::modifiHeart()
 {
@@ -81,18 +82,19 @@ void GamesWindow::allDrawWindow()
 {
     drawLife();
     setPosition();
-    setDrawing(m_bloc.getSprite());
-    setDrawing(m_tree.getSprite());
-    setDrawing(m_ground.getSprite());
-    setDrawing(m_cavern.getSprite());
-    setDrawing(m_Player.getSprite());
+    drawElement(m_bloc.getSprite());
+    drawElement(m_tree.getSprite());
+    drawElement(m_ground.getSprite());
+    drawElement(m_cavern.getSprite());
+    drawElement(m_Player.getSprite());
 }
 
 void GamesWindow::drawLife()
 {
-    for(std::vector<sf::Sprite>::iterator it = m_Heart.getListHeart().begin(); it != m_Heart.getListHeart().end(); it ++)
+    std::vector<sf::Sprite> list = m_Heart.getListHeart();
+    for(int number = 0;  number < list.size(); number ++)
     {
-        drawElement(*it);
+        drawElement(list[number]);
     }
 }
 

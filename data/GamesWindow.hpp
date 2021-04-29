@@ -26,6 +26,7 @@ class GamesWindow
             void controlWindow();
             void updateWindow();
             void renderWindow();
+            void setDrawing(sf::Sprite SPRITE);
     
     private:
 
@@ -65,7 +66,6 @@ class GamesWindow
             void drawLife();
             void modifiHeart();
             void allDrawWindow();
-            void setDrawing(sf::Sprite SPRITE);
 };
 
 #endif
