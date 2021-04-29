@@ -23,11 +23,11 @@ class GamesWindow
             bool isRunning();
 
         // function
-            void setMapStarting(); 
+            void setMapUpdate(); 
             void limitFramerate(int frame);
             void controlWindow();
             void updateWindow();
-            void renderWindow();
+            void tchecWindow();
             void setDrawing(sf::Sprite SPRITE);
     
     private:
@@ -64,6 +64,7 @@ class GamesWindow
 
 
         //Function
+            void switchMap();
             void loadNewMap();
             void setBackground();
             void setPosition();

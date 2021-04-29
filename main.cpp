@@ -6,7 +6,7 @@ int main()
 {
     GamesWindow WINDOW;
     WINDOW.limitFramerate(60);
-    WINDOW.setMapStarting();
+    WINDOW.setMapUpdate();
 
     std::cout << "Window Open" << std::endl;
     while(WINDOW.isRunning())
@@ -16,6 +16,9 @@ int main()
 
         // Update Window
         WINDOW.updateWindow();
+
+        // multi test
+        WINDOW.tchecWindow();
     }
     std::cout << "Window Close" << std::endl;
     return 0;

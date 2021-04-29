@@ -44,11 +44,10 @@ std::vector<sf::Vector2f> MapGenerator::getListPositionGroundInt()
 
 void MapGenerator::generateMap()
 {
+    // Open the file
     std::string name = "data/maping/" + std::to_string(m_y) + "_" + std::to_string(m_x) + ".xsb";
     std::ifstream ifmap(name);
-    std::string ligne;
-    char    lettre;
-
+    /*
     if(ifmap)
     {
         std::cout << "open" << std::endl;
@@ -57,8 +56,11 @@ void MapGenerator::generateMap()
     {
         std::cout << "no open" << std::endl;
     }
+    */
 
-
+    // generate the Vector2f
+    std::string ligne;
+    char    lettre;
     m_WallExt.clear();
     m_GroundExt.clear();
     m_WallInt.clear();
@@ -71,26 +73,26 @@ void MapGenerator::generateMap()
             ifmap.get(lettre);
             if(lettre == 't')
             {
-                std::cout << "t ";
+                //std::cout << "t ";
                 m_WallExt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));
             }
             else if(lettre == 'g')
             {
-                std::cout << "g ";
+                //std::cout << "g ";
                 m_GroundExt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));                
             }
             else if(lettre == 'b')
             {
-                std::cout << "b ";
+                //std::cout << "b ";
                 m_WallInt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));                
             }
             else if(lettre == 'c')
             {
-                std::cout << "c ";
+                //std::cout << "c ";
                 m_GroundInt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));                
             }
         }
-        std::cout << std::endl;
+        //std::cout << std::endl;
     }
 }
 

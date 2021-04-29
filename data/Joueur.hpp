@@ -13,14 +13,23 @@ class Joueur
         
         // Accessor 
             sf::Sprite getSprite();
+            sf::Vector2f getPosition();
+
             Joueur* getAdress();
+
             int getLife();
             int getMaxLife();
         
         // Function
+            void setPositionUp();
+            void setPositionDown();
+            void setPositionLeft();
+            void setPositionRight();
+
             void setMaxLifeUp();
             void setHeart();
             void setDamage(int power);
+
             void animationMoveDown();
             void animationMoveUp();
             void animationMoveLeft();

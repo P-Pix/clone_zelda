@@ -29,7 +29,7 @@ bool GamesWindow::isRunning()
 
 // Function public
 
-void GamesWindow::setMapStarting()
+void GamesWindow::setMapUpdate()
 {
     loadNewMap();
     setBackground();
@@ -48,9 +48,9 @@ void GamesWindow::updateWindow()
     this -> m_Window -> display();
 }
 
-void GamesWindow::renderWindow()
+void GamesWindow::tchecWindow()
 {
-    std::cout << "prout" << std::endl;
+    switchMap();
 }
 
 void GamesWindow::controlWindow()
@@ -64,6 +64,34 @@ void GamesWindow::setDrawing(sf::Sprite SPRITE)
 }
 
 // Function private
+
+void GamesWindow::switchMap()
+{
+    if(m_Player.getPosition().x < 0)
+    {
+        m_Map.setMapLeft();
+        setMapUpdate();
+        m_Player.setPositionLeft();
+    }
+    else if(m_Player.getPosition().x > 1088)
+    {
+        m_Map.setMapRight();
+        setMapUpdate();
+        m_Player.setPositionRight();
+    }
+    else if(m_Player.getPosition().y < 64)
+    {
+        m_Map.setMapUp();
+        setMapUpdate();
+        m_Player.setPositionUp();
+    }
+    if(m_Player.getPosition().y > 704)
+    {
+        m_Map.setMapDown();
+        setMapUpdate();
+        m_Player.setPositionDown();
+    }
+}
 
 void GamesWindow::loadNewMap()
 {
@@ -99,7 +127,7 @@ void GamesWindow::setPosition()
 void GamesWindow::allDrawWindow()
 {
     drawVector(m_Heart.getListHeart());
-    
+
     drawVector(m_Bloc.getListSprite());
     drawVector(m_Cavern.getListSprite());
     drawVector(m_Tree.getListSprite());
