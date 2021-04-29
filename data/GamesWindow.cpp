@@ -7,7 +7,7 @@
 
 // Constructor / Destructor
 
-GamesWindow::GamesWindow(): m_bloc(m_Bloc), m_cavern(m_Cavern)
+GamesWindow::GamesWindow(): m_Bloc(m_bloc), m_Cavern(m_cavern)
 {
     this -> m_Window = nullptr;
     //(17* 64) * ((10 * 64) + 64) = 1088 * 704
@@ -20,7 +20,7 @@ GamesWindow::~GamesWindow()
     //std::cout << "window delete " << this << std::endl;
 }
 
-// Accessor public
+// Accessor
 
 bool GamesWindow::isRunning()
 {
@@ -28,6 +28,12 @@ bool GamesWindow::isRunning()
 }
 
 // Function public
+
+void GamesWindow::setMapStarting()
+{
+    loadNewMap();
+    setBackground();
+}
 
 void GamesWindow::limitFramerate(int frame)
 {
@@ -59,6 +65,18 @@ void GamesWindow::setDrawing(sf::Sprite SPRITE)
 
 // Function private
 
+void GamesWindow::loadNewMap()
+{
+    m_Map.generateMap();
+}
+
+void GamesWindow::setBackground()
+{
+    m_Bloc.setPositionVector(m_Map.getListPositionWallInt());
+    m_Cavern.setPositionVector(m_Map.getListPositionGroundInt());
+    m_Tree.setPositionVector(m_Map.getListPositionWallExt());
+    m_Ground.setPositionVector(m_Map.getListPositionGroundExt());
+}
 
 void GamesWindow::modifiHeart()
 {
@@ -72,29 +90,29 @@ void GamesWindow::drawElement(sf::Sprite SPRITE)
 
 void GamesWindow::setPosition()
 {
-    m_bloc.setPosition(sf::Vector2f(0.f, 192.f));
-    m_tree.setPosition(sf::Vector2f(0.f, 128.f));
-    m_ground.setPosition(sf::Vector2f(64.f, 64.f));
-    m_cavern.setPosition(sf::Vector2f(64.f, 128.f));
+    m_Bloc.setPosition(sf::Vector2f(0.f, 192.f));
+    m_Tree.setPosition(sf::Vector2f(0.f, 128.f));
+    m_Ground.setPosition(sf::Vector2f(64.f, 64.f));
+    m_Cavern.setPosition(sf::Vector2f(64.f, 128.f));
 }
 
 void GamesWindow::allDrawWindow()
 {
-    drawLife();
-    setPosition();
-    drawElement(m_bloc.getSprite());
-    drawElement(m_tree.getSprite());
-    drawElement(m_ground.getSprite());
-    drawElement(m_cavern.getSprite());
+    drawVector(m_Heart.getListHeart());
+    
+    drawVector(m_Bloc.getListSprite());
+    drawVector(m_Cavern.getListSprite());
+    drawVector(m_Tree.getListSprite());
+    drawVector(m_Ground.getListSprite());
+
     drawElement(m_Player.getSprite());
 }
 
-void GamesWindow::drawLife()
+void GamesWindow::drawVector(std::vector<sf::Sprite> vector)
 {
-    std::vector<sf::Sprite> list = m_Heart.getListHeart();
-    for(int number = 0;  number < list.size(); number ++)
+    for(int number = 0;  number < vector.size(); number ++)
     {
-        drawElement(list[number]);
+        drawElement(vector[number]);
     }
 }
 

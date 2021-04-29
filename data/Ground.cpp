@@ -1,6 +1,7 @@
 #include "Ground.hpp"
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <vector>
 
 // Constructor / Destructor
 
@@ -24,6 +25,11 @@ Ground::~Ground()
 
 // Accessor
 
+std::vector<sf::Sprite> Ground::getListSprite()
+{
+    return m_ListeSprite;
+}
+
 sf::Sprite Ground::getSprite()
 {
     return m_Sprite;
@@ -41,7 +47,24 @@ void Ground::setPosition(sf::Vector2f POSITION)
     this -> m_Sprite.setPosition(POSITION);
 }
 
+void Ground::setPositionVector(std::vector<sf::Vector2f> vector)
+{
+    int size = 0;
+    this -> m_ListeSprite.clear();
+
+    for(size = 0; size < vector.size(); size ++)
+    {
+        m_ListeSprite.push_back(getSpritePosition(vector[size]));
+    }
+}
+
 // Function private
+
+sf::Sprite Ground::getSpritePosition(sf::Vector2f position)
+{
+    this -> m_Sprite.setPosition(position);
+    return m_Sprite;
+}
 
 void Ground::initSprite()
 {

@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <vector>
 
 class Ground
 {
@@ -13,16 +14,19 @@ class Ground
             ~Ground();
         
         // Accessor
+            std::vector<sf::Sprite> getListSprite();
             sf::Sprite getSprite();
             Ground* getAdress();
         
         // Function
+            void setPositionVector(std::vector<sf::Vector2f> vector);
             void setPosition(sf::Vector2f POSITION);
 
 
     private:
         // Variable
             // iostream
+                std::vector<sf::Sprite> m_ListeSprite;
                 const char *m_Name = "skin/ground.png";
 
             // SFML
@@ -30,6 +34,7 @@ class Ground
                 sf::Texture m_Texture;
         
         // Function
+            sf::Sprite getSpritePosition(sf::Vector2f position);
             void initSprite();
             void loadTexture();
             void loadSprite();

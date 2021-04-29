@@ -33,7 +33,7 @@ class MapGenerator
                     m_y = 1;
 
                 std::string *m_string;
-                std::fstream    *m_map;
+                std::fstream    *m_fmap;
 
             // SFML
                 std::vector<sf::Vector2f>   m_WallExt,
@@ -42,7 +42,6 @@ class MapGenerator
                                             m_GroundExt;
         
         // Function
-            void openMap();
 };
 
 #endif

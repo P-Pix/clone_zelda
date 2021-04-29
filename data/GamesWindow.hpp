@@ -23,6 +23,7 @@ class GamesWindow
             bool isRunning();
 
         // function
+            void setMapStarting(); 
             void limitFramerate(int frame);
             void controlWindow();
             void updateWindow();
@@ -36,8 +37,8 @@ class GamesWindow
                 const int   m_WindowWidth = 1088,
                             m_WindowHeight = 704;
                 
-                const char  *m_Bloc = "skin/bloc.png",
-                            *m_Cavern = "skin/cavern.png";
+                const char  *m_bloc = "skin/bloc.png",
+                            *m_cavern = "skin/cavern.png";
 
             // SFML            
                 sf::RenderWindow    *m_Window;
@@ -53,20 +54,22 @@ class GamesWindow
                         m_M2, 
                         m_M3;
 
-                Wall    m_tree,
-                        m_bloc;
+                Wall    m_Tree,
+                        m_Bloc;
 
-                Ground  m_ground, 
-                        m_cavern;
+                Ground  m_Ground, 
+                        m_Cavern;
                 
-                MapGenerator m_map;
+                MapGenerator m_Map;
 
 
         //Function
+            void loadNewMap();
+            void setBackground();
             void setPosition();
             void drawElement(sf::Sprite SPRITE);
             void pollEvent();
-            void drawLife();
+            void drawVector(std::vector<sf::Sprite> vector);
             void modifiHeart();
             void allDrawWindow();
 };

@@ -6,6 +6,7 @@ int main()
 {
     GamesWindow WINDOW;
     WINDOW.limitFramerate(60);
+    WINDOW.setMapStarting();
 
     std::cout << "Window Open" << std::endl;
     while(WINDOW.isRunning())

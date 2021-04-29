@@ -1,5 +1,6 @@
 #include "MapGenerator.hpp"
 #include <SFML/Graphics.hpp>
+
 #include <vector>
 #include <iostream>
 #include <fstream>
@@ -43,36 +44,53 @@ std::vector<sf::Vector2f> MapGenerator::getListPositionGroundInt()
 
 void MapGenerator::generateMap()
 {
+    std::string name = "data/maping/" + std::to_string(m_y) + "_" + std::to_string(m_x) + ".xsb";
+    std::ifstream ifmap(name);
+    std::string ligne;
     char    lettre;
-    openMap();
+
+    if(ifmap)
+    {
+        std::cout << "open" << std::endl;
+    }
+    else
+    {
+        std::cout << "no open" << std::endl;
+    }
+
 
     m_WallExt.clear();
     m_GroundExt.clear();
     m_WallInt.clear();
     m_GroundInt.clear();
 
-    for(int positiony = 0; positiony < 10; positiony ++)
+    for(int positiony = 1; positiony < 11; positiony ++)
     {
-        for(int positionx = 1; positionx <= 17; positionx ++)
+        for(int positionx = 0; positionx < 18; positionx ++)
         {
-            this -> m_map -> get(lettre);
+            ifmap.get(lettre);
             if(lettre == 't')
             {
-                m_WallExt.push_back(sf::Vector2f(positiony * 64.f, positionx * 64.f));
+                std::cout << "t ";
+                m_WallExt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));
             }
             else if(lettre == 'g')
             {
-                m_GroundExt.push_back(sf::Vector2f(positiony * 64.f, positionx * 64.f));                
+                std::cout << "g ";
+                m_GroundExt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));                
             }
             else if(lettre == 'b')
             {
-                m_WallInt.push_back(sf::Vector2f(positiony * 64.f, positionx * 64.f));                
+                std::cout << "b ";
+                m_WallInt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));                
             }
             else if(lettre == 'c')
             {
-                m_GroundInt.push_back(sf::Vector2f(positiony * 64.f, positionx * 64.f));                
+                std::cout << "c ";
+                m_GroundInt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));                
             }
         }
+        std::cout << std::endl;
     }
 }
 
@@ -97,9 +115,3 @@ void MapGenerator::setMapRight()
 }
 
 // Function private
-
-void MapGenerator::openMap()
-{
-    std::string name = "data/maping/" + std::to_string(m_y) + "_" + std::to_string(m_x) + ".xsb";
-    this -> m_map -> open(name);
-}
