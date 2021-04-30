@@ -10,6 +10,7 @@
 #include "Ground.hpp"
 #include "Monster.hpp"
 #include "MapGenerator.hpp"
+#include "Sword.hpp"
 
 class GamesWindow
 {
@@ -60,8 +61,11 @@ class GamesWindow
                 
                 MapGenerator m_Map;
 
+                Sword m_Sword;
+
 
         //Function
+            void drawSword();
             void setMapUpdate(); 
             void switchMap();
             void loadNewMap();
