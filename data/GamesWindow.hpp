@@ -49,9 +49,9 @@ class GamesWindow
 
                 Heart   m_Heart;
 
-                Monster m_M, 
-                        m_M2, 
-                        m_M3;
+                Monster m_Mob1, 
+                        m_Mob2, 
+                        m_Mob3;
 
                 Wall    m_Tree,
                         m_Bloc;
