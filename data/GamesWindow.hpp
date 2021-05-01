@@ -32,16 +32,16 @@ class GamesWindow
     private:
 
         //Variable
-            // iostream
-                const int   m_WindowWidth = 1088,
-                            m_WindowHeight = 704;
+            // basic
+                const int   m_windowwidth = 1088,
+                            m_windowheight = 704;
                 
-                const char  *m_bloc = "skin/bloc.png",
-                            *m_cavern = "skin/cavern.png";
+                const char  *m_blocname = "skin/bloc.png",
+                            *m_cavernname = "skin/cavern.png";
 
             // SFML            
                 sf::RenderWindow    *m_Window;
-                sf::Event   event;
+                sf::Event   m_Event;
                 sf::VideoMode   m_VideoMode;
 
             // class
@@ -70,7 +70,7 @@ class GamesWindow
             void switchMap();
             void loadNewMap();
             void setBackground();
-            void drawElement(sf::Sprite SPRITE);
+            void drawElement(sf::Sprite sprite);
             void pollEvent();
             void drawVector(std::vector<sf::Sprite> vector);
             void modifiHeart();

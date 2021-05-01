@@ -29,13 +29,13 @@
     // Power
         int Sword::getPower()
         {
-            return m_Power;
+            return m_power;
         }
     
     // Execution
         bool Sword::getExecution()
         {
-            return m_AniamtionExe;
+            return m_aniamtionexe;
         }
 
 // Function public
@@ -43,31 +43,45 @@
     // Power
         void Sword::setPowerSword(int power)
         {
-            m_Power = power;
+            m_power = power;
         }
 
     // Animate
         void Sword::animateAttack()
         {
-            m_AnimationFram ++;
+            m_animationfram ++;
             setOrientation();
             setPosition();
-            if(m_AnimationFram == 15)
+            if(m_animationfram == 15)
             {
                 endAnimation();
             }
         }
-        void Sword::startAnimation(sf::Vector2f positionsword,int playerorientation, bool playerup, bool playerdown, bool playerright, bool playerleft)
+        void Sword::startAnimation(sf::Vector2f positionsword,int playerorientation)
         {
             //std::cout << "start attack" << std::endl;
-            m_AnimationFram = 0;
-            m_AniamtionExe = true;
-            m_Rotate = playerorientation/* + 45*/;
+            m_animationfram = 0;
+            m_aniamtionexe = true;
+            m_rotate = playerorientation/* + 45*/;
             m_VectorAniamtor.x = positionsword.x + 2;
             m_VectorAniamtor.y = positionsword.y + 2;
+        }
+    
+    // Orientation
+        void Sword::setOrientationDown(bool playerdown)
+        {
             m_animationdown = playerdown;
+        }
+        void Sword::setOrientationLeft(bool playerleft)
+        {
             m_animationleft = playerleft;
+        }
+        void Sword::setOrientationRight(bool playerright)
+        {
             m_animationright = playerright;
+        }
+        void Sword::setOrientationUp(bool playerup)
+        {
             m_animationup = playerup;
         }
 
@@ -76,9 +90,9 @@
     // Load Sword Representation
         void Sword::loadTexture()
         {
-            if(!m_Texture.loadFromFile(m_Picture))
+            if(!m_Texture.loadFromFile(m_picture))
             {
-                std::cout << "error load " << m_Picture << std::endl;
+                std::cout << "error load " << m_picture << std::endl;
             }
         }
         void Sword::loadSprite()
@@ -89,8 +103,8 @@
     // Animate Attack
         void Sword::setOrientation()
         {
-            m_Rotate -= 6;
-            m_Sprite.setRotation(m_Rotate);
+            m_rotate -= 6;
+            m_Sprite.setRotation(m_rotate);
         }
         void Sword::setPosition()
         {
@@ -114,7 +128,7 @@
         }
         void Sword::endAnimation()
         {
-            m_AniamtionExe = false;
+            m_aniamtionexe = false;
             m_animationdown = false;
             m_animationleft = false;
             m_animationright = false;

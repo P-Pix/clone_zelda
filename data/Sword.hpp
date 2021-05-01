@@ -22,18 +22,23 @@ class Sword
         // Function
             void setPowerSword(int power);
             void animateAttack();
-            void startAnimation(sf::Vector2f positionsword, int playerorientation, bool playerup, bool playerdown, bool playerright, bool playerleft);
+            void startAnimation(sf::Vector2f positionsword, int playerorientation);
+
+            void setOrientationUp(bool playerup);
+            void setOrientationDown(bool playerdown);
+            void setOrientationLeft(bool playerleft);
+            void setOrientationRight(bool playerright);
 
     private:
         // Variable
-            // iostream
-                int m_Power = 4,
-                    m_AnimationFram = 0,
-                    m_Rotate = 0; // start animation right -45° to 45°
+            // basic
+                int m_power = 4,
+                    m_animationfram = 0,
+                    m_rotate = 0; // start animation right -45° to 45°
                 
-                const char *m_Picture = "skin/sword2.png";
+                const char *m_picture = "skin/sword2.png";
 
-                bool    m_AniamtionExe = false,
+                bool    m_aniamtionexe = false,
 
                         m_animationdown = false,
                         m_animationup = false,

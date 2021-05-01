@@ -13,7 +13,7 @@ Wall::Wall()
 
 Wall::Wall(const char *nametxt)
 {
-    this -> m_NameTexture = nametxt;
+    this -> m_nametexture = nametxt;
     this -> m_SWall = loadSprite();
     //std::cout << "wall create " << this << std::endl;
 }
@@ -71,8 +71,8 @@ sf::Sprite Wall::loadSprite()
 
 void Wall::loadTexture()
 {
-    if(!m_TWall.loadFromFile(m_NameTexture))
+    if(!m_TWall.loadFromFile(m_nametexture))
     {
-        std::cout << "error image " << m_NameTexture << std::endl;
+        std::cout << "error image " << m_nametexture << std::endl;
     }
 }

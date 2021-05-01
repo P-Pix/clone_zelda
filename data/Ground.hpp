@@ -10,7 +10,7 @@ class Ground
     public:
         // Constructor / Destrutor
             Ground();
-            Ground(const char *NAME);
+            Ground(const char *name);
             ~Ground();
         
         // Accessor
@@ -20,21 +20,22 @@ class Ground
         
         // Function
             void setPositionVector(std::vector<sf::Vector2f> vector);
-            void setPosition(sf::Vector2f POSITION);
+            void setPosition(sf::Vector2f position);
 
 
     private:
         // Variable
-            // iostream
+            // Basic
+                const char *m_name = "skin/ground.png";
+
+            // std
                 std::vector<sf::Sprite> m_ListeSprite;
-                const char *m_Name = "skin/ground.png";
 
             // SFML
                 sf::Sprite m_Sprite;
                 sf::Texture m_Texture;
         
         // Function
-            sf::Sprite getSpritePosition(sf::Vector2f position);
             void initSprite();
             void loadTexture();
             void loadSprite();

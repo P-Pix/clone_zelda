@@ -28,19 +28,19 @@ class MapGenerator
 
     private:
         // Variables 
-            // iostream
+            // basic
                 int m_x = 1,
                     m_y = 1;
 
-                std::string *m_string;
-                std::fstream    *m_fmap;
-
-            // SFML
+            // std
                 std::vector<sf::Vector2f>   m_WallExt,
                                             m_WallInt,
                                             m_GroundInt,
                                             m_GroundExt;
         
+                std::string *m_String;
+                std::fstream    *m_Fmap;
+
         // Function
 };
 

@@ -6,11 +6,11 @@
 // Constructor / Destructor
 
     // Constructor
-        GamesWindow::GamesWindow(): m_Bloc(m_bloc), m_Cavern(m_cavern)
+        GamesWindow::GamesWindow(): m_Bloc(m_blocname), m_Cavern(m_cavernname)
         {
             this -> m_Window = nullptr;
             //(17* 64) * ((10 * 64) + 64) = 1088 * 704
-            this -> m_Window = new sf::RenderWindow(sf::VideoMode(1088, 704), "Zelda Like");
+            this -> m_Window = new sf::RenderWindow(sf::VideoMode(m_windowwidth, m_windowheight), "Zelda Like");
             //std::cout << "window create " << this << std::endl;
             setMapUpdate();
         }
@@ -102,13 +102,13 @@
         }
 
     // Drawing
-        void GamesWindow::drawElement(sf::Sprite SPRITE)
+        void GamesWindow::drawElement(sf::Sprite sprite)
         {
-            this -> m_Window -> draw(SPRITE);
+            this -> m_Window -> draw(sprite);
         }
         void GamesWindow::allDrawWindow()
         {
-            drawVector(m_Heart.getListHeart());
+            drawVector(m_Heart.getListSprite());
 
             drawVector(m_Bloc.getListSprite());
             drawVector(m_Cavern.getListSprite());
@@ -137,19 +137,19 @@
     // Controls
         void GamesWindow::pollEvent()
         {
-            if(this -> m_Window -> pollEvent(this -> event))
+            if(this -> m_Window -> pollEvent(this -> m_Event))
             {
-                if(this -> event.type == sf::Event::Closed)
+                if(this -> m_Event.type == sf::Event::Closed)
                 {
                     this -> m_Window -> close();
                 }
-                else if (this -> event.type == sf::Event::KeyPressed)
+                else if (this -> m_Event.type == sf::Event::KeyPressed)
                 {
-                    if(this -> event.key.code == sf::Keyboard::Escape)
+                    if(this -> m_Event.key.code == sf::Keyboard::Escape)
                     {
                         this -> m_Window -> close();
                     }
-                    else if(this -> event.key.code == sf::Keyboard::Down)
+                    else if(this -> m_Event.key.code == sf::Keyboard::Down)
                     {
                         if(!m_Sword.getExecution())
                         {
@@ -160,7 +160,7 @@
                             m_Player.animationMoveDown();
                         }
                     }
-                    else if(this -> event.key.code == sf::Keyboard::Up)
+                    else if(this -> m_Event.key.code == sf::Keyboard::Up)
                     {
                         if(!m_Sword.getExecution())
                         {
@@ -171,7 +171,7 @@
                             m_Player.animationMoveUp();
                         }
                     }
-                    else if(this -> event.key.code == sf::Keyboard::Left)
+                    else if(this -> m_Event.key.code == sf::Keyboard::Left)
                     {
                         if(!m_Sword.getExecution())
                         {
@@ -182,7 +182,7 @@
                             m_Player.animationMoveLeft();
                         }
                     }
-                    else if(this -> event.key.code == sf::Keyboard::Right)
+                    else if(this -> m_Event.key.code == sf::Keyboard::Right)
                     {
                         if(!m_Sword.getExecution())
                         {
@@ -193,11 +193,15 @@
                             m_Player.animationMoveRight();
                         }
                     }
-                    else if(this -> event.key.code == sf::Keyboard::Space)
+                    else if(this -> m_Event.key.code == sf::Keyboard::Space)
                     {
                         if(!m_Sword.getExecution())
                         {
-                            m_Sword.startAnimation(m_Player.getPositionSword(), m_Player.getOrientationValue(), m_Player.getOrientationUp(), m_Player.getOrientationDown(), m_Player.getOrientationRight(), m_Player.getOrientationLeft());
+                            m_Sword.setOrientationUp(m_Player.getOrientationUp()); 
+                            m_Sword.setOrientationDown(m_Player.getOrientationDown());
+                            m_Sword.setOrientationRight(m_Player.getOrientationRight());
+                            m_Sword.setOrientationLeft(m_Player.getOrientationLeft());
+                            m_Sword.startAnimation(m_Player.getPositionSword(), m_Player.getOrientationValue());
                         }
                     }
                 }

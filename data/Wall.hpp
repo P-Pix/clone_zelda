@@ -19,13 +19,15 @@ class Wall
             std::vector<sf::Sprite> getListSprite();
 
         // Function
-            void setPosition(sf::Vector2f POSITION);
+            void setPosition(sf::Vector2f position);
             void setPositionVector(std::vector<sf::Vector2f> vector);
 
     private:
         // Variable
-            // iostream
-                const char  *m_NameTexture = "skin/tree.png";
+            // basic
+                const char  *m_nametexture = "skin/tree.png";
+
+            // std
                 std::vector<sf::Sprite> m_ListeSprite;
 
             // SFML/Graphics
