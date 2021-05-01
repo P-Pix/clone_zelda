@@ -13,9 +13,9 @@
 
     // Destructor
         Joueur::~Joueur()
-{
-    //std::cout << "player delete " << this << std::endl;
-}
+        {
+            //std::cout << "player delete " << this << std::endl;
+        }
 
 // Accessor
 
@@ -36,16 +36,38 @@
         {
             return m_OrientationUp;
         }
+        int Joueur::getOrientationValue()
+        {
+            if(m_OrientationDown)
+            {
+                return 90;
+            }
+            else if(m_OrientationLeft)
+            {
+                return 180;
+            }
+            else if(m_OrientationRight)
+            {
+                return 0;
+            }
+            else if(m_OrientationUp)
+            {
+                return 270;
+            }
+            return 0;
+        }
 
-sf::Sprite Joueur::getSprite()
-{
-    return m_Shero;
-}
+    // Sprite
+        sf::Sprite Joueur::getSprite()
+        {
+            return m_Shero;
+        }
 
-Joueur *Joueur::getAdress()
-{
-    return this;
-}
+    // Adress
+        Joueur *Joueur::getAdress()
+        {
+            return this;
+        }
     
     // About Life
         int Joueur::getLife()
@@ -53,14 +75,44 @@ Joueur *Joueur::getAdress()
             return m_Life;
         }
         int Joueur::getMaxLife()
-{
-    return m_MaxLife;
-}
+        {
+            return m_MaxLife;
+        }
 
-sf::Vector2f Joueur::getPosition()
-{
-    return m_Shero.getPosition();
-}
+    // Position
+        sf::Vector2f Joueur::getPosition()
+        {
+            return m_Shero.getPosition();
+        }
+        sf::Vector2f Joueur::getPositionSword()
+        {
+            sf::Vector2f positionsword(0.f, 0.f);
+            if(m_OrientationDown)
+            {
+                positionsword.x = m_Shero.getPosition().x;
+                positionsword.y = m_Shero.getPosition().y + 64;
+                return positionsword;
+            }
+            else if(m_OrientationLeft)
+            {
+                positionsword.x = m_Shero.getPosition().x;
+                positionsword.y = m_Shero.getPosition().y;
+                return positionsword;
+            }
+            else if(m_OrientationRight)
+            {
+                positionsword.x = m_Shero.getPosition().x + 64;
+                positionsword.y = m_Shero.getPosition().y + 64;
+                return positionsword;
+            }
+            else if(m_OrientationUp)
+            {
+                positionsword.x = m_Shero.getPosition().x + 64;
+                positionsword.y = m_Shero.getPosition().y;
+                return positionsword;
+            }
+            return m_Shero.getPosition();
+        }
 
 // Function public
 
@@ -174,47 +226,48 @@ sf::Vector2f Joueur::getPosition()
             this -> m_Shero.move(sf::Vector2f(0.f, m_Vitesse * -1.f));
         }
         void Joueur::animationMoveDown()
-{
-    if(m_MoveDown % 8 == 0)
-    {
-        loadTexture(m_NCF0);
-        m_MoveDown = 0;
-    }
-    else if(m_MoveDown % 8 == 1)
-    {
-        loadTexture(m_NCF1);
-    }
-    else if(m_MoveDown % 8 == 2)
-    {
-        loadTexture(m_NCF2);
-    }
-    else if(m_MoveDown % 8 == 3)
-    {
-        loadTexture(m_NCF3);
-    }
-    else if(m_MoveDown % 8 == 4)
-    {
-        loadTexture(m_NCF4);
-    }
-    else if(m_MoveDown % 8 == 5)
-    {
-        loadTexture(m_NCF5);
-    }
-    else if(m_MoveDown % 8 == 6)
-    {
-        loadTexture(m_NCF6);
-    }
-    else
-    {
-        loadTexture(m_NCF7);
-    }
-    m_MoveDown ++;
-    this -> m_Shero.move(sf::Vector2f(0.f, m_Vitesse * 1.f));
-}
+        {
+            if(m_MoveDown % 8 == 0)
+            {
+                loadTexture(m_NCF0);
+                m_MoveDown = 0;
+            }
+            else if(m_MoveDown % 8 == 1)
+            {
+                loadTexture(m_NCF1);
+            }
+            else if(m_MoveDown % 8 == 2)
+            {
+                loadTexture(m_NCF2);
+            }
+            else if(m_MoveDown % 8 == 3)
+            {
+                loadTexture(m_NCF3);
+            }
+            else if(m_MoveDown % 8 == 4)
+            {
+                loadTexture(m_NCF4);
+            }
+            else if(m_MoveDown % 8 == 5)
+            {
+                loadTexture(m_NCF5);
+            }
+            else if(m_MoveDown % 8 == 6)
+            {
+                loadTexture(m_NCF6);
+            }
+            else
+            {
+                loadTexture(m_NCF7);
+            }
+            m_MoveDown ++;
+            this -> m_Shero.move(sf::Vector2f(0.f, m_Vitesse * 1.f));
+        }
 
     // Switch Orientation
         void Joueur::setOrientationDown()
         {
+            //std::cout << "Switch orientation D" << std::endl;
             m_OrientationDown = true;
             m_OrientationLeft = false;
             m_OrientationRight = false;
@@ -222,6 +275,7 @@ sf::Vector2f Joueur::getPosition()
         }
         void Joueur::setOrientationLeft()
         {
+            //std::cout << "Switch orientation L" << std::endl;
             m_OrientationDown = false;
             m_OrientationLeft = true;
             m_OrientationRight = false;
@@ -229,6 +283,7 @@ sf::Vector2f Joueur::getPosition()
         }
         void Joueur::setOrientationUp()
         {
+            //std::cout << "Switch orientation U" << std::endl;
             m_OrientationDown = false;
             m_OrientationLeft = false;
             m_OrientationRight = false;
@@ -236,6 +291,7 @@ sf::Vector2f Joueur::getPosition()
         }
         void Joueur::setOrientationRight()
         {
+            //std::cout << "Switch orientation R" << std::endl;
             m_OrientationDown = false;
             m_OrientationLeft = false;
             m_OrientationRight = true;
@@ -255,9 +311,9 @@ sf::Vector2f Joueur::getPosition()
             return SPRITE;
         }
         void Joueur::loadTexture(const char *NAME)
-{
-    if(!m_Thero.loadFromFile(NAME))
-    {
-        std::cout << "error image " << NAME << std::endl;
-    }
-}
+        {
+            if(!m_Thero.loadFromFile(NAME))
+            {
+                std::cout << "error image " << NAME << std::endl;
+            }
+        }

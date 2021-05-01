@@ -21,21 +21,24 @@ class Sword
 
         // Function
             void setPowerSword(int power);
-            void animateAttack(sf::Vector2f positionplayer);
-            void startAnimation();
+            void animateAttack();
+            void startAnimation(sf::Vector2f positionsword, int playerorientation, bool playerup, bool playerdown, bool playerright, bool playerleft);
 
     private:
         // Variable
             // iostream
                 int m_Power = 4,
                     m_AnimationFram = 0,
-                    m_Rotate = 0, // start animation right -45° to 45°
-                    m_PositionX = 0,
-                    m_PositionY = 0;
+                    m_Rotate = 0; // start animation right -45° to 45°
                 
-                const char *m_Picture = "skin/sword.png";
+                const char *m_Picture = "skin/sword2.png";
 
-                bool m_AniamtionExe = false;
+                bool    m_AniamtionExe = false,
+
+                        m_animationdown = false,
+                        m_animationup = false,
+                        m_animationright = false,
+                        m_animationleft = false;
 
             // SFML
                 sf::Texture m_Texture;
@@ -49,7 +52,7 @@ class Sword
 
             //Animate Attack
                 void setOrientation();
-                void setPosition(sf::Vector2f positionplayer);
+                void setPosition();
                 void endAnimation();
 };
 

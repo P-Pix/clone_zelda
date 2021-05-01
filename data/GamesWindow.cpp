@@ -1,8 +1,6 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "GamesWindow.hpp"
-#include "Joueur.hpp"
-#include "Heart.hpp"
 #include <vector>
 
 // Constructor / Destructor
@@ -27,17 +25,17 @@
 
     // Window Open
         bool GamesWindow::isRunning()
-{
-    return m_Window -> isOpen();
-}
+        {
+            return m_Window -> isOpen();
+        }
 
 // Function public
 
     // Controls options
         void GamesWindow::limitFramerate(int frame)
-{
-    this -> m_Window -> setFramerateLimit(frame);
-}
+        {
+            this -> m_Window -> setFramerateLimit(frame);
+        }
 
     // Always call in the main
         void GamesWindow::updateWindow()
@@ -52,9 +50,9 @@
             switchMap();
         }
         void GamesWindow::controlWindow()
-{
-    this -> pollEvent();
-}
+        {
+            this -> pollEvent();
+        }
 
 // Function private
 
@@ -131,7 +129,7 @@
         {
             if(m_Sword.getExecution())
             {
-                m_Sword.animateAttack(m_Player.getSprite().getPosition());
+                m_Sword.animateAttack();
                 drawElement(m_Sword.getSprite());
             }
         }
@@ -199,7 +197,7 @@
                     {
                         if(!m_Sword.getExecution())
                         {
-                            m_Sword.startAnimation();
+                            m_Sword.startAnimation(m_Player.getPositionSword(), m_Player.getOrientationValue(), m_Player.getOrientationUp(), m_Player.getOrientationDown(), m_Player.getOrientationRight(), m_Player.getOrientationLeft());
                         }
                     }
                 }

@@ -7,7 +7,7 @@
     // Constructor
         Sword::Sword()
         {
-            std::cout << "Sword create" << std::endl;
+            //std::cout << "Sword create" << std::endl;
             loadTexture();
             loadSprite();
         }   
@@ -15,7 +15,7 @@
     // Destructor
         Sword::~Sword()
         {
-            std::cout << "Sword delete" << std::endl;
+            //std::cout << "Sword delete" << std::endl;
         }
 
 // Accessor
@@ -47,25 +47,28 @@
         }
 
     // Animate
-        void Sword::animateAttack(sf::Vector2f positionplayer)
+        void Sword::animateAttack()
         {
             m_AnimationFram ++;
-            if(m_AnimationFram == 90)
+            setOrientation();
+            setPosition();
+            if(m_AnimationFram == 15)
             {
                 endAnimation();
             }
         }
-        void Sword::startAnimation()
+        void Sword::startAnimation(sf::Vector2f positionsword,int playerorientation, bool playerup, bool playerdown, bool playerright, bool playerleft)
         {
-            std::cout << "start attack" << std::endl;
+            //std::cout << "start attack" << std::endl;
             m_AnimationFram = 0;
             m_AniamtionExe = true;
-            m_Rotate = -45;
-            /*
-            m_PositionX =
-            m_PositionY =
-            m_AnimationFram = 0;
-            */
+            m_Rotate = playerorientation/* + 45*/;
+            m_VectorAniamtor.x = positionsword.x + 2;
+            m_VectorAniamtor.y = positionsword.y + 2;
+            m_animationdown = playerdown;
+            m_animationleft = playerleft;
+            m_animationright = playerright;
+            m_animationup = playerup;
         }
 
 // Function private
@@ -86,16 +89,34 @@
     // Animate Attack
         void Sword::setOrientation()
         {
-            m_Rotate ++;
+            m_Rotate -= 6;
             m_Sprite.setRotation(m_Rotate);
         }
-        void Sword::setPosition(sf::Vector2f positionplayer)
+        void Sword::setPosition()
         {
-            m_VectorAniamtor.x = positionplayer.x + m_PositionX;
-            m_VectorAniamtor.y = positionplayer.y + m_PositionY;
             m_Sprite.setPosition(m_VectorAniamtor);
+            if(m_animationdown)
+            {
+                m_VectorAniamtor.x += 4;
+            }
+            else if(m_animationleft)
+            {
+                m_VectorAniamtor.y += 4;
+            }
+            else if(m_animationright)
+            {
+                m_VectorAniamtor.y -= 4;
+            }
+            else if(m_animationup)
+            {
+                m_VectorAniamtor.x -= 4;
+            }
         }
         void Sword::endAnimation()
         {
             m_AniamtionExe = false;
+            m_animationdown = false;
+            m_animationleft = false;
+            m_animationright = false;
+            m_animationup = false;
         }

@@ -14,6 +14,7 @@ class Joueur
         // Accessor 
             sf::Sprite getSprite();
             sf::Vector2f getPosition();
+            sf::Vector2f getPositionSword();
 
             Joueur* getAdress();
 
@@ -24,6 +25,7 @@ class Joueur
             bool getOrientationDown();
             bool getOrientationLeft();
             bool getOrientationRight();
+            int getOrientationValue();
         
         // Function
             void setOrientationUp();
