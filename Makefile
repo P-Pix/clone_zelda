@@ -14,6 +14,7 @@ DATA = 	data/Monster.cpp\
 		data/Heart.cpp\
 		data/MapGenerator.cpp\
 		data/Sword.cpp\
+		#data/Ai.cpp\
 
 NAME = 	main
 

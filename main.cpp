@@ -2,12 +2,14 @@
 #include <SFML/Graphics.hpp>
 #include "data/GamesWindow.hpp"
 
+using namespace std;
+
 int main()
 {
     GamesWindow Window;
 
     Window.limitFramerate(60);  // nombre de fram limite
-    std::cout << "Window Open" << std::endl;
+    cout << "Window Open" << endl;
 
     while(Window.isRunning())
     {
@@ -16,6 +18,6 @@ int main()
         Window.tchecWindow();   // Multi test
     }
 
-    std::cout << "Window Close" << std::endl;
+    cout << "Window Close" << endl;
     return 0;
 }
