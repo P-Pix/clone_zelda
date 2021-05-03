@@ -46,6 +46,11 @@ class Joueur
             void animationMoveUp();
             void animationMoveLeft();
             void animationMoveRight();
+
+            void recoilDown();
+            void recoilUp();
+            void recoilRight();
+            void recoilLeft();
         
     private:
         // Varible

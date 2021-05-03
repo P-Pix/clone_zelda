@@ -158,7 +158,12 @@
         }
         void Joueur::setDamage(int power)
         {
+            // creer les fram d'invulnérabilité
             m_life -= power;
+            if(m_life <= 0)
+            {
+                m_life = 0;
+            }
         }
 
     // Animation 

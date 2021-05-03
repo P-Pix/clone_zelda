@@ -13,6 +13,7 @@
             this -> m_Window = new sf::RenderWindow(sf::VideoMode(m_windowwidth, m_windowheight), "Zelda Like");
             //std::cout << "window create " << this << std::endl;
             setMapUpdate();
+            modifiHeart();
         }
 
     // Destructor
@@ -41,13 +42,18 @@
         void GamesWindow::updateWindow()
         {
             this -> m_Window -> clear();
-            modifiHeart();
+            modifMonster();
             allDrawWindow();
             this -> m_Window -> display();
         }
         void GamesWindow::tchecWindow()
         {
             switchMap();
+            if(collide(m_Player.getSprite(), m_Mob1.getSprite()))
+            {
+                m_Player.setDamage(m_Mob1.getPower());
+                m_Heart.updateHeart(m_Player.getLife(), m_Player.getMaxLife());
+            }
         }
         void GamesWindow::controlWindow()
         {
@@ -55,6 +61,25 @@
         }
 
 // Function private
+
+    // test
+        bool GamesWindow::collide(sf::Sprite sprite1, sf::Sprite sprite2)
+        {
+            int sprite1x = sprite1.getPosition().x,
+                sprite1y = sprite1.getPosition().y,
+
+                sprite2x = sprite2.getPosition().x,
+                sprite2y = sprite2.getPosition().y;
+
+            if(sprite1x <= sprite2x + 64 && sprite1x + 64 >= sprite2x && sprite1y <= sprite2y + 64 && sprite1y + 64 > sprite2y)
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+        }
 
     // New Map
         void GamesWindow::setMapUpdate()
@@ -115,6 +140,7 @@
             drawVector(m_Tree.getListSprite());
             drawVector(m_Ground.getListSprite());
 
+            drawElement(m_Mob1.getSprite());
             drawElement(m_Player.getSprite());
             drawSword();
         }
@@ -213,3 +239,9 @@
         {
             this -> m_Heart.updateHeart(m_Player.getLife(), m_Player.getMaxLife());
         }
+    
+    // Monster
+    void GamesWindow::modifMonster()
+    {
+        m_Mob1.moove();
+    }

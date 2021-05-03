@@ -75,6 +75,8 @@ class GamesWindow
             void drawVector(std::vector<sf::Sprite> vector);
             void modifiHeart();
             void allDrawWindow();
+            void modifMonster();
+            bool collide(sf::Sprite sprite1, sf::Sprite sprite2);
 };
 
 #endif

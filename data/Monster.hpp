@@ -51,6 +51,7 @@ class Monster
             void loadTexture(const char *name);
             void loadSprite();
             void initSprite();
+            void loadPosition();
 
 };
 
