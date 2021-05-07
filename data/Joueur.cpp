@@ -78,6 +78,10 @@
         {
             return m_maxlife;
         }
+        bool Joueur::isAlive()
+        {
+            return m_alive;
+        }
 
     // Position
         sf::Vector2f Joueur::getPosition()
@@ -163,6 +167,7 @@
             if(m_life <= 0)
             {
                 m_life = 0;
+                m_alive = false;
             }
         }
 

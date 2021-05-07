@@ -26,10 +26,14 @@ class Monster
             // Power
                 int getPower();
 
+            // alive
+                bool isAlive();     
+
         // Function
             // Attribution
                 void setPower(int power);
                 void moove();
+                void setDamage(int power);
 
                 void recoilUp();
                 void recoilDown();
@@ -40,7 +44,11 @@ class Monster
         // Variable
             // basic
                 int m_moveaction = 0,
-                    m_power = 4;
+                    m_power = 4,
+
+                    m_life = 10;
+
+                bool m_alive = true;
                 
                 const char *m_monster = "skin/monster1.png";
 

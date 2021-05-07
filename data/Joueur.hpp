@@ -20,6 +20,7 @@ class Joueur
 
             int getLife();
             int getMaxLife();
+            bool isAlive();
 
             bool getOrientationUp();
             bool getOrientationDown();
@@ -75,8 +76,10 @@ class Joueur
                 bool    m_orientationright = false,
                         m_orientationup = false,
                         m_orientationleft = false,
-                        m_orientationdown = true;
+                        m_orientationdown = true,
 
+                        m_alive = true;
+            
             // SFML/Graphics
                 sf::Texture m_Thero;
                 sf::Sprite  m_Shero;

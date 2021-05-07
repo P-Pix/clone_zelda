@@ -33,6 +33,12 @@
             return m_power;
         }
 
+    // alive
+        bool Monster::isAlive()
+        {
+            return m_alive;
+        }
+
 // Function public
     // moove
         void Monster::moove()
@@ -59,6 +65,16 @@
         void Monster::recoilRight()
         {
             m_Sprite.move(sf::Vector2f(64.f, 0.f));
+        }
+    
+    // life
+        void Monster::setDamage(int power)
+        {
+            m_life -= power;
+            if(m_life <= 0)
+            {
+                m_alive = false;
+            }
         }
 
 // Function private

@@ -75,7 +75,18 @@
                     {
                         m_Mob1.recoilLeft();
                     }
+                    m_Mob1.setDamage(m_Sword.getPower());
                 }
+            }
+            /*
+            if(!m_Mob1.isAlive())
+            {
+                m_Mob1.~Monster();
+            }
+            */
+            if(!m_Player.isAlive())
+            {
+                this -> m_Window -> close();
             }
         }
         void GamesWindow::controlWindow()

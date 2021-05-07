@@ -14,8 +14,8 @@ int main()
     while(Window.isRunning())
     {
         Window.controlWindow(); // Controls User
-        Window.updateWindow();  // Update Window
         Window.tchecWindow();   // Multi test
+        Window.updateWindow();  // Update Window
     }
 
     cout << "Window Close" << endl;

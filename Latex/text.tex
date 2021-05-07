@@ -2,7 +2,6 @@
 \usepackage[utf8]{inputenc} %encodage des caractères
 \usepackage[french]{babel} %paquet de langue français
 \usepackage[T1]{fontenc} %encodage de la police
-\usepackage{times}
 \usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry} %marges
 \usepackage{graphicx} %'affichage des images
 \usepackage{enumitem}
@@ -10,10 +9,10 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \usepackage{amssymb}
+\usepackage{times}
 \usepackage[useregional]{datetime2}
 \usepackage{datetime}
 \usepackage{listings}
-\newdateformat{monthyeardate}
 
 \renewcommand{\footrulewidth}{1pt}
 \fancyfoot[R]{\textbf{page \thepage}}
@@ -29,6 +28,8 @@
 
 \begin{document}
 
+\hypersetup{pdfborder = 0 0 0}
+
 \maketitle
 
 \newpage
@@ -37,18 +38,69 @@
 
 \newpage
 
-\section{Initialisation du Projet}
+\section{Création du Projet}
 
-Date de début = 23/04/2021
+Date de début : 23/04/2021.
+
+Date de fin : ... .
+
+Le projet de clone de zelda m'est venu en tête alors que cherchais un projet à réaliser pour m'entrainer au C++.
+Il me venu en tête car j'apprécie particuliairement la license \underline{The Legend Of Zelda}.
+De plus réaliser un projet de cette envergure me semblais d'une dificultée convenable et abordable.
 
 \subsection{Première approche}
 
+En première approche j'ai commencé par définir les éléments que j'allais avoir besoin de coder sur une feuille.
+Il y a :
+\begin{itemize}[label = -]
+    \item La fenetre de jeu
+    \item Le joueur
+    \item Les enemis
+    \item L'affichage de la vie du joueur
+    \item Les maps
+    \item L'épée du joueur
+    \item L'arme des enemis
+    \item Les déplacements
+    \item Les collisions des armes et du joueur/enemis
+    \item Les collision contre les murs
+\end{itemize}
+
 \newpage
 
-\section{Vision du Projet}
+\section{Développement du projet}
 
-\subsection{Les fonctions codés}
+\subsection{L'ordre du développement}
 
-\subsection{Répartition du travail}
+J'ai tout d'abord commencé par créer le projet sur \underline{GitHub} afin d'avoir un repo git.
+Ensuite j'ai commencé à écrire le main.cpp contenant uniquement l'appelle de la class du jeu et la boucle d'éxécution du jeu.
+Puis j'ai écris la class de le fenêtre avec la librairie SFML.
+
+\subsection{Les class}
+
+La fenetre de jeu
+
+\subsubsection{GamesWindow}
+
+\subsubsection{MakeSprite}
+
+Le Joueur et les enemis
+
+\subsubsection{Joueur}
+
+\subsubsection{Heart}
+
+\subsubsection{Sword}
+
+\subsubsection{Monster}
+
+\subsubsection{Ai}
+
+La création des Maps
+
+\subsubsection{MapGenerator}
+
+\subsubsection{Ground}
+
+\subsubsection{Wall}
 
 \end{document}
