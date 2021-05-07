@@ -30,6 +30,11 @@ class Monster
             // Attribution
                 void setPower(int power);
                 void moove();
+
+                void recoilUp();
+                void recoilDown();
+                void recoilRight();
+                void recoilLeft();
     
     private:
         // Variable

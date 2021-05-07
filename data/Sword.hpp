@@ -19,6 +19,11 @@ class Sword
             int getPower();
             bool getExecution();
 
+            bool getAttackUp();
+            bool getAttackLeft();
+            bool getAttackRight();
+            bool getAttackDown();
+
         // Function
             void setPowerSword(int power);
             void animateAttack();
@@ -36,7 +41,7 @@ class Sword
                     m_animationfram = 0,
                     m_rotate = 0; // start animation right -45° to 45°
                 
-                const char *m_picture = "skin/sword2.png";
+                const char *m_picture = "skin/sword.png";
 
                 bool    m_aniamtionexe = false,
 
@@ -58,6 +63,7 @@ class Sword
             //Animate Attack
                 void setOrientation();
                 void setPosition();
+                void setBasicPosition();
                 void endAnimation();
 };
 

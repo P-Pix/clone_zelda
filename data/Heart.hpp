@@ -46,7 +46,6 @@ class Heart
                             m_S3Heart,
                             m_S4Heart;
 
-        
         // Function
             sf::Sprite setSpritePosition(sf::Sprite sprite, sf::Vector2f position);
             void listeHeartConstructor(int life);

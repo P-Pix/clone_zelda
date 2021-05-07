@@ -269,6 +269,24 @@
             this -> m_Shero.move(sf::Vector2f(0.f, m_vitesse * 1.f));
         }
 
+    // recoil
+        void Joueur::recoilDown()
+        {
+            m_Shero.move(sf::Vector2f(0.f, 64.f));
+        }
+        void Joueur::recoilLeft()
+        {
+            m_Shero.move(sf::Vector2f(-64.f, 0.f));
+        }
+        void Joueur::recoilRight()
+        {
+            m_Shero.move(sf::Vector2f(6.f, 0.f));
+        }
+        void Joueur::recoilUp()
+        {
+            m_Shero.move(sf::Vector2f(0.f, -64.f));
+        }
+
     // Switch Orientation
         void Joueur::setOrientationDown()
         {

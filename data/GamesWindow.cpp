@@ -49,10 +49,33 @@
         void GamesWindow::tchecWindow()
         {
             switchMap();
-            if(collide(m_Player.getSprite(), m_Mob1.getSprite()))
+            if(collideUser(m_Mob1.getSprite()))
             {
                 m_Player.setDamage(m_Mob1.getPower());
                 m_Heart.updateHeart(m_Player.getLife(), m_Player.getMaxLife());
+                m_Player.recoilDown();
+            }
+            if(m_Sword.getExecution())
+            {
+                if(collideSword(m_Mob1.getSprite()))
+                {
+                    if(m_Player.getOrientationDown())
+                    {
+                        m_Mob1.recoilDown();
+                    }
+                    else if(m_Player.getOrientationUp())
+                    {
+                        m_Mob1.recoilUp();
+                    }
+                    else if(m_Player.getOrientationRight())
+                    {
+                        m_Mob1.recoilRight();
+                    }
+                    else if(m_Player.getOrientationLeft())
+                    {
+                        m_Mob1.recoilLeft();
+                    }
+                }
             }
         }
         void GamesWindow::controlWindow()
@@ -63,7 +86,17 @@
 // Function private
 
     // test
-        bool GamesWindow::collide(sf::Sprite sprite1, sf::Sprite sprite2)
+        bool GamesWindow::collideUser(sf::Sprite sprite)
+        {
+            int sprite1x = m_Player.getPosition().x,
+                sprite1y = m_Player.getPosition().y,
+
+                sprite2x = sprite.getPosition().x,
+                sprite2y = sprite.getPosition().y;
+
+            return (sprite1x <= sprite2x + 64 && sprite1x + 64 >= sprite2x && sprite1y <= sprite2y + 64 && sprite1y + 64 > sprite2y);
+        }
+        void GamesWindow::collidePosition(sf::Sprite sprite1, sf::Sprite sprite2)
         {
             int sprite1x = sprite1.getPosition().x,
                 sprite1y = sprite1.getPosition().y,
@@ -71,14 +104,44 @@
                 sprite2x = sprite2.getPosition().x,
                 sprite2y = sprite2.getPosition().y;
 
+            /*
+            si la partie touché est comprise entre :
+            x>=y avec y < 32 alors partie haut 
+            y>=x avec x < 32 alors partie gauche
+            x>=y avec x >= 32 alors partie droite
+            y>=x avec y >= 32 alors partie bas
+            */
+            
             if(sprite1x <= sprite2x + 64 && sprite1x + 64 >= sprite2x && sprite1y <= sprite2y + 64 && sprite1y + 64 > sprite2y)
             {
-                return true;
+                
             }
-            else 
+        }
+        bool GamesWindow::collideSword(sf::Sprite sprite)
+        {
+            int sprite1x = m_Sword.getSprite().getPosition().x,
+                sprite1y = m_Sword.getSprite().getPosition().y,
+
+                sprite2x = sprite.getPosition().x,
+                sprite2y = sprite.getPosition().y;
+
+            if(m_Sword.getAttackDown())
             {
-                return false;
+                return (sprite1x >= sprite2x && sprite1x - 64 <= sprite2x + 64 && sprite1y + 64 >= sprite2y && sprite1y + 64 <= sprite2y + 64);
             }
+            else if(m_Sword.getAttackLeft())
+            {
+                return (sprite1x - 64 <= sprite2x + 64 && sprite1x - 64 >= sprite2x && sprite1y >= sprite2y && sprite1y - 64 <= sprite2y + 64);
+            }
+            else if(m_Sword.getAttackRight())
+            {
+                return (sprite1x <= sprite2x + 64 && sprite1x + 64 >= sprite2x && sprite1y <= sprite2y + 64 && sprite1y + 64 > sprite2y);
+            }
+            else if(m_Sword.getAttackUp())
+            {
+                return (sprite1x + 64 >= sprite2x && sprite1x <= sprite2x + 64 && sprite1y - 64 <= sprite2y + 64 && sprite1y - 64 >= sprite2y);
+            }
+            return false;
         }
 
     // New Map
@@ -241,7 +304,7 @@
         }
     
     // Monster
-    void GamesWindow::modifMonster()
-    {
-        m_Mob1.moove();
-    }
+        void GamesWindow::modifMonster()
+        {
+            m_Mob1.moove();
+        }

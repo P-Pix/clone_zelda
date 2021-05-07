@@ -65,18 +65,29 @@ class GamesWindow
 
 
         //Function
-            void drawSword();
-            void setMapUpdate(); 
-            void switchMap();
-            void loadNewMap();
-            void setBackground();
-            void drawElement(sf::Sprite sprite);
-            void pollEvent();
-            void drawVector(std::vector<sf::Sprite> vector);
-            void modifiHeart();
-            void allDrawWindow();
-            void modifMonster();
-            bool collide(sf::Sprite sprite1, sf::Sprite sprite2);
+            // Map
+                void setMapUpdate(); 
+                void switchMap();
+                void loadNewMap();
+                void setBackground();
+
+            // control
+                void pollEvent();
+
+            // draw
+                void drawSword();
+                void drawElement(sf::Sprite sprite);
+                void drawVector(std::vector<sf::Sprite> vector);
+                void allDrawWindow();
+            
+            // modification
+                void modifiHeart();
+                void modifMonster();
+
+            // collide
+                bool collideUser(sf::Sprite sprite);
+                void collidePosition(sf::Sprite sprite1, sf::Sprite sprite2);
+                bool collideSword(sf::Sprite sprite);
 };
 
 #endif

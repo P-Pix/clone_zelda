@@ -44,6 +44,22 @@
                 m_moveaction = 0;
             }
         }
+        void Monster::recoilDown()
+        {
+            m_Sprite.move(sf::Vector2f(0.f, 64.f));
+        }
+        void Monster::recoilLeft()
+        {
+            m_Sprite.move(sf::Vector2f(-64.f, 0.f));
+        }
+        void Monster::recoilUp()
+        {
+            m_Sprite.move(sf::Vector2f(0.f, -64.f));
+        }
+        void Monster::recoilRight()
+        {
+            m_Sprite.move(sf::Vector2f(64.f, 0.f));
+        }
 
 // Function private
     // Patern
