@@ -3,6 +3,6 @@ Goal : Create a Zelda like game
 
 You need to install SFML for C++
 
-```c++
-cd clone 
+```
+sudo apt-get install libsfml-dev
 ```
