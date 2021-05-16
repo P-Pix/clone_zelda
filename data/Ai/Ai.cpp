@@ -1,3 +1,9 @@
+/**
+*** Guillaume LEMONNIER
+*** Developpement autonome
+*** Tout droits reservé
+**/
+
 #include "Ai.hpp"
 #include <vector>
 #include <SFML/Graphics.hpp>

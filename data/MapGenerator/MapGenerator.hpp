@@ -1,3 +1,9 @@
+/**
+*** Guillaume LEMONNIER
+*** Developpement autonome
+*** Tout droits reservé
+**/
+
 #if !defined(__MAPGENERATOR__)
 #define __MAPGENERATOR__
 

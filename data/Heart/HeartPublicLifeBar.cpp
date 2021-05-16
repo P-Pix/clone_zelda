@@ -1,3 +1,8 @@
+/**
+*** Guillaume LEMONNIER
+*** Developpement autonome
+*** Tout droits reservé
+**/
 
 #include "Heart.hpp"
 

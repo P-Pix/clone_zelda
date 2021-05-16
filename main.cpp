@@ -1,3 +1,9 @@
+/**
+*** Guillaume LEMONNIER
+*** Developpement autonome
+*** Tout droits reservé
+**/
+
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "data/GamesWindow/GamesWindow.hpp"

@@ -1,3 +1,9 @@
+/**
+*** Guillaume LEMONNIER
+*** Developpement autonome
+*** Tout droits reservé
+**/
+
 #include "Ground.hpp"
 
 #include <SFML/Graphics.hpp>

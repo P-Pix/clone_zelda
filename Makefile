@@ -1,3 +1,9 @@
+###
+### Guillaume LEMONNIER
+### Developpement autonome
+### Tout droits reservé
+###
+
 SRC		=	main.cpp\
 
 OBJ		=	$(SRC:.cpp = .o)
@@ -39,6 +45,8 @@ NAME	=	main
 
 val:
 	@(valgrind g++ -o $(NAME) $(OBJ) $(DATA) $(MODULE)) > /dev/null
+	@(./$(NAME))
 
 cpp:
 	@(g++ -o $(NAME) $(OBJ) $(DATA) $(MODULE)) > /dev/null
+	@(./$(NAME))

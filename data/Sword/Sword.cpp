@@ -1,3 +1,9 @@
+/**
+*** Guillaume LEMONNIER
+*** Developpement autonome
+*** Tout droits reservé
+**/
+
 #include "Sword.hpp"
 #include <SFML/Graphics.hpp>
 #include <iostream>

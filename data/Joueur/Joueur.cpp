@@ -1,3 +1,9 @@
+/**
+*** Guillaume LEMONNIER
+*** Developpement autonome
+*** Tout droits reservé
+**/
+
 #include "Joueur.hpp"
 #include <iostream>
 #include <SFML/Graphics.hpp>
