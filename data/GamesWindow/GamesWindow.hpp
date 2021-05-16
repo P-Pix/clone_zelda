@@ -4,13 +4,13 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-#include "../Joueur.hpp"
-#include "../Heart.hpp"
-#include "../Wall.hpp"
-#include "../Ground.hpp"
-#include "../Monster.hpp"
-#include "../MapGenerator.hpp"
-#include "../Sword.hpp"
+#include "../Joueur/Joueur.hpp"
+#include "../Heart/Heart.hpp"
+#include "../Wall/Wall.hpp"
+#include "../Ground/Ground.hpp"
+#include "../Monster/Monster.hpp"
+#include "../MapGenerator/MapGenerator.hpp"
+#include "../Sword/Sword.hpp"
 
 class GamesWindow
 {

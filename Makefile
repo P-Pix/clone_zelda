@@ -12,19 +12,19 @@ DATA 	=	data/GamesWindow/GamesWindow.cpp\
 			data/GamesWindow/GamesWindowDraw.cpp\
 			data/GamesWindow/GamesWindowMap.cpp\
 			\
-			data/Monster.cpp\
+			data/Monster/Monster.cpp\
 			\
-			data/Joueur.cpp\
+			data/Joueur/Joueur.cpp\
 			\
-			data/Wall.cpp\
+			data/Wall/Wall.cpp\
 			\
-			data/Ground.cpp\
+			data/Ground/Ground.cpp\
 			\
-			data/Heart.cpp\
+			data/Heart/Heart.cpp\
 			\
-			data/MapGenerator.cpp\
+			data/MapGenerator/MapGenerator.cpp\
 			\
-			data/Sword.cpp\
+			data/Sword/Sword.cpp\
 			\
 
 NAME	=	main
