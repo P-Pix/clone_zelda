@@ -12,5 +12,4 @@ sudo apt-get install libsfml-dev
 With Makefile
 ```
 make cpp
-./main
 ```
