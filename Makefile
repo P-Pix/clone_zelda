@@ -20,6 +20,9 @@ DATA 	=	data/GamesWindow/GamesWindow.cpp\
 			data/Ground/GroundPublicPosition.cpp\
 			\
 			data/Heart/Heart.cpp\
+			data/Heart/HeartPrivateSprite.cpp\
+			data/Heart/HeartPublicAccessorSprite.cpp\
+			data/Heart/HeartPublicLifeBar.cpp\
 			\
 			data/Joueur/Joueur.cpp\
 			\
