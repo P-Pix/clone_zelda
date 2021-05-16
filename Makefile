@@ -7,24 +7,29 @@ MODULE	=	-lsfml-window\
 			-lsfml-graphics\
 
 DATA 	=	data/GamesWindow/GamesWindow.cpp\
-			data/GamesWindow/GamesWindowControl.cpp\
-			data/GamesWindow/GamesWindowCollide.cpp\
-			data/GamesWindow/GamesWindowDraw.cpp\
-			data/GamesWindow/GamesWindowMap.cpp\
-			\
-			data/Monster/Monster.cpp\
-			\
-			data/Joueur/Joueur.cpp\
-			\
-			data/Wall/Wall.cpp\
+			data/GamesWindow/GamesWindowPublicAccessor.cpp\
+			data/GamesWindow/GamesWindowPublicWindow.cpp\
+			data/GamesWindow/GamesWindowPrivateControl.cpp\
+			data/GamesWindow/GamesWindowPrivateCollide.cpp\
+			data/GamesWindow/GamesWindowPrivateDraw.cpp\
+			data/GamesWindow/GamesWindowPrivateMap.cpp\
 			\
 			data/Ground/Ground.cpp\
+			data/Ground/GroundPrivateSprite.cpp\
+			data/Ground/GroundPublicAccessor.cpp\
+			data/Ground/GroundPublicPosition.cpp\
 			\
 			data/Heart/Heart.cpp\
 			\
+			data/Joueur/Joueur.cpp\
+			\
 			data/MapGenerator/MapGenerator.cpp\
 			\
+			data/Monster/Monster.cpp\
+			\
 			data/Sword/Sword.cpp\
+			\
+			data/Wall/Wall.cpp\
 			\
 
 NAME	=	main

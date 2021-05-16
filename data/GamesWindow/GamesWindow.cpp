@@ -1,6 +1,7 @@
+#include "GamesWindow.hpp"
+
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "GamesWindow.hpp"
 #include <vector>
 
 // Constructor / Destructor
@@ -8,11 +9,12 @@
     // Constructor
         GamesWindow::GamesWindow(): m_Bloc(m_blocname), m_Cavern(m_cavernname)
         {
+            // Window size : (17* 64) * ((10 * 64) + 64) = 1088 * 704
             this -> m_Window = nullptr;
-            //(17* 64) * ((10 * 64) + 64) = 1088 * 704
             this -> m_Window = new sf::RenderWindow(sf::VideoMode(m_windowwidth, m_windowheight), "Zelda Like");
             setMapUpdate();
             modifiHeart();
+            //std::cout << "window create " << this << std::endl;
         }
 
     // Destructor
@@ -23,53 +25,21 @@
 
 // Accessor
 
-    // Window Open
-        bool GamesWindow::isRunning()
-        {
-            return m_Window -> isOpen();
-        }
+    // Window Open : GamesWindowPublicAccessor.cpp
 
 // Function public
 
-    // Controls options
-        void GamesWindow::limitFramerate(int frame)
-        {
-            this -> m_Window -> setFramerateLimit(frame);
-        }
-
-    // Always call in the main
-        void GamesWindow::updateWindow()
-        {
-            this -> m_Window -> clear();
-            modifMonster();
-            allDrawWindow();
-            this -> m_Window -> display();
-        }
-        void GamesWindow::verificationWindow()
-        {
-            switchMap();
-            canMove();
-            swordAttack();
-            collideMonster();
-            if(!m_Player.isAlive())
-            {
-                this -> m_Window -> close();
-            }
-        }
-        void GamesWindow::controlWindow()
-        {
-            this -> pollEvent();
-        }
-
+    // Controls Window : GamesWindowPublicWindow.cpp
+        
 // Function private
 
-    // collide : GamesWindowCollide.cpp
+    // collide : GamesWindowPrivateCollide.cpp
 
-    // Map : GamesWindowMap.cpp
+    // Map : GamesWindowPrivateMap.cpp
 
-    // Drawing : GamesWindowDraw.cpp
+    // Drawing : GamesWindowPrivateDraw.cpp
 
-    // Control : GamesWindowControl.cpp
+    // Control : GamesWindowPrivateControl.cpp
 
     // modification
         void GamesWindow::modifiHeart()
