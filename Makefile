@@ -13,7 +13,7 @@ MODULE	=	-lsfml-window\
 			-lsfml-graphics\
 
 DATA 	=	data/GamesWindow/GamesWindow.cpp\
-			data/GamesWindow/GamesWindowPublicAccessor.cpp\
+			data/GamesWindow/GamesWindowAccessor.cpp\
 			data/GamesWindow/GamesWindowPublicWindow.cpp\
 			data/GamesWindow/GamesWindowPrivateControl.cpp\
 			data/GamesWindow/GamesWindowPrivateCollide.cpp\
@@ -22,15 +22,22 @@ DATA 	=	data/GamesWindow/GamesWindow.cpp\
 			\
 			data/Ground/Ground.cpp\
 			data/Ground/GroundPrivateSprite.cpp\
-			data/Ground/GroundPublicAccessor.cpp\
+			data/Ground/GroundAccessor.cpp\
 			data/Ground/GroundPublicPosition.cpp\
 			\
 			data/Heart/Heart.cpp\
 			data/Heart/HeartPrivateSprite.cpp\
-			data/Heart/HeartPublicAccessorSprite.cpp\
+			data/Heart/HeartAccessorSprite.cpp\
 			data/Heart/HeartPublicLifeBar.cpp\
 			\
 			data/Joueur/Joueur.cpp\
+			data/Joueur/JoueurAccessorOrientation.cpp\
+			data/Joueur/JoueurAccessorPosition.cpp\
+			data/Joueur/JoueurPrivateMove.cpp\
+			data/Joueur/JoueurPrivateSprite.cpp\
+			data/Joueur/JoueurPublicAnimation.cpp\
+			data/Joueur/JoueurPublicMove.cpp\
+			data/Joueur/JoueurPublicSwitchOrientation.cpp\
 			\
 			data/MapGenerator/MapGenerator.cpp\
 			\

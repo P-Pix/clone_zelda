@@ -94,6 +94,11 @@ class Joueur
         //Function
             sf::Sprite loadSprite(const char *name, sf::Vector2f vector);
             void loadTexture(const char *name);
+
+            void moveUp();
+            void moveDown();
+            void moveRight();
+            void moveLeft();
 };
 
 #endif
