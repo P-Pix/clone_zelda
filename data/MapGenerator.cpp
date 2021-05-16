@@ -39,6 +39,25 @@
         {
             return m_GroundInt;
         }
+        
+    // Has sprite on his map
+        bool MapGenerator::hasTree()
+        {
+            return m_tree;
+        }
+        bool MapGenerator::hasGround()
+        {
+            return m_ground;
+        }
+        bool MapGenerator::hasCavern()
+        {
+            return m_cavern;
+        }
+        bool MapGenerator::hasBloc()
+        {
+            return m_bloc;
+        }
+
 
 // Function public
 
@@ -57,6 +76,11 @@
             m_WallInt.clear();
             m_GroundInt.clear();
 
+            m_bloc = false;
+            m_cavern = false;
+            m_ground = false;
+            m_tree = false;
+
             for(int positiony = 1; positiony < 11; positiony ++)
             {
                 for(int positionx = 0; positionx < 18; positionx ++)
@@ -66,21 +90,25 @@
                     {
                         //std::cout << "t ";
                         m_WallExt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));
+                        m_tree = true;
                     }
                     else if(lettre == 'g')
                     {
                         //std::cout << "g ";
-                        m_GroundExt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));                
+                        m_GroundExt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));
+                        m_ground = true;         
                     }
                     else if(lettre == 'b')
                     {
                         //std::cout << "b ";
-                        m_WallInt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));                
+                        m_WallInt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));
+                        m_bloc = true;          
                     }
                     else if(lettre == 'c')
                     {
                         //std::cout << "c ";
-                        m_GroundInt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));                
+                        m_GroundInt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));
+                        m_cavern = true;           
                     }
                 }
                 //std::cout << std::endl;

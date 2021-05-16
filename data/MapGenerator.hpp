@@ -26,11 +26,21 @@ class MapGenerator
             void setMapRight();
             void setMapLeft();
 
+            bool hasTree();
+            bool hasGround();
+            bool hasCavern();
+            bool hasBloc();
+
     private:
         // Variables 
             // basic
                 int m_x = 1,
                     m_y = 1;
+                
+                bool    m_tree = false,
+                        m_cavern = false,
+                        m_bloc = false,
+                        m_ground = false;
 
             // std
                 std::vector<sf::Vector2f>   m_WallExt,

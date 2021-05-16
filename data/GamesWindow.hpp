@@ -15,11 +15,11 @@
 class GamesWindow
 {
     public:
-        
+
         // Constructor /Destructor
             GamesWindow();
             ~GamesWindow();
-        
+
         // Accessor
             bool isRunning();
 
@@ -27,19 +27,28 @@ class GamesWindow
             void limitFramerate(int frame);
             void controlWindow();
             void updateWindow();
-            void tchecWindow();
-    
-    private:
+            void verificationWindow();
 
+    private:
         //Variable
             // basic
-                const int   m_windowwidth = 1088,
-                            m_windowheight = 704;
-                
-                const char  *m_blocname = "skin/bloc.png",
-                            *m_cavernname = "skin/cavern.png";
+                bool    m_canmove       = true,
 
-            // SFML            
+                        m_collidedown   = false,
+                        m_collideup     = false,
+                        m_collideright  = false,
+                        m_collideleft   = false;
+
+                const int   m_windowwidth   = 1088,
+                            m_windowheight  = 704;
+
+                const char  *m_blocname     = "skin/bloc.png",
+                            *m_cavernname   = "skin/cavern.png";
+            
+            // std
+                std::vector<Monster> m_listmob;
+
+            // SFML
                 sf::RenderWindow    *m_Window;
                 sf::Event   m_Event;
                 sf::VideoMode   m_VideoMode;
@@ -54,9 +63,9 @@ class GamesWindow
                 Wall    m_Tree,
                         m_Bloc;
 
-                Ground  m_Ground, 
+                Ground  m_Ground,
                         m_Cavern;
-                
+
                 MapGenerator m_Map;
 
                 Sword m_Sword;
@@ -64,28 +73,33 @@ class GamesWindow
 
         //Function
             // Map
-                void setMapUpdate(); 
+                void setMapUpdate();
                 void switchMap();
                 void loadNewMap();
                 void setBackground();
 
             // control
                 void pollEvent();
+                void canMove();
+                void swordAttack();
 
             // draw
                 void drawSword();
                 void drawElement(sf::Sprite sprite);
                 void drawVector(std::vector<sf::Sprite> vector);
                 void allDrawWindow();
-            
+
             // modification
                 void modifiHeart();
                 void modifMonster();
+                void makeListMonster();
 
             // collide
-                bool collideUser(sf::Sprite sprite);
+                bool collideUser(sf::Vector2f sprite);
                 void collidePosition(sf::Sprite sprite1, sf::Sprite sprite2);
                 bool collideSword(sf::Sprite sprite);
+                bool collideWall(std::vector<sf::Vector2f> wall);
+                void collideMonster();
 };
 
 #endif

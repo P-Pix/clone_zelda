@@ -14,7 +14,7 @@ int main()
     while(Window.isRunning())
     {
         Window.controlWindow(); // Controls User
-        Window.tchecWindow();   // Multi test
+        Window.verificationWindow();   // Multi test
         Window.updateWindow();  // Update Window
     }
 
