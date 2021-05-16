@@ -6,11 +6,11 @@ MODULE	=	-lsfml-window\
 			-lsfml-system\
 			-lsfml-graphics\
 
-DATA 	=	data/GamesWindow.cpp\
-			data/GamesWindowControl.cpp\
-			data/GamesWindowCollide.cpp\
-			data/GamesWindowDraw.cpp\
-			data/GamesWindowMap.cpp\
+DATA 	=	data/GamesWindow/GamesWindow.cpp\
+			data/GamesWindow/GamesWindowControl.cpp\
+			data/GamesWindow/GamesWindowCollide.cpp\
+			data/GamesWindow/GamesWindowDraw.cpp\
+			data/GamesWindow/GamesWindowMap.cpp\
 			\
 			data/Monster.cpp\
 			\

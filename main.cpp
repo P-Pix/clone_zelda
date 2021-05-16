@@ -1,6 +1,6 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "data/GamesWindow.hpp"
+#include "data/GamesWindow/GamesWindow.hpp"
 
 using namespace std;
 

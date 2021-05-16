@@ -14,8 +14,3 @@ With Makefile
 make cpp
 ./main
 ```
-Without Makefile
-```
-g++ -o main.cpp main data/Monster.cpp data/GamesWindow.cpp data/Joueur.cpp data/Wall.cpp data/Ground.cpp data/Heart.cpp data/MapGenerator.cpp data/Sword.cpp -lsfml-window -lsfml-system -lsfml-graphics
-./main
-```
