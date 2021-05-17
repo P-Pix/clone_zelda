@@ -118,13 +118,12 @@ bool GamesWindow::collideSword(sf::Sprite sprite)
 }
 bool GamesWindow::collideWall(std::vector<sf::Vector2f> wall)
 {
-    bool contact = false;
     for(int x = 0; x < wall.size(); x ++)
     {
         if(collideUser(wall[x]))
         {
-            contact = true;
+            return true;
         }
     }
-    return contact;
+    return false;
 }
