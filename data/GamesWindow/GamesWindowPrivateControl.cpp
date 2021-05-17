@@ -46,7 +46,7 @@ void GamesWindow::canMove()
             m_canmove = false;
         }
     }
-    else if(m_Map.hasTree())
+    if(m_Map.hasTree())
     {
         if(collideWall(m_Map.getListPositionWallExt()))
         {

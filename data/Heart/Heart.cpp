@@ -26,15 +26,3 @@
         {
             //std::cout << "heart delete " << this << std::endl;
         }
-
-// Accessor
-
-    // Sprite : HeartPublicAccessorSprite.cpp
-
-// Function public
-
-    // life Barre : HeartPublicLifeBar.cpp
-
-// Function private
-
-    // Sprite : HeartPrivateSprite.cpp

@@ -29,15 +29,3 @@
         {
             //std::cout << "Ground deete " << this << std::endl;
         }
-
-// Accessor
-
-    // Get Element : GroundPublicAccessor.cpp
-
-// Function public
-
-    // Position : GroundPublicPosition.cpp
-
-// Function private
-
-    // make Sprite : GroundPrivateSprite.cpp

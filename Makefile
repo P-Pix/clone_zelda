@@ -31,15 +31,20 @@ DATA 	=	data/GamesWindow/GamesWindow.cpp\
 			data/Heart/HeartPublicLifeBar.cpp\
 			\
 			data/Joueur/Joueur.cpp\
+			data/Joueur/JoueurAccessorLife.cpp\
 			data/Joueur/JoueurAccessorOrientation.cpp\
 			data/Joueur/JoueurAccessorPosition.cpp\
 			data/Joueur/JoueurPrivateMove.cpp\
 			data/Joueur/JoueurPrivateSprite.cpp\
 			data/Joueur/JoueurPublicAnimation.cpp\
+			data/Joueur/JoueurPublicLife.cpp\
 			data/Joueur/JoueurPublicMove.cpp\
 			data/Joueur/JoueurPublicSwitchOrientation.cpp\
 			\
 			data/MapGenerator/MapGenerator.cpp\
+			data/MapGenerator/MapGeneratorAccessorElement.cpp\
+			data/MapGenerator/MapGeneratorAccessorList.cpp\
+			data/MapGenerator/MapGeneratorPublicCreateMap.cpp\
 			\
 			data/Monster/Monster.cpp\
 			\
