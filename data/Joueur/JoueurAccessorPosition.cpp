@@ -39,3 +39,7 @@ sf::Vector2f Joueur::getPositionSword()
     }
     return m_Shero.getPosition();
 }
+int Joueur::getSpeed()
+{
+    return m_vitesse;
+}

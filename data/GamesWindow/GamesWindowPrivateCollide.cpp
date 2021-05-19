@@ -11,24 +11,24 @@ void GamesWindow::collideMonster()
     makeListMonster();
     for(int x = 0; x < m_listmob.size(); x ++)
     {
-        if(collideUser(m_listmob[x].getPosition()))
+        if(collideUser(m_Player.getPosition(), m_listmob[x].getPosition()))
         {
             m_Player.setDamage(m_listmob[x].getPower());
             m_Heart.updateHeart(m_Player.getLife(), m_Player.getMaxLife());
             collidePosition(m_Player.getSprite(), m_listmob[x].getSprite());
-            if(m_collidedown)
+            if(m_collidedown && !previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, -64.f)))
             {
                 m_Player.recoilUp();
             }
-            else if(m_collideup)
+            else if(m_collideup && !previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, 64.f)))
             {
                 m_Player.recoilDown();
             }
-            else if(m_collideright)
+            else if(m_collideright && !previewCollide(m_Player.getPosition(), sf::Vector2f(-64.f, 0.f)))
             {
                 m_Player.recoilLeft();
             }
-            else if(m_collideleft)
+            else if(m_collideleft && !previewCollide(m_Player.getPosition(), sf::Vector2f(64.f, 0.f)))
             {
                 m_Player.recoilRight();
             }
@@ -41,10 +41,10 @@ void GamesWindow::collideMonster()
         */
     }
 }
-bool GamesWindow::collideUser(sf::Vector2f sprite)
+bool GamesWindow::collideUser(sf::Vector2f user, sf::Vector2f sprite)
 {
-    int sprite1x = m_Player.getPosition().x,
-        sprite1y = m_Player.getPosition().y,
+    int sprite1x = user.x,
+        sprite1y = user.y,
 
         sprite2x = sprite.x,
         sprite2y = sprite.y;
@@ -108,14 +108,31 @@ bool GamesWindow::collideSword(sf::Sprite sprite)
     }
     return false;
 }
-bool GamesWindow::collideWall(std::vector<sf::Vector2f> wall)
+bool GamesWindow::collideWall(sf::Vector2f user, std::vector<sf::Vector2f> wall)
 {
     for(int x = 0; x < wall.size(); x ++)
     {
-        if(collideUser(wall[x]))
+        if(collideUser(user, wall[x]))
         {
             return true;
         }
     }
     return false;
+}
+bool GamesWindow::previewCollide(sf::Vector2f user, sf::Vector2f moove)
+{
+    int nextx = user.x + moove.x,
+        nexty = user.y + moove.y;
+
+    bool collide = false;
+
+    if(m_Map.hasTree())
+    {
+        collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionWallExt());
+    }
+    if(m_Map.hasBloc() && !collide)
+    {
+        collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionWallInt());
+    }
+    return collide;
 }

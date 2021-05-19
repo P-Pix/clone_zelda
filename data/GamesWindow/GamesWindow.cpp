@@ -32,7 +32,7 @@
     }
     void GamesWindow::modifMonster()
     {
-        //m_Mob1.moove();
+        m_Mob1.moove();
     }
     void GamesWindow::makeListMonster()
     {

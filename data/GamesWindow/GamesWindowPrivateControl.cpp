@@ -37,14 +37,14 @@ void GamesWindow::canMove()
     m_canmove = true;
     if(m_Map.hasBloc())
     {
-        if(collideWall(m_Map.getListPositionWallInt()))
+        if(collideWall(m_Player.getPosition(), m_Map.getListPositionWallInt()))
         {
             m_canmove = false;
         }
     }
     if(m_Map.hasTree())
     {
-        if(collideWall(m_Map.getListPositionWallExt()))
+        if(collideWall(m_Player.getPosition(), m_Map.getListPositionWallExt()))
         {
             m_canmove = false;
         }
@@ -66,7 +66,7 @@ void GamesWindow::pollEvent()
             }
             else if(this -> m_Event.key.code == sf::Keyboard::Down)
             {
-                if(!m_Sword.getExecution() && m_canmove)
+                if(!m_Sword.getExecution() && m_canmove && !previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, m_Player.getSpeed() * 1.f)))
                 {
                     if(!m_Player.getOrientationDown())
                     {
@@ -77,7 +77,7 @@ void GamesWindow::pollEvent()
             }
             else if(this -> m_Event.key.code == sf::Keyboard::Up)
             {
-                if(!m_Sword.getExecution() && m_canmove)
+                if(!m_Sword.getExecution() && m_canmove && !previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, m_Player.getSpeed() * -1.f)))
                 {
                     if(!m_Player.getOrientationUp())
                     {
@@ -88,7 +88,7 @@ void GamesWindow::pollEvent()
             }
             else if(this -> m_Event.key.code == sf::Keyboard::Left)
             {
-                if(!m_Sword.getExecution() && m_canmove)
+                if(!m_Sword.getExecution() && m_canmove && !previewCollide(m_Player.getPosition(), sf::Vector2f(m_Player.getSpeed() * -1.f, 0.f)))
                 {
                     if(!m_Player.getOrientationLeft())
                     {
@@ -99,7 +99,7 @@ void GamesWindow::pollEvent()
             }
             else if(this -> m_Event.key.code == sf::Keyboard::Right)
             {
-                if(!m_Sword.getExecution() && m_canmove)
+                if(!m_Sword.getExecution() && m_canmove && !previewCollide(m_Player.getPosition(), sf::Vector2f(m_Player.getSpeed() * 1.f, 0.f)))
                 {
                     if(!m_Player.getOrientationRight())
                     {

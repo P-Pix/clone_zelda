@@ -30,6 +30,8 @@ class Joueur
             bool isAlive();
             bool isInvulnerable();
 
+            int getSpeed();
+
             bool getOrientationUp();
             bool getOrientationDown();
             bool getOrientationLeft();
