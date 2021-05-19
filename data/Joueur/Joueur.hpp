@@ -75,7 +75,7 @@ class Joueur
                     m_moveup = 0,
                     m_moveleft = 0,
                     m_moveright = 0,
-                    m_vitesse = 10,
+                    m_vitesse = 5,
                     m_maxlife = 80,
                     m_life = 69;
                 
