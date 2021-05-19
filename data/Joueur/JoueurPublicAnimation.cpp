@@ -8,153 +8,76 @@
 
 void Joueur::animationMoveRight()
 {
-    if(m_moveright % 32 == 0)
+    moveAniamtion(m_moveright, m_AnimationDown);
+    if(m_moveright == 32)
     {
-        loadTexture(m_ncf0);
         m_moveright = 0;
-    }
-    else if(m_moveright % 32 == 4)
-    {
-        loadTexture(m_ncf1);
-    }
-    else if(m_moveright % 32 == 8)
-    {
-        loadTexture(m_ncf2);
-    }
-    else if(m_moveright % 32 == 12)
-    {
-        loadTexture(m_ncf3);
-    }
-    else if(m_moveright % 32 == 16)
-    {
-        loadTexture(m_ncf4);
-    }
-    else if(m_moveright % 32 == 20)
-    {
-        loadTexture(m_ncf5);
-    }
-    else if(m_moveright % 32 == 24)
-    {
-        loadTexture(m_ncf6);
-    }
-    else if(m_moveright % 32 == 28)
-    {
-        loadTexture(m_ncf7);
     }
     m_moveright ++;
     moveRight();
 }
 void Joueur::animationMoveLeft()
 {
-    if(m_moveleft % 32 == 0)
+    moveAniamtion(m_moveleft, m_AnimationDown);
+    if(m_moveleft == 32)
     {
-        loadTexture(m_ncf0);
         m_moveleft = 0;
-    }
-    else if(m_moveleft % 32 == 4)
-    {
-        loadTexture(m_ncf1);
-    }
-    else if(m_moveleft % 32 == 8)
-    {
-        loadTexture(m_ncf2);
-    }
-    else if(m_moveleft % 32 == 12)
-    {
-        loadTexture(m_ncf3);
-    }
-    else if(m_moveleft % 32 == 16)
-    {
-        loadTexture(m_ncf4);
-    }
-    else if(m_moveleft % 32 == 20)
-    {
-        loadTexture(m_ncf5);
-    }
-    else if(m_moveleft % 32 == 24)
-    {
-        loadTexture(m_ncf6);
-    }
-    else if(m_moveleft % 32 == 28)
-    {
-        loadTexture(m_ncf7);
     }
     m_moveleft ++;
     moveLeft();
 }
 void Joueur::animationMoveUp()
 {
-    if(m_moveup % 32 == 0)
+    moveAniamtion(m_moveup, m_AnimationDown);
+    if(m_moveup == 32)
     {
-        loadTexture(m_ncf0);
         m_moveup = 0;
-    }
-    else if(m_moveup % 32 == 4)
-    {
-        loadTexture(m_ncf1);
-    }
-    else if(m_moveup % 32 == 8)
-    {
-        loadTexture(m_ncf2);
-    }
-    else if(m_moveup % 32 == 12)
-    {
-        loadTexture(m_ncf3);
-    }
-    else if(m_moveup % 32 == 16)
-    {
-        loadTexture(m_ncf4);
-    }
-    else if(m_moveup % 32 == 20)
-    {
-        loadTexture(m_ncf5);
-    }
-    else if(m_moveup % 32 == 24)
-    {
-        loadTexture(m_ncf6);
-    }
-    else if(m_moveup % 32 == 28)
-    {
-        loadTexture(m_ncf7);
     }
     m_moveup ++;
     moveUp();
 }
 void Joueur::animationMoveDown()
 {
-    if(m_movedown % 32 == 0)
+    moveAniamtion(m_movedown, m_AnimationDown);
+    if(m_movedown == 32)
     {
-        loadTexture(m_ncf0);
         m_movedown = 0;
-    }
-    else if(m_movedown % 32 == 4)
-    {
-        loadTexture(m_ncf1);
-    }
-    else if(m_movedown % 32 == 8)
-    {
-        loadTexture(m_ncf2);
-    }
-    else if(m_movedown % 32 == 12)
-    {
-        loadTexture(m_ncf3);
-    }
-    else if(m_movedown % 32 == 16)
-    {
-        loadTexture(m_ncf4);
-    }
-    else if(m_movedown % 32 == 20)
-    {
-        loadTexture(m_ncf5);
-    }
-    else if(m_movedown % 32 == 24)
-    {
-        loadTexture(m_ncf6);
-    }
-    else if(m_movedown % 32 == 28)
-    {
-        loadTexture(m_ncf7);
     }
     m_movedown ++;
     moveDown();
+}
+void Joueur::moveAniamtion(int frame, std::vector<const char * > liste)
+{
+    if(frame % 32 == 0)
+    {
+        loadTexture(liste[0]);
+    }
+    else if(frame % 32 == 4)
+    {
+        loadTexture(liste[1]);
+    }
+    else if(frame % 32 == 8)
+    {
+        loadTexture(liste[2]);
+    }
+    else if(frame % 32 == 12)
+    {
+        loadTexture(liste[3]);
+    }
+    else if(frame % 32 == 16)
+    {
+        loadTexture(liste[4]);
+    }
+    else if(frame % 32 == 20)
+    {
+        loadTexture(liste[5]);
+    }
+    else if(frame % 32 == 24)
+    {
+        loadTexture(liste[6]);
+    }
+    else if(frame % 32 == 28)
+    {
+        loadTexture(liste[7]);
+    }
 }

@@ -12,6 +12,7 @@
         Joueur::Joueur(): m_Spown(sf::Vector2f(10 * 64.f, 7 * 64.f))
         {
             this -> m_Shero = loadSprite(m_ncf0, m_Spown);
+            makeListeAnimation();
             //std::cout << "player create " << this << std::endl;
         }
 

@@ -10,6 +10,7 @@
 #include <SFML/Graphics.hpp>
 
 #include <iostream>
+#include <vector>
 class Joueur
 {
     public:
@@ -85,6 +86,11 @@ class Joueur
                         m_orientationdown = true,
 
                         m_alive = true;
+            // std
+                std::vector<const char * >  m_AnimationUp,
+                                            m_AnimationDown,
+                                            m_AnimationRight,
+                                            m_AnimationLeft;
             
             // SFML/Graphics
                 sf::Texture m_Thero;
@@ -99,6 +105,9 @@ class Joueur
             void moveDown();
             void moveRight();
             void moveLeft();
+
+            void makeListeAnimation();
+            void moveAniamtion(int frame, std::vector<const char * > liste);
 };
 
 #endif
