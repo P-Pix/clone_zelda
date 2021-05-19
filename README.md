@@ -8,8 +8,8 @@ OS|Compatibility
 --|-------------
 Ubuntu 20.4|__Yes__
 
--[x] oui
--[x] non
+> oui
+>oui
 ## SFML
 ```
 sudo apt-get install libsfml-dev
