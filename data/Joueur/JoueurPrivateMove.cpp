@@ -25,6 +25,7 @@ void Joueur::moveDown()
 
 void Joueur::makeListeAnimation()
 {
+    // Liste aniamtion Down
     m_AnimationDown.push_back(m_ncf0);
     m_AnimationDown.push_back(m_ncf1);
     m_AnimationDown.push_back(m_ncf2);
@@ -34,6 +35,7 @@ void Joueur::makeListeAnimation()
     m_AnimationDown.push_back(m_ncf6);
     m_AnimationDown.push_back(m_ncf7);
 
+    // Liste aniamtion Left
     m_AnimationLeft.push_back(m_ncf0);
     m_AnimationLeft.push_back(m_ncf1);
     m_AnimationLeft.push_back(m_ncf2);
@@ -43,6 +45,7 @@ void Joueur::makeListeAnimation()
     m_AnimationLeft.push_back(m_ncf6);
     m_AnimationLeft.push_back(m_ncf7);
 
+    // Liste aniamtion Right
     m_AnimationRight.push_back(m_ncf0);
     m_AnimationRight.push_back(m_ncf1);
     m_AnimationRight.push_back(m_ncf2);
@@ -52,6 +55,7 @@ void Joueur::makeListeAnimation()
     m_AnimationRight.push_back(m_ncf6);
     m_AnimationRight.push_back(m_ncf7);
 
+    // Liste aniamtion Up
     m_AnimationUp.push_back(m_ncf0);
     m_AnimationUp.push_back(m_ncf1);
     m_AnimationUp.push_back(m_ncf2);
