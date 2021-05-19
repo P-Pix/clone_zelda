@@ -24,6 +24,10 @@ void GamesWindow::verificationWindow()
     canMove();
     swordAttack();
     collideMonster();
+    if(m_Player.isInvulnerable())
+    {
+        m_Player.frameInvulnerable();
+    }
     if(!m_Player.isAlive())
     {
         this -> m_Window -> close();

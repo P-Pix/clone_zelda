@@ -21,11 +21,23 @@ void Joueur::setHeart()
 }
 void Joueur::setDamage(int power)
 {
-    // creer les fram d'invulnérabilité
-    m_life -= power;
-    if(m_life <= 0)
+    if(!m_invulnerable)
     {
-        m_life = 0;
-        m_alive = false;
+        m_life -= power;
+        if(m_life <= 0)
+        {
+            m_life = 0;
+            m_alive = false;
+        }
+        m_invulnerable = true;
+        m_invulnerability = 0;
     }
+}
+void Joueur::frameInvulnerable()
+{
+    if(m_invulnerability == 120)
+    {
+        m_invulnerable = false;
+    }
+    m_invulnerability ++;
 }

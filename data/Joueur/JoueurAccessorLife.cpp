@@ -18,3 +18,7 @@ bool Joueur::isAlive()
 {
     return m_alive;
 }
+bool Joueur::isInvulnerable()
+{
+    return m_invulnerable;
+}

@@ -28,6 +28,7 @@ class Joueur
             int getLife();
             int getMaxLife();
             bool isAlive();
+            bool isInvulnerable();
 
             bool getOrientationUp();
             bool getOrientationDown();
@@ -44,6 +45,7 @@ class Joueur
             void setMaxLifeUp();
             void setHeart();
             void setDamage(int power);
+            void frameInvulnerable();
             
             void setPositionUp();
             void setPositionDown();
@@ -78,14 +80,16 @@ class Joueur
                     m_moveright = 0,
                     m_vitesse = 5,
                     m_maxlife = 80,
-                    m_life = 69;
+                    m_life = 69,
+                    m_invulnerability = 0;
                 
                 bool    m_orientationright = false,
                         m_orientationup = false,
                         m_orientationleft = false,
                         m_orientationdown = true,
 
-                        m_alive = true;
+                        m_alive = true,
+                        m_invulnerable = false;
             // std
                 std::vector<const char * >  m_AnimationUp,
                                             m_AnimationDown,
