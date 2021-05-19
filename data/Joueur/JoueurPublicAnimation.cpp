@@ -8,7 +8,7 @@
 
 void Joueur::animationMoveRight()
 {
-    moveAniamtion(m_moveright, m_AnimationDown);
+    moveAniamtion(m_moveright, m_AnimationRight);
     if(m_moveright == 32)
     {
         m_moveright = 0;
@@ -18,7 +18,7 @@ void Joueur::animationMoveRight()
 }
 void Joueur::animationMoveLeft()
 {
-    moveAniamtion(m_moveleft, m_AnimationDown);
+    moveAniamtion(m_moveleft, m_AnimationLeft);
     if(m_moveleft == 32)
     {
         m_moveleft = 0;
@@ -28,7 +28,7 @@ void Joueur::animationMoveLeft()
 }
 void Joueur::animationMoveUp()
 {
-    moveAniamtion(m_moveup, m_AnimationDown);
+    moveAniamtion(m_moveup, m_AnimationUp);
     if(m_moveup == 32)
     {
         m_moveup = 0;

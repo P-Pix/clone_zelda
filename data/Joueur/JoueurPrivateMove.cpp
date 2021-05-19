@@ -33,4 +33,31 @@ void Joueur::makeListeAnimation()
     m_AnimationDown.push_back(m_ncf5);
     m_AnimationDown.push_back(m_ncf6);
     m_AnimationDown.push_back(m_ncf7);
+
+    m_AnimationLeft.push_back(m_ncf0);
+    m_AnimationLeft.push_back(m_ncf1);
+    m_AnimationLeft.push_back(m_ncf2);
+    m_AnimationLeft.push_back(m_ncf3);
+    m_AnimationLeft.push_back(m_ncf4);
+    m_AnimationLeft.push_back(m_ncf5);
+    m_AnimationLeft.push_back(m_ncf6);
+    m_AnimationLeft.push_back(m_ncf7);
+
+    m_AnimationRight.push_back(m_ncf0);
+    m_AnimationRight.push_back(m_ncf1);
+    m_AnimationRight.push_back(m_ncf2);
+    m_AnimationRight.push_back(m_ncf3);
+    m_AnimationRight.push_back(m_ncf4);
+    m_AnimationRight.push_back(m_ncf5);
+    m_AnimationRight.push_back(m_ncf6);
+    m_AnimationRight.push_back(m_ncf7);
+
+    m_AnimationUp.push_back(m_ncf0);
+    m_AnimationUp.push_back(m_ncf1);
+    m_AnimationUp.push_back(m_ncf2);
+    m_AnimationUp.push_back(m_ncf3);
+    m_AnimationUp.push_back(m_ncf4);
+    m_AnimationUp.push_back(m_ncf5);
+    m_AnimationUp.push_back(m_ncf6);
+    m_AnimationUp.push_back(m_ncf7);
 }
