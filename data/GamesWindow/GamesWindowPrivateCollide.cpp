@@ -18,19 +18,19 @@ void GamesWindow::collideMonster()
             collidePosition(m_Player.getSprite(), m_listmob[x].getSprite());
             if(m_collidedown)
             {
-                m_Player.recoilDown();
+                m_Player.recoilUp();
             }
             else if(m_collideup)
             {
-                m_Player.recoilUp();
+                m_Player.recoilDown();
             }
             else if(m_collideright)
             {
-                m_Player.recoilRight();
+                m_Player.recoilLeft();
             }
             else if(m_collideleft)
             {
-                m_Player.recoilLeft();
+                m_Player.recoilRight();
             }
         }
         /*
@@ -65,25 +65,21 @@ void GamesWindow::collidePosition(sf::Sprite sprite1, sf::Sprite sprite2)
     m_collideup = false;
 
     
-    if(sprite1x <= sprite2x + 64 && sprite1x + 64 >= sprite2x && sprite1y <= sprite2y + 64 && sprite1y + 32 > sprite2y)
+    if(sprite1x < sprite2x + 64 && sprite1x + 64 > sprite2x && sprite1y < sprite2y + 64 && sprite1y > sprite2y)
     {
-        //x>=y avec y < 32 alors partie haut
         m_collideup = true;   
     }
-    else if(sprite1x <= sprite2x + 64 && sprite1x + 32 >= sprite2x && sprite1y <= sprite2y + 64 && sprite1y + 64 > sprite2y)
+    else if(sprite1x < sprite2x + 64 && sprite1x + 64 > sprite2x + 64 && sprite1y + 64 > sprite2y && sprite1y + 64 < sprite2y + 64)
     {
-        //y>=x avec x < 32 alors partie gauche
-        m_collideleft = true;
+        m_collideleft = true;                
     }
-    else if(sprite1x <= sprite2x + 64 && sprite1x + 64 >= sprite2x && sprite1y <= sprite2y + 64 && sprite1y + 64 > sprite2y)
+    else if(sprite1x < sprite2x && sprite1x + 64 > sprite2x && sprite1y < sprite2y + 64 && sprite1y + 64 > sprite2y)
     {
-        //x>=y avec x >= 32 alors partie droite
         m_collideright = true;
     }
-    else if(sprite1x <= sprite2x + 64 && sprite1x + 64 >= sprite2x && sprite1y <= sprite2y + 64 && sprite1y + 64 > sprite2y)
+    else if(sprite1x < sprite2x + 64 && sprite1x + 64 > sprite2x && sprite1y + 64 > sprite2y && sprite1y + 64 < sprite2y + 64)
     {
-        //y>=x avec y >= 32 alors partie bas
-        m_collidedown = true;                
+        m_collidedown = true;
     }
 }
 bool GamesWindow::collideSword(sf::Sprite sprite)

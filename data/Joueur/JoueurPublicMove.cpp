@@ -41,7 +41,7 @@ void Joueur::recoilLeft()
 }
 void Joueur::recoilRight()
 {
-    m_Shero.move(sf::Vector2f(6.f, 0.f));
+    m_Shero.move(sf::Vector2f(64.f, 0.f));
 }
 void Joueur::recoilUp()
 {
