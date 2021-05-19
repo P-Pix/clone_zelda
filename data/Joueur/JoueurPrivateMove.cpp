@@ -65,3 +65,38 @@ void Joueur::makeListeAnimation()
     m_AnimationUp.push_back(m_ncf6);
     m_AnimationUp.push_back(m_ncf7);
 }
+void Joueur::moveAniamtion(int frame, std::vector<const char * > liste)
+{
+    if(frame % 32 == 0)
+    {
+        loadTexture(liste[0]);
+    }
+    else if(frame % 32 == 4)
+    {
+        loadTexture(liste[1]);
+    }
+    else if(frame % 32 == 8)
+    {
+        loadTexture(liste[2]);
+    }
+    else if(frame % 32 == 12)
+    {
+        loadTexture(liste[3]);
+    }
+    else if(frame % 32 == 16)
+    {
+        loadTexture(liste[4]);
+    }
+    else if(frame % 32 == 20)
+    {
+        loadTexture(liste[5]);
+    }
+    else if(frame % 32 == 24)
+    {
+        loadTexture(liste[6]);
+    }
+    else if(frame % 32 == 28)
+    {
+        loadTexture(liste[7]);
+    }
+}
