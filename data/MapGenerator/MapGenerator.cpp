@@ -5,12 +5,6 @@
 **/
 
 #include "MapGenerator.hpp"
-#include <SFML/Graphics.hpp>
-
-#include <vector>
-#include <iostream>
-#include <fstream>
-#include <string>
 
 // Constructor / Destructor
 

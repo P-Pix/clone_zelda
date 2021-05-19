@@ -7,9 +7,9 @@
 #if !defined(__JOUEUR__)
 #define __JOUEUR__
 
-#include <iostream>
 #include <SFML/Graphics.hpp>
 
+#include <iostream>
 class Joueur
 {
     public:

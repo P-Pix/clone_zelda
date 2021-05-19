@@ -5,12 +5,6 @@
 **/
 
 #include "Heart.hpp"
-#include <iostream>
-#include <SFML/Graphics.hpp>
-
-#include <queue>
-#include <list>
-#include <vector>
 
 // Consructor / Destructor
 

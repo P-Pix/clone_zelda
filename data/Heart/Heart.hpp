@@ -10,8 +10,7 @@
 #include <SFML/Graphics.hpp>
 
 #include <vector>
-#include <list>
-
+#include <iostream>
 class Heart
 {
     public:

@@ -6,10 +6,6 @@
 
 #include "Joueur.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <vector>
-#include <iostream>
-
 void Joueur::setPositionDown()
 {
     float   x = m_Shero.getPosition().x,

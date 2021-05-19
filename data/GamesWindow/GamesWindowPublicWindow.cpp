@@ -6,10 +6,6 @@
 
 #include "GamesWindow.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <iostream>
-#include <vector>
-
 void GamesWindow::limitFramerate(int frame)
 {
     this -> m_Window -> setFramerateLimit(frame);

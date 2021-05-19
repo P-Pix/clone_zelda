@@ -6,10 +6,6 @@
 
 #include "Ground.hpp"
 
-#include <vector>
-#include <SFML/Graphics.hpp>
-#include <iostream>
-
 // Sprite
     std::vector<sf::Sprite> Ground::getListSprite()
     {

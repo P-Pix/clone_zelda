@@ -8,8 +8,11 @@
 #define __MAPGENERATOR__
 
 #include <SFML/Graphics.hpp>
+
 #include <vector>
 #include <string>
+#include <fstream>
+#include <iostream>
 
 class MapGenerator
 {
@@ -25,6 +28,14 @@ class MapGenerator
             std::vector<sf::Vector2f> getListPositionWallInt();
             std::vector<sf::Vector2f> getListPositionGroundInt();
         
+            bool hasTree();
+            bool hasGround();
+            bool hasCavern();
+            bool hasBloc();
+
+            int getMapX();
+            int getMapY();
+            
         // Function
             void generateMap();
             void setMapUp();
@@ -32,10 +43,6 @@ class MapGenerator
             void setMapRight();
             void setMapLeft();
 
-            bool hasTree();
-            bool hasGround();
-            bool hasCavern();
-            bool hasBloc();
 
     private:
         // Variables 

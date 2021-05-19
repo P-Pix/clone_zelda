@@ -6,10 +6,6 @@
 
 #include "Joueur.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <iostream>
-#include <vector>
-
 void Joueur::animationMoveRight()
 {
     if(m_moveright % 4 == 0)

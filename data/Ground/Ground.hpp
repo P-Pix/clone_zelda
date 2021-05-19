@@ -8,9 +8,9 @@
 #define __GROUND__
 
 #include <SFML/Graphics.hpp>
+
 #include <iostream>
 #include <vector>
-
 class Ground
 {
     public:

@@ -6,10 +6,6 @@
 
 #include "Joueur.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <vector>
-#include <iostream>
-
 sf::Sprite Joueur::loadSprite(const char *name, sf::Vector2f vector)
 {
     sf::Sprite sprite;

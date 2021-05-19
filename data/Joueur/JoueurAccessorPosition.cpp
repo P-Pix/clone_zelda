@@ -6,10 +6,6 @@
 
 #include "Joueur.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <vector>
-#include <iostream>
-
 sf::Vector2f Joueur::getPosition()
 {
     return m_Shero.getPosition();

@@ -6,12 +6,6 @@
 
 #include "MapGenerator.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <vector>
-#include <iostream>
-#include <fstream>
-#include <string>
-
 std::vector<sf::Vector2f> MapGenerator::getListPositionWallExt()
 {
     return m_WallExt;

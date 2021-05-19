@@ -6,10 +6,6 @@
 
 #include "Joueur.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <iostream>
-#include <vector>
-
 void Joueur::setMaxLifeUp()
 {
     m_maxlife += 4;

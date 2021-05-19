@@ -6,10 +6,6 @@
 
 #include "Joueur.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <vector>
-#include <iostream>
-
 bool Joueur::getOrientationDown()
 {
     return m_orientationdown;

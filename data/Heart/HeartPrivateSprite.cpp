@@ -6,10 +6,6 @@
 
 #include "Heart.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <iostream>
-#include <vector>
-
 sf::Sprite Heart::setSpritePosition(sf::Sprite sprite, sf::Vector2f position)
 {
     sprite.setPosition(position);

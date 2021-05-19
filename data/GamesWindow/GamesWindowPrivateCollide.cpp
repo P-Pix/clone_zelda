@@ -6,10 +6,6 @@
 
 #include "GamesWindow.hpp"
 
-#include <vector>
-#include <SFML/Graphics.hpp>
-#include <iostream>
-
 void GamesWindow::collideMonster()
 {
     makeListMonster();

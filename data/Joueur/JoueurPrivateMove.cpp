@@ -6,10 +6,6 @@
 
 #include "Joueur.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <vector>
-#include <iostream>
-
 void Joueur::moveLeft()
 {
     m_Shero.move(sf::Vector2f(m_vitesse * -1.f, 0.f));

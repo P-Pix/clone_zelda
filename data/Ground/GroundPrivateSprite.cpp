@@ -6,10 +6,6 @@
 
 #include "Ground.hpp"
 
-#include <iostream>
-#include <SFML/Graphics.hpp>
-#include <vector>
-
 void Ground::initSprite()
 {
     loadTexture();

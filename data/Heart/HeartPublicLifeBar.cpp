@@ -6,10 +6,6 @@
 
 #include "Heart.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <iostream>
-#include <vector>
-
 void Heart::updateHeart(int life, int maxlife)
 {
     int numberheart = life / 4,

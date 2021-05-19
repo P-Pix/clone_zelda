@@ -5,9 +5,6 @@
 **/
 
 #include "Ground.hpp"
-#include <SFML/Graphics.hpp>
-#include <iostream>
-#include <vector>
 
 // Constructor / Destructor
 

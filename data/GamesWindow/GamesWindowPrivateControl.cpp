@@ -6,10 +6,6 @@
 
 #include "GamesWindow.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <vector>
-#include <iostream>
-
 void GamesWindow::swordAttack()
 {
     if(m_Sword.getExecution())

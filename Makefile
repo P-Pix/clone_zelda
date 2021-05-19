@@ -53,7 +53,7 @@ DATA 	=	data/GamesWindow/GamesWindow.cpp\
 			data/Wall/Wall.cpp\
 			\
 
-NAME	=	main
+NAME	=	ZeldaLike
 
 val:
 	@(valgrind g++ -o $(NAME) $(OBJ) $(DATA) $(MODULE)) > /dev/null

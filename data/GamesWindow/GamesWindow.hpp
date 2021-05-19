@@ -8,7 +8,9 @@
 #define __GAMESWINDOW__
 
 #include <SFML/Graphics.hpp>
+
 #include <iostream>
+#include <vector>
 
 #include "../Joueur/Joueur.hpp"
 #include "../Heart/Heart.hpp"

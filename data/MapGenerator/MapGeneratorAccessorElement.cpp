@@ -5,12 +5,6 @@
 **/
 
 #include "MapGenerator.hpp"
-#include <SFML/Graphics.hpp>
-
-#include <vector>
-#include <iostream>
-#include <fstream>
-#include <string>
 
 bool MapGenerator::hasTree()
 {
@@ -27,4 +21,12 @@ bool MapGenerator::hasCavern()
 bool MapGenerator::hasBloc()
 {
     return m_bloc;
+}
+int MapGenerator::getMapX()
+{
+    return m_x;
+}
+int MapGenerator::getMapY()
+{
+    return m_y;
 }

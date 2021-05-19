@@ -6,10 +6,6 @@
 
 #include "Ground.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <vector>
-#include <iostream>
-
 void Ground::setPosition(sf::Vector2f position)
 {
     this -> m_Sprite.setPosition(position);

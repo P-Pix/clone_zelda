@@ -5,8 +5,6 @@
 **/
 
 #include "Joueur.hpp"
-#include <iostream>
-#include <SFML/Graphics.hpp>
 
 // Constructor / Destructor
 

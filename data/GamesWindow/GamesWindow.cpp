@@ -6,10 +6,6 @@
 
 #include "GamesWindow.hpp"
 
-#include <iostream>
-#include <SFML/Graphics.hpp>
-#include <vector>
-
 // Constructor / Destructor
 
     // Constructor

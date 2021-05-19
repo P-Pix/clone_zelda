@@ -6,10 +6,6 @@
 
 #include "GamesWindow.hpp"
 
-#include <SFML/Graphics.hpp>
-#include <iostream>
-#include <vector>
-
 void GamesWindow::drawElement(sf::Sprite sprite)
 {
     this -> m_Window -> draw(sprite);
