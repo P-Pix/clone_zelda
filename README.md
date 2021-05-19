@@ -4,9 +4,9 @@ Goal : Create a Zelda like game
 You need to install SFML for C++
 
 ## Compatibilty
-__OS__|_Compatibility_
+OS|Compatibility
 --|-------------
-Ubuntu 20.4|Yes
+Ubuntu 20.4|__Yes__
 ## SFML
 ```
 sudo apt-get install libsfml-dev
