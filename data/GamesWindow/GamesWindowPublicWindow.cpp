@@ -14,7 +14,7 @@ void GamesWindow::limitFramerate(int frame)
 void GamesWindow::updateWindow()
 {
     this -> m_Window -> clear();
-    modifMonster();
+    mooveMonster();
     allDrawWindow();
     this -> m_Window -> display();
 }

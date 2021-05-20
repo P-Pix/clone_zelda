@@ -16,6 +16,7 @@
             this -> m_Window = new sf::RenderWindow(sf::VideoMode(m_windowwidth, m_windowheight), "Zelda Like");
             setMapUpdate();
             modifiHeart();
+            makeListMonster();
             //std::cout << "window create " << this << std::endl;
         }
 

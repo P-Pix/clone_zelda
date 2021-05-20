@@ -1,7 +1,12 @@
+/**
+*** Guillaume LEMONNIER
+*** Developpement autonome
+*** Tout droits reservé
+**/
+
 #include "GamesWindow.hpp"
 
-
-void GamesWindow::modifMonster()
+void GamesWindow::mooveMonster()
 {
     m_Mob1.nextPosition();
     if(!previewCollide(m_Mob1.getPosition(), m_Mob1.getNextPosition()))

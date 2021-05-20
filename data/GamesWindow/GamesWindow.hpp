@@ -76,7 +76,6 @@ class GamesWindow
 
                 Sword m_Sword;
 
-
         //Function
             // Map
                 void setMapUpdate();
@@ -96,7 +95,7 @@ class GamesWindow
 
             // modification
                 void modifiHeart();
-                void modifMonster();
+                void mooveMonster();
                 void makeListMonster();
 
             // collide
