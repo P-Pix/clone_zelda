@@ -49,10 +49,24 @@ DATA 	=	data/GamesWindow/GamesWindow.cpp\
 			data/MapGenerator/MapGeneratorPublicCreateMap.cpp\
 			\
 			data/Monster/Monster.cpp\
+			data/Monster/MonsterAccessor.cpp\
+			data/Monster/MonsterPrivatePatern.cpp\
+			data/Monster/MonsterPrivateSprite.cpp\
+			data/Monster/MonsterPublicLife.cpp\
+			data/Monster/MonsterPublicMoove.cpp\
 			\
 			data/Sword/Sword.cpp\
+			data/Sword/SwordAccessor.cpp\
+			data/Sword/SwordPrivateAnimation.cpp\
+			data/Sword/SwordPrivateSprite.cpp\
+			data/Sword/SwordPublicAnimation.cpp\
+			data/Sword/SwordPublicOrientation.cpp\
+			data/Sword/SwordPublicPower.cpp\
 			\
 			data/Wall/Wall.cpp\
+			data/Wall/WallAccessor.cpp\
+			data/Wall/WallPrivateSprite.cpp\
+			data/Wall/WallPublicPosition.cpp\
 			\
 
 NAME	=	ZeldaLike
