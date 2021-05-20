@@ -22,3 +22,7 @@ std::vector<sf::Vector2f> MapGenerator::getListPositionGroundInt()
 {
     return m_GroundInt;
 }
+std::vector<std::vector<char>> MapGenerator::getMap()
+{
+    return m_map;
+}

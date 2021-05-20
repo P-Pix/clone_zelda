@@ -19,6 +19,7 @@ void MapGenerator::generateMap()
     m_GroundExt.clear();
     m_WallInt.clear();
     m_GroundInt.clear();
+    m_map.clear();
 
     m_bloc = false;
     m_cavern = false;
@@ -27,6 +28,7 @@ void MapGenerator::generateMap()
 
     for(int positiony = 1; positiony < 11; positiony ++)
     {
+        std::vector<char> ligne;
         for(int positionx = 0; positionx < 18; positionx ++)
         {
             ifmap.get(lettre);
@@ -54,9 +56,12 @@ void MapGenerator::generateMap()
                 m_GroundInt.push_back(sf::Vector2f(positionx * 64.f, positiony * 64.f));
                 m_cavern = true;           
             }
+            ligne.push_back(lettre);
         }
         //std::cout << std::endl;
+        m_map.push_back(ligne);
     }
+    ifmap.close();
 }
 
 void MapGenerator::setMapDown()

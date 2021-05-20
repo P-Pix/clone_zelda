@@ -27,6 +27,8 @@ class MapGenerator
 
             std::vector<sf::Vector2f> getListPositionWallInt();
             std::vector<sf::Vector2f> getListPositionGroundInt();
+
+            std::vector<std::vector<char>> getMap();
         
             bool hasTree();
             bool hasGround();
@@ -60,6 +62,8 @@ class MapGenerator
                                             m_WallInt,
                                             m_GroundInt,
                                             m_GroundExt;
+
+                std::vector<std::vector<char>> m_map;
         
                 std::string *m_String;
                 std::fstream    *m_Fmap;

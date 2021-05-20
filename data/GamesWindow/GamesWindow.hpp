@@ -40,9 +40,7 @@ class GamesWindow
     private:
         //Variable
             // basic
-                bool    m_canmove       = true,
-
-                        m_collidedown   = false,
+                bool    m_collidedown   = false,
                         m_collideup     = false,
                         m_collideright  = false,
                         m_collideleft   = false;
@@ -88,7 +86,6 @@ class GamesWindow
 
             // control
                 void pollEvent();
-                void canMove();
                 void swordAttack();
 
             // draw

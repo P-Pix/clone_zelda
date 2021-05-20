@@ -21,7 +21,6 @@ void GamesWindow::updateWindow()
 void GamesWindow::verificationWindow()
 {
     switchMap();
-    canMove();
     swordAttack();
     collideMonster();
     if(m_Player.isInvulnerable())
