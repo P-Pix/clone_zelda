@@ -12,19 +12,19 @@ void GamesWindow::swordAttack()
     {
         if(collideSword(m_Mob1.getPosition()))
         {
-            if(m_Player.getOrientationDown())
+            if(m_Player.getOrientationDown() && !previewCollide(m_Mob1.getPosition(), sf::Vector2f(0.f, 64.f)))
             {
                 m_Mob1.recoilDown();
             }
-            else if(m_Player.getOrientationUp())
+            else if(m_Player.getOrientationUp() && !previewCollide(m_Mob1.getPosition(), sf::Vector2f(0.f, -64.f)))
             {
                 m_Mob1.recoilUp();
             }
-            else if(m_Player.getOrientationRight())
+            else if(m_Player.getOrientationRight() && !previewCollide(m_Mob1.getPosition(), sf::Vector2f(64.f, 0.f)))
             {
                 m_Mob1.recoilRight();
             }
-            else if(m_Player.getOrientationLeft())
+            else if(m_Player.getOrientationLeft() && !previewCollide(m_Mob1.getPosition(), sf::Vector2f(-64.f, 0.f)))
             {
                 m_Mob1.recoilLeft();
             }

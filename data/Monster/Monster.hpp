@@ -28,6 +28,7 @@ class Monster
 
             // Position
                 sf::Vector2f getPosition();
+                sf::Vector2f getNextPosition();
 
             // Power
                 int getPower();
@@ -39,6 +40,7 @@ class Monster
             // Attribution
                 void setPower(int power);
                 void moove();
+                void nextPosition();
                 void setDamage(int power);
 
                 void recoilUp();

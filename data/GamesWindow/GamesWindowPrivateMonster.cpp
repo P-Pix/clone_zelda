@@ -3,7 +3,11 @@
 
 void GamesWindow::modifMonster()
 {
-    m_Mob1.moove();
+    m_Mob1.nextPosition();
+    if(!previewCollide(m_Mob1.getPosition(), m_Mob1.getNextPosition()))
+    {
+        m_Mob1.moove();
+    }
 }
 void GamesWindow::makeListMonster()
 {
