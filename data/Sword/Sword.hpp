@@ -22,6 +22,8 @@ class Sword
 
         // Accessor
             sf::Sprite getSprite();
+            sf::Vector2f getPosition();
+            
             int getPower();
             bool getExecution();
 

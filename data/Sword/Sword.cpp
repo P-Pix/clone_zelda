@@ -31,6 +31,10 @@
         {
             return m_Sprite;
         }
+        sf::Vector2f Sword::getPosition()
+        {
+            return m_Sprite.getPosition();
+        }
     
     // Power
         int Sword::getPower()

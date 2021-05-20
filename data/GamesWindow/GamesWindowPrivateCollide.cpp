@@ -11,11 +11,11 @@ void GamesWindow::collideMonster()
     makeListMonster();
     for(int x = 0; x < m_listmob.size(); x ++)
     {
-        if(collideUser(m_Player.getPosition(), m_listmob[x].getPosition()))
+        if(collideTwoSprite64x64(m_Player.getPosition(), m_listmob[x].getPosition()))
         {
             m_Player.setDamage(m_listmob[x].getPower());
             m_Heart.updateHeart(m_Player.getLife(), m_Player.getMaxLife());
-            collidePosition(m_Player.getSprite(), m_listmob[x].getSprite());
+            collidePosition(m_Player.getPosition(), m_listmob[x].getPosition());
             if(m_collidedown && !previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, -64.f)))
             {
                 m_Player.recoilUp();
@@ -41,23 +41,23 @@ void GamesWindow::collideMonster()
         */
     }
 }
-bool GamesWindow::collideUser(sf::Vector2f user, sf::Vector2f sprite)
+bool GamesWindow::collideTwoSprite64x64(sf::Vector2f sprite1, sf::Vector2f sprite2)
 {
-    int sprite1x = user.x,
-        sprite1y = user.y,
+    int sprite1x = sprite1.x,
+        sprite1y = sprite1.y,
 
-        sprite2x = sprite.x,
-        sprite2y = sprite.y;
+        sprite2x = sprite2.x,
+        sprite2y = sprite2.y;
 
     return (sprite1x <= sprite2x + 64 && sprite1x + 64 >= sprite2x && sprite1y <= sprite2y + 64 && sprite1y + 64 > sprite2y);
 }
-void GamesWindow::collidePosition(sf::Sprite sprite1, sf::Sprite sprite2)
+void GamesWindow::collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2)
 {
-    int sprite1x = sprite1.getPosition().x,
-        sprite1y = sprite1.getPosition().y,
+    int sprite1x = sprite1.x,
+        sprite1y = sprite1.y,
 
-        sprite2x = sprite2.getPosition().x,
-        sprite2y = sprite2.getPosition().y;
+        sprite2x = sprite2.x,
+        sprite2y = sprite2.y;
 
     m_collidedown = false;
     m_collideleft = false;
@@ -82,13 +82,13 @@ void GamesWindow::collidePosition(sf::Sprite sprite1, sf::Sprite sprite2)
         m_collidedown = true;
     }
 }
-bool GamesWindow::collideSword(sf::Sprite sprite)
+bool GamesWindow::collideSword(sf::Vector2f sprite)
 {
-    int sprite1x = m_Sword.getSprite().getPosition().x,
-        sprite1y = m_Sword.getSprite().getPosition().y,
+    int sprite1x = m_Sword.getPosition().x,
+        sprite1y = m_Sword.getPosition().y,
 
-        sprite2x = sprite.getPosition().x,
-        sprite2y = sprite.getPosition().y;
+        sprite2x = sprite.x,
+        sprite2y = sprite.y;
 
     if(m_Sword.getAttackDown())
     {
@@ -108,11 +108,11 @@ bool GamesWindow::collideSword(sf::Sprite sprite)
     }
     return false;
 }
-bool GamesWindow::collideWall(sf::Vector2f user, std::vector<sf::Vector2f> wall)
+bool GamesWindow::collideWall(sf::Vector2f sprite, std::vector<sf::Vector2f> wall)
 {
     for(int x = 0; x < wall.size(); x ++)
     {
-        if(collideUser(user, wall[x]))
+        if(collideTwoSprite64x64(sprite, wall[x]))
         {
             return true;
         }

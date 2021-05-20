@@ -14,11 +14,13 @@ MODULE	=	-lsfml-window\
 
 DATA 	=	data/GamesWindow/GamesWindow.cpp\
 			data/GamesWindow/GamesWindowAccessor.cpp\
-			data/GamesWindow/GamesWindowPublicWindow.cpp\
-			data/GamesWindow/GamesWindowPrivateControl.cpp\
 			data/GamesWindow/GamesWindowPrivateCollide.cpp\
+			data/GamesWindow/GamesWindowPrivateControl.cpp\
 			data/GamesWindow/GamesWindowPrivateDraw.cpp\
+			data/GamesWindow/GamesWindowPrivateHeart.cpp\
 			data/GamesWindow/GamesWindowPrivateMap.cpp\
+			data/GamesWindow/GamesWindowPrivateMonster.cpp\
+			data/GamesWindow/GamesWindowPublicWindow.cpp\
 			\
 			data/Ground/Ground.cpp\
 			data/Ground/GroundPrivateSprite.cpp\

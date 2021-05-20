@@ -100,9 +100,9 @@ class GamesWindow
                 void makeListMonster();
 
             // collide
-                bool collideUser(sf::Vector2f user, sf::Vector2f sprite);
-                void collidePosition(sf::Sprite sprite1, sf::Sprite sprite2);
-                bool collideSword(sf::Sprite sprite);
+                bool collideTwoSprite64x64(sf::Vector2f sprite1, sf::Vector2f sprite2);
+                void collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2);
+                bool collideSword(sf::Vector2f sprite);
                 bool collideWall(sf::Vector2f user, std::vector<sf::Vector2f> wall);
                 void collideMonster();
                 bool previewCollide(sf::Vector2f user, sf::Vector2f moove);

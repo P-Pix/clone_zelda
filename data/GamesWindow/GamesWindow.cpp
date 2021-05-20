@@ -24,19 +24,3 @@
         {
             //std::cout << "window delete " << this << std::endl;
         }
-
-// modification
-    void GamesWindow::modifiHeart()
-    {
-        this -> m_Heart.updateHeart(m_Player.getLife(), m_Player.getMaxLife());
-    }
-    void GamesWindow::modifMonster()
-    {
-        m_Mob1.moove();
-    }
-    void GamesWindow::makeListMonster()
-    {
-        m_listmob.clear();
-
-        m_listmob.push_back(m_Mob1);
-    }

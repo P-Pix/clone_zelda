@@ -10,7 +10,7 @@ void GamesWindow::swordAttack()
 {
     if(m_Sword.getExecution())
     {
-        if(collideSword(m_Mob1.getSprite()))
+        if(collideSword(m_Mob1.getPosition()))
         {
             if(m_Player.getOrientationDown())
             {
