@@ -9,6 +9,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <vector>
 //#include "Ai.hpp"
 
 class Monster
@@ -47,6 +48,8 @@ class Monster
                 void recoilDown();
                 void recoilRight();
                 void recoilLeft();
+
+                void createPaternRelative(sf::Vector2f target);
     
     private:
         // Variable
@@ -56,7 +59,8 @@ class Monster
 
                     m_life = 10;
 
-                bool m_alive = true;
+                bool    m_alive = true,
+                        m_turnxy = true;
                 
                 const char *m_monster = "skin/monster1.png";
 
@@ -68,7 +72,7 @@ class Monster
                 sf::Texture m_Texture;
 
         // Function
-            void createPatern();
+            void createPaternStatic();
             void loadTexture(const char *name);
             void loadSprite();
             void initSprite();

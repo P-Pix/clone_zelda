@@ -36,7 +36,7 @@ void GamesWindow::collideMonster()
         /*
         if(!m_listmob[x].isAlive())
         {
-            m_listmob[x].~Monster();
+            this -> m_listmob[x] = new Monster;
         }
         */
     }

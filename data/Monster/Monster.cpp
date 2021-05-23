@@ -12,7 +12,7 @@
         Monster::Monster()
         {
             //std::cout << "Monster create " << this << std::endl;
-            createPatern();
+            createPaternStatic();
             initSprite();
         }
 
