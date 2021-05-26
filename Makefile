@@ -12,7 +12,12 @@ MODULE	=	-lsfml-window\
 			-lsfml-system\
 			-lsfml-graphics\
 
-DATA 	=	data/GamesWindow/GamesWindow.cpp\
+DATA 	=	data/GainKill/GainKill.cpp\
+			data/GainKill/GainKillAccessor.cpp\
+			data/GainKill/GainKillPrivateSprite.cpp\
+			data/GainKill/GainKillPublicChose.cpp\
+			\
+			data/GamesWindow/GamesWindow.cpp\
 			data/GamesWindow/GamesWindowAccessor.cpp\
 			data/GamesWindow/GamesWindowPrivateCollide.cpp\
 			data/GamesWindow/GamesWindowPrivateControl.cpp\

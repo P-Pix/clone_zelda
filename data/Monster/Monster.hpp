@@ -10,6 +10,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <vector>
+#include "../GainKill/GainKill.hpp"
 //#include "Ai.hpp"
 
 class Monster
@@ -70,6 +71,9 @@ class Monster
             // SFML
                 sf::Sprite  m_Sprite;
                 sf::Texture m_Texture;
+            
+            // class
+                GainKill Gain;
 
         // Function
             void createPaternStatic();
