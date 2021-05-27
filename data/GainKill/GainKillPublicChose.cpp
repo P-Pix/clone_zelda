@@ -27,7 +27,7 @@ void GainKill::choseGain(sf::Vector2f positionmonster)
         m_valorgainlife = 0;
         m_valorgainrubis = 5;
     }
-    else if(valeur <= 15)
+    else if(valeur == 15)
     {
         loadSprite(m_redrubisname);
         m_valorgainlife = 0;
