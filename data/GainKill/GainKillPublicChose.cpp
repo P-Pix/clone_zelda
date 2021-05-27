@@ -38,7 +38,6 @@ void GainKill::choseGain(sf::Vector2f positionmonster)
         m_valorgainlife = 0;
         m_valorgainrubis = 0;
     }
-    m_valorgainlife = 4;
     std::cout << valeur << std::endl;
     setPostionSprite(positionmonster);
 }

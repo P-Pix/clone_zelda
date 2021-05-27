@@ -40,11 +40,13 @@ DATA 	=	data/GainKill/GainKill.cpp\
 			data/Joueur/JoueurAccessorLife.cpp\
 			data/Joueur/JoueurAccessorOrientation.cpp\
 			data/Joueur/JoueurAccessorPosition.cpp\
+			data/Joueur/JoueurAccessorRubis.cpp\
 			data/Joueur/JoueurPrivateMove.cpp\
 			data/Joueur/JoueurPrivateSprite.cpp\
 			data/Joueur/JoueurPublicAnimation.cpp\
 			data/Joueur/JoueurPublicLife.cpp\
 			data/Joueur/JoueurPublicMove.cpp\
+			data/Joueur/JoueurPublicRubis.cpp\
 			data/Joueur/JoueurPublicSwitchOrientation.cpp\
 			\
 			data/MapGenerator/MapGenerator.cpp\
@@ -58,6 +60,10 @@ DATA 	=	data/GainKill/GainKill.cpp\
 			data/Monster/MonsterPrivateSprite.cpp\
 			data/Monster/MonsterPublicLife.cpp\
 			data/Monster/MonsterPublicMoove.cpp\
+			\
+			data/Rubis/Rubis.cpp\
+			data/Rubis/RubisAccessor.cpp\
+			data/Rubis/RubisPublicUpdate.cpp\
 			\
 			data/Sword/Sword.cpp\
 			data/Sword/SwordAccessor.cpp\

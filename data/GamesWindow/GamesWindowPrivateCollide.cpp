@@ -35,6 +35,7 @@ void GamesWindow::collideMonster()
         else if(collideTwoSprite64x64(m_Player.getPosition(), m_listmob[x].getPosition()) && !m_listmob[x].isAlive())
         {
             m_Player.setHeart(m_listmob[x].getGainLifeValor());
+            m_Player.updateRubis(m_listmob[x].getGainRubisValor());
         }
         /*
         if(!m_listmob[x].isAlive())

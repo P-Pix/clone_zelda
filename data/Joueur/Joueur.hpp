@@ -11,7 +11,9 @@
 
 #include <iostream>
 #include <vector>
+
 #include "../Heart/Heart.hpp"
+#include "../Rubis/Rubis.hpp"
 class Joueur
 {
     public:
@@ -41,6 +43,11 @@ class Joueur
 
             std::vector<sf::Sprite> getListSpriteHeart();
             sf::Sprite getSpriteHeart(int number);
+
+            sf::Sprite getLogoRubis();
+            int getRubisHundred();
+            int getRubisTen();
+            int getRubisUnit();
         
         // Function
             void setOrientationUp();
@@ -67,6 +74,8 @@ class Joueur
             void recoilUp();
             void recoilRight();
             void recoilLeft();
+
+            void updateRubis(int valor);
         
     private:
         // Varible
@@ -109,6 +118,7 @@ class Joueur
             
             // class
                 Heart m_Heart;
+                Rubis m_Rubis;
 
         //Function
             sf::Sprite loadSprite(const char *name, sf::Vector2f vector);

@@ -9,7 +9,7 @@
 void GamesWindow::mooveMonster()
 {
     m_Mob1.nextPosition();
-    if(!previewCollide(m_Mob1.getPosition(), m_Mob1.getNextPosition()))
+    if(!previewCollide(m_Mob1.getPosition(), m_Mob1.getNextPosition()) && m_Mob1.isAlive())
     {
         m_Mob1.moove();
     }
