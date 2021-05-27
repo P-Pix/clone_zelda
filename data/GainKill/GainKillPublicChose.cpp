@@ -36,8 +36,7 @@ void GainKill::choseGain(sf::Vector2f positionmonster)
     }
     else 
     {
-        loadSprite(m_emptyname);
-        m_gain = false;
+        isGet();
     }
     std::cout << valeur << std::endl;
     setPostionSprite(positionmonster);
