@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 #include "../Joueur/Joueur.hpp"
 #include "../Wall/Wall.hpp"
@@ -48,7 +49,8 @@ class GamesWindow
                             m_windowheight  = 704;
 
                 const char  *m_blocname     = "skin/bloc.png",
-                            *m_cavernname   = "skin/cavern.png";
+                            *m_cavernname   = "skin/cavern.png",
+                            *m_fontname     = "font/SuperLegendBoy.ttf";
             
             // std
                 std::vector<Monster> m_listmob;
@@ -86,8 +88,11 @@ class GamesWindow
 
             // draw
                 void drawSword();
-                void drawElement(sf::Sprite sprite);
+                void drawSprite(sf::Sprite sprite);
+                void drawText(sf::Text Text);
                 void drawVector(std::vector<sf::Sprite> vector);
+                void drawRubis();
+                void drawMap();
                 void allDrawWindow();
 
             // modification

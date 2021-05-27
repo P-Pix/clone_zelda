@@ -10,6 +10,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include <string>
 
 class Rubis
 {
@@ -20,9 +21,11 @@ class Rubis
         
         // Accessor
             sf::Sprite getLogoRubis();
-            int getRubisHundred();
-            int getRubisTen();
-            int getRubisUnit();
+            sf::Text getRubisHundred();
+            sf::Text getRubisTen();
+            sf::Text getRubisUnit();
+
+            int getTotalRubis();
         
         // Function
             void updateRubis(int valorrubis);
@@ -35,10 +38,21 @@ class Rubis
             
             unsigned int    m_totalrubis = 0;
 
-            const char *m_nameimage = "skin/greenrubis.png";
+            const char  *m_nameimage = "skin/greenrubis.png",
+                        *m_namefont = "font/SuperLegendBoy.ttf";
 
             sf::Sprite m_Sprite;
             sf::Texture m_Texture;
+            sf::Font m_Font;
+            sf::Text    m_Text100,
+                        m_Text10,
+                        m_Text1;
+        // Function
+            void generateText();
+
+            void changeText100();
+            void changeText10();
+            void changeText1();
 };
 
 #endif

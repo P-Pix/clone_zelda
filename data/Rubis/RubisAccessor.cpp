@@ -10,15 +10,19 @@ sf::Sprite Rubis::getLogoRubis()
 {
     return m_Sprite;
 }
-int Rubis::getRubisHundred()
+sf::Text Rubis::getRubisHundred()
 {
-    return m_hunderedrubis;
+    return m_Text100;
 }
-int Rubis::getRubisTen()
+sf::Text Rubis::getRubisTen()
 {
-    return m_tenrubis;
+    return m_Text10;
 }
-int Rubis::getRubisUnit()
+sf::Text Rubis::getRubisUnit()
 {
-    return m_unitrubis;
+    return m_Text1;
+}
+int Rubis::getTotalRubis()
+{
+    return m_totalrubis;
 }

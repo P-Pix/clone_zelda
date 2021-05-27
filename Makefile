@@ -63,6 +63,7 @@ DATA 	=	data/GainKill/GainKill.cpp\
 			\
 			data/Rubis/Rubis.cpp\
 			data/Rubis/RubisAccessor.cpp\
+			data/Rubis/RubisPrivateText.cpp\
 			data/Rubis/RubisPublicUpdate.cpp\
 			\
 			data/Sword/Sword.cpp\

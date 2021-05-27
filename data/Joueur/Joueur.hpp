@@ -40,14 +40,17 @@ class Joueur
             bool getOrientationLeft();
             bool getOrientationRight();
             int getOrientationValue();
+            
+            // Heart
+                std::vector<sf::Sprite> getListSpriteHeart();
+                sf::Sprite getSpriteHeart(int number);
 
-            std::vector<sf::Sprite> getListSpriteHeart();
-            sf::Sprite getSpriteHeart(int number);
-
-            sf::Sprite getLogoRubis();
-            int getRubisHundred();
-            int getRubisTen();
-            int getRubisUnit();
+            // Rubis
+                sf::Sprite getLogoRubis();
+                sf::Text getRubisHundred();
+                sf::Text getRubisTen();
+                sf::Text getRubisUnit();
+                int getTotalRubis();
         
         // Function
             void setOrientationUp();

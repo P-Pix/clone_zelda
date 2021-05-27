@@ -10,15 +10,19 @@ sf::Sprite Joueur::getLogoRubis()
 {
     return m_Rubis.getLogoRubis();
 }
-int Joueur::getRubisHundred()
+sf::Text Joueur::getRubisHundred()
 {
     return m_Rubis.getRubisHundred();
 }
-int Joueur::getRubisTen()
+sf::Text Joueur::getRubisTen()
 {
     return m_Rubis.getRubisTen();
 }
-int Joueur::getRubisUnit()
+sf::Text Joueur::getRubisUnit()
 {
     return m_Rubis.getRubisUnit();
+}
+int Joueur::getTotalRubis()
+{
+    return m_Rubis.getTotalRubis();
 }
