@@ -11,10 +11,10 @@ void GamesWindow::collideMonster()
     makeListMonster();
     for(int x = 0; x < m_listmob.size(); x ++)
     {
-        if(collideTwoSprite64x64(m_Player.getPosition(), m_listmob[x].getPosition()) && m_listmob[x].isAlive())
+        if(collideTwoSprite64x64(m_Player.getPosition(), m_Mob1.getPosition()) && m_Mob1.isAlive())
         {
-            m_Player.setDamage(m_listmob[x].getPower());
-            collidePosition(m_Player.getPosition(), m_listmob[x].getPosition());
+            m_Player.setDamage(m_Mob1.getPower());
+            collidePosition(m_Player.getPosition(), m_Mob1.getPosition());
             if(m_collidedown && !previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, -64.f)))
             {
                 m_Player.recoilUp();
@@ -32,10 +32,11 @@ void GamesWindow::collideMonster()
                 m_Player.recoilRight();
             }
         }
-        else if(collideTwoSprite64x64(m_Player.getPosition(), m_listmob[x].getPosition()) && !m_listmob[x].isAlive())
+        else if(collideTwoSprite64x64(m_Player.getPosition(), m_Mob1.getPosition()) && !m_Mob1.isAlive() && m_Mob1.thereGain())
         {
-            m_Player.setHeart(m_listmob[x].getGainLifeValor());
-            m_Player.updateRubis(m_listmob[x].getGainRubisValor());
+            m_Player.setHeart(m_Mob1.getGainLifeValor());
+            m_Player.updateRubis(m_Mob1.getGainRubisValor());
+            m_Mob1.gainIsGet();
         }
         /*
         if(!m_listmob[x].isAlive())

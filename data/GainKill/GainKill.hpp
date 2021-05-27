@@ -23,16 +23,21 @@ class GainKill
             sf::Sprite getSpriteGain();
             int getValorGainLife();
             int getValorGainRubis();
+            bool thereGain();
 
         // Chose element gain
             void choseGain(sf::Vector2f positionmonster);
+            void isGet();
 
     private:
         // Variable
+            bool    m_gain = false;
+
             const char  *m_heartname = "skin/heartgain.png",
                         *m_bluerubisname = "skin/bluerubis.png",
                         *m_greenrubisname = "skin/greenrubis.png",
-                        *m_redrubisname = "skin/redrubis.png";
+                        *m_redrubisname = "skin/redrubis.png",
+                        *m_emptyname = "skin/empty.png";
             
             int m_valorgainrubis = 0,
                 m_valorgainlife = 0;

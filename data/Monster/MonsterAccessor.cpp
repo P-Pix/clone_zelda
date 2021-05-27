@@ -28,3 +28,7 @@ int Monster::getGainRubisValor()
 {
     return m_Gain.getValorGainRubis();
 }
+bool Monster::thereGain()
+{
+    return m_Gain.thereGain();
+}

@@ -8,6 +8,7 @@
 
 void GainKill::choseGain(sf::Vector2f positionmonster)
 {
+    m_gain = true;
     int valeur = rand() % 20;
     if(valeur <= 5)
     {
@@ -35,9 +36,14 @@ void GainKill::choseGain(sf::Vector2f positionmonster)
     }
     else 
     {
-        m_valorgainlife = 0;
-        m_valorgainrubis = 0;
+        loadSprite(m_emptyname);
+        m_gain = false;
     }
     std::cout << valeur << std::endl;
     setPostionSprite(positionmonster);
+}
+void GainKill::isGet()
+{
+    m_gain = false;
+    loadSprite(m_emptyname);
 }

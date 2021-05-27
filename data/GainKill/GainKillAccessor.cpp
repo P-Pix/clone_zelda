@@ -18,3 +18,7 @@ int GainKill::getValorGainRubis()
 {
     return m_valorgainrubis;
 }
+bool GainKill::thereGain()
+{
+    return m_gain;
+}

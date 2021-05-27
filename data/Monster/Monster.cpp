@@ -5,7 +5,6 @@
 **/
 
 #include "Monster.hpp"
-#include <iostream>
 
 // Constructor / Desttructor
     // Constructor

@@ -39,6 +39,7 @@ class Monster
                 bool isAlive();
                 int getGainRubisValor();
                 int getGainLifeValor();
+                bool thereGain();
 
         // Function
             // Attribution
@@ -53,6 +54,7 @@ class Monster
                 void recoilLeft();
 
                 void createPaternRelative(sf::Vector2f target);
+                void gainIsGet();
     
     private:
         // Variable

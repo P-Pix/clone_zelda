@@ -58,6 +58,7 @@ DATA 	=	data/GainKill/GainKill.cpp\
 			data/Monster/MonsterAccessor.cpp\
 			data/Monster/MonsterPrivatePatern.cpp\
 			data/Monster/MonsterPrivateSprite.cpp\
+			data/Monster/MonsterPublicGain.cpp\
 			data/Monster/MonsterPublicLife.cpp\
 			data/Monster/MonsterPublicMoove.cpp\
 			\
