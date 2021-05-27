@@ -6,5 +6,11 @@ void Monster::setDamage(int power)
     if(m_life <= 0)
     {
         m_alive = false;
+        dropGain();
     }
+}
+void Monster::dropGain()
+{
+    m_Gain.choseGain(m_Sprite.getPosition());
+    m_Sprite = m_Gain.getSpriteGain();
 }

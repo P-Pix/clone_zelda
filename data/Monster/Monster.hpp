@@ -36,7 +36,9 @@ class Monster
                 int getPower();
 
             // alive
-                bool isAlive();     
+                bool isAlive();
+                int getGainRubisValor();
+                int getGainLifeValor();
 
         // Function
             // Attribution
@@ -73,7 +75,7 @@ class Monster
                 sf::Texture m_Texture;
             
             // class
-                GainKill Gain;
+                GainKill m_Gain;
 
         // Function
             void createPaternStatic();
@@ -81,6 +83,7 @@ class Monster
             void loadSprite();
             void initSprite();
             void loadPosition();
+            void dropGain();
 
 };
 

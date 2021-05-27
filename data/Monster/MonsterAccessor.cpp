@@ -20,3 +20,11 @@ bool Monster::isAlive()
 {
     return m_alive;
 }
+int Monster::getGainLifeValor()
+{
+    return m_Gain.getValorGainLife();
+}
+int Monster::getGainRubisValor()
+{
+    return m_Gain.getValorGainRubis();
+}

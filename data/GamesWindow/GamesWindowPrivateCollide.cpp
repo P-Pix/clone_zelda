@@ -11,10 +11,9 @@ void GamesWindow::collideMonster()
     makeListMonster();
     for(int x = 0; x < m_listmob.size(); x ++)
     {
-        if(collideTwoSprite64x64(m_Player.getPosition(), m_listmob[x].getPosition()))
+        if(collideTwoSprite64x64(m_Player.getPosition(), m_listmob[x].getPosition()) && m_listmob[x].isAlive())
         {
             m_Player.setDamage(m_listmob[x].getPower());
-            m_Heart.updateHeart(m_Player.getLife(), m_Player.getMaxLife());
             collidePosition(m_Player.getPosition(), m_listmob[x].getPosition());
             if(m_collidedown && !previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, -64.f)))
             {
@@ -32,6 +31,10 @@ void GamesWindow::collideMonster()
             {
                 m_Player.recoilRight();
             }
+        }
+        else if(collideTwoSprite64x64(m_Player.getPosition(), m_listmob[x].getPosition()) && !m_listmob[x].isAlive())
+        {
+            m_Player.setHeart(m_listmob[x].getGainLifeValor());
         }
         /*
         if(!m_listmob[x].isAlive())

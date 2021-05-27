@@ -13,7 +13,6 @@
 #include <vector>
 
 #include "../Joueur/Joueur.hpp"
-#include "../Heart/Heart.hpp"
 #include "../Wall/Wall.hpp"
 #include "../Ground/Ground.hpp"
 #include "../Monster/Monster.hpp"
@@ -62,8 +61,6 @@ class GamesWindow
             // class
                 Joueur  m_Player;
 
-                Heart   m_Heart;
-
                 Monster m_Mob1;
 
                 Wall    m_Tree,
@@ -94,7 +91,6 @@ class GamesWindow
                 void allDrawWindow();
 
             // modification
-                void modifiHeart();
                 void mooveMonster();
                 void makeListMonster();
 

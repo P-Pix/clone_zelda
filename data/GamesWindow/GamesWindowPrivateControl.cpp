@@ -10,7 +10,7 @@ void GamesWindow::swordAttack()
 {
     if(m_Sword.getExecution())
     {
-        if(collideSword(m_Mob1.getPosition()))
+        if(collideSword(m_Mob1.getPosition()) && m_Mob1.isAlive())
         {
             if(m_Player.getOrientationDown() && !previewCollide(m_Mob1.getPosition(), sf::Vector2f(0.f, 64.f)))
             {

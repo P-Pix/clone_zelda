@@ -12,7 +12,7 @@ void GamesWindow::drawElement(sf::Sprite sprite)
 }
 void GamesWindow::allDrawWindow()
 {
-    drawVector(m_Heart.getListSprite());
+    drawVector(m_Player.getListSpriteHeart());
 
     drawVector(m_Bloc.getListSprite());
     drawVector(m_Cavern.getListSprite());

@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <vector>
+#include "../Heart/Heart.hpp"
 class Joueur
 {
     public:
@@ -37,6 +38,9 @@ class Joueur
             bool getOrientationLeft();
             bool getOrientationRight();
             int getOrientationValue();
+
+            std::vector<sf::Sprite> getListSpriteHeart();
+            sf::Sprite getSpriteHeart(int number);
         
         // Function
             void setOrientationUp();
@@ -45,7 +49,7 @@ class Joueur
             void setOrientationLeft();
 
             void setMaxLifeUp();
-            void setHeart();
+            void setHeart(int life);
             void setDamage(int power);
             void frameInvulnerable();
             
@@ -82,7 +86,7 @@ class Joueur
                     m_moveright = 0,
                     m_vitesse = 5,
                     m_maxlife = 80,
-                    m_life = 69,
+                    m_life = 20,
                     m_invulnerability = 0;
                 
                 bool    m_orientationright = false,
@@ -102,6 +106,9 @@ class Joueur
                 sf::Texture m_Thero;
                 sf::Sprite  m_Shero;
                 sf::Vector2f    m_Spown;
+            
+            // class
+                Heart m_Heart;
 
         //Function
             sf::Sprite loadSprite(const char *name, sf::Vector2f vector);

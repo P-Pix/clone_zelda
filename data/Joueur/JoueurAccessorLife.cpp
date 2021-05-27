@@ -22,3 +22,11 @@ bool Joueur::isInvulnerable()
 {
     return m_invulnerable;
 }
+std::vector<sf::Sprite> Joueur::getListSpriteHeart()
+{
+    return m_Heart.getListSprite();
+}
+sf::Sprite Joueur::getSpriteHeart(int number)
+{
+    return m_Heart.getSprite(number);
+}

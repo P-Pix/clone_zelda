@@ -22,7 +22,6 @@ DATA 	=	data/GainKill/GainKill.cpp\
 			data/GamesWindow/GamesWindowPrivateCollide.cpp\
 			data/GamesWindow/GamesWindowPrivateControl.cpp\
 			data/GamesWindow/GamesWindowPrivateDraw.cpp\
-			data/GamesWindow/GamesWindowPrivateHeart.cpp\
 			data/GamesWindow/GamesWindowPrivateMap.cpp\
 			data/GamesWindow/GamesWindowPrivateMonster.cpp\
 			data/GamesWindow/GamesWindowPublicWindow.cpp\

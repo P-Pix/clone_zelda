@@ -13,6 +13,7 @@
         {
             this -> m_Shero = loadSprite(m_ncf0, m_Spown);
             makeListeAnimation();
+            m_Heart.updateHeart(m_life, m_maxlife);
             //std::cout << "player create " << this << std::endl;
         }
 
