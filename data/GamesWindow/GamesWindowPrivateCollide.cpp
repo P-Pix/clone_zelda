@@ -8,10 +8,9 @@
 
 void GamesWindow::collideMonster()
 {
-    makeListMonster();
-    for(int x = 0; x < m_listmob.size(); x ++)
+    if(collideTwoSprite64x64(m_Player.getPosition(), m_Mob1.getPosition()))
     {
-        if(collideTwoSprite64x64(m_Player.getPosition(), m_Mob1.getPosition()) && m_Mob1.isAlive())
+        if(m_Mob1.isAlive())
         {
             m_Player.setDamage(m_Mob1.getPower());
             collidePosition(m_Player.getPosition(), m_Mob1.getPosition());
@@ -32,18 +31,12 @@ void GamesWindow::collideMonster()
                 m_Player.recoilRight();
             }
         }
-        else if(collideTwoSprite64x64(m_Player.getPosition(), m_Mob1.getPosition()) && !m_Mob1.isAlive() && m_Mob1.thereGain())
+        else if(m_Mob1.thereGain())
         {
             m_Player.setHeart(m_Mob1.getGainLifeValor());
             m_Player.updateRubis(m_Mob1.getGainRubisValor());
             m_Mob1.gainIsGet();
         }
-        /*
-        if(!m_listmob[x].isAlive())
-        {
-            this -> m_listmob[x] = new Monster;
-        }
-        */
     }
 }
 bool GamesWindow::collideTwoSprite64x64(sf::Vector2f sprite1, sf::Vector2f sprite2)

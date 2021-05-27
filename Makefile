@@ -24,6 +24,7 @@ DATA 	=	data/GainKill/GainKill.cpp\
 			data/GamesWindow/GamesWindowPrivateDraw.cpp\
 			data/GamesWindow/GamesWindowPrivateMap.cpp\
 			data/GamesWindow/GamesWindowPrivateMonster.cpp\
+			data/GamesWindow/GamesWindowPrivateSword.cpp\
 			data/GamesWindow/GamesWindowPublicWindow.cpp\
 			\
 			data/Ground/Ground.cpp\
