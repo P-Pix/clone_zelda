@@ -10,7 +10,7 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <iostream>
-#include <time.h>
+#include <cstdlib>
 
 class GainKill
 {
