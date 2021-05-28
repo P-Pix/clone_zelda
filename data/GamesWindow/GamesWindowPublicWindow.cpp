@@ -23,6 +23,7 @@ void GamesWindow::verificationWindow()
     switchMap();
     swordAttack();
     collideMonster();
+    gainChest();
     if(m_Player.isInvulnerable())
     {
         m_Player.frameInvulnerable();

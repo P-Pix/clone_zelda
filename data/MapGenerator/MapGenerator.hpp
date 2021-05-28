@@ -42,6 +42,10 @@ class MapGenerator
 
             sf::Sprite getChestSprite();
             bool thereChest();
+
+            sf::Sprite getGainSprite();
+            int getGainLife();
+            int getGainRubis();
             
         // Function
             void generateMap();
@@ -49,6 +53,9 @@ class MapGenerator
             void setMapDown();
             void setMapRight();
             void setMapLeft();
+
+            void oprenChest();
+            void gainIsGet();
 
 
     private:

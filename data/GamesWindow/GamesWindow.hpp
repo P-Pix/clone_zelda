@@ -81,6 +81,7 @@ class GamesWindow
                 void switchMap();
                 void loadNewMap();
                 void setBackground();
+                void gainChest();
 
             // control
                 void pollEvent();
@@ -93,6 +94,8 @@ class GamesWindow
                 void drawVector(std::vector<sf::Sprite> vector);
                 void drawRubis();
                 void drawMap();
+                void drawChestGain();
+                void drawChest();
                 void allDrawWindow();
 
             // modification

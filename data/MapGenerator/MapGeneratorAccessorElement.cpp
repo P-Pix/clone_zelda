@@ -38,3 +38,15 @@ sf::Sprite MapGenerator::getChestSprite()
 {
     return m_Chest.getSprite();
 }
+sf::Sprite MapGenerator::getGainSprite()
+{
+    return m_Chest.getSpriteGain();
+}
+int MapGenerator::getGainRubis()
+{
+    return m_Chest.getValorRubis();
+}
+int MapGenerator::getGainLife()
+{
+    return m_Chest.getValorLife();
+}

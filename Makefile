@@ -58,6 +58,7 @@ DATA 	=	data/Chest/Chest.cpp\
 			data/MapGenerator/MapGenerator.cpp\
 			data/MapGenerator/MapGeneratorAccessorElement.cpp\
 			data/MapGenerator/MapGeneratorAccessorList.cpp\
+			data/MapGenerator/MapGeneratorPublicChest.cpp\
 			data/MapGenerator/MapGeneratorPublicCreateMap.cpp\
 			\
 			data/Monster/Monster.cpp\

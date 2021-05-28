@@ -49,3 +49,12 @@ void GamesWindow::setBackground()
     m_Tree.setPositionVector(m_Map.getListPositionWallExt());
     m_Ground.setPositionVector(m_Map.getListPositionGroundExt());
 }
+void GamesWindow::gainChest()
+{
+    if(collideTwoSprite64x64(m_Player.getPosition(), m_Map.getGainSprite().getPosition()))
+    {
+        m_Player.setHeart(m_Map.getGainLife());
+        m_Player.updateRubis(m_Map.getGainRubis());
+        m_Map.gainIsGet();
+    }
+}

@@ -30,13 +30,15 @@ class Chest
         // Function
             void generateChest();
             void openChest();
+            void isGet();
 
     private:
         // Variable
             const char  *m_namechestclose = "skin/chestclose.png",
                         *m_namechestopen = "skin/chestopen.png";
             
-            bool    m_spawnchest = false;
+            bool    m_spawnchest = false,
+                    m_open = false;
             
             sf::Sprite m_Sprite;
             sf::Texture m_Texture;

@@ -16,14 +16,32 @@ void GamesWindow::drawText(sf::Text text)
 }
 void GamesWindow::allDrawWindow()
 {
-    drawVector(m_Player.getListSpriteHeart());
+    // Up screen
+    drawVector(m_Player.getListSpriteHeart()); // Life bar
+    drawRubis(); // Rubis number
 
-    drawMap();
-    drawRubis();
+    // Element Immobile
+    drawMap(); // Map
+    drawChest(); // Chest
+    drawChestGain();
 
-    drawSprite(m_Mob1.getSprite());
-    drawSprite(m_Player.getSprite());
-    drawSword();
+    // Element Mobile
+    drawSprite(m_Mob1.getSprite()); // Monster
+    drawSprite(m_Player.getSprite()); // Player
+
+    // Over all
+    drawSword(); // Sword
+}
+void GamesWindow::drawChestGain()
+{
+    drawSprite(m_Map.getGainSprite());
+}
+void GamesWindow::drawChest()
+{
+    if(m_Map.thereChest())
+    {
+        drawSprite(m_Map.getChestSprite());
+    }
 }
 void GamesWindow::drawVector(std::vector<sf::Sprite> vector)
 {

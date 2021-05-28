@@ -45,4 +45,6 @@ void GainKill::isGet()
 {
     m_gain = false;
     loadSprite(m_emptyname);
+    m_valorgainlife = 0;
+    m_valorgainrubis = 0;
 }

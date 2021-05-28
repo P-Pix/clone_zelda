@@ -33,5 +33,9 @@ void GamesWindow::swordAttack()
                 }
             }
         }
+        else if(collideSword(m_Map.getChestSprite().getPosition()))
+        {
+            m_Map.oprenChest();
+        }
     }
 }

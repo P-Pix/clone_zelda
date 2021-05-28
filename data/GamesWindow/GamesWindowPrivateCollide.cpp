@@ -132,5 +132,9 @@ bool GamesWindow::previewCollide(sf::Vector2f user, sf::Vector2f moove)
     {
         collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionWallInt());
     }
+    if(m_Map.thereChest() && !collide)
+    {
+        collide = collideTwoSprite64x64(sf::Vector2f(nextx, nexty), m_Map.getChestSprite().getPosition());
+    }
     return collide;
 }
