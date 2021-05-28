@@ -26,6 +26,8 @@ void MapGenerator::generateMap()
     m_ground = false;
     m_tree = false;
 
+    m_Chest.generateChest();
+
     for(int positiony = 1; positiony < 11; positiony ++)
     {
         std::vector<char> ligne;

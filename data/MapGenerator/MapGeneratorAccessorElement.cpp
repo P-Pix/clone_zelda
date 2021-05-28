@@ -30,3 +30,11 @@ int MapGenerator::getMapY()
 {
     return m_y;
 }
+bool MapGenerator::thereChest()
+{
+    return m_Chest.getChest();
+}
+sf::Sprite MapGenerator::getChestSprite()
+{
+    return m_Chest.getSprite();
+}

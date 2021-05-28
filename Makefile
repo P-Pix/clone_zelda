@@ -12,7 +12,12 @@ MODULE	=	-lsfml-window\
 			-lsfml-system\
 			-lsfml-graphics\
 
-DATA 	=	data/GainKill/GainKill.cpp\
+DATA 	=	data/Chest/Chest.cpp\
+			data/Chest/ChestAccessor.cpp\
+			data/Chest/ChestPrivateSprite.cpp\
+			data/Chest/ChestPublicGenerate.cpp\
+			\
+			data/GainKill/GainKill.cpp\
 			data/GainKill/GainKillAccessor.cpp\
 			data/GainKill/GainKillPrivateSprite.cpp\
 			data/GainKill/GainKillPublicChose.cpp\

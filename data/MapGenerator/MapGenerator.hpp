@@ -14,6 +14,8 @@
 #include <fstream>
 #include <iostream>
 
+#include "../Chest/Chest.hpp"
+
 class MapGenerator
 {
     public:
@@ -37,6 +39,9 @@ class MapGenerator
 
             int getMapX();
             int getMapY();
+
+            sf::Sprite getChestSprite();
+            bool thereChest();
             
         // Function
             void generateMap();
@@ -67,6 +72,9 @@ class MapGenerator
         
                 std::string *m_String;
                 std::fstream    *m_Fmap;
+
+            // class
+                Chest m_Chest;
 
         // Function
 };

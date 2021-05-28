@@ -11,6 +11,8 @@
 #include <vector>
 #include <iostream>
 
+#include "../GainKill/GainKill.hpp"
+
 class Chest
 {
     public:
@@ -20,16 +22,29 @@ class Chest
         
         // Accessor
             sf::Sprite getSprite();
+            bool getChest();
+            int getValorRubis();
+            int getValorLife();
+            sf::Sprite getSpriteGain();
+        
+        // Function
+            void generateChest();
+            void openChest();
 
     private:
         // Variable
             const char  *m_namechestclose = "skin/chestclose.png",
                         *m_namechestopen = "skin/chestopen.png";
             
+            bool    m_spawnchest = false;
+            
             sf::Sprite m_Sprite;
             sf::Texture m_Texture;
+
+            GainKill m_Gain;
         
         // Function
+            void loadSprite(const char *name);
 };
 
 #endif
