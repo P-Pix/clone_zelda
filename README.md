@@ -12,8 +12,12 @@ Ubuntu 20.04|Yes
 sudo apt-get install libsfml-dev
 ```
 
-## Compilation / Execution
+## Compilation
 With Makefile
 ```
 make cpp
+```
+## Execution
+```
+./Zelda Like
 ```
