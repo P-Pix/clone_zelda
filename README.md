@@ -7,6 +7,7 @@ You need to install SFML for C++
 OS|Compatibility
 -|-
 Ubuntu 20.04|__Yes__
+Fedora|oui
 ## SFML
 ```
 sudo apt-get install libsfml-dev
