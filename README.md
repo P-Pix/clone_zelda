@@ -8,6 +8,7 @@ OS|Compatibility
 -|-
 Ubuntu 20.04|Yes
 ## Install SFML
+### On Ubuntu
 ```
 sudo apt-get install libsfml-dev
 ```
