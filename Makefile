@@ -88,7 +88,7 @@ DATA 	=	data/Chest/Chest.cpp\
 			data/Wall/WallPublicPosition.cpp\
 			\
 
-NAME	=	ZeldaLike
+NAME	=	ZeldaLike.o
 
 val:
 	@(valgrind g++ -o $(NAME) $(OBJ) $(DATA) $(MODULE)) > /dev/null
