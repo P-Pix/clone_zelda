@@ -46,7 +46,7 @@ class Chest
             GainKill m_Gain;
         
         // Function
-            void loadSprite(const char *name);
+            void loadSprite(const char *name_image);
 };
 
 #endif

@@ -26,7 +26,7 @@ class GainKill
             bool thereGain();
 
         // Chose element gain
-            void choseGain(sf::Vector2f positionmonster);
+            void choseGain(sf::Vector2f);
             void isGet();
 
     private:
@@ -47,9 +47,9 @@ class GainKill
             sf::Sprite m_Sprite;
 
         // Function
-            void loadSprite(const char *name);
-            void loadTexture(const char *name);
-            void setPostionSprite(sf::Vector2f position);
+            void loadSprite(const char *name_image);
+            void loadTexture(const char *name_image);
+            void setPostionSprite(sf::Vector2f);
 };
 
 #endif

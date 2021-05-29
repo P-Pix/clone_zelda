@@ -16,7 +16,7 @@ class Ground
     public:
         // Constructor / Destrutor
             Ground();
-            Ground(const char *name);
+            Ground(const char *name_image);
             ~Ground();
         
         // Accessor
@@ -25,8 +25,8 @@ class Ground
             Ground* getAdress();
         
         // Function
-            void setPositionVector(std::vector<sf::Vector2f> vector);
-            void setPosition(sf::Vector2f position);
+            void setPositionVector(std::vector<sf::Vector2f>);
+            void setPosition(sf::Vector2f);
 
 
     private:

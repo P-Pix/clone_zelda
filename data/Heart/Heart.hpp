@@ -20,10 +20,10 @@ class Heart
 
         // Accessor
             std::vector<sf::Sprite> getListSprite();
-            sf::Sprite getSprite(int number);
+            sf::Sprite getSprite(int number_sprite);
 
         // Function
-            void updateHeart(int life, int maxlife);
+            void updateHeart(int life, int max_life);
             void setPosition(sf::Sprite sprite, sf::Vector2f position);
 
     private:
