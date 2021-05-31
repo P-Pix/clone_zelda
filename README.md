@@ -11,6 +11,7 @@ Ubuntu 20.04|Yes
 
 ### WebSite
 [SFML Home](https://www.sfml-dev.org/index.php)
+
 [SFML Docs](https://www.sfml-dev.org/documentation/2.5.1-fr/)
 ### Install
 ```
