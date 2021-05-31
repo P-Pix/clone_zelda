@@ -8,6 +8,10 @@ OS|Compatibility
 -|-
 Ubuntu 20.04|Yes
 ## SFML
+
+### WebSite
+[SFML](https://www.sfml-dev.org/index.php)
+### Install
 ```
 sudo apt-get install libsfml-dev
 ```
