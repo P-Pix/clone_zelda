@@ -14,10 +14,11 @@ Ubuntu 20.04|Yes
 
 [SFML Docs](https://www.sfml-dev.org/documentation/2.5.1-fr/)
 ### Install
+Linux
 ```
 sudo apt-get install libsfml-dev
 ```
-
+[Window / Mac](https://www.sfml-dev.org/download/sfml/2.5.1/index-fr.php)
 ## Using
 ### Compilation
 ```
