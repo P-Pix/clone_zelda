@@ -1,8 +1,13 @@
 /**
-*** Guillaume LEMONNIER
-*** Developpement autonome
-*** Tout droits reservé
-**/
+ * @file GamesWindow.hpp
+ * @author Guillaume LEMONNIER
+ * @brief 
+ * @version 0.1
+ * @date 2021-05-31
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
 #if !defined(__GAMESWINDOW__)
 #define __GAMESWINDOW__
@@ -90,8 +95,8 @@ class GamesWindow
             // draw
                 void drawSword();
                 void drawSprite(sf::Sprite sprite);
-                void drawText(sf::Text text);
-                void drawVector(std::vector<sf::Sprite> liste_sprite);
+                void drawText(sf::Text Text);
+                void drawVector(std::vector<sf::Sprite> vector);
                 void drawRubis();
                 void drawMap();
                 void drawChestGain();
@@ -103,12 +108,12 @@ class GamesWindow
                 void makeListMonster();
 
             // collide
-                bool collideTwoSprite64x64(sf::Vector2f, sf::Vector2f);
-                void collidePosition(sf::Vector2f, sf::Vector2f);
-                bool collideSword(sf::Vector2f);
-                bool collideWall(sf::Vector2f, std::vector<sf::Vector2f>);
+                bool collideTwoSprite64x64(sf::Vector2f sprite1, sf::Vector2f sprite2);
+                void collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2);
+                bool collideSword(sf::Vector2f sprite);
+                bool collideWall(sf::Vector2f user, std::vector<sf::Vector2f> wall);
                 void collideMonster();
-                bool previewCollide(sf::Vector2f, sf::Vector2f);
+                bool previewCollide(sf::Vector2f user, sf::Vector2f moove);
 };
 
 #endif

@@ -1,8 +1,13 @@
 /**
-*** Guillaume LEMONNIER
-*** Developpement autonome
-*** Tout droits reservé
-**/
+ * @file GainKill.hpp
+ * @author Guillaume LEMONNIER
+ * @brief 
+ * @version 0.1
+ * @date 2021-05-31
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
 #if !defined(__GAINKILL__)
 #define __GAINKILL__
@@ -26,7 +31,7 @@ class GainKill
             bool thereGain();
 
         // Chose element gain
-            void choseGain(sf::Vector2f);
+            void choseGain(sf::Vector2f positionmonster);
             void isGet();
 
     private:
@@ -47,9 +52,9 @@ class GainKill
             sf::Sprite m_Sprite;
 
         // Function
-            void loadSprite(const char *name_image);
-            void loadTexture(const char *name_image);
-            void setPostionSprite(sf::Vector2f);
+            void loadSprite(const char *name);
+            void loadTexture(const char *name);
+            void setPostionSprite(sf::Vector2f position);
 };
 
 #endif

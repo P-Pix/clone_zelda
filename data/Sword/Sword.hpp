@@ -1,15 +1,19 @@
 /**
-*** Guillaume LEMONNIER
-*** Developpement autonome
-*** Tout droits reservé
-**/
+ * @file Sword.hpp
+ * @author Guillaume LEMONNIER
+ * @brief 
+ * @version 0.1
+ * @date 2021-05-31
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
 #if !defined(__SWORD__)
 #define __SWORD__
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
-
 class Sword
 {
     public:

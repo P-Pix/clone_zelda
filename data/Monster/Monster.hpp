@@ -1,8 +1,13 @@
 /**
-*** Guillaume LEMONNIER
-*** Developpement autonome
-*** Tout droits reservé
-**/
+ * @file Monster.hpp
+ * @author Guillaume LEMONNIER
+ * @brief 
+ * @version 0.1
+ * @date 2021-05-31
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
 #if !defined(__MONSTER__)
 #define __MONSTER__

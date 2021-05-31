@@ -1,8 +1,13 @@
 /**
-*** Guillaume LEMONNIER
-*** Developpement autonome
-*** Tout droits reservé
-**/
+ * @file Chest.hpp
+ * @author Guillaume LEMONNIER
+ * @brief 
+ * @version 0.1
+ * @date 2021-05-31
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
 #if !defined(__CHEST__)
 #define __CHEST__
@@ -46,7 +51,7 @@ class Chest
             GainKill m_Gain;
         
         // Function
-            void loadSprite(const char *name_image);
+            void loadSprite(const char *name);
 };
 
 #endif

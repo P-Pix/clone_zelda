@@ -1,8 +1,13 @@
 /**
-*** Guillaume LEMONNIER
-*** Developpement autonome
-*** Tout droits reservé
-**/
+ * @file Heart.hpp
+ * @author Guillaume LEMONNIER
+ * @brief 
+ * @version 0.1
+ * @date 2021-05-31
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
 #if !defined(__HEART__)
 #define __HEART__
@@ -20,10 +25,10 @@ class Heart
 
         // Accessor
             std::vector<sf::Sprite> getListSprite();
-            sf::Sprite getSprite(int number_sprite);
+            sf::Sprite getSprite(int number);
 
         // Function
-            void updateHeart(int life, int max_life);
+            void updateHeart(int life, int maxlife);
             void setPosition(sf::Sprite sprite, sf::Vector2f position);
 
     private:

@@ -1,8 +1,13 @@
 /**
-*** Guillaume LEMONNIER
-*** Developpement autonome
-*** Tout droits reservé
-**/
+ * @file Ground.hpp
+ * @author Guillaume LEMONNIER
+ * @brief 
+ * @version 0.1
+ * @date 2021-05-31
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
 #if !defined(__GROUND__)
 #define __GROUND__
@@ -16,7 +21,7 @@ class Ground
     public:
         // Constructor / Destrutor
             Ground();
-            Ground(const char *name_image);
+            Ground(const char *name);
             ~Ground();
         
         // Accessor
@@ -25,8 +30,8 @@ class Ground
             Ground* getAdress();
         
         // Function
-            void setPositionVector(std::vector<sf::Vector2f>);
-            void setPosition(sf::Vector2f);
+            void setPositionVector(std::vector<sf::Vector2f> vector);
+            void setPosition(sf::Vector2f position);
 
 
     private:
