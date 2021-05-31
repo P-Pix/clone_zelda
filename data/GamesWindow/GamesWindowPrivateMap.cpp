@@ -24,7 +24,7 @@ void GamesWindow::switchMap()
         setMapUpdate();
         m_Player.setPositionLeft();
     }
-    else if(m_Player.getPosition().x > 1088)
+    else if(m_Player.getPosition().x > m_windowwidth)
     {
         m_Map.setMapRight();
         setMapUpdate();
@@ -36,7 +36,7 @@ void GamesWindow::switchMap()
         setMapUpdate();
         m_Player.setPositionUp();
     }
-    if(m_Player.getPosition().y > 704)
+    if(m_Player.getPosition().y > m_windowheight)
     {
         m_Map.setMapDown();
         setMapUpdate();

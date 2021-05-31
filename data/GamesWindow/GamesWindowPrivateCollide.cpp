@@ -52,7 +52,7 @@ bool GamesWindow::collideTwoSprite64x64(sf::Vector2f sprite1, sf::Vector2f sprit
         sprite2x = sprite2.x,
         sprite2y = sprite2.y;
 
-    return (sprite1x <= sprite2x + 64 && sprite1x + 64 >= sprite2x && sprite1y <= sprite2y + 64 && sprite1y + 64 > sprite2y);
+    return (sprite1x + 5 <= sprite2x + 64 && sprite1x + 59 >= sprite2x && sprite1y + 32 <= sprite2y + 64 && sprite1y + 64 > sprite2y);
 }
 void GamesWindow::collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2)
 {

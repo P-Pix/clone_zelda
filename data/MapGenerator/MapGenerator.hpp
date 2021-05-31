@@ -66,8 +66,8 @@ class MapGenerator
     private:
         // Variables 
             // basic
-                int m_x = 1,
-                    m_y = 1;
+                int m_x = 8,
+                    m_y = 8;
                 
                 bool    m_tree = false,
                         m_cavern = false,

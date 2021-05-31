@@ -50,8 +50,8 @@ class GamesWindow
                         m_collideright  = false,
                         m_collideleft   = false;
 
-                const int   m_windowwidth   = 1088,
-                            m_windowheight  = 704;
+                const int   m_windowwidth   = 1024,
+                            m_windowheight  = 768;
 
                 const char  *m_blocname     = "skin/bloc.png",
                             *m_cavernname   = "skin/cavern.png",

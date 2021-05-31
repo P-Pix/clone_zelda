@@ -33,10 +33,10 @@ void MapGenerator::generateMap()
 
     m_Chest.generateChest();
 
-    for(int positiony = 1; positiony < 11; positiony ++)
+    for(int positiony = 1; positiony < 12; positiony ++)
     {
         std::vector<char> ligne;
-        for(int positionx = 0; positionx < 18; positionx ++)
+        for(int positionx = 0; positionx < 17; positionx ++)
         {
             ifmap.get(lettre);
             if(lettre == 't')

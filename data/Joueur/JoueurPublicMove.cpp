@@ -14,24 +14,24 @@
 void Joueur::setPositionDown()
 {
     float   x = m_Shero.getPosition().x,
-            y = m_Shero.getPosition().y - 640;
+            y = m_Shero.getPosition().y - 704;
     m_Shero.setPosition(sf::Vector2f(x, y));
 }
 void Joueur::setPositionUp()
 {
     float   x = m_Shero.getPosition().x,
-            y = m_Shero.getPosition().y + 640;
+            y = m_Shero.getPosition().y + 704;
     m_Shero.setPosition(sf::Vector2f(x, y));
 }
 void Joueur::setPositionRight()
 {
-    float   x = m_Shero.getPosition().x - 1088,
+    float   x = m_Shero.getPosition().x - 1024,
             y = m_Shero.getPosition().y;
     m_Shero.setPosition(sf::Vector2f(x, y));
 }
 void Joueur::setPositionLeft()
 {
-    float   x = m_Shero.getPosition().x + 1088,
+    float   x = m_Shero.getPosition().x + 1024,
             y = m_Shero.getPosition().y;
     m_Shero.setPosition(sf::Vector2f(x, y));
 }
