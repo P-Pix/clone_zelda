@@ -1,4 +1,4 @@
-###
+####
 ### @file Makefile
 ### @author Guillaume LEMONNIER
 ### @brief 
@@ -7,7 +7,7 @@
 ### 
 ### @copyright Copyright (c) 2021
 ### 
-###
+####
 
 SRC		=	main.cpp\
 

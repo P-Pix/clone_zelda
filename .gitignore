@@ -1,4 +1,4 @@
-###
+####
 ### @file .gitignore
 ### @author Guillaume LEMONNIER
 ### @brief 
@@ -7,7 +7,7 @@
 ### 
 ### @copyright Copyright (c) 2021
 ### 
-###
+####
 
 # Prerequisites
 *.d
