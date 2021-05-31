@@ -15,7 +15,6 @@ void Chest::generateChest()
 {
     loadSprite(m_namechestclose);
     m_spawnchest = false;
-    std::srand(std::time(nullptr));
     short spawn = std::rand() % 5;
     if(spawn == 1)
     {

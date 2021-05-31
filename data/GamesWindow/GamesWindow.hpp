@@ -53,9 +53,15 @@ class GamesWindow
                 const int   m_windowwidth   = 1024,
                             m_windowheight  = 768;
 
-                const char  *m_blocname     = "skin/bloc.png",
-                            *m_cavernname   = "skin/cavern.png",
-                            *m_fontname     = "font/SuperLegendBoy.ttf";
+                const char  *m_blocname         = "skin/bloc.png",
+                            *m_cavernname       = "skin/cavern.png",
+                            *m_orangetreename   = "skin/orangetree.png",
+                            *m_whitetreename    = "skin/whitetree.png",
+                            *m_bridgename       = "skin/bridge.png",
+                            *m_greygroundname   = "skin/greyground.png",
+                            *m_watername        = "skin/water.png",
+
+                            *m_fontname         = "font/SuperLegendBoy.ttf";
             
             // std
                 std::vector<Monster> m_listmob;
@@ -71,9 +77,14 @@ class GamesWindow
                 Monster m_Mob1;
 
                 Wall    m_Tree,
+                        m_OrangeTree,
+                        m_WhiteTree,
+                        m_Water,
                         m_Bloc;
 
                 Ground  m_Ground,
+                        m_GreyGround,
+                        m_Bridge,
                         m_Cavern;
 
                 MapGenerator m_Map;

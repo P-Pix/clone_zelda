@@ -14,7 +14,6 @@
 void GainKill::choseGain(sf::Vector2f positionmonster)
 {
     m_gain = true;
-    std::srand(std::time(nullptr));
     int valeur = std::rand() % 20;
     if(valeur <= 5)
     {

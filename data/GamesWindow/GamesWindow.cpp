@@ -14,7 +14,14 @@
 // Constructor / Destructor
 
     // Constructor
-        GamesWindow::GamesWindow(): m_Bloc(m_blocname), m_Cavern(m_cavernname)
+        GamesWindow::GamesWindow(): m_Bloc(m_blocname),
+                                    m_OrangeTree(m_orangetreename),
+                                    m_Water(m_watername),
+                                    m_WhiteTree(m_whitetreename),
+                                    
+                                    m_Bridge(m_bridgename), 
+                                    m_GreyGround(m_greygroundname), 
+                                    m_Cavern(m_cavernname)
         {
             // Window size : (16* 64) * ((10 * 64) + 64) = 1024 * 704
             this -> m_Window = nullptr;

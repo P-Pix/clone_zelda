@@ -13,7 +13,7 @@
 
 GainKill::GainKill()
 {
-
+    std::srand(std::time(nullptr));
 }
 GainKill::~GainKill()
 {

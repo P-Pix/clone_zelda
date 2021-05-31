@@ -16,8 +16,16 @@
         Monster::Monster()
         {
             //std::cout << "Monster create " << this << std::endl;
-            createPaternStatic();
             initSprite();
+            std::srand(std::time(nullptr));
+            createPaternRelative();
+        }
+        Monster::Monster(const char *name)
+        {
+            m_monster = name;
+            initSprite();
+            std::srand(std::time(nullptr));
+            createPaternRelative();
         }
 
     // Destructeur

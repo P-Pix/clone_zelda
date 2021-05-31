@@ -68,7 +68,7 @@ void GamesWindow::collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2)
     m_collideup = false;
 
     
-    if(sprite1x < sprite2x + 64 && sprite1x + 64 > sprite2x && sprite1y < sprite2y + 64 && sprite1y > sprite2y)
+    if(sprite1x < sprite2x + 64 && sprite1x + 64 > sprite2x && sprite1y < sprite2y + 64 && sprite1y + 32 > sprite2y)
     {
         m_collideup = true;   
     }

@@ -58,7 +58,7 @@ class Monster
                 void recoilRight();
                 void recoilLeft();
 
-                void createPaternRelative(sf::Vector2f target);
+                void createPaternRelative();
                 void gainIsGet();
     
     private:

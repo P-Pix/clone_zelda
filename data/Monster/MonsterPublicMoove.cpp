@@ -36,6 +36,8 @@ void Monster::nextPosition()
     m_moveaction ++;
     if(m_moveaction == m_Patern.size())
     {
+        m_Patern.clear();
+        createPaternRelative();
         m_moveaction = 0;
     }
 }
