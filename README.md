@@ -10,7 +10,8 @@ Ubuntu 20.04|Yes
 ## SFML
 
 ### WebSite
-[SFML](https://www.sfml-dev.org/index.php)
+[SFML Home](https://www.sfml-dev.org/index.php)
+[SFML Docs](https://www.sfml-dev.org/documentation/2.5.1-fr/)
 ### Install
 ```
 sudo apt-get install libsfml-dev
