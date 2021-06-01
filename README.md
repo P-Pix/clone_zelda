@@ -28,6 +28,7 @@ g++ -o ZeldaLike.o main.cpp data/Chest/Chest.cpp data/Chest/ChestAccessor.cpp da
 ```
 ./ZeldaLike.o
 ```
+### Compilation and Execution
 With Makefile
 ```
 make cpp
