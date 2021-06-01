@@ -13,19 +13,19 @@
 
 int Joueur::getLife()
 {
-    return m_life;
+    return m_Heart.getLife();
 }
 int Joueur::getMaxLife()
 {
-    return m_maxlife;
+    return m_Heart.getMaxLife();
 }
 bool Joueur::isAlive()
 {
-    return m_alive;
+    return m_Heart.isAlive();
 }
 bool Joueur::isInvulnerable()
 {
-    return m_invulnerable;
+    return m_Heart.isInvulnerable();
 }
 std::vector<sf::Sprite> Joueur::getListSpriteHeart()
 {

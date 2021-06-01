@@ -101,18 +101,13 @@ class Joueur
                     m_moveup = 0,
                     m_moveleft = 0,
                     m_moveright = 0,
-                    m_vitesse = 5,
-                    m_maxlife = 80,
-                    m_life = 20,
-                    m_invulnerability = 0;
+                    m_vitesse = 5;
                 
                 bool    m_orientationright = false,
                         m_orientationup = false,
                         m_orientationleft = false,
-                        m_orientationdown = true,
+                        m_orientationdown = true;
 
-                        m_alive = true,
-                        m_invulnerable = false;
             // std
                 std::vector<const char * >  m_AnimationUp,
                                             m_AnimationDown,

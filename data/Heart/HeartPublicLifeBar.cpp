@@ -11,11 +11,11 @@
 
 #include "Heart.hpp"
 
-void Heart::updateHeart(int life, int maxlife)
+void Heart::updateHeart()
 {
-    int numberheart = life / 4,
-        lastheart = life % 4,
-        taillist = maxlife / 4,
+    int numberheart = m_life / 4,
+        lastheart = m_life % 4,
+        taillist = m_maxlife / 4,
         positionx = 0,
         positiony = 0,
         size = 0;
@@ -66,4 +66,41 @@ void Heart::updateHeart(int life, int maxlife)
 void Heart::setPosition(sf::Sprite sprite, sf::Vector2f position)
 {
     sprite.setPosition(position);
+}
+void Heart::setMaxLifeUp()
+{
+    m_maxlife += 4;
+    m_life = m_maxlife;
+}
+void Heart::setHeart(int life)
+{
+    m_life += life;
+    if(m_life > m_maxlife)
+    {
+        m_life = m_maxlife;
+    }
+    updateHeart();
+}
+void Heart::setDamage(int power)
+{
+    if(!m_invulnerable)
+    {
+        m_life -= power;
+        if(m_life <= 0)
+        {
+            m_life = 0;
+            m_alive = false;
+        }
+        m_invulnerable = true;
+        m_invulnerability = 0;
+    }
+    updateHeart();
+}
+void Heart::frameInvulnerable()
+{
+    if(m_invulnerability == 120)
+    {
+        m_invulnerable = false;
+    }
+    m_invulnerability ++;
 }

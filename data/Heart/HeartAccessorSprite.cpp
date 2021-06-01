@@ -19,3 +19,19 @@ sf::Sprite Heart::getSprite(int number)
 {
     return m_List[number];
 }
+int Heart::getLife()
+{
+    return m_life;
+}
+int Heart::getMaxLife()
+{
+    return m_maxlife;
+}
+bool Heart::isInvulnerable()
+{
+    return m_invulnerable;
+}
+bool Heart::isAlive()
+{
+    return m_alive;
+}

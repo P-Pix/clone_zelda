@@ -27,13 +27,32 @@ class Heart
             std::vector<sf::Sprite> getListSprite();
             sf::Sprite getSprite(int number);
 
+            int getLife();
+            int getMaxLife();
+
+            bool isAlive();
+            bool isInvulnerable();
+
         // Function
-            void updateHeart(int life, int maxlife);
+            void updateHeart();
             void setPosition(sf::Sprite sprite, sf::Vector2f position);
+
+            void setMaxLifeUp();
+            void setHeart(int life);
+            void setDamage(int power);
+            void frameInvulnerable();
 
     private:
         // Variable
             // basic
+                int m_life = 12,
+                    m_maxlife = 12,
+
+                    m_invulnerability = 0;
+                
+                bool    m_alive = true,
+                        m_invulnerable = false;
+
                 const char  *m_name0 = "skin/heart04.png",
                             *m_name1 = "skin/heart14.png",
                             *m_name2 = "skin/heart24.png",

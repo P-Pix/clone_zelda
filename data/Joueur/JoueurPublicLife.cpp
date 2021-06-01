@@ -13,38 +13,17 @@
 
 void Joueur::setMaxLifeUp()
 {
-    m_maxlife += 4;
-    m_life = m_maxlife;
+    m_Heart.setMaxLifeUp();
 }
 void Joueur::setHeart(int life)
 {
-    m_life += life;
-    if(m_life > m_maxlife)
-    {
-        m_life = m_maxlife;
-    }
-    m_Heart.updateHeart(m_life, m_maxlife);
+    m_Heart.setHeart(life);
 }
 void Joueur::setDamage(int power)
 {
-    if(!m_invulnerable)
-    {
-        m_life -= power;
-        if(m_life <= 0)
-        {
-            m_life = 0;
-            m_alive = false;
-        }
-        m_invulnerable = true;
-        m_invulnerability = 0;
-    }
-    m_Heart.updateHeart(m_life, m_maxlife);
+    m_Heart.setDamage(power);
 }
 void Joueur::frameInvulnerable()
 {
-    if(m_invulnerability == 120)
-    {
-        m_invulnerable = false;
-    }
-    m_invulnerability ++;
+    m_Heart.frameInvulnerable();
 }
