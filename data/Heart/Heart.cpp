@@ -19,6 +19,11 @@
             initConstructor();
             //std::cout << "heart create " << this << std::endl;
         }
+        Heart::Heart(int frameinvulnerable)
+        {
+            m_frameinvulnerable = frameinvulnerable;
+            initConstructor();
+        }
 
     // Destructor
         Heart::~Heart()

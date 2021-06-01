@@ -15,7 +15,9 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <vector>
+
 #include "../Gain/Gain.hpp"
+#include "../Heart/Heart.hpp"
 //#include "Ai.hpp"
 
 class Monster
@@ -45,6 +47,7 @@ class Monster
                 int getGainRubisValor();
                 int getGainLifeValor();
                 bool thereGain();
+                bool isInvulnerable();
 
         // Function
             // Attribution
@@ -60,18 +63,14 @@ class Monster
 
                 void createPaternRelative();
                 void gainIsGet();
+                void frameInvulnerable();
     
     private:
         // Variable
             // basic
                 int m_moveaction = 0,
-                    m_power = 4,
+                    m_power = 4;
 
-                    m_life = 10;
-
-                bool    m_alive = true,
-                        m_turnxy = true;
-                
                 const char *m_monster = "skin/monster1.png";
 
             // std
@@ -83,9 +82,9 @@ class Monster
             
             // class
                 Gain m_Gain;
+                Heart m_Heart;
 
         // Function
-            void createPaternStatic();
             void loadTexture(const char *name);
             void loadSprite();
             void initSprite();

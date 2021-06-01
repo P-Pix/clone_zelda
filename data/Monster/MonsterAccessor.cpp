@@ -29,7 +29,7 @@ int Monster::getPower()
 }
 bool Monster::isAlive()
 {
-    return m_alive;
+    return m_Heart.isAlive();
 }
 int Monster::getGainLifeValor()
 {
@@ -42,4 +42,8 @@ int Monster::getGainRubisValor()
 bool Monster::thereGain()
 {
     return m_Gain.thereGain();
+}
+bool Monster::isInvulnerable()
+{
+    return m_Heart.isInvulnerable();
 }

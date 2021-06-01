@@ -37,6 +37,10 @@ void GamesWindow::verificationWindow()
     {
         this -> m_Window -> close();
     }
+    if(m_Mob1.isInvulnerable())
+    {
+        m_Mob1.frameInvulnerable();
+    }
 }
 void GamesWindow::controlWindow()
 {

@@ -98,7 +98,7 @@ void Heart::setDamage(int power)
 }
 void Heart::frameInvulnerable()
 {
-    if(m_invulnerability == 120)
+    if(m_invulnerability == m_frameinvulnerable)
     {
         m_invulnerable = false;
     }

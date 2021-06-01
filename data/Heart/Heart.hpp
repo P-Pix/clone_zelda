@@ -21,6 +21,7 @@ class Heart
     public:
         // Constructor / Destructor
             Heart();
+            Heart(int frameinvulnerable);
             ~Heart();
 
         // Accessor
@@ -48,7 +49,8 @@ class Heart
                 int m_life = 12,
                     m_maxlife = 12,
 
-                    m_invulnerability = 0;
+                    m_invulnerability = 0,
+                    m_frameinvulnerable = 120;
                 
                 bool    m_alive = true,
                         m_invulnerable = false;
