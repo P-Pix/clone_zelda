@@ -1,5 +1,5 @@
 /**
- * @file GainKillAccessor.cpp
+ * @file GainAccessor.cpp
  * @author Guillaume LEMONNIER
  * @brief 
  * @version 0.1
@@ -9,21 +9,21 @@
  * 
  */
 
-#include "GainKill.hpp"
+#include "Gain.hpp"
 
-sf::Sprite GainKill::getSpriteGain()
+sf::Sprite Gain::getSpriteGain()
 {
     return m_Sprite;
 }
-int GainKill::getValorGainLife()
+int Gain::getValorGainLife()
 {
     return m_valorgainlife;
 }
-int GainKill::getValorGainRubis()
+int Gain::getValorGainRubis()
 {
     return m_valorgainrubis;
 }
-bool GainKill::thereGain()
+bool Gain::thereGain()
 {
     return m_gain;
 }

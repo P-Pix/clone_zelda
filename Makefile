@@ -22,10 +22,10 @@ DATA 	=	data/Chest/Chest.cpp\
 			data/Chest/ChestPrivateSprite.cpp\
 			data/Chest/ChestPublicGenerate.cpp\
 			\
-			data/GainKill/GainKill.cpp\
-			data/GainKill/GainKillAccessor.cpp\
-			data/GainKill/GainKillPrivateSprite.cpp\
-			data/GainKill/GainKillPublicChose.cpp\
+			data/Gain/Gain.cpp\
+			data/Gain/GainAccessor.cpp\
+			data/Gain/GainPrivateSprite.cpp\
+			data/Gain/GainPublicChose.cpp\
 			\
 			data/GamesWindow/GamesWindow.cpp\
 			data/GamesWindow/GamesWindowAccessor.cpp\

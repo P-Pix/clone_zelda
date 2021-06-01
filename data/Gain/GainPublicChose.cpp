@@ -1,5 +1,5 @@
 /**
- * @file GainKillPublicChose.cpp
+ * @file GainPublicChose.cpp
  * @author Guillaume LEMONNIER
  * @brief 
  * @version 0.1
@@ -9,9 +9,9 @@
  * 
  */
 
-#include "GainKill.hpp"
+#include "Gain.hpp"
 
-void GainKill::choseGain(sf::Vector2f positionmonster)
+void Gain::choseGain(sf::Vector2f positionmonster)
 {
     m_gain = true;
     int valeur = std::rand() % 20;
@@ -45,7 +45,7 @@ void GainKill::choseGain(sf::Vector2f positionmonster)
     }
     setPostionSprite(positionmonster);
 }
-void GainKill::isGet()
+void Gain::isGet()
 {
     m_gain = false;
     loadSprite(m_emptyname);

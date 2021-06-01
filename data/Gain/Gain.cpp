@@ -1,5 +1,5 @@
 /**
- * @file GainKill.cpp
+ * @file Gain.cpp
  * @author Guillaume LEMONNIER
  * @brief 
  * @version 0.1
@@ -9,13 +9,13 @@
  * 
  */
 
-#include "GainKill.hpp"
+#include "Gain.hpp"
 
-GainKill::GainKill()
+Gain::Gain()
 {
     std::srand(std::time(nullptr));
 }
-GainKill::~GainKill()
+Gain::~Gain()
 {
     
 }

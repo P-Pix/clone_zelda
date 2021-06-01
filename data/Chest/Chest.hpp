@@ -16,7 +16,7 @@
 #include <vector>
 #include <iostream>
 
-#include "../GainKill/GainKill.hpp"
+#include "../Gain/Gain.hpp"
 
 class Chest
 {
@@ -48,7 +48,7 @@ class Chest
             sf::Sprite m_Sprite;
             sf::Texture m_Texture;
 
-            GainKill m_Gain;
+            Gain m_Gain;
         
         // Function
             void loadSprite(const char *name);

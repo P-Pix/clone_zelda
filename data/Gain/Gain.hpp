@@ -1,5 +1,5 @@
 /**
- * @file GainKill.hpp
+ * @file Gain.hpp
  * @author Guillaume LEMONNIER
  * @brief 
  * @version 0.1
@@ -17,12 +17,12 @@
 #include <iostream>
 #include <cstdlib>
 
-class GainKill
+class Gain
 {
     public:
         // Constructor / Destructor
-            GainKill();
-            ~GainKill();
+            Gain();
+            ~Gain();
         
         // Accessor
             sf::Sprite getSpriteGain();
