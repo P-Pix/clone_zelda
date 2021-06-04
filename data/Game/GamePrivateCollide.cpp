@@ -19,21 +19,24 @@ void Game::collideMonster()
         {
             m_Player.setDamage(m_Mob1.getPower());
             collidePosition(m_Player.getPosition(), m_Mob1.getPosition());
-            if(m_collidedown && !previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, -64.f)))
+            if(!m_Sword.getExecution())
             {
-                m_Player.recoilUp();
-            }
-            else if(m_collideup && !previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, 64.f)))
-            {
-                m_Player.recoilDown();
-            }
-            else if(m_collideright && !previewCollide(m_Player.getPosition(), sf::Vector2f(-64.f, 0.f)))
-            {
-                m_Player.recoilLeft();
-            }
-            else if(m_collideleft && !previewCollide(m_Player.getPosition(), sf::Vector2f(64.f, 0.f)))
-            {
-                m_Player.recoilRight();
+                if(m_collidedown && !previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, -64.f)) && !previewLimitMap(m_Player.getPosition(), sf::Vector2f(0.f, -64.f)))
+                {
+                    m_Player.recoilUp();
+                }
+                else if(m_collideup && !previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, 64.f)) && !previewLimitMap(m_Player.getPosition(), sf::Vector2f(0.f, 64.f)))
+                {
+                    m_Player.recoilDown();
+                }
+                else if(m_collideright && !previewCollide(m_Player.getPosition(), sf::Vector2f(-64.f, 0.f)) && !previewLimitMap(m_Player.getPosition(), sf::Vector2f(-64.f, 0.f)))
+                {
+                    m_Player.recoilLeft();
+                }
+                else if(m_collideleft && !previewCollide(m_Player.getPosition(), sf::Vector2f(64.f, 0.f)) && !previewLimitMap(m_Player.getPosition(), sf::Vector2f(64.f, 0.f)))
+                {
+                    m_Player.recoilRight();
+                }
             }
         }
         else if(m_Mob1.thereGain())
@@ -46,21 +49,21 @@ void Game::collideMonster()
 }
 bool Game::collideTwoSprite64x64(sf::Vector2f sprite1, sf::Vector2f sprite2)
 {
-    int sprite1x = sprite1.x,
-        sprite1y = sprite1.y,
+    float   sprite1x = sprite1.x,
+            sprite1y = sprite1.y,
 
-        sprite2x = sprite2.x,
-        sprite2y = sprite2.y;
+            sprite2x = sprite2.x,
+            sprite2y = sprite2.y;
 
     return (sprite1x + 5 <= sprite2x + 64 && sprite1x + 59 >= sprite2x && sprite1y + 32 <= sprite2y + 64 && sprite1y + 64 > sprite2y);
 }
 void Game::collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2)
 {
-    int sprite1x = sprite1.x,
-        sprite1y = sprite1.y,
+    float   sprite1x = sprite1.x,
+            sprite1y = sprite1.y,
 
-        sprite2x = sprite2.x,
-        sprite2y = sprite2.y;
+            sprite2x = sprite2.x,
+            sprite2y = sprite2.y;
 
     m_collidedown = false;
     m_collideleft = false;
@@ -87,11 +90,11 @@ void Game::collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2)
 }
 bool Game::collideSword(sf::Vector2f sprite)
 {
-    int sprite1x = m_Sword.getPosition().x,
-        sprite1y = m_Sword.getPosition().y,
+    float   sprite1x = m_Sword.getPosition().x,
+            sprite1y = m_Sword.getPosition().y,
 
-        sprite2x = sprite.x,
-        sprite2y = sprite.y;
+            sprite2x = sprite.x,
+            sprite2y = sprite.y;
 
     if(m_Sword.getAttackDown())
     {
@@ -124,8 +127,8 @@ bool Game::collideWall(sf::Vector2f sprite, std::vector<sf::Vector2f> wall)
 }
 bool Game::previewCollide(sf::Vector2f user, sf::Vector2f moove)
 {
-    int nextx = user.x + moove.x,
-        nexty = user.y + moove.y;
+    float   nextx = user.x + moove.x,
+            nexty = user.y + moove.y;
 
     bool collide = false;
 
@@ -142,4 +145,15 @@ bool Game::previewCollide(sf::Vector2f user, sf::Vector2f moove)
         collide = collideTwoSprite64x64(sf::Vector2f(nextx, nexty), m_Map.getChestSprite().getPosition());
     }
     return collide;
+}
+bool Game::previewLimitMap(sf::Vector2f user, sf::Vector2f moove)
+{
+    float   nextx = user.x + moove.x,
+            nexty = user.y + moove.y;
+
+    if(nextx > 768 || nextx < 0 || nexty > 1024 || nexty < 0)
+    {
+        return true;
+    }
+    return false;
 }

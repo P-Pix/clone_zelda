@@ -22,8 +22,8 @@ void Game::allDrawWindow()
 
     // Element Immobile
     drawMap(); // Map
-    drawChest(); // Chest
-    drawChestGain();
+    //drawChest(); // Chest
+    //drawChestGain();
 
     // Element Mobile
     m_vectorsprite.push_back(m_Mob1.getSprite()); // Monster

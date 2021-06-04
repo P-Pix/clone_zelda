@@ -30,46 +30,58 @@ void Game::executionGame()
 }
 void Game::keyDown()
 {
-    if(!m_Sword.getExecution() && !previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, m_Player.getSpeed() * 1.f)))
+    if(!m_Sword.getExecution())
     {
+        if(!previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, m_Player.getSpeed() * 1.f)))
+        {
+            m_Player.animationMoveDown();
+        }
         if(!m_Player.getOrientationDown())
         {
             m_Player.setOrientationDown();
         }
-        m_Player.animationMoveDown();
     }
 }
 void Game::keyLeft()
 {
-    if(!m_Sword.getExecution() && !previewCollide(m_Player.getPosition(), sf::Vector2f(m_Player.getSpeed() * -1.f, 0.f)))
+    if(!m_Sword.getExecution())
     {
+        if(!previewCollide(m_Player.getPosition(), sf::Vector2f(m_Player.getSpeed() * -1.f, 0.f)))
+        {
+            m_Player.animationMoveLeft();        
+        }
         if(!m_Player.getOrientationLeft())
         {
             m_Player.setOrientationLeft();
         }
-        m_Player.animationMoveLeft();
     }
 }
 void Game::keyRight()
 {
-    if(!m_Sword.getExecution() && !previewCollide(m_Player.getPosition(), sf::Vector2f(m_Player.getSpeed() * 1.f, 0.f)))
+    if(!m_Sword.getExecution())
     {
+        if(!previewCollide(m_Player.getPosition(), sf::Vector2f(m_Player.getSpeed() * 1.f, 0.f)))
+        {
+            m_Player.animationMoveRight();
+        }        
         if(!m_Player.getOrientationRight())
         {
             m_Player.setOrientationRight();
         }
-        m_Player.animationMoveRight();
     }
 }
 void Game::keyUp()
 {
-    if(!m_Sword.getExecution() && !previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, m_Player.getSpeed() * -1.f)))
+    if(!m_Sword.getExecution())
     {
+        if(!previewCollide(m_Player.getPosition(), sf::Vector2f(0.f, m_Player.getSpeed() * -1.f)))
+        {
+            m_Player.animationMoveUp();
+        }
         if(!m_Player.getOrientationUp())
         {
             m_Player.setOrientationUp();
         }
-        m_Player.animationMoveUp();
     }
 }
 void Game::keySpace()

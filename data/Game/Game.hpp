@@ -83,6 +83,7 @@ class Game
                 bool collideSword(sf::Vector2f sprite);
                 bool collideWall(sf::Vector2f user, std::vector<sf::Vector2f> wall);
                 bool previewCollide(sf::Vector2f user, sf::Vector2f moove);
+                bool previewLimitMap(sf::Vector2f user, sf::Vector2f moove);
 
                 void collideMonster();
                 void collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2);
