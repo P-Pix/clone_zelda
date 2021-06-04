@@ -1,5 +1,5 @@
 /**
- * @file GamesWindowPrivateMap.cpp
+ * @file GamePrivateMap.cpp
  * @author Guillaume LEMONNIER
  * @brief 
  * @version 0.1
@@ -9,14 +9,15 @@
  * 
  */
 
-#include "GamesWindow.hpp"
+#include "Game.hpp"
 
-void GamesWindow::setMapUpdate()
+void Game::setMapUpdate()
 {
     loadNewMap();
     setBackground();
+    makeListMonster();
 }
-void GamesWindow::switchMap()
+void Game::switchMap()
 {
     if(m_Player.getPosition().x < 0)
     {
@@ -24,7 +25,7 @@ void GamesWindow::switchMap()
         setMapUpdate();
         m_Player.setPositionLeft();
     }
-    else if(m_Player.getPosition().x > m_windowwidth)
+    else if(m_Player.getPosition().x > 1024)
     {
         m_Map.setMapRight();
         setMapUpdate();
@@ -36,25 +37,25 @@ void GamesWindow::switchMap()
         setMapUpdate();
         m_Player.setPositionUp();
     }
-    if(m_Player.getPosition().y > m_windowheight)
+    if(m_Player.getPosition().y > 768)
     {
         m_Map.setMapDown();
         setMapUpdate();
         m_Player.setPositionDown();
     }
 }
-void GamesWindow::loadNewMap()
+void Game::loadNewMap()
 {
     m_Map.generateMap();
 }
-void GamesWindow::setBackground()
+void Game::setBackground()
 {
     m_Bloc.setPositionVector(m_Map.getListPositionWallInt());
     m_Cavern.setPositionVector(m_Map.getListPositionGroundInt());
     m_Tree.setPositionVector(m_Map.getListPositionWallExt());
     m_Ground.setPositionVector(m_Map.getListPositionGroundExt());
 }
-void GamesWindow::gainChest()
+void Game::gainChest()
 {
     if(collideTwoSprite64x64(m_Player.getPosition(), m_Map.getGainSprite().getPosition()))
     {

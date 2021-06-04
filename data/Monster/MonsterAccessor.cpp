@@ -47,3 +47,11 @@ bool Monster::isInvulnerable()
 {
     return m_Heart.isInvulnerable();
 }
+Monster* Monster::getAdress()
+{
+    return this;
+}
+Monster Monster::getMonster()
+{
+    return *this;
+}

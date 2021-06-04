@@ -1,5 +1,5 @@
 /**
- * @file GamesWindowPrivateCollide.cpp
+ * @file GamePrivateCollide.cpp
  * @author Guillaume LEMONNIER
  * @brief 
  * @version 0.1
@@ -9,9 +9,9 @@
  * 
  */
 
-#include "GamesWindow.hpp"
+#include "Game.hpp"
 
-void GamesWindow::collideMonster()
+void Game::collideMonster()
 {
     if(collideTwoSprite64x64(m_Player.getPosition(), m_Mob1.getPosition()))
     {
@@ -44,7 +44,7 @@ void GamesWindow::collideMonster()
         }
     }
 }
-bool GamesWindow::collideTwoSprite64x64(sf::Vector2f sprite1, sf::Vector2f sprite2)
+bool Game::collideTwoSprite64x64(sf::Vector2f sprite1, sf::Vector2f sprite2)
 {
     int sprite1x = sprite1.x,
         sprite1y = sprite1.y,
@@ -54,7 +54,7 @@ bool GamesWindow::collideTwoSprite64x64(sf::Vector2f sprite1, sf::Vector2f sprit
 
     return (sprite1x + 5 <= sprite2x + 64 && sprite1x + 59 >= sprite2x && sprite1y + 32 <= sprite2y + 64 && sprite1y + 64 > sprite2y);
 }
-void GamesWindow::collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2)
+void Game::collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2)
 {
     int sprite1x = sprite1.x,
         sprite1y = sprite1.y,
@@ -85,7 +85,7 @@ void GamesWindow::collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2)
         m_collidedown = true;
     }
 }
-bool GamesWindow::collideSword(sf::Vector2f sprite)
+bool Game::collideSword(sf::Vector2f sprite)
 {
     int sprite1x = m_Sword.getPosition().x,
         sprite1y = m_Sword.getPosition().y,
@@ -111,7 +111,7 @@ bool GamesWindow::collideSword(sf::Vector2f sprite)
     }
     return false;
 }
-bool GamesWindow::collideWall(sf::Vector2f sprite, std::vector<sf::Vector2f> wall)
+bool Game::collideWall(sf::Vector2f sprite, std::vector<sf::Vector2f> wall)
 {
     for(int x = 0; x < wall.size(); x ++)
     {
@@ -122,7 +122,7 @@ bool GamesWindow::collideWall(sf::Vector2f sprite, std::vector<sf::Vector2f> wal
     }
     return false;
 }
-bool GamesWindow::previewCollide(sf::Vector2f user, sf::Vector2f moove)
+bool Game::previewCollide(sf::Vector2f user, sf::Vector2f moove)
 {
     int nextx = user.x + moove.x,
         nexty = user.y + moove.y;

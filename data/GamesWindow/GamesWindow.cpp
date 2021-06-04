@@ -14,20 +14,11 @@
 // Constructor / Destructor
 
     // Constructor
-        GamesWindow::GamesWindow(): m_Bloc(m_blocname),
-                                    m_OrangeTree(m_orangetreename),
-                                    m_Water(m_watername),
-                                    m_WhiteTree(m_whitetreename),
-                                    
-                                    m_Bridge(m_bridgename), 
-                                    m_GreyGround(m_greygroundname), 
-                                    m_Cavern(m_cavernname)
+        GamesWindow::GamesWindow()
         {
             // Window size : (16* 64) * ((10 * 64) + 64) = 1024 * 704
             this -> m_Window = nullptr;
             this -> m_Window = new sf::RenderWindow(sf::VideoMode(m_windowwidth, m_windowheight), "Zelda Like");
-            setMapUpdate();
-            makeListMonster();
             //std::cout << "window create " << this << std::endl;
         }
 

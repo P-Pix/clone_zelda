@@ -32,6 +32,8 @@ class Monster
                 ~Monster();
                 
         // Accessor
+                Monster* getAdress();
+                Monster getMonster();
             // Sprite
                 sf::Sprite getSprite();
 

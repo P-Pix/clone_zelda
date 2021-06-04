@@ -27,14 +27,19 @@ DATA 	=	data/Chest/Chest.cpp\
 			data/Gain/GainPrivateSprite.cpp\
 			data/Gain/GainPublicChose.cpp\
 			\
+			data/Game/Game.cpp\
+			data/Game/GameAccessor.cpp\
+			data/Game/GamePrivateCollide.cpp\
+			data/Game/GamePrivateDraw.cpp\
+			data/Game/GamePrivateMap.cpp\
+			data/Game/GamePrivateMonster.cpp\
+			data/Game/GamePrivateSword.cpp\
+			data/Game/GamePublic.cpp\
+			\
 			data/GamesWindow/GamesWindow.cpp\
 			data/GamesWindow/GamesWindowAccessor.cpp\
-			data/GamesWindow/GamesWindowPrivateCollide.cpp\
 			data/GamesWindow/GamesWindowPrivateControl.cpp\
 			data/GamesWindow/GamesWindowPrivateDraw.cpp\
-			data/GamesWindow/GamesWindowPrivateMap.cpp\
-			data/GamesWindow/GamesWindowPrivateMonster.cpp\
-			data/GamesWindow/GamesWindowPrivateSword.cpp\
 			data/GamesWindow/GamesWindowPublicWindow.cpp\
 			\
 			data/Ground/Ground.cpp\

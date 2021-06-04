@@ -1,5 +1,5 @@
 /**
- * @file GamesWindowPrivateSword.cpp
+ * @file GamePrivateSword.cpp
  * @author Guillaume LEMONNIER
  * @brief 
  * @version 0.1
@@ -9,9 +9,9 @@
  * 
  */
 
-#include "GamesWindow.hpp"
+#include "Game.hpp"
 
-void GamesWindow::swordAttack()
+void Game::swordAttack()
 {
     if(m_Sword.getExecution())
     {
