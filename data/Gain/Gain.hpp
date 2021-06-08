@@ -21,18 +21,18 @@ class Gain
 {
     public:
         // Constructor / Destructor
-            Gain();
-            ~Gain();
+            Gain(void);
+            ~Gain(void);
         
         // Accessor
-            sf::Sprite getSpriteGain();
-            int getValorGainLife();
-            int getValorGainRubis();
-            bool thereGain();
+            sf::Sprite getSpriteGain(void);
+            int getValorGainLife(void);
+            int getValorGainRubis(void);
+            bool thereGain(void);
 
         // Chose element gain
             void choseGain(sf::Vector2f positionmonster);
-            void isGet();
+            void isGet(void);
 
     private:
         // Variable

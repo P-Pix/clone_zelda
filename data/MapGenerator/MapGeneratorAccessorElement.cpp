@@ -11,47 +11,47 @@
 
 #include "MapGenerator.hpp"
 
-bool MapGenerator::hasTree()
+bool MapGenerator::hasTree(void)
 {
     return m_tree;
 }
-bool MapGenerator::hasGround()
+bool MapGenerator::hasGround(void)
 {
     return m_ground;
 }
-bool MapGenerator::hasCavern()
+bool MapGenerator::hasCavern(void)
 {
     return m_cavern;
 }
-bool MapGenerator::hasBloc()
+bool MapGenerator::hasBloc(void)
 {
     return m_bloc;
 }
-int MapGenerator::getMapX()
+int MapGenerator::getMapX(void)
 {
     return m_x;
 }
-int MapGenerator::getMapY()
+int MapGenerator::getMapY(void)
 {
     return m_y;
 }
-bool MapGenerator::thereChest()
+bool MapGenerator::thereChest(void)
 {
     return m_Chest.getChest();
 }
-sf::Sprite MapGenerator::getChestSprite()
+sf::Sprite MapGenerator::getChestSprite(void)
 {
     return m_Chest.getSprite();
 }
-sf::Sprite MapGenerator::getGainSprite()
+sf::Sprite MapGenerator::getGainSprite(void)
 {
     return m_Chest.getSpriteGain();
 }
-int MapGenerator::getGainRubis()
+int MapGenerator::getGainRubis(void)
 {
     return m_Chest.getValorRubis();
 }
-int MapGenerator::getGainLife()
+int MapGenerator::getGainLife(void)
 {
     return m_Chest.getValorLife();
 }

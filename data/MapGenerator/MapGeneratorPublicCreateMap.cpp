@@ -11,7 +11,7 @@
 
 #include "MapGenerator.hpp"
 
-void MapGenerator::generateMap()
+void MapGenerator::generateMap(void)
 {
     // Open the file
     std::string name = "data/maping/" + std::to_string(m_y) + "_" + std::to_string(m_x) + "map.xsb";
@@ -31,7 +31,7 @@ void MapGenerator::generateMap()
     m_ground = false;
     m_tree = false;
 
-    //m_Chest.generateChest();
+    //m_Chest.generateChest(void);
 
     for(int positiony = 1; positiony < 12; positiony ++)
     {
@@ -71,19 +71,19 @@ void MapGenerator::generateMap()
     ifmap.close();
 }
 
-void MapGenerator::setMapDown()
+void MapGenerator::setMapDown(void)
 {
     m_y += 1;
 }
-void MapGenerator::setMapUp()
+void MapGenerator::setMapUp(void)
 {
     m_y -= 1;
 }
-void MapGenerator::setMapLeft()
+void MapGenerator::setMapLeft(void)
 {
     m_x -= 1;
 }
-void MapGenerator::setMapRight()
+void MapGenerator::setMapRight(void)
 {
     m_x += 1;
 }

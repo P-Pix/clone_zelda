@@ -11,23 +11,23 @@
 
 #include "Chest.hpp"
 
-sf::Sprite Chest::getSprite()
+sf::Sprite Chest::getSprite(void)
 {
     return m_Sprite;
 }
-bool Chest::getChest()
+bool Chest::getChest(void)
 {
     return m_spawnchest;
 }
-int Chest::getValorLife()
+int Chest::getValorLife(void)
 {
     return m_Gain.getValorGainLife();
 }
-int Chest::getValorRubis()
+int Chest::getValorRubis(void)
 {
     return m_Gain.getValorGainRubis();
 }
-sf::Sprite Chest::getSpriteGain()
+sf::Sprite Chest::getSpriteGain(void)
 {
     return m_Gain.getSpriteGain();
 }

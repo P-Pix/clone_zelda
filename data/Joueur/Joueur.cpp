@@ -14,7 +14,7 @@
 // Constructor / Destructor
 
     // Constructor
-        Joueur::Joueur(): m_Spown(sf::Vector2f(10 * 64.f, 7 * 64.f))
+        Joueur::Joueur(void): m_Spown(sf::Vector2f(10 * 64.f, 7 * 64.f))
         {
             this -> m_Shero = loadSprite(m_ncf0, m_Spown);
             makeListeAnimation();
@@ -23,7 +23,7 @@
         }
 
     // Destructor
-        Joueur::~Joueur()
+        Joueur::~Joueur(void)
         {
             //std::cout << "player delete " << this << std::endl;
         }
@@ -33,13 +33,13 @@
     // Orientation : JoueurAccessorOrientation.cpp
 
     // Sprite
-        sf::Sprite Joueur::getSprite()
+        sf::Sprite Joueur::getSprite(void)
         {
             return m_Shero;
         }
 
     // Adress
-        Joueur *Joueur::getAdress()
+        Joueur *Joueur::getAdress(void)
         {
             return this;
         }

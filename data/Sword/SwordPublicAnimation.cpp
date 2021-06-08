@@ -11,7 +11,7 @@
 
 #include "Sword.hpp"
 
-void Sword::animateAttack()
+void Sword::animateAttack(void)
 {
     m_animationfram ++;
     if(m_animationfram == 15)

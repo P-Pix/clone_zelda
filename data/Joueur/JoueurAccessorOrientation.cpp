@@ -11,23 +11,23 @@
 
 #include "Joueur.hpp"
 
-bool Joueur::getOrientationDown()
+bool Joueur::getOrientationDown(void)
 {
     return m_orientationdown;
 }
-bool Joueur::getOrientationLeft()
+bool Joueur::getOrientationLeft(void)
 {
     return m_orientationleft;
 }
-bool Joueur::getOrientationRight()
+bool Joueur::getOrientationRight(void)
 {
     return m_orientationright;
 }
-bool Joueur::getOrientationUp()
+bool Joueur::getOrientationUp(void)
 {
     return m_orientationup;
 }
-int Joueur::getOrientationValue()
+int Joueur::getOrientationValue(void)
 {
     if(m_orientationdown)
     {

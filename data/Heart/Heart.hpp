@@ -20,28 +20,28 @@ class Heart
 {
     public:
         // Constructor / Destructor
-            Heart();
+            Heart(void);
             Heart(int frameinvulnerable);
-            ~Heart();
+            ~Heart(void);
 
         // Accessor
-            std::vector<sf::Sprite> getListSprite();
+            std::vector<sf::Sprite> getListSprite(void);
             sf::Sprite getSprite(int number);
 
-            int getLife();
-            int getMaxLife();
+            int getLife(void);
+            int getMaxLife(void);
 
-            bool isAlive();
-            bool isInvulnerable();
+            bool isAlive(void);
+            bool isInvulnerable(void);
 
         // Function
-            void updateHeart();
+            void updateHeart(void);
             void setPosition(sf::Sprite sprite, sf::Vector2f position);
 
-            void setMaxLifeUp();
+            void setMaxLifeUp(void);
             void setHeart(int life);
             void setDamage(int power);
-            void frameInvulnerable();
+            void frameInvulnerable(void);
 
     private:
         // Variable
@@ -81,7 +81,7 @@ class Heart
             sf::Sprite setSpritePosition(sf::Sprite sprite, sf::Vector2f position);
             void listeHeartConstructor(int life);
             void heartConstructor(int partie);
-            void initConstructor();
+            void initConstructor(void);
 
 };
 

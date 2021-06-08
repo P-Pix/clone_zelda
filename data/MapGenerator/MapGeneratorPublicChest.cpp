@@ -11,11 +11,11 @@
 
 #include "MapGenerator.hpp"
 
-void MapGenerator::oprenChest()
+void MapGenerator::oprenChest(void)
 {
     m_Chest.openChest();
 }
-void MapGenerator::gainIsGet()
+void MapGenerator::gainIsGet(void)
 {
     m_Chest.isGet();
 }

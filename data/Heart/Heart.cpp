@@ -14,7 +14,7 @@
 // Consructor / Destructor
 
     // Constructor
-        Heart::Heart()
+        Heart::Heart(void)
         {
             initConstructor();
             //std::cout << "heart create " << this << std::endl;
@@ -26,7 +26,7 @@
         }
 
     // Destructor
-        Heart::~Heart()
+        Heart::~Heart(void)
         {
             //std::cout << "heart delete " << this << std::endl;
         }

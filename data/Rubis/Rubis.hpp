@@ -21,16 +21,16 @@ class Rubis
 {
     public:
         // Constructor / Destructor
-            Rubis();
-            ~Rubis();
+            Rubis(void);
+            ~Rubis(void);
         
         // Accessor
-            sf::Sprite getLogoRubis();
-            sf::Text getRubisHundred();
-            sf::Text getRubisTen();
-            sf::Text getRubisUnit();
+            sf::Sprite getLogoRubis(void);
+            sf::Text getRubisHundred(void);
+            sf::Text getRubisTen(void);
+            sf::Text getRubisUnit(void);
 
-            int getTotalRubis();
+            int getTotalRubis(void);
         
         // Function
             void updateRubis(int valorrubis);
@@ -53,11 +53,11 @@ class Rubis
                         m_Text10,
                         m_Text1;
         // Function
-            void generateText();
+            void generateText(void);
 
-            void changeText100();
-            void changeText10();
-            void changeText1();
+            void changeText100(void);
+            void changeText10(void);
+            void changeText1(void);
 };
 
 #endif

@@ -11,13 +11,13 @@
 
 #include "Game.hpp"
 
-void Game::setMapUpdate()
+void Game::setMapUpdate(void)
 {
     loadNewMap();
     setBackground();
     makeListMonster();
 }
-void Game::switchMap()
+void Game::switchMap(void)
 {
     if(m_Player.getPosition().x < 0)
     {
@@ -44,18 +44,18 @@ void Game::switchMap()
         m_Player.setPositionDown();
     }
 }
-void Game::loadNewMap()
+void Game::loadNewMap(void)
 {
     m_Map.generateMap();
 }
-void Game::setBackground()
+void Game::setBackground(void)
 {
     m_Bloc.setPositionVector(m_Map.getListPositionWallInt());
     m_Cavern.setPositionVector(m_Map.getListPositionGroundInt());
     m_Tree.setPositionVector(m_Map.getListPositionWallExt());
     m_Ground.setPositionVector(m_Map.getListPositionGroundExt());
 }
-void Game::gainChest()
+void Game::gainChest(void)
 {
     if(collideTwoSprite64x64(m_Player.getPosition(), m_Map.getGainSprite().getPosition()))
     {

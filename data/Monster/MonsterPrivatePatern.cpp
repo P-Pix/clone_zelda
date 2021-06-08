@@ -11,7 +11,7 @@
 
 #include "Monster.hpp"
 
-void Monster::createPaternRelative()
+void Monster::createPaternRelative(void)
 {
     int random = std::rand() % 4;
     if(random == 0)

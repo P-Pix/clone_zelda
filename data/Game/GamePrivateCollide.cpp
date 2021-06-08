@@ -11,7 +11,7 @@
 
 #include "Game.hpp"
 
-void Game::collideMonster()
+void Game::collideMonster(void)
 {
     if(collideTwoSprite64x64(m_Player.getPosition(), m_Mob1.getPosition()))
     {

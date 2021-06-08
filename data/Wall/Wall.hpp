@@ -20,14 +20,14 @@ class Wall
 {
     public:
         // Constructor / Destructor
-            Wall();
+            Wall(void);
             Wall(const char *nametexture);
 
-            ~Wall();
+            ~Wall(void);
 
         // Accessor 
-            sf::Sprite getSprite();
-            std::vector<sf::Sprite> getListSprite();
+            sf::Sprite getSprite(void);
+            std::vector<sf::Sprite> getListSprite(void);
 
         // Function
             void setPosition(sf::Vector2f position);
@@ -47,8 +47,8 @@ class Wall
         
         // Function
             sf::Sprite getSpritePosition(sf::Vector2f position);
-            sf::Sprite loadSprite();
-            void loadTexture();
+            sf::Sprite loadSprite(void);
+            void loadTexture(void);
 };
 
 #endif

@@ -14,7 +14,7 @@
 // Constructor / Destructor
 
     // Constructor
-        Ground::Ground()
+        Ground::Ground(void)
         {
             initSprite();
             //std::cout << "Ground create " << this << std::endl;
@@ -27,7 +27,7 @@
         }
 
     // Destructor
-        Ground::~Ground()
+        Ground::~Ground(void)
         {
             //std::cout << "Ground deete " << this << std::endl;
         }

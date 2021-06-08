@@ -11,7 +11,7 @@
 
 #include "Game.hpp"
 
-void Game::executionGame()
+void Game::executionGame(void)
 {
     allDrawWindow();
     mooveMonster();
@@ -28,7 +28,7 @@ void Game::executionGame()
         m_Mob1.frameInvulnerable();
     }
 }
-void Game::keyDown()
+void Game::keyDown(void)
 {
     if(!m_Sword.getExecution())
     {
@@ -42,7 +42,7 @@ void Game::keyDown()
         }
     }
 }
-void Game::keyLeft()
+void Game::keyLeft(void)
 {
     if(!m_Sword.getExecution())
     {
@@ -56,7 +56,7 @@ void Game::keyLeft()
         }
     }
 }
-void Game::keyRight()
+void Game::keyRight(void)
 {
     if(!m_Sword.getExecution())
     {
@@ -70,7 +70,7 @@ void Game::keyRight()
         }
     }
 }
-void Game::keyUp()
+void Game::keyUp(void)
 {
     if(!m_Sword.getExecution())
     {
@@ -84,7 +84,7 @@ void Game::keyUp()
         }
     }
 }
-void Game::keySpace()
+void Game::keySpace(void)
 {
     if(!m_Sword.getExecution())
     {

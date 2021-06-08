@@ -11,7 +11,7 @@
 
 #include "Game.hpp"
 
-void Game::mooveMonster()
+void Game::mooveMonster(void)
 {
     m_Mob1.nextPosition();
     if(!previewCollide(m_Mob1.getPosition(), m_Mob1.getNextPosition()) && m_Mob1.isAlive() && !previewLimitMap(m_Mob1.getPosition(), m_Mob1.getNextPosition()))
@@ -19,7 +19,7 @@ void Game::mooveMonster()
         m_Mob1.moove();
     }
 }
-void Game::makeListMonster()
+void Game::makeListMonster(void)
 {
     m_listmob.clear();
 

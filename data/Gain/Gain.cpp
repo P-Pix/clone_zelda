@@ -11,11 +11,11 @@
 
 #include "Gain.hpp"
 
-Gain::Gain()
+Gain::Gain(void)
 {
     std::srand(std::time(nullptr));
 }
-Gain::~Gain()
+Gain::~Gain(void)
 {
     
 }

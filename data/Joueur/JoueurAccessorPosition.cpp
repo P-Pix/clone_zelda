@@ -11,11 +11,11 @@
 
 #include "Joueur.hpp"
 
-sf::Vector2f Joueur::getPosition()
+sf::Vector2f Joueur::getPosition(void)
 {
     return m_Shero.getPosition();
 }
-sf::Vector2f Joueur::getPositionSword()
+sf::Vector2f Joueur::getPositionSword(void)
 {
     sf::Vector2f positionsword(0.f, 0.f);
     if(m_orientationdown)
@@ -44,7 +44,7 @@ sf::Vector2f Joueur::getPositionSword()
     }
     return m_Shero.getPosition();
 }
-int Joueur::getSpeed()
+int Joueur::getSpeed(void)
 {
     return m_vitesse;
 }

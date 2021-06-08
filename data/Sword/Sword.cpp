@@ -14,7 +14,7 @@
 // Constructor / Destructor
 
     // Constructor
-        Sword::Sword()
+        Sword::Sword(void)
         {
             //std::cout << "Sword create" << std::endl;
             loadTexture();
@@ -22,7 +22,7 @@
         }   
     
     // Destructor
-        Sword::~Sword()
+        Sword::~Sword(void)
         {
             //std::cout << "Sword delete" << std::endl;
         }

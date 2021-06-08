@@ -11,7 +11,7 @@
 
 #include "Chest.hpp"
 
-void Chest::generateChest()
+void Chest::generateChest(void)
 {
     loadSprite(m_namechestclose);
     m_spawnchest = false;
@@ -22,7 +22,7 @@ void Chest::generateChest()
         m_open = false;
     }
 }
-void Chest::openChest()
+void Chest::openChest(void)
 {
     if(!m_open)
     {
@@ -32,7 +32,7 @@ void Chest::openChest()
         m_open = !m_open;
     }
 }
-void Chest::isGet()
+void Chest::isGet(void)
 {
     m_Gain.isGet();
 }

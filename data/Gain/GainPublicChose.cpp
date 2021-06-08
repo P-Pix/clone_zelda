@@ -45,7 +45,7 @@ void Gain::choseGain(sf::Vector2f positionmonster)
     }
     setPostionSprite(positionmonster);
 }
-void Gain::isGet()
+void Gain::isGet(void)
 {
     m_gain = false;
     loadSprite(m_emptyname);

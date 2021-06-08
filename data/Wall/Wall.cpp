@@ -13,7 +13,7 @@
 
 // Constructor / Destructor
 
-    Wall::Wall()
+    Wall::Wall(void)
     {
         this -> m_SWall = loadSprite();
         //std::cout << "wall create " << this << std::endl;
@@ -26,7 +26,7 @@
         //std::cout << "wall create " << this << std::endl;
     }
 
-    Wall::~Wall()
+    Wall::~Wall(void)
     {
         //std::cout << "Wall delete " << this << std::endl;
     }

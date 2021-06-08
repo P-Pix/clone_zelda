@@ -13,7 +13,7 @@
 
 // Constructor / Desttructor
     // Constructor
-        Monster::Monster(): m_Heart(16)
+        Monster::Monster(void): m_Heart(16)
         {
             //std::cout << "Monster create " << this << std::endl;
             initSprite();
@@ -29,7 +29,7 @@
         }
 
     // Destructeur
-        Monster::~Monster()
+        Monster::~Monster(void)
         {
             //std::cout << "Monster delete " << this << std::endl;
         }

@@ -11,7 +11,7 @@
 
 #include "Game.hpp"
 
-void Game::swordAttack()
+void Game::swordAttack(void)
 {
     if(m_Sword.getExecution())
     {

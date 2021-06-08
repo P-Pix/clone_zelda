@@ -11,12 +11,12 @@
 
 #include "Sword.hpp"
 
-void Sword::setOrientation()
+void Sword::setOrientation(void)
 {
     m_rotate -= 6;
     m_Sprite.setRotation(m_rotate);
 }
-void Sword::setBasicPosition()
+void Sword::setBasicPosition(void)
 {
     if(m_animationdown)
     {
@@ -40,7 +40,7 @@ void Sword::setBasicPosition()
     }
     m_Sprite.setPosition(m_VectorAniamtor);
 }
-void Sword::setPosition()
+void Sword::setPosition(void)
 {
     if(m_animationdown)
     {
@@ -60,7 +60,7 @@ void Sword::setPosition()
     }
     m_Sprite.setPosition(m_VectorAniamtor);
 }
-void Sword::endAnimation()
+void Sword::endAnimation(void)
 {
     m_aniamtionexe = false;
     m_animationdown = false;

@@ -14,13 +14,13 @@
 // Constructor / Destructor
 
     // Constructor
-        MapGenerator::MapGenerator()
+        MapGenerator::MapGenerator(void)
         {
             //std::cout << "map generator create " << this << std::endl;
         }
 
     // Destructor
-        MapGenerator::~MapGenerator()
+        MapGenerator::~MapGenerator(void)
         {
             //std::cout << "map generator delete " << this << std::endl;
         }

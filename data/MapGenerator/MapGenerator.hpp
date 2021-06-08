@@ -25,42 +25,42 @@ class MapGenerator
 {
     public:
         // Constructor / Destructor
-            MapGenerator();
-            ~MapGenerator();
+            MapGenerator(void);
+            ~MapGenerator(void);
         
         // Accessor
-            std::vector<sf::Vector2f> getListPositionWallExt();
-            std::vector<sf::Vector2f> getListPositionGroundExt();
+            std::vector<sf::Vector2f> getListPositionWallExt(void);
+            std::vector<sf::Vector2f> getListPositionGroundExt(void);
 
-            std::vector<sf::Vector2f> getListPositionWallInt();
-            std::vector<sf::Vector2f> getListPositionGroundInt();
+            std::vector<sf::Vector2f> getListPositionWallInt(void);
+            std::vector<sf::Vector2f> getListPositionGroundInt(void);
 
-            std::vector<std::vector<char>> getMap();
+            std::vector<std::vector<char>> getMap(void);
         
-            bool hasTree();
-            bool hasGround();
-            bool hasCavern();
-            bool hasBloc();
+            bool hasTree(void);
+            bool hasGround(void);
+            bool hasCavern(void);
+            bool hasBloc(void);
 
-            int getMapX();
-            int getMapY();
+            int getMapX(void);
+            int getMapY(void);
 
-            sf::Sprite getChestSprite();
-            bool thereChest();
+            sf::Sprite getChestSprite(void);
+            bool thereChest(void);
 
-            sf::Sprite getGainSprite();
-            int getGainLife();
-            int getGainRubis();
+            sf::Sprite getGainSprite(void);
+            int getGainLife(void);
+            int getGainRubis(void);
             
         // Function
-            void generateMap();
-            void setMapUp();
-            void setMapDown();
-            void setMapRight();
-            void setMapLeft();
+            void generateMap(void);
+            void setMapUp(void);
+            void setMapDown(void);
+            void setMapRight(void);
+            void setMapLeft(void);
 
-            void oprenChest();
-            void gainIsGet();
+            void oprenChest(void);
+            void gainIsGet(void);
 
 
     private:

@@ -11,7 +11,7 @@
 
 #include "GamesWindow.hpp"
 
-void GamesWindow::pollEvent()
+void GamesWindow::pollEvent(void)
 {
     if(this -> m_Window -> pollEvent(this -> m_Event))
     {

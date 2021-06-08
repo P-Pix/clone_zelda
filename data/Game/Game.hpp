@@ -72,11 +72,11 @@ class Game
         
         // Function
             // Map
-                void setMapUpdate();
-                void switchMap();
-                void loadNewMap();
-                void setBackground();
-                void gainChest();
+                void setMapUpdate(void);
+                void switchMap(void);
+                void loadNewMap(void);
+                void setBackground(void);
+                void gainChest(void);
 
             // collide
                 bool collideTwoSprite64x64(sf::Vector2f sprite1, sf::Vector2f sprite2);
@@ -85,45 +85,45 @@ class Game
                 bool previewCollide(sf::Vector2f user, sf::Vector2f moove);
                 bool previewLimitMap(sf::Vector2f user, sf::Vector2f moove);
 
-                void collideMonster();
+                void collideMonster(void);
                 void collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2);
             
             // Sword
-                void swordAttack();
+                void swordAttack(void);
 
             // Monster
-                void mooveMonster();
-                void makeListMonster();
+                void mooveMonster(void);
+                void makeListMonster(void);
             
             // Draw
-                void drawSword();
-                void drawRubis();
-                void drawMap();
-                void drawChestGain();
-                void drawChest();
-                void allDrawWindow();
+                void drawSword(void);
+                void drawRubis(void);
+                void drawMap(void);
+                void drawChestGain(void);
+                void drawChest(void);
+                void allDrawWindow(void);
 
                 void extractSpriteFromVector(std::vector<sf::Sprite> vector);
 
     public:
         // Constructor / Destructor
-            Game();
-            ~Game();
+            Game(void);
+            ~Game(void);
         
         // Accessor
-            std::vector<sf::Sprite> getDrawingSprite();
-            std::vector<sf::Text> getDrawingText();
+            std::vector<sf::Sprite> getDrawingSprite(void);
+            std::vector<sf::Text> getDrawingText(void);
 
-            bool playerIsAlive();
+            bool playerIsAlive(void);
         
         // Function
-            void executionGame();
+            void executionGame(void);
             
-            void keyDown();
-            void keyLeft();
-            void keyRight();
-            void keyUp();
-            void keySpace();
+            void keyDown(void);
+            void keyLeft(void);
+            void keyRight(void);
+            void keyUp(void);
+            void keySpace(void);
 };
 
 #endif

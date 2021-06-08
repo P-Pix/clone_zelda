@@ -11,15 +11,15 @@
 
 #include "Game.hpp"
 
-std::vector<sf::Sprite> Game::getDrawingSprite()
+std::vector<sf::Sprite> Game::getDrawingSprite(void)
 {
     return m_vectorsprite;
 }
-std::vector<sf::Text> Game::getDrawingText()
+std::vector<sf::Text> Game::getDrawingText(void)
 {
     return m_vectortext;
 }
-bool Game::playerIsAlive()
+bool Game::playerIsAlive(void)
 {
     return m_Player.isAlive();
 }

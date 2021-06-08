@@ -21,17 +21,17 @@ class GamesWindow
     public:
 
         // Constructor /Destructor
-            GamesWindow();
-            ~GamesWindow();
+            GamesWindow(void);
+            ~GamesWindow(void);
 
         // Accessor
-            bool isRunning();
+            bool isRunning(void);
 
         // function
             void limitFramerate(int frame);
-            void controlWindow();
-            void updateWindow();
-            void verificationWindow();
+            void controlWindow(void);
+            void updateWindow(void);
+            void verificationWindow(void);
 
     private:
         //Variable
@@ -48,7 +48,7 @@ class GamesWindow
 
         //Function
             // control
-                void pollEvent();
+                void pollEvent(void);
 
             // draw
                 void drawSprite(sf::Sprite sprite);

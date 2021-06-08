@@ -15,14 +15,14 @@ void GamesWindow::limitFramerate(int frame)
 {
     this -> m_Window -> setFramerateLimit(frame);
 }
-void GamesWindow::updateWindow()
+void GamesWindow::updateWindow(void)
 {
     this -> m_Window -> clear();
     drawVectorSprite(m_Game.getDrawingSprite());
     drawVectorText(m_Game.getDrawingText());
     this -> m_Window -> display();
 }
-void GamesWindow::verificationWindow()
+void GamesWindow::verificationWindow(void)
 {
     m_Game.executionGame();
     if(!m_Game.playerIsAlive())
@@ -30,7 +30,7 @@ void GamesWindow::verificationWindow()
         this -> m_Window -> close();
     }
 }
-void GamesWindow::controlWindow()
+void GamesWindow::controlWindow(void)
 {
     this -> pollEvent();
 }

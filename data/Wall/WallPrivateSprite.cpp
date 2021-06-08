@@ -17,7 +17,7 @@ sf::Sprite Wall::getSpritePosition(sf::Vector2f position)
     return m_SWall;
 }
 
-sf::Sprite Wall::loadSprite()
+sf::Sprite Wall::loadSprite(void)
 {
     sf::Sprite SPRITE;
     loadTexture();
@@ -25,7 +25,7 @@ sf::Sprite Wall::loadSprite()
     return SPRITE;
 }
 
-void Wall::loadTexture()
+void Wall::loadTexture(void)
 {
     if(!m_TWall.loadFromFile(m_nametexture))
     {

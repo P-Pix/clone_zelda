@@ -11,47 +11,47 @@
 
 #include "Monster.hpp"
 
-sf::Sprite Monster::getSprite()
+sf::Sprite Monster::getSprite(void)
 {
     return m_Sprite;
 }
-sf::Vector2f Monster::getNextPosition()
+sf::Vector2f Monster::getNextPosition(void)
 {
     return m_Patern[m_moveaction];
 }
-sf::Vector2f Monster::getPosition()
+sf::Vector2f Monster::getPosition(void)
 {
     return m_Sprite.getPosition();
 }
-int Monster::getPower()
+int Monster::getPower(void)
 {
     return m_power;
 }
-bool Monster::isAlive()
+bool Monster::isAlive(void)
 {
     return m_Heart.isAlive();
 }
-int Monster::getGainLifeValor()
+int Monster::getGainLifeValor(void)
 {
     return m_Gain.getValorGainLife();
 }
-int Monster::getGainRubisValor()
+int Monster::getGainRubisValor(void)
 {
     return m_Gain.getValorGainRubis();
 }
-bool Monster::thereGain()
+bool Monster::thereGain(void)
 {
     return m_Gain.thereGain();
 }
-bool Monster::isInvulnerable()
+bool Monster::isInvulnerable(void)
 {
     return m_Heart.isInvulnerable();
 }
-Monster* Monster::getAdress()
+Monster* Monster::getAdress(void)
 {
     return this;
 }
-Monster Monster::getMonster()
+Monster Monster::getMonster(void)
 {
     return *this;
 }

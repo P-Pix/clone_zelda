@@ -22,20 +22,20 @@ class Chest
 {
     public:
         // Constructor / Destructor
-            Chest();
-            ~Chest();
+            Chest(void);
+            ~Chest(void);
         
         // Accessor
-            sf::Sprite getSprite();
-            bool getChest();
-            int getValorRubis();
-            int getValorLife();
-            sf::Sprite getSpriteGain();
+            sf::Sprite getSprite(void);
+            bool getChest(void);
+            int getValorRubis(void);
+            int getValorLife(void);
+            sf::Sprite getSpriteGain(void);
         
         // Function
-            void generateChest();
-            void openChest();
-            void isGet();
+            void generateChest(void);
+            void openChest(void);
+            void isGet(void);
 
     private:
         // Variable

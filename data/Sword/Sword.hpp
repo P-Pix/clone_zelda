@@ -19,26 +19,26 @@ class Sword
     public:
         // Constructor / Destructor
             // Constructor
-                Sword();
+                Sword(void);
 
             // Destructor
-                ~Sword();
+                ~Sword(void);
 
         // Accessor
-            sf::Sprite getSprite();
-            sf::Vector2f getPosition();
+            sf::Sprite getSprite(void);
+            sf::Vector2f getPosition(void);
             
-            int getPower();
-            bool getExecution();
+            int getPower(void);
+            bool getExecution(void);
 
-            bool getAttackUp();
-            bool getAttackLeft();
-            bool getAttackRight();
-            bool getAttackDown();
+            bool getAttackUp(void);
+            bool getAttackLeft(void);
+            bool getAttackRight(void);
+            bool getAttackDown(void);
 
         // Function
             void setPowerSword(int power);
-            void animateAttack();
+            void animateAttack(void);
             void startAnimation(sf::Vector2f positionsword, int playerorientation);
 
             void setOrientationUp(bool playerup);
@@ -69,14 +69,14 @@ class Sword
 
         // Function
             // Load sword
-                void loadTexture();
-                void loadSprite();
+                void loadTexture(void);
+                void loadSprite(void);
 
             //Animate Attack
-                void setOrientation();
-                void setPosition();
-                void setBasicPosition();
-                void endAnimation();
+                void setOrientation(void);
+                void setPosition(void);
+                void setBasicPosition(void);
+                void endAnimation(void);
 };
 
 #endif

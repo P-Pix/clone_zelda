@@ -19,12 +19,12 @@ void Monster::setDamage(int power)
         dropGain();
     }
 }
-void Monster::dropGain()
+void Monster::dropGain(void)
 {
     m_Gain.choseGain(m_Sprite.getPosition());
     m_Sprite = m_Gain.getSpriteGain();
 }
-void Monster::frameInvulnerable()
+void Monster::frameInvulnerable(void)
 {
     m_Heart.frameInvulnerable();
 }

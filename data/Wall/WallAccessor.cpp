@@ -11,12 +11,12 @@
 
 #include "Wall.hpp"
 
-sf::Sprite Wall::getSprite()
+sf::Sprite Wall::getSprite(void)
 {
     return m_SWall;
 }
 
-std::vector<sf::Sprite> Wall::getListSprite()
+std::vector<sf::Sprite> Wall::getListSprite(void)
 {
     return m_ListeSprite;
 }

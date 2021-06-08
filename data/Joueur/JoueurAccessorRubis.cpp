@@ -11,23 +11,23 @@
 
 #include "Joueur.hpp"
 
-sf::Sprite Joueur::getLogoRubis()
+sf::Sprite Joueur::getLogoRubis(void)
 {
     return m_Rubis.getLogoRubis();
 }
-sf::Text Joueur::getRubisHundred()
+sf::Text Joueur::getRubisHundred(void)
 {
     return m_Rubis.getRubisHundred();
 }
-sf::Text Joueur::getRubisTen()
+sf::Text Joueur::getRubisTen(void)
 {
     return m_Rubis.getRubisTen();
 }
-sf::Text Joueur::getRubisUnit()
+sf::Text Joueur::getRubisUnit(void)
 {
     return m_Rubis.getRubisUnit();
 }
-int Joueur::getTotalRubis()
+int Joueur::getTotalRubis(void)
 {
     return m_Rubis.getTotalRubis();
 }

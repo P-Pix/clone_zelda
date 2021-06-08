@@ -25,47 +25,47 @@ class Monster
     public:
         // Constructeur / Destructeur
             // Constructeur
-                Monster();
+                Monster(void);
                 Monster(const char *name);
             
             // Destructeur
-                ~Monster();
+                ~Monster(void);
                 
         // Accessor
-                Monster* getAdress();
-                Monster getMonster();
+                Monster* getAdress(void);
+                Monster getMonster(void);
             // Sprite
-                sf::Sprite getSprite();
+                sf::Sprite getSprite(void);
 
             // Position
-                sf::Vector2f getPosition();
-                sf::Vector2f getNextPosition();
+                sf::Vector2f getPosition(void);
+                sf::Vector2f getNextPosition(void);
 
             // Power
-                int getPower();
+                int getPower(void);
 
             // alive
-                bool isAlive();
-                int getGainRubisValor();
-                int getGainLifeValor();
-                bool thereGain();
-                bool isInvulnerable();
+                bool isAlive(void);
+                int getGainRubisValor(void);
+                int getGainLifeValor(void);
+                bool thereGain(void);
+                bool isInvulnerable(void);
 
         // Function
             // Attribution
                 void setPower(int power);
-                void moove();
-                void nextPosition();
+                void moove(void);
+                void nextPosition(void);
                 void setDamage(int power);
 
-                void recoilUp();
-                void recoilDown();
-                void recoilRight();
-                void recoilLeft();
+                void recoilUp(void);
+                void recoilDown(void);
+                void recoilRight(void);
+                void recoilLeft(void);
 
-                void createPaternRelative();
-                void gainIsGet();
-                void frameInvulnerable();
+                void createPaternRelative(void);
+                void gainIsGet(void);
+                void frameInvulnerable(void);
     
     private:
         // Variable
@@ -88,10 +88,10 @@ class Monster
 
         // Function
             void loadTexture(const char *name);
-            void loadSprite();
-            void initSprite();
-            void loadPosition();
-            void dropGain();
+            void loadSprite(void);
+            void initSprite(void);
+            void loadPosition(void);
+            void dropGain(void);
 
 };
 

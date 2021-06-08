@@ -11,24 +11,24 @@
 
 #include "Joueur.hpp"
 
-void Joueur::moveLeft()
+void Joueur::moveLeft(void)
 {
     m_Shero.move(sf::Vector2f(m_vitesse * -1.f, 0.f));
 }
-void Joueur::moveRight()
+void Joueur::moveRight(void)
 {
     m_Shero.move(sf::Vector2f(m_vitesse * 1.f, 0.f));
 }
-void Joueur::moveUp()
+void Joueur::moveUp(void)
 {
     m_Shero.move(sf::Vector2f(0.f, m_vitesse * -1.f));
 }
-void Joueur::moveDown()
+void Joueur::moveDown(void)
 {
     m_Shero.move(sf::Vector2f(0.f, m_vitesse * 1.f));
 }
 
-void Joueur::makeListeAnimation()
+void Joueur::makeListeAnimation(void)
 {
     // Liste aniamtion Down
     m_AnimationDown.push_back(m_ncf0);

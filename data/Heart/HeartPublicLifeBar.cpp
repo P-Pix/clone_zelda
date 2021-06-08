@@ -11,7 +11,7 @@
 
 #include "Heart.hpp"
 
-void Heart::updateHeart()
+void Heart::updateHeart(void)
 {
     int numberheart = m_life / 4,
         lastheart = m_life % 4,
@@ -67,7 +67,7 @@ void Heart::setPosition(sf::Sprite sprite, sf::Vector2f position)
 {
     sprite.setPosition(position);
 }
-void Heart::setMaxLifeUp()
+void Heart::setMaxLifeUp(void)
 {
     m_maxlife += 4;
     m_life = m_maxlife;
@@ -96,7 +96,7 @@ void Heart::setDamage(int power)
     }
     updateHeart();
 }
-void Heart::frameInvulnerable()
+void Heart::frameInvulnerable(void)
 {
     if(m_invulnerability == m_frameinvulnerable)
     {

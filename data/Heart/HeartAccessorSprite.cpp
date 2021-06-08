@@ -11,7 +11,7 @@
 
 #include "Heart.hpp"
 
-std::vector<sf::Sprite> Heart::getListSprite()
+std::vector<sf::Sprite> Heart::getListSprite(void)
 {
     return m_List;
 }
@@ -19,19 +19,19 @@ sf::Sprite Heart::getSprite(int number)
 {
     return m_List[number];
 }
-int Heart::getLife()
+int Heart::getLife(void)
 {
     return m_life;
 }
-int Heart::getMaxLife()
+int Heart::getMaxLife(void)
 {
     return m_maxlife;
 }
-bool Heart::isInvulnerable()
+bool Heart::isInvulnerable(void)
 {
     return m_invulnerable;
 }
-bool Heart::isAlive()
+bool Heart::isAlive(void)
 {
     return m_alive;
 }

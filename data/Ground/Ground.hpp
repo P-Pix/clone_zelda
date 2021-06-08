@@ -20,14 +20,14 @@ class Ground
 {
     public:
         // Constructor / Destrutor
-            Ground();
+            Ground(void);
             Ground(const char *name);
-            ~Ground();
+            ~Ground(void);
         
         // Accessor
-            std::vector<sf::Sprite> getListSprite();
-            sf::Sprite getSprite();
-            Ground* getAdress();
+            std::vector<sf::Sprite> getListSprite(void);
+            sf::Sprite getSprite(void);
+            Ground* getAdress(void);
         
         // Function
             void setPositionVector(std::vector<sf::Vector2f> vector);
@@ -47,9 +47,9 @@ class Ground
                 sf::Texture m_Texture;
         
         // Function
-            void initSprite();
-            void loadTexture();
-            void loadSprite();
+            void initSprite(void);
+            void loadTexture(void);
+            void loadSprite(void);
 };
 
 #endif

@@ -11,16 +11,16 @@
 
 #include "Ground.hpp"
 
-void Ground::initSprite()
+void Ground::initSprite(void)
 {
     loadTexture();
     loadSprite();
 }
-void Ground::loadSprite()
+void Ground::loadSprite(void)
 {
     m_Sprite.setTexture(m_Texture);
 }
-void Ground::loadTexture()
+void Ground::loadTexture(void)
 {
     if(!m_Texture.loadFromFile(m_name))
     {

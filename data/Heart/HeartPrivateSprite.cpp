@@ -17,7 +17,7 @@ sf::Sprite Heart::setSpritePosition(sf::Sprite sprite, sf::Vector2f position)
     return sprite;
 }
 
-void Heart::initConstructor()
+void Heart::initConstructor(void)
 {
     m_T0Heart.loadFromFile(m_name0);
     m_S0Heart.setTexture(m_T0Heart);

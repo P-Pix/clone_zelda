@@ -11,7 +11,7 @@
 
 #include "Game.hpp"
 
-void Game::allDrawWindow()
+void Game::allDrawWindow(void)
 {
     m_vectorsprite.clear();
     m_vectortext.clear();
@@ -32,18 +32,18 @@ void Game::allDrawWindow()
     // Over all
     drawSword(); // Sword
 }
-void Game::drawChestGain()
+void Game::drawChestGain(void)
 {
     m_vectorsprite.push_back(m_Map.getGainSprite());
 }
-void Game::drawChest()
+void Game::drawChest(void)
 {
     if(m_Map.thereChest())
     {
         m_vectorsprite.push_back(m_Map.getChestSprite());
     }
 }
-void Game::drawSword()
+void Game::drawSword(void)
 {
     if(m_Sword.getExecution())
     {
@@ -51,14 +51,14 @@ void Game::drawSword()
         m_vectorsprite.push_back(m_Sword.getSprite());
     }
 }
-void Game::drawRubis()
+void Game::drawRubis(void)
 {
     m_vectorsprite.push_back(m_Player.getLogoRubis());
     m_vectortext.push_back(m_Player.getRubisHundred());
     m_vectortext.push_back(m_Player.getRubisTen());
     m_vectortext.push_back(m_Player.getRubisUnit());
 }
-void Game::drawMap()
+void Game::drawMap(void)
 {
     extractSpriteFromVector(m_Bloc.getListSprite());
     extractSpriteFromVector(m_Cavern.getListSprite());

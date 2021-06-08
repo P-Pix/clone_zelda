@@ -11,13 +11,13 @@
 
 #include "Chest.hpp"
 
-Chest::Chest()
+Chest::Chest(void)
 {
     loadSprite(m_namechestclose);
     m_Sprite.setPosition(sf::Vector2f(512.f, 320.f));
     std::srand(std::time(nullptr));
 }
-Chest::~Chest()
+Chest::~Chest(void)
 {
 
 }

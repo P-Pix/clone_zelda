@@ -11,7 +11,7 @@
 
 #include "Joueur.hpp"
 
-void Joueur::animationMoveRight()
+void Joueur::animationMoveRight(void)
 {
     moveAniamtion(m_moveright, m_AnimationRight);
     if(m_moveright == 32)
@@ -21,7 +21,7 @@ void Joueur::animationMoveRight()
     m_moveright ++;
     moveRight();
 }
-void Joueur::animationMoveLeft()
+void Joueur::animationMoveLeft(void)
 {
     moveAniamtion(m_moveleft, m_AnimationLeft);
     if(m_moveleft == 32)
@@ -31,7 +31,7 @@ void Joueur::animationMoveLeft()
     m_moveleft ++;
     moveLeft();
 }
-void Joueur::animationMoveUp()
+void Joueur::animationMoveUp(void)
 {
     moveAniamtion(m_moveup, m_AnimationUp);
     if(m_moveup == 32)
@@ -41,7 +41,7 @@ void Joueur::animationMoveUp()
     m_moveup ++;
     moveUp();
 }
-void Joueur::animationMoveDown()
+void Joueur::animationMoveDown(void)
 {
     moveAniamtion(m_movedown, m_AnimationDown);
     if(m_movedown == 32)

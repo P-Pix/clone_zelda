@@ -11,7 +11,7 @@
 
 #include "Game.hpp"
 
-Game::Game():   m_Bloc(m_blocname),
+Game::Game(void):   m_Bloc(m_blocname),
                 m_OrangeTree(m_orangetreename),
                 m_Water(m_watername),
                 m_WhiteTree(m_whitetreename),
@@ -22,7 +22,7 @@ Game::Game():   m_Bloc(m_blocname),
 {
     setMapUpdate();
 }
-Game::~Game()
+Game::~Game(void)
 {
 
 }
