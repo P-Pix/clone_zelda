@@ -10,7 +10,7 @@
  */
 
 #include <iostream>
-#include "data/GamesWindow/GamesWindow.hpp"
+#include "include/GamesWindow.hpp"
 
 using namespace std;
 

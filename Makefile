@@ -17,85 +17,87 @@ MODULE	=	-lsfml-window\
 			-lsfml-system\
 			-lsfml-graphics\
 
-DATA 	=	data/Chest/Chest.cpp\
-			data/Chest/ChestAccessor.cpp\
-			data/Chest/ChestPrivateSprite.cpp\
-			data/Chest/ChestPublicGenerate.cpp\
+DATA 	=	src/Chest/Chest.cpp\
+			src/Chest/ChestAccessor.cpp\
+			src/Chest/ChestPrivateSprite.cpp\
+			src/Chest/ChestPublicGenerate.cpp\
 			\
-			data/Gain/Gain.cpp\
-			data/Gain/GainAccessor.cpp\
-			data/Gain/GainPrivateSprite.cpp\
-			data/Gain/GainPublicChose.cpp\
+			src/Gain/Gain.cpp\
+			src/Gain/GainAccessor.cpp\
+			src/Gain/GainPrivateSprite.cpp\
+			src/Gain/GainPublicChose.cpp\
 			\
-			data/Game/Game.cpp\
-			data/Game/GameAccessor.cpp\
-			data/Game/GamePrivateCollide.cpp\
-			data/Game/GamePrivateDraw.cpp\
-			data/Game/GamePrivateMap.cpp\
-			data/Game/GamePrivateMonster.cpp\
-			data/Game/GamePrivateSword.cpp\
-			data/Game/GamePublic.cpp\
+			src/Game/Game.cpp\
+			src/Game/GameAccessor.cpp\
+			src/Game/GamePrivateCollide.cpp\
+			src/Game/GamePrivateDraw.cpp\
+			src/Game/GamePrivateMap.cpp\
+			src/Game/GamePrivateMonster.cpp\
+			src/Game/GamePrivateSword.cpp\
+			src/Game/GamePublic.cpp\
 			\
-			data/GamesWindow/GamesWindow.cpp\
-			data/GamesWindow/GamesWindowAccessor.cpp\
-			data/GamesWindow/GamesWindowPrivateControl.cpp\
-			data/GamesWindow/GamesWindowPrivateDraw.cpp\
-			data/GamesWindow/GamesWindowPublicWindow.cpp\
+			src/GamesWindow/GamesWindow.cpp\
+			src/GamesWindow/GamesWindowAccessor.cpp\
+			src/GamesWindow/GamesWindowPrivateControl.cpp\
+			src/GamesWindow/GamesWindowPrivateDraw.cpp\
+			src/GamesWindow/GamesWindowPublicWindow.cpp\
 			\
-			data/Ground/Ground.cpp\
-			data/Ground/GroundPrivateSprite.cpp\
-			data/Ground/GroundAccessor.cpp\
-			data/Ground/GroundPublicPosition.cpp\
+			src/Ground/Ground.cpp\
+			src/Ground/GroundPrivateSprite.cpp\
+			src/Ground/GroundAccessor.cpp\
+			src/Ground/GroundPublicPosition.cpp\
 			\
-			data/Heart/Heart.cpp\
-			data/Heart/HeartPrivateSprite.cpp\
-			data/Heart/HeartAccessorSprite.cpp\
-			data/Heart/HeartPublicLifeBar.cpp\
+			src/Heart/Heart.cpp\
+			src/Heart/HeartPrivateSprite.cpp\
+			src/Heart/HeartAccessorSprite.cpp\
+			src/Heart/HeartPublicLifeBar.cpp\
 			\
-			data/Joueur/Joueur.cpp\
-			data/Joueur/JoueurAccessorLife.cpp\
-			data/Joueur/JoueurAccessorOrientation.cpp\
-			data/Joueur/JoueurAccessorPosition.cpp\
-			data/Joueur/JoueurAccessorRubis.cpp\
-			data/Joueur/JoueurPrivateMove.cpp\
-			data/Joueur/JoueurPrivateSprite.cpp\
-			data/Joueur/JoueurPublicAnimation.cpp\
-			data/Joueur/JoueurPublicLife.cpp\
-			data/Joueur/JoueurPublicMove.cpp\
-			data/Joueur/JoueurPublicRubis.cpp\
-			data/Joueur/JoueurPublicSwitchOrientation.cpp\
+			src/Joueur/Joueur.cpp\
+			src/Joueur/JoueurAccessorLife.cpp\
+			src/Joueur/JoueurAccessorOrientation.cpp\
+			src/Joueur/JoueurAccessorPosition.cpp\
+			src/Joueur/JoueurAccessorRubis.cpp\
+			src/Joueur/JoueurPrivateMove.cpp\
+			src/Joueur/JoueurPrivateSprite.cpp\
+			src/Joueur/JoueurPublicAnimation.cpp\
+			src/Joueur/JoueurPublicLife.cpp\
+			src/Joueur/JoueurPublicMove.cpp\
+			src/Joueur/JoueurPublicRubis.cpp\
+			src/Joueur/JoueurPublicSwitchOrientation.cpp\
 			\
-			data/MapGenerator/MapGenerator.cpp\
-			data/MapGenerator/MapGeneratorAccessorElement.cpp\
-			data/MapGenerator/MapGeneratorAccessorList.cpp\
-			data/MapGenerator/MapGeneratorPublicChest.cpp\
-			data/MapGenerator/MapGeneratorPublicCreateMap.cpp\
+			src/MakeSprite/MakeSprite.cpp\
 			\
-			data/Monster/Monster.cpp\
-			data/Monster/MonsterAccessor.cpp\
-			data/Monster/MonsterPrivatePatern.cpp\
-			data/Monster/MonsterPrivateSprite.cpp\
-			data/Monster/MonsterPublicGain.cpp\
-			data/Monster/MonsterPublicLife.cpp\
-			data/Monster/MonsterPublicMoove.cpp\
+			src/MapGenerator/MapGenerator.cpp\
+			src/MapGenerator/MapGeneratorAccessorElement.cpp\
+			src/MapGenerator/MapGeneratorAccessorList.cpp\
+			src/MapGenerator/MapGeneratorPublicChest.cpp\
+			src/MapGenerator/MapGeneratorPublicCreateMap.cpp\
 			\
-			data/Rubis/Rubis.cpp\
-			data/Rubis/RubisAccessor.cpp\
-			data/Rubis/RubisPrivateText.cpp\
-			data/Rubis/RubisPublicUpdate.cpp\
+			src/Monster/Monster.cpp\
+			src/Monster/MonsterAccessor.cpp\
+			src/Monster/MonsterPrivatePatern.cpp\
+			src/Monster/MonsterPrivateSprite.cpp\
+			src/Monster/MonsterPublicGain.cpp\
+			src/Monster/MonsterPublicLife.cpp\
+			src/Monster/MonsterPublicMoove.cpp\
 			\
-			data/Sword/Sword.cpp\
-			data/Sword/SwordAccessor.cpp\
-			data/Sword/SwordPrivateAnimation.cpp\
-			data/Sword/SwordPrivateSprite.cpp\
-			data/Sword/SwordPublicAnimation.cpp\
-			data/Sword/SwordPublicOrientation.cpp\
-			data/Sword/SwordPublicPower.cpp\
+			src/Rubis/Rubis.cpp\
+			src/Rubis/RubisAccessor.cpp\
+			src/Rubis/RubisPrivateText.cpp\
+			src/Rubis/RubisPublicUpdate.cpp\
 			\
-			data/Wall/Wall.cpp\
-			data/Wall/WallAccessor.cpp\
-			data/Wall/WallPrivateSprite.cpp\
-			data/Wall/WallPublicPosition.cpp\
+			src/Sword/Sword.cpp\
+			src/Sword/SwordAccessor.cpp\
+			src/Sword/SwordPrivateAnimation.cpp\
+			src/Sword/SwordPrivateSprite.cpp\
+			src/Sword/SwordPublicAnimation.cpp\
+			src/Sword/SwordPublicOrientation.cpp\
+			src/Sword/SwordPublicPower.cpp\
+			\
+			src/Wall/Wall.cpp\
+			src/Wall/WallAccessor.cpp\
+			src/Wall/WallPrivateSprite.cpp\
+			src/Wall/WallPublicPosition.cpp\
 			\
 
 NAME	=	ZeldaLike.o
