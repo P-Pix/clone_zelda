@@ -42,6 +42,8 @@ class MapGenerator
         /// \param position x and y coord
         std::vector<sf::Vector2f> addVector2f(std::vector<sf::Vector2f> list, sf::Vector2f position);
 
+        void positionLetter(char letter, int positionx, int positiony, int x);
+
         bool    m_booltree          = false,
                 m_boolwall          = false,
                 m_boolorangetree    = false,

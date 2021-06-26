@@ -16,14 +16,13 @@
     // Constructor
         Ground::Ground(void)
         {
-            /*initSprite();*/
+            initSprite();
             //std::cout << "Ground create " << this << std::endl;
         }
-        Ground::Ground(const char *name): m_MSprite(name)
+        Ground::Ground(const char *name)
         {
-            /*
             this -> m_name = name;
-            initSprite();*/
+            initSprite();
             //std::cout << "Ground create " << name << " " << this << std::endl;
         }
 

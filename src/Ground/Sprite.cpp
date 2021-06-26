@@ -11,7 +11,6 @@
 
 #include "../../include/Ground.hpp"
 
-/**
 
 void Ground::initSprite(void)
 {
@@ -29,4 +28,3 @@ void Ground::loadTexture(void)
         std::cout << "error image " << m_name << std::endl;
     }
 }
-**/

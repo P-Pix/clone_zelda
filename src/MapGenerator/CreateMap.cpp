@@ -16,19 +16,28 @@ std::vector<sf::Vector2f> MapGenerator::addVector2f(std::vector<sf::Vector2f> li
 }
 ///////////////////////////////////////
 
+void MapGenerator::positionLetter(char lettre, int positionx, int positiony, int x)
+{
+    if(lettre == m_listletter[x])
+    {
+        //std::cout << lettre << " ";
+        //ptr[x](sf::Vector2f(positionx * 64.f, positiony * 64.f));
+        m_listvector[x] = addVector2f(m_listvector[x], sf::Vector2f(positionx * 64.f, positiony * 64.f));
+        m_listbool[x] = true;
+    }
+}
+
 void MapGenerator::generateMap(void)
 {
     // Open the file
     std::string name = "maping/" + std::to_string(m_y) + "_" + std::to_string(m_x) + "map.xsb";
     std::ifstream ifmap(name);
 
-    std::string ligne;
-
     char lettre;
 
     m_map.clear();
 
-    for(int x = 0; x < 8; x ++)
+    for(int x = 0; x < NUMBER_ELEMENT; x ++)
     {
         m_listbool[x] = false;
         m_listvector[x].clear();
@@ -42,15 +51,9 @@ void MapGenerator::generateMap(void)
         for(int positionx = 0; positionx < 17; positionx ++)
         {
             ifmap.get(lettre);
-            for(int x = 0; x < 8; x ++)
+            for(int x = 0; x < NUMBER_ELEMENT; x ++)
             {
-                if(lettre == m_listletter[x])
-                {
-                    //std::cout << lettre << " ";
-                    //ptr[x](sf::Vector2f(positionx * 64.f, positiony * 64.f));
-                    m_listvector[x] = addVector2f(m_listvector[x], sf::Vector2f(positionx * 64.f, positiony * 64.f));
-                    m_listbool[x] = true;
-                }
+                positionLetter(lettre, positionx, positiony, x);
             }
             ligne.push_back(lettre);
         }

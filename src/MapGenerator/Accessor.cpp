@@ -13,23 +13,23 @@
 
 bool MapGenerator::hasTree(void)
 {
-    return m_booltree;
+    return m_listbool[4];
 }
 bool MapGenerator::hasSlad(void)
 {
-    return m_boolslad;
+    return m_listbool[2];
 }
 bool MapGenerator::hasWall(void)
 {
-    return m_boolwall;
+    return m_listbool[5];
 }
 bool MapGenerator::hasDust(void)
 {
-    return m_booldust;
+    return m_listbool[1];
 }
 bool MapGenerator::hasBridge(void)
 {
-    return m_boolbridge;
+    return m_listbool[0];
 }
 ///////////////////////////////////////
 

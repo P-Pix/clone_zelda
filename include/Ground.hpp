@@ -18,7 +18,7 @@
 #include <vector>
 
 #include "MakeSprite.hpp"
-class Ground : public MakeSprite
+class Ground
 {
     public:
         // Constructor / Destrutor
@@ -39,13 +39,13 @@ class Ground : public MakeSprite
     private:
         // Variable
             // std
+                const char *m_name = "";
                 std::vector<sf::Sprite> m_ListeSprite;
             
             // Class
                 MakeSprite m_MSprite;
 
             // SFML
-            /*
                 sf::Sprite m_Sprite;
                 sf::Texture m_Texture;
 
@@ -53,7 +53,6 @@ class Ground : public MakeSprite
             void initSprite(void);
             void loadTexture(void);
             void loadSprite(void);
-        */
 };
 
 #endif
