@@ -102,8 +102,9 @@ NAME	=	ZeldaLike.o
 
 val:
 	@(valgrind g++ -o $(NAME) $(OBJ) $(DATA) $(MODULE)) > /dev/null
-	@(./$(NAME))
 
 cpp:
 	@(g++ -o $(NAME) $(OBJ) $(DATA) $(MODULE)) > /dev/null
+
+run:
 	@(./$(NAME))
