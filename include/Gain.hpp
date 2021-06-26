@@ -9,8 +9,8 @@
  * 
  */
 
-#if !defined(__GAINKILL__)
-#define __GAINKILL__
+#ifndef _GAINKILL_HPP_
+#define _GAINKILL_HPP_
 
 #include <SFML/Graphics.hpp>
 #include <vector>

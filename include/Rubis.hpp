@@ -9,8 +9,8 @@
  * 
  */
 
-#if !defined(__RUBIS__)
-#define __RUBIS__
+#ifndef _RUBIS_HPP_
+#define _RUBIS_HPP_
 
 #include <iostream>
 #include <SFML/Graphics.hpp>

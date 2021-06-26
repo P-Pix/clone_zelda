@@ -9,8 +9,8 @@
  * 
  */
 
-#if !defined(__HEART__)
-#define __HEART__
+#ifndef _HEART_HPP_
+#define _HEART_HPP_
 
 #include <SFML/Graphics.hpp>
 

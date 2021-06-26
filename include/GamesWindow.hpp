@@ -9,8 +9,8 @@
  * 
  */
 
-#if !defined(__GAMESWINDOW__)
-#define __GAMESWINDOW__
+#ifndef _GAMESWINDOW_HPP_
+#define _GAMESWINDOW_HPP_
 
 #include <SFML/Graphics.hpp>
 

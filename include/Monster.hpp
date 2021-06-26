@@ -9,8 +9,8 @@
  * 
  */
 
-#if !defined(__MONSTER__)
-#define __MONSTER__
+#ifndef _MONSTER_HPP_
+#define _MONSTER_HPP_
 
 #include <SFML/Graphics.hpp>
 #include <iostream>

@@ -9,8 +9,8 @@
  * 
  */
 
-#if !defined(__JOUEUR__)
-#define __JOUEUR__
+#ifndef _JOUEUR_HPP_
+#define _JOUEUR_HPP_
 
 #include <SFML/Graphics.hpp>
 

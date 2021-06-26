@@ -9,8 +9,8 @@
  * 
  */
 
-#if !defined(__SWORD__)
-#define __SWORD__
+#ifndef _SWORD_HPP_
+#define _SWORD_HPP_
 
 #include <iostream>
 #include <SFML/Graphics.hpp>

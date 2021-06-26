@@ -9,8 +9,8 @@
  * 
  */
 
-#if !defined(__MAKESPRITE__)
-#define __MAKESPRITE__
+#ifndef _MAKESPRITE_HPP_
+#define _MAKESPRITE_HPP_
 
 #include <SFML/Graphics.hpp>
 #include <iostream>

@@ -9,8 +9,8 @@
  * 
  */
 
-#if !defined(__MAPGENERATOR__)
-#define __MAPGENERATOR__
+#ifndef _MAPGENERATOR_HPP_
+#define _MAPGENERATOR_HPP_
 
 #include <SFML/Graphics.hpp>
 

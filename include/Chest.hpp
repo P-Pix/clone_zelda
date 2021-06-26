@@ -9,8 +9,8 @@
  * 
  */
 
-#if !defined(__CHEST__)
-#define __CHEST__
+#ifndef _CHEST_HPP_
+#define _CHEST_HPP_
 
 #include <SFML/Graphics.hpp>
 #include <vector>

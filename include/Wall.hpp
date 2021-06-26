@@ -9,8 +9,8 @@
  * 
  */
 
-#if !defined(__WALL__)
-#define __WALL__
+#ifndef _WALL_HPP_
+#define _WALL_HPP_
 
 #include <iostream>
 #include <SFML/Graphics.hpp>

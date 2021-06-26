@@ -9,8 +9,8 @@
  * 
  */
 
-#if !defined(__GROUND__)
-#define __GROUND__
+#ifndef _GROUND_HPP_
+#define _GROUND_HPP_
 
 #include <SFML/Graphics.hpp>
 
