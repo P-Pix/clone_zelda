@@ -37,10 +37,34 @@ void Game::swordAttack(void)
                     m_Mob1.recoilLeft();
                 }
             }
+            //monsterReceveAttack(x);
         }
         else if(collideSword(m_Map.getChestSprite().getPosition()))
         {
             m_Map.oprenChest();
+        }
+    }
+}
+void Game::monsterReceveAttack(unsigned int mob)
+{
+    m_listmob[mob].setDamage(m_Sword.getPower());
+    if(m_listmob[mob].isAlive())
+    {
+        if(m_Player.getOrientationDown() && !previewCollide(m_listmob[mob].getPosition(), sf::Vector2f(0.f, 64.f)))
+        {
+            m_listmob[mob].recoilDown();
+        }
+        else if(m_Player.getOrientationUp() && !previewCollide(m_listmob[mob].getPosition(), sf::Vector2f(0.f, -64.f)))
+        {
+            m_listmob[mob].recoilUp();
+        }
+        else if(m_Player.getOrientationRight() && !previewCollide(m_listmob[mob].getPosition(), sf::Vector2f(64.f, 0.f)))
+        {
+            m_listmob[mob].recoilRight();
+        }
+        else if(m_Player.getOrientationLeft() && !previewCollide(m_listmob[mob].getPosition(), sf::Vector2f(-64.f, 0.f)))
+        {
+            m_listmob[mob].recoilLeft();
         }
     }
 }

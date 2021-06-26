@@ -134,11 +134,11 @@ bool Game::previewCollide(sf::Vector2f user, sf::Vector2f moove)
 
     if(m_Map.hasTree())
     {
-        collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionWallExt());
+        collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionTree());
     }
-    if(m_Map.hasBloc() && !collide)
+    if(m_Map.hasWall() && !collide)
     {
-        collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionWallInt());
+        collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionWall());
     }
     if(m_Map.thereChest() && !collide)
     {

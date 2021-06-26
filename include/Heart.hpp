@@ -55,11 +55,11 @@ class Heart
                 bool    m_alive = true,
                         m_invulnerable = false;
 
-                const char  *m_name0 = "skin/heart04.png",
-                            *m_name1 = "skin/heart14.png",
-                            *m_name2 = "skin/heart24.png",
-                            *m_name3 = "skin/heart34.png",
-                            *m_name4 = "skin/heart44.png";
+                const char  *m_name0 = "image/heart04.png",
+                            *m_name1 = "image/heart14.png",
+                            *m_name2 = "image/heart24.png",
+                            *m_name3 = "image/heart34.png",
+                            *m_name4 = "image/heart44.png";
             
             // std
                 std::vector<sf::Sprite> m_List;

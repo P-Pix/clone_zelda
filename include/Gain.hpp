@@ -38,11 +38,11 @@ class Gain
         // Variable
             bool    m_gain = false;
 
-            const char  *m_heartname = "skin/heartgain.png",
-                        *m_bluerubisname = "skin/bluerubis.png",
-                        *m_greenrubisname = "skin/greenrubis.png",
-                        *m_redrubisname = "skin/redrubis.png",
-                        *m_emptyname = "skin/empty.png";
+            const char  *m_heartname = "image/heartgain.png",
+                        *m_bluerubisname = "image/bluerubis.png",
+                        *m_greenrubisname = "image/greenrubis.png",
+                        *m_redrubisname = "image/redrubis.png",
+                        *m_emptyname = "image/empty.png";
             
             int m_valorgainrubis = 0,
                 m_valorgainlife = 0;

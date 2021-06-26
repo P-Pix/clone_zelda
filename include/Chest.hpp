@@ -20,27 +20,10 @@
 
 class Chest
 {
-    public:
-        /// Constructor / Destructor
-            Chest(void);
-            ~Chest(void);
-        
-        /// Accessor
-            sf::Sprite getSprite(void);
-            bool getChest(void);
-            int getValorRubis(void);
-            int getValorLife(void);
-            sf::Sprite getSpriteGain(void);
-        
-        /// Function
-            void generateChest(void);
-            void openChest(void);
-            void isGet(void);
-
     private:
         /// Variable
-            const char  *m_namechestclose = "skin/chestclose.png",
-                        *m_namechestopen = "skin/chestopen.png";
+            const char  *m_namechestclose = "image/chestclose.png",
+                        *m_namechestopen = "image/chestopen.png";
             
             bool    m_spawnchest = false,
                     m_open = false;
@@ -52,6 +35,40 @@ class Chest
         
         /// Function
             void loadSprite(const char *name);
+    public:
+        ////////////////////////////////////////
+        
+        /// Default Constructor
+        Chest(void);
+
+        /// Destructor
+        ~Chest(void);
+
+        ////////////////////////////////////////
+        
+        /// Accessor
+        /// \return Chest sprite
+        sf::Sprite getSprite(void);
+
+        /// Accessor
+        /// \return True if the chest there is a chest, False if not
+        bool getChest(void);
+
+        /// Accessor
+        /// \return Rubis value : 0, 1, 5, 20
+        int getValorRubis(void);
+
+        /// Accessor
+        /// \return Life value : 0, 4
+        int getValorLife(void);
+
+        /// Accessor
+        /// \return 
+        sf::Sprite getSpriteGain(void);
+    
+        void generateChest(void);
+        void openChest(void);
+        void isGet(void);
 };
 
 #endif

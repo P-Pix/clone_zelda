@@ -23,5 +23,5 @@ void Game::makeListMonster(void)
 {
     m_listmob.clear();
 
-    m_listmob.push_back(m_Mob1.getAdress());
+    m_listmob.push_back(m_Mob1);
 }

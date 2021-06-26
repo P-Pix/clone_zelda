@@ -13,7 +13,7 @@
 
 void Game::setMapUpdate(void)
 {
-    loadNewMap();
+    m_Map.generateMap();
     setBackground();
     makeListMonster();
 }
@@ -37,23 +37,19 @@ void Game::switchMap(void)
         setMapUpdate();
         m_Player.setPositionUp();
     }
-    if(m_Player.getPosition().y > 768)
+    else if(m_Player.getPosition().y > 768)
     {
         m_Map.setMapDown();
         setMapUpdate();
         m_Player.setPositionDown();
     }
 }
-void Game::loadNewMap(void)
-{
-    m_Map.generateMap();
-}
 void Game::setBackground(void)
 {
-    m_Bloc.setPositionVector(m_Map.getListPositionWallInt());
-    m_Cavern.setPositionVector(m_Map.getListPositionGroundInt());
-    m_Tree.setPositionVector(m_Map.getListPositionWallExt());
-    m_Ground.setPositionVector(m_Map.getListPositionGroundExt());
+    m_Bloc.setPositionVector(m_Map.getListPositionWall());
+    m_Cavern.setPositionVector(m_Map.getListPositionSlad());
+    m_Tree.setPositionVector(m_Map.getListPositionTree());
+    m_Ground.setPositionVector(m_Map.getListPositionDust());
 }
 void Game::gainChest(void)
 {

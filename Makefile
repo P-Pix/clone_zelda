@@ -17,61 +17,59 @@ MODULE	=	-lsfml-window\
 			-lsfml-system\
 			-lsfml-graphics\
 
-DATA 	=	src/Chest/Chest.cpp\
-			src/Chest/ChestAccessor.cpp\
-			src/Chest/ChestPrivateSprite.cpp\
-			src/Chest/ChestPublicGenerate.cpp\
+DATA	=	src/Chest/Accessor.cpp\
+			src/Chest/Constructor.cpp\
+			src/Chest/Generate.cpp\
+			src/Chest/Sprite.cpp\
 			\
-			src/Gain/Gain.cpp\
-			src/Gain/GainAccessor.cpp\
-			src/Gain/GainPrivateSprite.cpp\
-			src/Gain/GainPublicChose.cpp\
+			src/Gain/Accessor.cpp\
+			src/Gain/Chose.cpp\
+			src/Gain/Constructor.cpp\
+			src/Gain/Sprite.cpp\
 			\
-			src/Game/Game.cpp\
-			src/Game/GameAccessor.cpp\
-			src/Game/GamePrivateCollide.cpp\
-			src/Game/GamePrivateDraw.cpp\
-			src/Game/GamePrivateMap.cpp\
-			src/Game/GamePrivateMonster.cpp\
-			src/Game/GamePrivateSword.cpp\
-			src/Game/GamePublic.cpp\
+			src/Game/Accessor.cpp\
+			src/Game/Collide.cpp\
+			src/Game/Constructor.cpp\
+			src/Game/Control.cpp\
+			src/Game/Draw.cpp\
+			src/Game/Map.cpp\
+			src/Game/Monster.cpp\
+			src/Game/Sword.cpp\
 			\
-			src/GamesWindow/GamesWindow.cpp\
-			src/GamesWindow/GamesWindowAccessor.cpp\
-			src/GamesWindow/GamesWindowPrivateControl.cpp\
-			src/GamesWindow/GamesWindowPrivateDraw.cpp\
-			src/GamesWindow/GamesWindowPublicWindow.cpp\
+			src/GamesWindow/Accessor.cpp\
+			src/GamesWindow/Constructor.cpp\
+			src/GamesWindow/Control.cpp\
+			src/GamesWindow/Draw.cpp\
+			src/GamesWindow/Window.cpp\
 			\
-			src/Ground/Ground.cpp\
-			src/Ground/GroundPrivateSprite.cpp\
-			src/Ground/GroundAccessor.cpp\
-			src/Ground/GroundPublicPosition.cpp\
+			src/Ground/Accessor.cpp\
+			src/Ground/Constructor.cpp\
+			src/Ground/Position.cpp\
+			src/Ground/Sprite.cpp\
 			\
-			src/Heart/Heart.cpp\
-			src/Heart/HeartPrivateSprite.cpp\
-			src/Heart/HeartAccessorSprite.cpp\
-			src/Heart/HeartPublicLifeBar.cpp\
+			src/Heart/Accessor.cpp\
+			src/Heart/Constructor.cpp\
+			src/Heart/LifeBar.cpp\
+			src/Heart/Sprite.cpp\
 			\
-			src/Joueur/Joueur.cpp\
-			src/Joueur/JoueurAccessorLife.cpp\
-			src/Joueur/JoueurAccessorOrientation.cpp\
-			src/Joueur/JoueurAccessorPosition.cpp\
-			src/Joueur/JoueurAccessorRubis.cpp\
-			src/Joueur/JoueurPrivateMove.cpp\
-			src/Joueur/JoueurPrivateSprite.cpp\
-			src/Joueur/JoueurPublicAnimation.cpp\
-			src/Joueur/JoueurPublicLife.cpp\
-			src/Joueur/JoueurPublicMove.cpp\
-			src/Joueur/JoueurPublicRubis.cpp\
-			src/Joueur/JoueurPublicSwitchOrientation.cpp\
+			src/Joueur/AccessorLife.cpp\
+			src/Joueur/AccessorOrientation.cpp\
+			src/Joueur/AccessorPosition.cpp\
+			src/Joueur/AccessorRubis.cpp\
+			src/Joueur/Animation.cpp\
+			src/Joueur/Constructor.cpp\
+			src/Joueur/Life.cpp\
+			src/Joueur/Move.cpp\
+			src/Joueur/Orientation.cpp\
+			src/Joueur/Rubis.cpp\
+			src/Joueur/Sprite.cpp\
 			\
 			src/MakeSprite/MakeSprite.cpp\
 			\
-			src/MapGenerator/MapGenerator.cpp\
-			src/MapGenerator/MapGeneratorAccessorElement.cpp\
-			src/MapGenerator/MapGeneratorAccessorList.cpp\
-			src/MapGenerator/MapGeneratorPublicChest.cpp\
-			src/MapGenerator/MapGeneratorPublicCreateMap.cpp\
+			src/MapGenerator/Accessor.cpp\
+			src/MapGenerator/Chest.cpp\
+			src/MapGenerator/Constructor.cpp\
+			src/MapGenerator/CreateMap.cpp\
 			\
 			src/Monster/Monster.cpp\
 			src/Monster/MonsterAccessor.cpp\

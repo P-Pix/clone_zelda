@@ -24,14 +24,14 @@ class Joueur
     private:
         // Varible
             // iostream / Standar
-                const char  *m_ncf0 = "skin/heros10.png",
-                            *m_ncf1 = "skin/heros11.png",
-                            *m_ncf2 = "skin/heros12.png",
-                            *m_ncf3 = "skin/heros13.png",
-                            *m_ncf4 = "skin/heros14.png",
-                            *m_ncf5 = "skin/heros15.png",
-                            *m_ncf6 = "skin/heros16.png",
-                            *m_ncf7 = "skin/heros17.png";
+                const char  *m_ncf0 = "image/heros10.png",
+                            *m_ncf1 = "image/heros11.png",
+                            *m_ncf2 = "image/heros12.png",
+                            *m_ncf3 = "image/heros13.png",
+                            *m_ncf4 = "image/heros14.png",
+                            *m_ncf5 = "image/heros15.png",
+                            *m_ncf6 = "image/heros16.png",
+                            *m_ncf7 = "image/heros17.png";
                 
                 int m_movedown = 0,
                     m_moveup = 0,

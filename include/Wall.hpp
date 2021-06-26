@@ -36,7 +36,7 @@ class Wall
     private:
         // Variable
             // basic
-                const char  *m_nametexture = "skin/tree.png";
+                const char  *m_nametexture = "image/tree.png";
 
             // std
                 std::vector<sf::Sprite> m_ListeSprite;

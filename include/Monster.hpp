@@ -73,7 +73,7 @@ class Monster
                 int m_moveaction = 0,
                     m_power = 4;
 
-                const char *m_monster = "skin/monster1.png";
+                const char *m_monster = "image/monster1.png";
 
             // std
                 std::vector<sf::Vector2f> m_Patern;

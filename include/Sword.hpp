@@ -53,7 +53,7 @@ class Sword
                     m_animationfram = 0,
                     m_rotate = 0; // start animation right -45° to 45°
                 
-                const char *m_picture = "skin/sword.png";
+                const char *m_picture = "image/sword.png";
 
                 bool    m_aniamtionexe = false,
 

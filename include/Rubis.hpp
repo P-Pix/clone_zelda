@@ -43,7 +43,7 @@ class Rubis
             
             unsigned int    m_totalrubis = 0;
 
-            const char  *m_nameimage = "skin/greenrubis.png",
+            const char  *m_nameimage = "image/greenrubis.png",
                         *m_namefont = "font/SuperLegendBoy.ttf";
 
             sf::Sprite m_Sprite;
