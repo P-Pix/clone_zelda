@@ -1,8 +1,6 @@
 /**
  * @file main.cpp
  * @author Guillaume LEMONNIER
- * @brief 
- * @version 0.1
  * @date 2021-05-31
  * 
  * @copyright Copyright (c) 2021
@@ -14,18 +12,21 @@
 
 using namespace std;
 
+/// execution function
+int main(void);
+
 int main(void)
 {
     GamesWindow Window;
 
-    Window.limitFramerate(60);          // nombre de fram limite
+    Window.limitFramerate(60);
     cout << "Window Open" << endl;
 
     while(Window.isRunning())
     {
-        Window.controlWindow();         // Controls User
-        Window.verificationWindow();    // Multi test
-        Window.updateWindow();          // Update Window
+        Window.controlWindow();
+        Window.verificationWindow();
+        Window.updateWindow();
     }
 
     cout << "Window Close" << endl;

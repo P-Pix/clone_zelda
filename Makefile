@@ -64,25 +64,25 @@ DATA	=	src/Chest/Accessor.cpp\
 			src/Joueur/Rubis.cpp\
 			src/Joueur/Sprite.cpp\
 			\
-			src/MakeSprite/MakeSprite.cpp\
+			src/MakeSprite/Constructor.cpp\
 			\
 			src/MapGenerator/Accessor.cpp\
 			src/MapGenerator/Chest.cpp\
 			src/MapGenerator/Constructor.cpp\
 			src/MapGenerator/CreateMap.cpp\
 			\
-			src/Monster/Monster.cpp\
-			src/Monster/MonsterAccessor.cpp\
-			src/Monster/MonsterPrivatePatern.cpp\
-			src/Monster/MonsterPrivateSprite.cpp\
-			src/Monster/MonsterPublicGain.cpp\
-			src/Monster/MonsterPublicLife.cpp\
-			src/Monster/MonsterPublicMoove.cpp\
+			src/Monster/Constructor.cpp\
+			src/Monster/Accessor.cpp\
+			src/Monster/Gain.cpp\
+			src/Monster/Life.cpp\
+			src/Monster/Moove.cpp\
+			src/Monster/Patern.cpp\
+			src/Monster/Sprite.cpp\
 			\
-			src/Rubis/Rubis.cpp\
-			src/Rubis/RubisAccessor.cpp\
-			src/Rubis/RubisPrivateText.cpp\
-			src/Rubis/RubisPublicUpdate.cpp\
+			src/Rubis/Constructor.cpp\
+			src/Rubis/Accessor.cpp\
+			src/Rubis/Text.cpp\
+			src/Rubis/Update.cpp\
 			\
 			src/Sword/Sword.cpp\
 			src/Sword/SwordAccessor.cpp\

@@ -1,8 +1,6 @@
 /**
  * @file MapGeneratorPublicCreateMap.cpp
  * @author Guillaume LEMONNIER
- * @brief 
- * @version 0.1
  * @date 2021-05-31
  * 
  * @copyright Copyright (c) 2021
@@ -11,77 +9,12 @@
 
 #include "../../include/MapGenerator.hpp"
 
-void MapGenerator::addBridge(sf::Vector2f position)
+std::vector<sf::Vector2f> MapGenerator::addVector2f(std::vector<sf::Vector2f> list, sf::Vector2f position)
 {
-    m_Bridge.push_back(position);
-    m_boolbridge = true;
+    list.push_back(position);
+    return list;
 }
-void MapGenerator::addDust(sf::Vector2f position)
-{
-    m_Dust.push_back(position);
-    m_booldust = true;
-}
-void MapGenerator::addSlad(sf::Vector2f position)
-{
-    m_Slad.push_back(position);
-    m_boolslad = true;
-}
-
 ///////////////////////////////////////
-
-void MapGenerator::addOrangeTree(sf::Vector2f position)
-{
-    m_OrangeTree.push_back(position);
-    m_boolorangetree = true;
-}
-void MapGenerator::addTree(sf::Vector2f position)
-{
-    m_Tree.push_back(position);
-    m_booltree = true;
-}
-void MapGenerator::addWall(sf::Vector2f position)
-{
-    m_Wall.push_back(position);
-    m_boolwall = true;
-}
-void MapGenerator::addWater(sf::Vector2f position)
-{
-    m_Water.push_back(position);
-    m_boolwater = true;
-}
-void MapGenerator::addWhiteTree(sf::Vector2f position)
-{
-    m_WhiteTree.push_back(position);
-    m_boolwhitetree = true;
-}
-
-///////////////////////////////////////
-
-void (MapGenerator::*ptr[8])(sf::Vector2f) = 
-{
-    MapGenerator::addBridge,
-    MapGenerator::addDust,
-    MapGenerator::addSlad,
-
-    MapGenerator::addOrangeTree,
-    MapGenerator::addTree,
-    MapGenerator::addWall,
-    MapGenerator::addWater,
-    MapGenerator::addWhiteTree,
-};
-
-char listletter[8] = 
-{
-    'p',
-    'g',
-    's',
-
-    'o',
-    't',
-    'b',
-    'e',
-    'w'
-};
 
 void MapGenerator::generateMap(void)
 {
@@ -93,27 +26,13 @@ void MapGenerator::generateMap(void)
 
     char lettre;
 
-    m_Tree.clear();
-    m_Wall.clear();
-    m_OrangeTree.clear();
-    m_WhiteTree.clear();
-    m_Water.clear();
-
-    m_Dust.clear();
-    m_Slad.clear();
-    m_Bridge.clear();
-
     m_map.clear();
 
-    m_booltree = false;
-    m_boolorangetree = false;
-    m_boolwater = false;
-    m_boolwall = false;
-    m_boolwhitetree = false;
-
-    m_booldust = false;
-    m_boolbridge = false;
-    m_boolslad = false;
+    for(int x = 0; x < 8; x ++)
+    {
+        m_listbool[x] = false;
+        m_listvector[x].clear();
+    }
 
     //m_Chest.generateChest(void);
 
@@ -125,10 +44,12 @@ void MapGenerator::generateMap(void)
             ifmap.get(lettre);
             for(int x = 0; x < 8; x ++)
             {
-                if(lettre == listletter[x])
+                if(lettre == m_listletter[x])
                 {
-                    //std::cout << lettre;
-                    ptr[x](sf::Vector2f(positionx * 64.f, positiony * 64.f));
+                    //std::cout << lettre << " ";
+                    //ptr[x](sf::Vector2f(positionx * 64.f, positiony * 64.f));
+                    m_listvector[x] = addVector2f(m_listvector[x], sf::Vector2f(positionx * 64.f, positiony * 64.f));
+                    m_listbool[x] = true;
                 }
             }
             ligne.push_back(lettre);
@@ -137,6 +58,7 @@ void MapGenerator::generateMap(void)
         m_map.push_back(ligne);
     }
     ifmap.close();
+    //std::cout << std::endl;
 }
 
 void MapGenerator::setMapDown(void)

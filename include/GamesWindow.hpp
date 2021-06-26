@@ -16,45 +16,49 @@
 
 #include "Game.hpp"
 
+/// Window class and start the game
 class GamesWindow
 {
-    public:
-
-        // Constructor /Destructor
-            GamesWindow(void);
-            ~GamesWindow(void);
-
-        // Accessor
-            bool isRunning(void);
-
-        // function
-            void limitFramerate(int frame);
-            void controlWindow(void);
-            void updateWindow(void);
-            void verificationWindow(void);
-
     private:
-        //Variable
-            const int   m_windowwidth   = 1024,
-                        m_windowheight  = 768;
+        const int   m_windowwidth   = 1024,
+                    m_windowheight  = 768;
 
-            // SFML
-                sf::RenderWindow    *m_Window;
-                sf::Event   m_Event;
-                sf::VideoMode   m_VideoMode;
+        sf::RenderWindow    *m_Window;
+        sf::Event   m_Event;
+        sf::VideoMode   m_VideoMode;
 
-            // class
-                Game m_Game;
+        Game m_Game;
+        void pollEvent(void);
 
-        //Function
-            // control
-                void pollEvent(void);
+        void drawSprite(sf::Sprite sprite);
+        void drawText(sf::Text Text);
+        void drawVectorSprite(std::vector<sf::Sprite> vector);
+        void drawVectorText(std::vector<sf::Text> vector); 
 
-            // draw
-                void drawSprite(sf::Sprite sprite);
-                void drawText(sf::Text Text);
-                void drawVectorSprite(std::vector<sf::Sprite> vector);
-                void drawVectorText(std::vector<sf::Text> vector);            
+    public:
+        ////////////////////////////////////////
+
+        /// Default Constructor
+        GamesWindow(void);
+
+        /// Destructor
+        ~GamesWindow(void);
+
+        ////////////////////////////////////////
+
+        /// \return true if the window is open
+        bool isRunning(void);
+
+        ////////////////////////////////////////
+
+        /// Limit FPS 
+        /// \param frame FPS number
+        void limitFramerate(int frame);
+
+        ///
+        void controlWindow(void);
+        void updateWindow(void);
+        void verificationWindow(void);         
 };
 
 #endif

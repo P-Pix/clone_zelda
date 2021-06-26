@@ -13,7 +13,6 @@
 #define _MAPGENERATOR_HPP_
 
 #include <SFML/Graphics.hpp>
-
 #include <vector>
 #include <string>
 #include <fstream>
@@ -21,33 +20,13 @@
 
 #include "Chest.hpp"
 
+#define NUMBER_ELEMENT  8
+
 class MapGenerator
-    {
+{
     private:
         int m_x = 7,
             m_y = 8;
-
-        bool    m_booltree          = false,
-                m_boolwall          = false,
-                m_boolorangetree    = false,
-                m_boolwater         = false,
-                m_boolwhitetree     = false,
-
-                m_boolbridge        = false,
-                m_boolslad          = false,
-                m_booldust          = false;
-
-        // std
-        std::vector<sf::Vector2f> 
-            m_Tree,
-            m_OrangeTree,
-            m_WhiteTree,
-            m_Water,
-            m_Wall,
-
-            m_Bridge,
-            m_Dust,
-            m_Slad;
 
         std::vector<std::vector<char>> 
             m_map;
@@ -58,48 +37,70 @@ class MapGenerator
         // class
         Chest m_Chest;
 
-    public:
-        ////////////////////////////////////////
-
         /// add the position the Dust list
+        /// \param list vector2f list
         /// \param position x and y coord
-        void addDust(sf::Vector2f position);
+        std::vector<sf::Vector2f> addVector2f(std::vector<sf::Vector2f> list, sf::Vector2f position);
 
-        /// add the position the Slad list
-        /// \param position x and y coord
-        void addSlad(sf::Vector2f position);
+        bool    m_booltree          = false,
+                m_boolwall          = false,
+                m_boolorangetree    = false,
+                m_boolwater         = false,
+                m_boolwhitetree     = false,
 
-        /// add the position the Bridge list
-        /// \param position x and y coord
-        void addBridge(sf::Vector2f position);
+                m_boolbridge        = false,
+                m_boolslad          = false,
+                m_booldust          = false;
+                
+        std::vector<sf::Vector2f> 
+            m_Bridge,
+            m_Dust,
+            m_Slad,
 
-        ////////////////////////////////////////
+            m_Tree,
+            m_OrangeTree,
+            m_WhiteTree,
+            m_Water,
+            m_Wall;
 
-        /// add the position the Wall list
-        /// \param position x and y coord
-        void addWall(sf::Vector2f position);
+        std::vector<sf::Vector2f> m_listvector[NUMBER_ELEMENT] = 
+        {
+            MapGenerator::m_Bridge,
+            MapGenerator::m_Dust,
+            MapGenerator::m_Slad,
 
-        /// add the position the Water list
-        /// \param position x and y coord
-        void addWater(sf::Vector2f position);
+            MapGenerator::m_OrangeTree,
+            MapGenerator::m_Tree,
+            MapGenerator::m_Wall,
+            MapGenerator::m_Water,
+            MapGenerator::m_WhiteTree
+        };
 
-        /// add the position the Orange Tree list
-        /// \param position x and y coord
-        void addOrangeTree(sf::Vector2f position);
+        bool m_listbool[NUMBER_ELEMENT] = 
+        {
+            MapGenerator::m_boolbridge,
+            MapGenerator::m_booldust,
+            MapGenerator::m_boolslad,
 
-        /// add the position the White Tree list
-        /// \param position x and y coord
-        void addWhiteTree(sf::Vector2f position);
+            MapGenerator::m_boolorangetree,
+            MapGenerator::m_booltree,
+            MapGenerator::m_boolwall,
+            MapGenerator::m_boolwater,
+            MapGenerator::m_boolwhitetree
+        };
 
-        /// add the position the Tree list
-        /// \param position x and y coord
-        void addTree(sf::Vector2f position);
-    
-    private:
-        ////////////////////////////////////////
+        char m_listletter[NUMBER_ELEMENT] = 
+        {
+            'p', // Bridge
+            'g', // Dust
+            's', // Slad
 
-        /// function pointer
-        void *(*ptr[8])(sf::Vector2f position);
+            'o', // Orange Tree
+            't', // Tree
+            'b', // Wall
+            'e', // Water
+            'w'  // White Tree
+        };
 
     public:
         /// Default constructor

@@ -75,19 +75,19 @@ int MapGenerator::getGainLife(void)
 
 std::vector<sf::Vector2f> MapGenerator::getListPositionTree(void)
 {
-    return m_Tree;
+    return m_listvector[4];
 }
 std::vector<sf::Vector2f> MapGenerator::getListPositionDust(void)
 {
-    return m_Dust;
+    return m_listvector[1];
 }
 std::vector<sf::Vector2f> MapGenerator::getListPositionWall(void)
 {
-    return m_Wall;
+    return m_listvector[5];
 }
 std::vector<sf::Vector2f> MapGenerator::getListPositionSlad(void)
 {
-    return m_Slad;
+    return m_listvector[2];
 }
 std::vector<std::vector<char>> MapGenerator::getMap(void)
 {
