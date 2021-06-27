@@ -50,6 +50,11 @@ void Game::setBackground(void)
     m_Cavern.setPositionVector(m_Map.getListPositionSlad());
     m_Tree.setPositionVector(m_Map.getListPositionTree());
     m_Ground.setPositionVector(m_Map.getListPositionDust());
+    m_OrangeTree.setPositionVector(m_Map.getListPositionOrangeTree());
+    m_Water.setPositionVector(m_Map.getListPositionWater());
+    m_WhiteTree.setPositionVector(m_Map.getListPositionWhiteTree());
+    m_Bridge.setPositionVector(m_Map.getListPositionBridge());
+    m_GreyGround.setPositionVector(m_Map.getListPositionGreyDust());
 }
 void Game::gainChest(void)
 {

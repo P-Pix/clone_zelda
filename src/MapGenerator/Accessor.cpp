@@ -11,25 +11,43 @@
 
 #include "../../include/MapGenerator.hpp"
 
-bool MapGenerator::hasTree(void)
+bool MapGenerator::hasBridge(void)
 {
-    return m_listbool[4];
-}
-bool MapGenerator::hasSlad(void)
-{
-    return m_listbool[2];
-}
-bool MapGenerator::hasWall(void)
-{
-    return m_listbool[5];
+    return m_listbool[0];
 }
 bool MapGenerator::hasDust(void)
 {
     return m_listbool[1];
 }
-bool MapGenerator::hasBridge(void)
+bool MapGenerator::hasSlad(void)
 {
-    return m_listbool[0];
+    return m_listbool[2];
+}
+
+bool MapGenerator::hasOrangeTree(void)
+{
+    return m_listbool[3];
+}
+bool MapGenerator::hasTree(void)
+{
+    return m_listbool[4];
+}
+bool MapGenerator::hasWall(void)
+{
+    return m_listbool[5];
+}
+bool MapGenerator::hasWater(void)
+{
+    return m_listbool[6];
+}
+bool MapGenerator::hasWhiteTree(void)
+{
+    return m_listbool[7];
+}
+
+bool MapGenerator::hasGreyDust(void)
+{
+    return m_listbool[8];
 }
 ///////////////////////////////////////
 
@@ -73,22 +91,47 @@ int MapGenerator::getGainLife(void)
 
 ///////////////////////////////////////
 
-std::vector<sf::Vector2f> MapGenerator::getListPositionTree(void)
+std::vector<sf::Vector2f> MapGenerator::getListPositionBridge(void)
 {
-    return m_listvector[4];
+    return m_listvector[0];
 }
 std::vector<sf::Vector2f> MapGenerator::getListPositionDust(void)
 {
     return m_listvector[1];
 }
-std::vector<sf::Vector2f> MapGenerator::getListPositionWall(void)
-{
-    return m_listvector[5];
-}
 std::vector<sf::Vector2f> MapGenerator::getListPositionSlad(void)
 {
     return m_listvector[2];
 }
+
+std::vector<sf::Vector2f> MapGenerator::getListPositionOrangeTree(void)
+{
+    return m_listvector[3];
+}
+std::vector<sf::Vector2f> MapGenerator::getListPositionTree(void)
+{
+    return m_listvector[4];
+}
+std::vector<sf::Vector2f> MapGenerator::getListPositionWall(void)
+{
+    return m_listvector[5];
+}
+std::vector<sf::Vector2f> MapGenerator::getListPositionWater(void)
+{
+    return m_listvector[6];
+}
+std::vector<sf::Vector2f> MapGenerator::getListPositionWhiteTree(void)
+{
+    return m_listvector[7];
+}
+
+std::vector<sf::Vector2f> MapGenerator::getListPositionGreyDust(void)
+{
+    return m_listvector[8];
+}
+
+///////////////////////////////////////
+
 std::vector<std::vector<char>> MapGenerator::getMap(void)
 {
     return m_map;

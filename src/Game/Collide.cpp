@@ -140,6 +140,18 @@ bool Game::previewCollide(sf::Vector2f user, sf::Vector2f moove)
     {
         collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionWall());
     }
+    if(m_Map.hasOrangeTree() && !collide)
+    {
+        collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionOrangeTree());
+    }
+    if(m_Map.hasWater() && !collide)
+    {
+        collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionWater());
+    }
+    if(m_Map.hasWhiteTree() && !collide)
+    {
+        collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionWhiteTree());
+    }
     if(m_Map.thereChest() && !collide)
     {
         collide = collideTwoSprite64x64(sf::Vector2f(nextx, nexty), m_Map.getChestSprite().getPosition());

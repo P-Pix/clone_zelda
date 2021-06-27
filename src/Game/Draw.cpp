@@ -64,6 +64,11 @@ void Game::drawMap(void)
     extractSpriteFromVector(m_Cavern.getListSprite());
     extractSpriteFromVector(m_Tree.getListSprite());
     extractSpriteFromVector(m_Ground.getListSprite());
+    extractSpriteFromVector(m_OrangeTree.getListSprite());
+    extractSpriteFromVector(m_Water.getListSprite());
+    extractSpriteFromVector(m_WhiteTree.getListSprite());
+    extractSpriteFromVector(m_Bridge.getListSprite());
+    extractSpriteFromVector(m_GreyGround.getListSprite());
 }
 
 void Game::extractSpriteFromVector(std::vector<sf::Sprite> vector)

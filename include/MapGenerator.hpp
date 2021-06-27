@@ -20,13 +20,13 @@
 
 #include "Chest.hpp"
 
-#define NUMBER_ELEMENT  8
+#define NUMBER_ELEMENT  9
 
 class MapGenerator
 {
     private:
-        int m_x = 7,
-            m_y = 8;
+        int m_x = 7, // 7
+            m_y = 8; // 8
 
         std::vector<std::vector<char>> 
             m_map;
@@ -52,7 +52,8 @@ class MapGenerator
 
                 m_boolbridge        = false,
                 m_boolslad          = false,
-                m_booldust          = false;
+                m_booldust          = false,
+                m_boolgreydust      = false;
                 
         std::vector<sf::Vector2f> 
             m_Bridge,
@@ -63,7 +64,8 @@ class MapGenerator
             m_OrangeTree,
             m_WhiteTree,
             m_Water,
-            m_Wall;
+            m_Wall,
+            m_GreyDust;
 
         std::vector<sf::Vector2f> m_listvector[NUMBER_ELEMENT] = 
         {
@@ -75,7 +77,8 @@ class MapGenerator
             MapGenerator::m_Tree,
             MapGenerator::m_Wall,
             MapGenerator::m_Water,
-            MapGenerator::m_WhiteTree
+            MapGenerator::m_WhiteTree,
+            MapGenerator::m_GreyDust
         };
 
         bool m_listbool[NUMBER_ELEMENT] = 
@@ -88,20 +91,22 @@ class MapGenerator
             MapGenerator::m_booltree,
             MapGenerator::m_boolwall,
             MapGenerator::m_boolwater,
-            MapGenerator::m_boolwhitetree
+            MapGenerator::m_boolwhitetree,
+            MapGenerator::m_boolgreydust
         };
 
         char m_listletter[NUMBER_ELEMENT] = 
         {
-            'p', // Bridge
-            'g', // Dust
-            's', // Slad
+            'p', // Bridge      0
+            'g', // Dust        1
+            's', // Slad        2
 
-            'o', // Orange Tree
-            't', // Tree
-            'b', // Wall
-            'e', // Water
-            'w'  // White Tree
+            'o', // Orange Tree 3
+            't', // Tree        4
+            'b', // Wall        5
+            'e', // Water       6
+            'w', // White Tree  7
+            'x'  // Grey Dust   8
         };
 
     public:
@@ -139,6 +144,8 @@ class MapGenerator
         /// \return position Slad list
         std::vector<sf::Vector2f> getListPositionSlad(void);
 
+        std::vector<sf::Vector2f> getListPositionGreyDust(void);
+
         /// \return map matrix 
         std::vector<std::vector<char>> getMap(void);
 
@@ -152,6 +159,9 @@ class MapGenerator
 
         /// \return True if the map has Bridge
         bool hasBridge(void);
+
+        /// \return True if the maphas Grey Dust
+        bool hasGreyDust(void);
 
         ////////////////////////////////////////
 

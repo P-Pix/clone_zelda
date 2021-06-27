@@ -50,3 +50,6 @@
 *.out
 *.synctex.gz
 *.toc
+
+# vscode
+.vscode
