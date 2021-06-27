@@ -9,7 +9,6 @@
 
 #include "../../include/MapGenerator.hpp"
 
-
 #include "../printing.cpp"
 
 std::vector<sf::Vector2f> MapGenerator::addVector2f(std::vector<sf::Vector2f> list, sf::Vector2f position)
