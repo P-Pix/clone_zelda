@@ -9,6 +9,9 @@
 
 #include "../../include/MapGenerator.hpp"
 
+
+#include "../printing.cpp"
+
 std::vector<sf::Vector2f> MapGenerator::addVector2f(std::vector<sf::Vector2f> list, sf::Vector2f position)
 {
     list.push_back(position);
@@ -20,8 +23,6 @@ void MapGenerator::positionLetter(char lettre, int positionx, int positiony, int
 {
     if(lettre == m_listletter[x])
     {
-        //std::cout << lettre << " ";
-        //ptr[x](sf::Vector2f(positionx * 64.f, positiony * 64.f));
         m_listvector[x] = addVector2f(m_listvector[x], sf::Vector2f(positionx * 64.f, positiony * 64.f));
         m_listbool[x] = true;
     }
@@ -45,10 +46,10 @@ void MapGenerator::generateMap(void)
 
     //m_Chest.generateChest(void);
 
-    for(int positiony = 1; positiony < 12; positiony ++)
+    for(int positiony = 1; positiony < TILE_Y + 1; positiony ++)
     {
         std::vector<char> ligne;
-        for(int positionx = 0; positionx < 17; positionx ++)
+        for(int positionx = 0; positionx < TILE_X; positionx ++)
         {
             ifmap.get(lettre);
             for(int x = 0; x < NUMBER_ELEMENT; x ++)
@@ -57,11 +58,10 @@ void MapGenerator::generateMap(void)
             }
             ligne.push_back(lettre);
         }
-        //std::cout << std::endl;
         m_map.push_back(ligne);
     }
+    std::cout << m_map << std::endl;
     ifmap.close();
-    //std::cout << std::endl;
 }
 
 void MapGenerator::setMapDown(void)

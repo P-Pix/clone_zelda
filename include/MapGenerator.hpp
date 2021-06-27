@@ -21,6 +21,8 @@
 #include "Chest.hpp"
 
 #define NUMBER_ELEMENT  9
+#define TILE_X          17
+#define TILE_Y          11
 
 class MapGenerator
 {
