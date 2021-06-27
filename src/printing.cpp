@@ -20,6 +20,5 @@ std::ostream &operator<<(std::ostream &flux, std::vector<std::vector<char>> map)
             flux << map[y][x];
         }
     }
-    flux << std::endl;
     return flux;
 }
