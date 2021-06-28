@@ -84,18 +84,17 @@ DATA	=	src/Chest/Accessor.cpp\
 			src/Rubis/Text.cpp\
 			src/Rubis/Update.cpp\
 			\
-			src/Sword/Sword.cpp\
-			src/Sword/SwordAccessor.cpp\
-			src/Sword/SwordPrivateAnimation.cpp\
-			src/Sword/SwordPrivateSprite.cpp\
-			src/Sword/SwordPublicAnimation.cpp\
-			src/Sword/SwordPublicOrientation.cpp\
-			src/Sword/SwordPublicPower.cpp\
+			src/Sword/Accessor.cpp\
+			src/Sword/Animation.cpp\
+			src/Sword/Constructor.cpp\
+			src/Sword/Orientation.cpp\
+			src/Sword/Power.cpp\
+			src/Sword/Sprite.cpp\
 			\
-			src/Wall/Wall.cpp\
-			src/Wall/WallAccessor.cpp\
-			src/Wall/WallPrivateSprite.cpp\
-			src/Wall/WallPublicPosition.cpp\
+			src/Wall/Accessor.cpp\
+			src/Wall/Constructor.cpp\
+			src/Wall/Position.cpp\
+			src/Wall/Sprite.cpp\
 			\
 
 NAME	=	ZeldaLike.o

@@ -68,3 +68,22 @@ void Sword::endAnimation(void)
     m_animationright = false;
     m_animationup = false;
 }
+
+void Sword::animateAttack(void)
+{
+    m_animationfram ++;
+    if(m_animationfram == 15)
+    {
+        endAnimation();
+    }
+}
+void Sword::startAnimation(sf::Vector2f positionsword,int playerorientation)
+{
+    m_animationfram = 0;
+    m_aniamtionexe = true;
+    m_rotate = playerorientation;
+    m_Sprite.setRotation(m_rotate);
+    m_VectorAniamtor.x = positionsword.x;
+    m_VectorAniamtor.y = positionsword.y;
+    setBasicPosition();
+}
