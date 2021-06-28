@@ -27,8 +27,8 @@
 class MapGenerator
 {
     private:
-        int m_x = 7, // 7
-            m_y = 8; // 8
+        int m_x = 7, // 7 start / 0 area test
+            m_y = 8; // 8 start / 0 area test
 
         std::vector<std::vector<char>> 
             m_map;

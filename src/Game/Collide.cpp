@@ -163,7 +163,7 @@ bool Game::previewLimitMap(sf::Vector2f user, sf::Vector2f moove)
     float   nextx = user.x + moove.x,
             nexty = user.y + moove.y;
 
-    if(nextx > 768 || nextx < 0 || nexty > 1024 || nexty < 0)
+    if(nextx > 768 || nextx < 0 || nexty > 1024 || nexty < 64)
     {
         return true;
     }
