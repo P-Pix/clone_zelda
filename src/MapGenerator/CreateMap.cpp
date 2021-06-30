@@ -27,10 +27,31 @@ void MapGenerator::positionLetter(char lettre, int positionx, int positiony, int
     }
 }
 
+///////////////////////////////////////
+
+void MapGenerator::goToExterior(unsigned int x, unsigned int y)
+{
+    m_location = "map";
+    m_x = x;
+    m_y = y;
+}
+void MapGenerator::goToGrotte(void)
+{
+    m_location = "grotte";
+}
+void MapGenerator::goToDonjon(unsigned int x, unsigned int y)
+{
+    m_location = "donjon";
+    m_x = x;
+    m_y = y;
+}
+
+///////////////////////////////////////
+
 void MapGenerator::generateMap(void)
 {
     // Open the file
-    std::string name = "maping/" + std::to_string(m_y) + "_" + std::to_string(m_x) + "map.xsb";
+    std::string name = "maping/" + std::to_string(m_y) + "_" + std::to_string(m_x) + m_location + ".xsb";
     std::ifstream ifmap(name);
 
     char lettre;

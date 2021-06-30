@@ -20,7 +20,7 @@
 
 #include "Chest.hpp"
 
-#define NUMBER_ELEMENT  9
+#define NUMBER_ELEMENT  12
 #define TILE_X          17
 #define TILE_Y          11
 
@@ -55,7 +55,12 @@ class MapGenerator
                 m_boolbridge        = false,
                 m_boolslad          = false,
                 m_booldust          = false,
-                m_boolgreydust      = false;
+                m_boolgreydust      = false,
+                m_boolrock          = false,
+                m_boolredrock       = false,
+                m_boolwhiterock     = false;
+            
+        const char *m_location = "map";
                 
         std::vector<sf::Vector2f> 
             m_Bridge,
@@ -67,7 +72,10 @@ class MapGenerator
             m_WhiteTree,
             m_Water,
             m_Wall,
-            m_GreyDust;
+            m_GreyDust,
+            m_Rock,
+            m_RedRock,
+            m_WhiteRock;
 
         std::vector<sf::Vector2f> m_listvector[NUMBER_ELEMENT] = 
         {
@@ -80,7 +88,10 @@ class MapGenerator
             MapGenerator::m_Wall,
             MapGenerator::m_Water,
             MapGenerator::m_WhiteTree,
-            MapGenerator::m_GreyDust
+            MapGenerator::m_GreyDust,
+            MapGenerator::m_Rock,
+            MapGenerator::m_RedRock,
+            MapGenerator::m_WhiteRock
         };
 
         bool m_listbool[NUMBER_ELEMENT] = 
@@ -94,7 +105,10 @@ class MapGenerator
             MapGenerator::m_boolwall,
             MapGenerator::m_boolwater,
             MapGenerator::m_boolwhitetree,
-            MapGenerator::m_boolgreydust
+            MapGenerator::m_boolgreydust,
+            MapGenerator::m_boolrock,
+            MapGenerator::m_boolredrock,
+            MapGenerator::m_boolwhiterock
         };
 
         char m_listletter[NUMBER_ELEMENT] = 
@@ -108,7 +122,10 @@ class MapGenerator
             'b', // Wall        5
             'e', // Water       6
             'w', // White Tree  7
-            'x'  // Grey Dust   8
+            'x', // Grey Dust   8
+            'r', // Rock        9
+            'q', // Red Rock    10
+            'z', // White Rock  11
         };
 
     public:
@@ -134,6 +151,15 @@ class MapGenerator
 
         /// \return position Wall list
         std::vector<sf::Vector2f> getListPositionWall(void);
+
+        /// \return position Rock list
+        std::vector<sf::Vector2f> getListPositionRock(void);
+
+        /// \return position Red Rock list
+        std::vector<sf::Vector2f> getListPositionRedRock(void);
+
+        /// \return position White Rock list
+        std::vector<sf::Vector2f> getListPositionWhiteRock(void);
 
         ////////////////////////////////////////
 
@@ -182,6 +208,15 @@ class MapGenerator
         /// \return True if the map has Tree
         bool hasTree(void);
 
+        /// \return True if the map has Rock
+        bool hasRock(void);
+
+        /// \return True if the map has Red Rock
+        bool hasRedRock(void);
+
+        /// \return True if the maphas White Rock
+        bool hasWhiteRock(void);
+
         ////////////////////////////////////////
 
         /// \return the X map value
@@ -209,6 +244,9 @@ class MapGenerator
 
         void oprenChest(void);
         void gainIsGet(void);
+        void goToGrotte(void);
+        void goToDonjon(unsigned int x, unsigned int y);
+        void goToExterior(unsigned int x, unsigned int y);
 };
 
 #endif

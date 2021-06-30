@@ -69,6 +69,9 @@ void Game::drawMap(void)
     extractSpriteFromVector(m_WhiteTree.getListSprite());
     extractSpriteFromVector(m_Bridge.getListSprite());
     extractSpriteFromVector(m_GreyGround.getListSprite());
+    extractSpriteFromVector(m_Rock.getListSprite());
+    extractSpriteFromVector(m_RedRock.getListSprite());
+    extractSpriteFromVector(m_WhiteRock.getListSprite());
 }
 
 void Game::extractSpriteFromVector(std::vector<sf::Sprite> vector)

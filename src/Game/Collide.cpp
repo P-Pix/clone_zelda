@@ -152,6 +152,18 @@ bool Game::previewCollide(sf::Vector2f user, sf::Vector2f moove)
     {
         collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionWhiteTree());
     }
+    if(m_Map.hasRock() && !collide)
+    {
+        collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionRock());
+    }
+    if(m_Map.hasRedRock() && !collide)
+    {
+        collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionRedRock());
+    }
+    if(m_Map.hasWhiteRock() && !collide)
+    {
+        collide = collideWall(sf::Vector2f(nextx, nexty), m_Map.getListPositionWhiteRock());
+    }
     if(m_Map.thereChest() && !collide)
     {
         collide = collideTwoSprite64x64(sf::Vector2f(nextx, nexty), m_Map.getChestSprite().getPosition());

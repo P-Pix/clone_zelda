@@ -55,6 +55,9 @@ void Game::setBackground(void)
     m_WhiteTree.setPositionVector(m_Map.getListPositionWhiteTree());
     m_Bridge.setPositionVector(m_Map.getListPositionBridge());
     m_GreyGround.setPositionVector(m_Map.getListPositionGreyDust());
+    m_Rock.setPositionVector(m_Map.getListPositionRock());
+    m_RedRock.setPositionVector(m_Map.getListPositionRedRock());
+    m_WhiteRock.setPositionVector(m_Map.getListPositionWhiteRock());
 }
 void Game::gainChest(void)
 {

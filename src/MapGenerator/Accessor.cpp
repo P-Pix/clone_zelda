@@ -49,6 +49,19 @@ bool MapGenerator::hasGreyDust(void)
 {
     return m_listbool[8];
 }
+bool MapGenerator::hasRock(void)
+{
+    return m_listbool[9];
+}
+bool MapGenerator::hasRedRock(void)
+{
+    return m_listbool[10];
+}
+
+bool MapGenerator::hasWhiteRock(void)
+{
+    return m_listbool[11];
+}
 ///////////////////////////////////////
 
 int MapGenerator::getMapX(void)
@@ -129,6 +142,21 @@ std::vector<sf::Vector2f> MapGenerator::getListPositionGreyDust(void)
 {
     return m_listvector[8];
 }
+
+std::vector<sf::Vector2f> MapGenerator::getListPositionRock(void)
+{
+    return m_listvector[9];
+}
+std::vector<sf::Vector2f> MapGenerator::getListPositionRedRock(void)
+{
+    return m_listvector[10];
+}
+
+std::vector<sf::Vector2f> MapGenerator::getListPositionWhiteRock(void)
+{
+    return m_listvector[11];
+}
+
 
 ///////////////////////////////////////
 

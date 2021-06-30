@@ -35,6 +35,9 @@ class Game
                     *m_greygroundname   = "image/greyground.png",
                     *m_watername        = "image/water.png",
                     *m_groundname       = "image/ground.png",
+                    *m_rockname         = "image/rock.png",
+                    *m_redrockname      = "image/redrock.png",
+                    *m_whiterockname    = "image/whiterock.png",
 
                     *m_fontname         = "font/SuperLegendBoy.ttf";
         
@@ -64,6 +67,9 @@ class Game
                 m_OrangeTree,
                 m_WhiteTree,
                 m_Water,
+                m_Rock,
+                m_RedRock,
+                m_WhiteRock,
                 m_Bloc;
 
         /// Class Ground 
