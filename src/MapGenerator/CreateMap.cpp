@@ -80,7 +80,7 @@ void MapGenerator::generateMap(void)
         }
         m_map.push_back(ligne);
     }
-    std::cout << m_map << std::endl << std::endl;
+    //std::cout << m_map << std::endl << std::endl;
     ifmap.close();
 }
 
