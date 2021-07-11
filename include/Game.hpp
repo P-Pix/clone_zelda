@@ -10,18 +10,30 @@
 #ifndef _GAME_HPP_
 #define _GAME_HPP_
 
+/// Special library
 #include <SFML/Graphics.hpp>
 
+/// STL
 #include <iostream>
 #include <vector>
 #include <string>
 
+/// Header create
 #include "Joueur.hpp"
 #include "Wall.hpp"
 #include "Ground.hpp"
 #include "Monster.hpp"
 #include "MapGenerator.hpp"
 #include "Sword.hpp"
+
+/// Size Sprite
+#define SPRITE_SIZE             64
+
+/// Size Game
+#define LIMIT_UP_GAME           64
+#define LIMIT_DOWN_GAME         768
+#define LIMIT_RIGHT_GAME        1024
+#define LIMIT_LEFT_GAME         0
 
 class Game
 {

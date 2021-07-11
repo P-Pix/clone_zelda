@@ -55,7 +55,7 @@ bool Game::collideTwoSprite64x64(sf::Vector2f sprite1, sf::Vector2f sprite2)
             sprite2x = sprite2.x,
             sprite2y = sprite2.y;
 
-    return (sprite1x + 5 <= sprite2x + 64 && sprite1x + 59 >= sprite2x && sprite1y + 32 <= sprite2y + 64 && sprite1y + 64 > sprite2y);
+    return (sprite1x + 5 <= sprite2x + SPRITE_SIZE && sprite1x + 59 >= sprite2x && sprite1y + 32 <= sprite2y + SPRITE_SIZE && sprite1y + SPRITE_SIZE > sprite2y);
 }
 void Game::collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2)
 {
@@ -71,19 +71,19 @@ void Game::collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2)
     m_collideup = false;
 
     
-    if(sprite1x < sprite2x + 64 && sprite1x + 64 > sprite2x && sprite1y < sprite2y + 64 && sprite1y + 32 > sprite2y)
+    if(sprite1x < sprite2x + SPRITE_SIZE && sprite1x + SPRITE_SIZE > sprite2x && sprite1y < sprite2y + SPRITE_SIZE && sprite1y + 32 > sprite2y)
     {
         m_collideup = true;   
     }
-    else if(sprite1x < sprite2x + 64 && sprite1x + 64 > sprite2x + 64 && sprite1y + 64 > sprite2y && sprite1y + 64 < sprite2y + 64)
+    else if(sprite1x < sprite2x + SPRITE_SIZE && sprite1x + SPRITE_SIZE > sprite2x + SPRITE_SIZE && sprite1y + SPRITE_SIZE > sprite2y && sprite1y + SPRITE_SIZE < sprite2y + SPRITE_SIZE)
     {
         m_collideleft = true;                
     }
-    else if(sprite1x < sprite2x && sprite1x + 64 > sprite2x && sprite1y < sprite2y + 64 && sprite1y + 64 > sprite2y)
+    else if(sprite1x < sprite2x && sprite1x + SPRITE_SIZE > sprite2x && sprite1y < sprite2y + SPRITE_SIZE && sprite1y + SPRITE_SIZE > sprite2y)
     {
         m_collideright = true;
     }
-    else if(sprite1x < sprite2x + 64 && sprite1x + 64 > sprite2x && sprite1y + 64 > sprite2y && sprite1y + 64 < sprite2y + 64)
+    else if(sprite1x < sprite2x + SPRITE_SIZE && sprite1x + SPRITE_SIZE > sprite2x && sprite1y + SPRITE_SIZE > sprite2y && sprite1y + SPRITE_SIZE < sprite2y + SPRITE_SIZE)
     {
         m_collidedown = true;
     }
@@ -98,19 +98,19 @@ bool Game::collideSword(sf::Vector2f target)
 
     if(m_Sword.getAttackDown())
     {
-        return (sprite1x >= sprite2x && sprite1x - 64 <= sprite2x + 64 && sprite1y + 64 >= sprite2y && sprite1y + 64 <= sprite2y + 64);
+        return (sprite1x >= sprite2x && sprite1x - SPRITE_SIZE <= sprite2x + SPRITE_SIZE && sprite1y + SPRITE_SIZE >= sprite2y && sprite1y + SPRITE_SIZE <= sprite2y + SPRITE_SIZE);
     }
     else if(m_Sword.getAttackLeft())
     {
-        return (sprite1x - 64 <= sprite2x + 64 && sprite1x - 64 >= sprite2x && sprite1y >= sprite2y && sprite1y - 64 <= sprite2y + 64);
+        return (sprite1x - SPRITE_SIZE <= sprite2x + SPRITE_SIZE && sprite1x - SPRITE_SIZE >= sprite2x && sprite1y >= sprite2y && sprite1y - SPRITE_SIZE <= sprite2y + SPRITE_SIZE);
     }
     else if(m_Sword.getAttackRight())
     {
-        return (sprite1x <= sprite2x + 64 && sprite1x + 64 >= sprite2x && sprite1y <= sprite2y + 64 && sprite1y + 64 > sprite2y);
+        return (sprite1x <= sprite2x + SPRITE_SIZE && sprite1x + SPRITE_SIZE >= sprite2x && sprite1y <= sprite2y + SPRITE_SIZE && sprite1y + SPRITE_SIZE > sprite2y);
     }
     else if(m_Sword.getAttackUp())
     {
-        return (sprite1x + 64 >= sprite2x && sprite1x <= sprite2x + 64 && sprite1y - 64 <= sprite2y + 64 && sprite1y - 64 >= sprite2y);
+        return (sprite1x + SPRITE_SIZE >= sprite2x && sprite1x <= sprite2x + SPRITE_SIZE && sprite1y - SPRITE_SIZE <= sprite2y + SPRITE_SIZE && sprite1y - SPRITE_SIZE >= sprite2y);
     }
     return false;
 }
@@ -175,7 +175,7 @@ bool Game::previewLimitMap(sf::Vector2f user, sf::Vector2f moove)
     float   nextx = user.x + moove.x,
             nexty = user.y + moove.y;
 
-    if(nextx > 768 || nextx < 0 || nexty > 1024 || nexty < 64)
+    if(nextx > LIMIT_RIGHT_GAME || nextx < LIMIT_LEFT_GAME || nexty > LIMIT_DOWN_GAME || nexty < LIMIT_UP_GAME)
     {
         return true;
     }
