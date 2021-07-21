@@ -35,6 +35,12 @@
 #define LIMIT_RIGHT_GAME        1024
 #define LIMIT_LEFT_GAME         0
 
+#define NO_COLLIDE              0
+#define LEFT_COLLIDE            1
+#define RIGHT_COLLIDE           2
+#define UP_COLLIDE              3
+#define DOWN_COLLIDE            4
+
 class Game
 {
     private:
@@ -52,12 +58,6 @@ class Game
                     *m_whiterockname    = "image/whiterock.png",
 
                     *m_fontname         = "font/SuperLegendBoy.ttf";
-        
-        /// Orientation of the collide
-        bool    m_collidedown   = false,
-                m_collideup     = false,
-                m_collideright  = false,
-                m_collideleft   = false;
 
         /// Vector sprite for draw in the window
         std::vector<sf::Sprite> m_vectorsprite;
@@ -147,7 +147,7 @@ class Game
         /// Check where the the sprite if in contact
         /// \param sprite1 The sprite who suffered the contact
         /// \param sprite2 The sprite who afflict the contact
-        void collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2);
+        int collidePosition(sf::Vector2f sprite1, sf::Vector2f sprite2);
         
         ////////////////////////////////////////
         
