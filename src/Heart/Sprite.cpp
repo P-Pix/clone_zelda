@@ -11,20 +11,18 @@
 
 #include "../../include/Heart.hpp"
 
-sf::Sprite Heart::setSpritePosition(sf::Sprite sprite, sf::Vector2f position)
-{
+sf::Sprite Heart::setSpritePosition(sf::Sprite sprite, sf::Vector2f position) {
     sprite.setPosition(position);
     return sprite;
 }
 
-void Heart::initConstructor(void)
-{
+void Heart::initConstructor(void) {
     m_T0Heart.loadFromFile(m_name0);
     m_S0Heart.setTexture(m_T0Heart);
 
     m_T1Heart.loadFromFile(m_name1);
     m_S1Heart.setTexture(m_T1Heart);
-    
+
     m_T2Heart.loadFromFile(m_name2);
     m_S2Heart.setTexture(m_T2Heart);
 

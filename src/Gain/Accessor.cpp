@@ -11,19 +11,18 @@
 
 #include "../../include/Gain.hpp"
 
-sf::Sprite Gain::getSpriteGain(void)
-{
+sf::Sprite Gain::getSpriteGain(void) {
     return m_Sprite;
 }
-int Gain::getValorGainLife(void)
-{
+
+int Gain::getValorGainLife(void) {
     return m_valorgainlife;
 }
-int Gain::getValorGainRubis(void)
-{
+
+int Gain::getValorGainRubis(void) {
     return m_valorgainrubis;
 }
-bool Gain::thereGain(void)
-{
+
+bool Gain::thereGain(void) {
     return m_gain;
 }

@@ -11,47 +11,46 @@
 
 #include "../../include/Monster.hpp"
 
-sf::Sprite Monster::getSprite(void)
-{
+sf::Sprite Monster::getSprite(void) {
     return m_Sprite;
 }
-sf::Vector2f Monster::getNextPosition(void)
-{
+
+sf::Vector2f Monster::getNextPosition(void) {
     return m_Patern[m_moveaction];
 }
-sf::Vector2f Monster::getPosition(void)
-{
+
+sf::Vector2f Monster::getPosition(void) {
     return m_Sprite.getPosition();
 }
-int Monster::getPower(void)
-{
+
+int Monster::getPower(void) {
     return m_power;
 }
-bool Monster::isAlive(void)
-{
+
+bool Monster::isAlive(void) {
     return m_Heart.isAlive();
 }
-int Monster::getGainLifeValor(void)
-{
+
+int Monster::getGainLifeValor(void) {
     return m_Gain.getValorGainLife();
 }
-int Monster::getGainRubisValor(void)
-{
+
+int Monster::getGainRubisValor(void) {
     return m_Gain.getValorGainRubis();
 }
-bool Monster::thereGain(void)
-{
+
+bool Monster::thereGain(void) {
     return m_Gain.thereGain();
 }
-bool Monster::isInvulnerable(void)
-{
+
+bool Monster::isInvulnerable(void) {
     return m_Heart.isInvulnerable();
 }
-Monster* Monster::getAdress(void)
-{
+
+Monster *Monster::getAdress(void) {
     return this;
 }
-Monster Monster::getMonster(void)
-{
+
+Monster Monster::getMonster(void) {
     return *this;
 }

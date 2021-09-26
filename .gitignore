@@ -54,6 +54,9 @@
 # vscode
 .vscode
 
+#JetBrain
+.idea
+
 # image
 image/donjonmap.gif
 image/exteriormap.png

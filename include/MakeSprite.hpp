@@ -15,36 +15,35 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-class MakeSprite
-{
-    private:
-        sf::Texture m_Texture;
+class MakeSprite {
+private:
+    sf::Texture m_Texture;
 
-        void loadSprite(const char *NameTexture);
+    void loadSprite(const char *NameTexture);
 
-    protected:
-        /// Size of the Sprite
-        /// 0 if it's the default constructor
-        unsigned int    m_sizex = 0,
-                        m_sizey = 0;
+protected:
+    /// Size of the Sprite
+    /// 0 if it's the default constructor
+    unsigned int m_sizex = 0,
+            m_sizey = 0;
 
-        sf::Sprite m_Sprite;
+    sf::Sprite m_Sprite;
 
-    public:
-        ////////////////////////////////////////
-        /// Default constructor
-        /// Create a empty Sprite
-        MakeSprite(void);
+public:
+    ////////////////////////////////////////
+    /// Default constructor
+    /// Create a empty Sprite
+    MakeSprite(void);
 
-        /// Constructor with a Picture name
-        /// Create a Sprite with the Picture
-        MakeSprite(const char *NameTexture);
+    /// Constructor with a Picture name
+    /// Create a Sprite with the Picture
+    MakeSprite(const char *NameTexture);
 
-        /// Destructor 
-        ~MakeSprite(void);   
+    /// Destructor
+    ~MakeSprite(void);
 
-        ////////////////////////////////////////
-        /// 
+    ////////////////////////////////////////
+    ///
 };
 
 #endif

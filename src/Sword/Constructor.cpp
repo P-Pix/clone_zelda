@@ -13,16 +13,14 @@
 
 // Constructor / Destructor
 
-    // Constructor
-        Sword::Sword(void)
-        {
-            //std::cout << "Sword create" << std::endl;
-            loadTexture();
-            loadSprite();
-        }   
-    
-    // Destructor
-        Sword::~Sword(void)
-        {
-            //std::cout << "Sword delete" << std::endl;
-        }
+// Constructor
+Sword::Sword(void) {
+    //std::cout << "Sword create" << std::endl;
+    loadTexture();
+    loadSprite();
+}
+
+// Destructor
+Sword::~Sword(void) {
+    //std::cout << "Sword delete" << std::endl;
+}

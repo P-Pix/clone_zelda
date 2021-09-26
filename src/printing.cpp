@@ -14,14 +14,11 @@
 /// \param flux ostream flux
 /// \param map 2D char matrix
 /// \return flux
-std::ostream &operator<<(std::ostream &flux, std::vector<std::vector<char>> map);
+std::ostream &operator<<(std::ostream &flux, std::vector <std::vector<char>> map);
 
-std::ostream &operator<<(std::ostream &flux, std::vector<std::vector<char>> map)
-{
-    for(int y = 0; y < map.size(); y ++)
-    {
-        for(int x = 0; x < map[y].size(); x ++)
-        {
+std::ostream &operator<<(std::ostream &flux, std::vector <std::vector<char>> map) {
+    for (int y = 0; y < map.size(); y++) {
+        for (int x = 0; x < map[y].size(); x++) {
             flux << " ";
             flux << map[y][x];
         }

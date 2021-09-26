@@ -11,31 +11,30 @@
 
 #include "../../include/Joueur.hpp"
 
-void Joueur::setOrientationDown(void)
-{
+void Joueur::setOrientationDown(void) {
     m_orientationdown = true;
     m_orientationleft = false;
     m_orientationright = false;
     m_orientationup = false;
 }
-void Joueur::setOrientationLeft(void)
-{
+
+void Joueur::setOrientationLeft(void) {
     m_orientationdown = false;
     m_orientationleft = true;
     m_orientationright = false;
-    m_orientationup = false;            
+    m_orientationup = false;
 }
-void Joueur::setOrientationUp(void)
-{
+
+void Joueur::setOrientationUp(void) {
     m_orientationdown = false;
     m_orientationleft = false;
     m_orientationright = false;
-    m_orientationup = true;            
+    m_orientationup = true;
 }
-void Joueur::setOrientationRight(void)
-{
+
+void Joueur::setOrientationRight(void) {
     m_orientationdown = false;
     m_orientationleft = false;
     m_orientationright = true;
-    m_orientationup = false;            
+    m_orientationup = false;
 }

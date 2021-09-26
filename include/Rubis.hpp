@@ -17,47 +17,53 @@
 #include <vector>
 #include <string>
 
-class Rubis
-{
-    public:
-        // Constructor / Destructor
-            Rubis(void);
-            ~Rubis(void);
-        
-        // Accessor
-            sf::Sprite getLogoRubis(void);
-            sf::Text getRubisHundred(void);
-            sf::Text getRubisTen(void);
-            sf::Text getRubisUnit(void);
+class Rubis {
+public:
+    // Constructor / Destructor
+    Rubis(void);
 
-            int getTotalRubis(void);
-        
-        // Function
-            void updateRubis(int valorrubis);
+    ~Rubis(void);
 
-    private:
-        // Variable
-            unsigned short  m_hunderedrubis = 0,
-                            m_tenrubis = 0,
-                            m_unitrubis = 0;
-            
-            unsigned int    m_totalrubis = 0;
+    // Accessor
+    sf::Sprite getLogoRubis(void);
 
-            const char  *m_nameimage = "image/greenrubis.png",
-                        *m_namefont = "font/SuperLegendBoy.ttf";
+    sf::Text getRubisHundred(void);
 
-            sf::Sprite m_Sprite;
-            sf::Texture m_Texture;
-            sf::Font m_Font;
-            sf::Text    m_Text100,
-                        m_Text10,
-                        m_Text1;
-        // Function
-            void generateText(void);
+    sf::Text getRubisTen(void);
 
-            void changeText100(void);
-            void changeText10(void);
-            void changeText1(void);
+    sf::Text getRubisUnit(void);
+
+    int getTotalRubis(void);
+
+    // Function
+    void updateRubis(int valorrubis);
+
+private:
+    // Variable
+    unsigned short m_hunderedrubis = 0,
+            m_tenrubis = 0,
+            m_unitrubis = 0;
+
+    unsigned int m_totalrubis = 0;
+
+    const char *m_nameimage = "image/greenrubis.png",
+            *m_namefont = "font/SuperLegendBoy.ttf";
+
+    sf::Sprite m_Sprite;
+    sf::Texture m_Texture;
+    sf::Font m_Font;
+    sf::Text m_Text100,
+            m_Text10,
+            m_Text1;
+
+    // Function
+    void generateText(void);
+
+    void changeText100(void);
+
+    void changeText10(void);
+
+    void changeText1(void);
 };
 
 #endif

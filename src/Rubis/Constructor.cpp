@@ -11,8 +11,7 @@
 
 #include "../../include/Rubis.hpp"
 
-Rubis::Rubis(void)
-{
+Rubis::Rubis(void) {
     m_Texture.loadFromFile(m_nameimage);
     m_Sprite.setTexture(m_Texture);
     m_Sprite.setPosition(sf::Vector2f(640.f, 16.f));
@@ -20,7 +19,7 @@ Rubis::Rubis(void)
 
     generateText();
 }
-Rubis::~Rubis(void)
-{
-    
+
+Rubis::~Rubis(void) {
+
 }

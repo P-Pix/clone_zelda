@@ -17,48 +17,53 @@
 #include "Game.hpp"
 
 /// Window class and start the game
-class GamesWindow
-{
-    private:
-        const int   m_windowwidth   = 1024,
-                    m_windowheight  = 768;
+class GamesWindow {
+private:
+    const int m_windowwidth = 1024,
+            m_windowheight = 768;
 
-        sf::RenderWindow    *m_Window;
-        sf::Event   m_Event;
-        sf::VideoMode   m_VideoMode;
+    sf::RenderWindow *m_Window;
+    sf::Event m_Event;
+    sf::VideoMode m_VideoMode;
 
-        Game m_Game;
-        void pollEvent(void);
+    Game m_Game;
 
-        void drawSprite(sf::Sprite sprite);
-        void drawText(sf::Text Text);
-        void drawVectorSprite(std::vector<sf::Sprite> vector);
-        void drawVectorText(std::vector<sf::Text> vector); 
+    void pollEvent(void);
 
-    public:
-        ////////////////////////////////////////
+    void drawSprite(sf::Sprite sprite);
 
-        /// Default Constructor
-        GamesWindow(void);
+    void drawText(sf::Text Text);
 
-        /// Destructor
-        ~GamesWindow(void);
+    void drawVectorSprite(std::vector <sf::Sprite> vector);
 
-        ////////////////////////////////////////
+    void drawVectorText(std::vector <sf::Text> vector);
 
-        /// \return true if the window is open
-        bool isRunning(void);
+public:
+    ////////////////////////////////////////
 
-        ////////////////////////////////////////
+    /// Default Constructor
+    GamesWindow(void);
 
-        /// Limit FPS 
-        /// \param frame FPS number
-        void limitFramerate(int frame);
+    /// Destructor
+    ~GamesWindow(void);
 
-        ///
-        void controlWindow(void);
-        void updateWindow(void);
-        void verificationWindow(void);         
+    ////////////////////////////////////////
+
+    /// \return true if the window is open
+    bool isRunning(void);
+
+    ////////////////////////////////////////
+
+    /// Limit FPS
+    /// \param frame FPS number
+    void limitFramerate(int frame);
+
+    ///
+    void controlWindow(void);
+
+    void updateWindow(void);
+
+    void verificationWindow(void);
 };
 
 #endif

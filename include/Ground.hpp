@@ -18,41 +18,48 @@
 #include <vector>
 
 #include "MakeSprite.hpp"
-class Ground
-{
-    public:
-        // Constructor / Destrutor
-            Ground(void);
-            Ground(const char *name);
-            ~Ground(void);
-        
-        // Accessor
-            std::vector<sf::Sprite> getListSprite(void);
-            sf::Sprite getSprite(void);
-            Ground* getAdress(void);
-        
-        // Function
-            void setPositionVector(std::vector<sf::Vector2f> vector);
-            void setPosition(sf::Vector2f position);
+
+class Ground {
+public:
+    // Constructor / Destrutor
+    Ground(void);
+
+    Ground(const char *name);
+
+    ~Ground(void);
+
+    // Accessor
+    std::vector <sf::Sprite> getListSprite(void);
+
+    sf::Sprite getSprite(void);
+
+    Ground *getAdress(void);
+
+    // Function
+    void setPositionVector(std::vector <sf::Vector2f> vector);
+
+    void setPosition(sf::Vector2f position);
 
 
-    private:
-        // Variable
-            // std
-                const char *m_name = "";
-                std::vector<sf::Sprite> m_ListeSprite;
-            
-            // Class
-                MakeSprite m_MSprite;
+private:
+    // Variable
+    // std
+    const char *m_name = "";
+    std::vector <sf::Sprite> m_ListeSprite;
 
-            // SFML
-                sf::Sprite m_Sprite;
-                sf::Texture m_Texture;
+    // Class
+    MakeSprite m_MSprite;
 
-        // Function
-            void initSprite(void);
-            void loadTexture(void);
-            void loadSprite(void);
+    // SFML
+    sf::Sprite m_Sprite;
+    sf::Texture m_Texture;
+
+    // Function
+    void initSprite(void);
+
+    void loadTexture(void);
+
+    void loadSprite(void);
 };
 
 #endif

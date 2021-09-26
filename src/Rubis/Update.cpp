@@ -11,28 +11,22 @@
 
 #include "../../include/Rubis.hpp"
 
-void Rubis::updateRubis(int valorrubis)
-{
+void Rubis::updateRubis(int valorrubis) {
     m_totalrubis += valorrubis;
     m_unitrubis += valorrubis;
-    while(m_unitrubis >= 10)
-    {
+    while (m_unitrubis >= 10) {
         m_unitrubis -= 10;
-        m_tenrubis ++;
+        m_tenrubis++;
     }
-    while(m_tenrubis >= 10)
-    {
+    while (m_tenrubis >= 10) {
         m_tenrubis -= 10;
-        m_hunderedrubis ++;
+        m_hunderedrubis++;
     }
-    if(m_totalrubis >= 900)
-    {
+    if (m_totalrubis >= 900) {
         m_hunderedrubis = 9;
-        if(m_totalrubis >= 990)
-        {
+        if (m_totalrubis >= 990) {
             m_tenrubis = 9;
-            if(m_totalrubis >= 999)
-            {
+            if (m_totalrubis >= 999) {
                 m_unitrubis = 9;
                 m_totalrubis = 999;
             }

@@ -12,17 +12,15 @@
 #include "../../include/Ground.hpp"
 
 // Sprite
-    std::vector<sf::Sprite> Ground::getListSprite(void)
-    {
-        return m_ListeSprite;
-    }
-    sf::Sprite Ground::getSprite(void)
-    {
-        return m_Sprite;
-    }
+std::vector <sf::Sprite> Ground::getListSprite(void) {
+    return m_ListeSprite;
+}
+
+sf::Sprite Ground::getSprite(void) {
+    return m_Sprite;
+}
 
 // Adress
-    Ground* Ground::getAdress(void)
-    {
-        return this;
-    }
+Ground *Ground::getAdress(void) {
+    return this;
+}

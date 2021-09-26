@@ -13,21 +13,19 @@
 
 // Constructor / Destructor
 
-    // Constructor
-        Ground::Ground(void)
-        {
-            initSprite();
-            //std::cout << "Ground create " << this << std::endl;
-        }
-        Ground::Ground(const char *name)
-        {
-            this -> m_name = name;
-            initSprite();
-            //std::cout << "Ground create " << name << " " << this << std::endl;
-        }
+// Constructor
+Ground::Ground(void) {
+    initSprite();
+    //std::cout << "Ground create " << this << std::endl;
+}
 
-    // Destructor
-        Ground::~Ground(void)
-        {
-            //std::cout << "Ground deete " << this << std::endl;
-        }
+Ground::Ground(const char *name) {
+    this->m_name = name;
+    initSprite();
+    //std::cout << "Ground create " << name << " " << this << std::endl;
+}
+
+// Destructor
+Ground::~Ground(void) {
+    //std::cout << "Ground deete " << this << std::endl;
+}

@@ -11,23 +11,20 @@
 
 #include "../../include/MakeSprite.hpp"
 
-MakeSprite::MakeSprite(void)
-{
+MakeSprite::MakeSprite(void) {
 
 }
-MakeSprite::MakeSprite(const char *NameTexture)
-{
+
+MakeSprite::MakeSprite(const char *NameTexture) {
     loadSprite(NameTexture);
 }
-MakeSprite::~MakeSprite(void)
-{
+
+MakeSprite::~MakeSprite(void) {
 
 }
 
-void MakeSprite::loadSprite(const char *NameTexture)
-{
-    if(!m_Texture.loadFromFile(NameTexture))
-    {
+void MakeSprite::loadSprite(const char *NameTexture) {
+    if (!m_Texture.loadFromFile(NameTexture)) {
         std::cout << "error image " << NameTexture << std::endl;
     }
     m_Sprite.setTexture(m_Texture);

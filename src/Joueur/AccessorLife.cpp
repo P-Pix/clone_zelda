@@ -11,27 +11,26 @@
 
 #include "../../include/Joueur.hpp"
 
-int Joueur::getLife(void)
-{
+int Joueur::getLife(void) {
     return m_Heart.getLife();
 }
-int Joueur::getMaxLife(void)
-{
+
+int Joueur::getMaxLife(void) {
     return m_Heart.getMaxLife();
 }
-bool Joueur::isAlive(void)
-{
+
+bool Joueur::isAlive(void) {
     return m_Heart.isAlive();
 }
-bool Joueur::isInvulnerable(void)
-{
+
+bool Joueur::isInvulnerable(void) {
     return m_Heart.isInvulnerable();
 }
-std::vector<sf::Sprite> Joueur::getListSpriteHeart(void)
-{
+
+std::vector <sf::Sprite> Joueur::getListSpriteHeart(void) {
     return m_Heart.getListSprite();
 }
-sf::Sprite Joueur::getSpriteHeart(int number)
-{
+
+sf::Sprite Joueur::getSpriteHeart(int number) {
     return m_Heart.getSprite(number);
 }

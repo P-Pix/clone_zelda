@@ -11,19 +11,18 @@
 
 #include "../../include/Joueur.hpp"
 
-void Joueur::setMaxLifeUp(void)
-{
+void Joueur::setMaxLifeUp(void) {
     m_Heart.setMaxLifeUp();
 }
-void Joueur::setHeart(int life)
-{
+
+void Joueur::setHeart(int life) {
     m_Heart.setHeart(life);
 }
-void Joueur::setDamage(int power)
-{
+
+void Joueur::setDamage(int power) {
     m_Heart.setDamage(power);
 }
-void Joueur::frameInvulnerable(void)
-{
+
+void Joueur::frameInvulnerable(void) {
     m_Heart.frameInvulnerable();
 }

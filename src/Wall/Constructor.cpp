@@ -13,20 +13,17 @@
 
 // Constructor / Destructor
 
-    Wall::Wall(void)
-    {
-        this -> m_SWall = loadSprite();
-        //std::cout << "wall create " << this << std::endl;
-    }
+Wall::Wall(void) {
+    this->m_SWall = loadSprite();
+    //std::cout << "wall create " << this << std::endl;
+}
 
-    Wall::Wall(const char *nametxt)
-    {
-        this -> m_nametexture = nametxt;
-        this -> m_SWall = loadSprite();
-        //std::cout << "wall create " << this << std::endl;
-    }
+Wall::Wall(const char *nametxt) {
+    this->m_nametexture = nametxt;
+    this->m_SWall = loadSprite();
+    //std::cout << "wall create " << this << std::endl;
+}
 
-    Wall::~Wall(void)
-    {
-        //std::cout << "Wall delete " << this << std::endl;
-    }
+Wall::~Wall(void) {
+    //std::cout << "Wall delete " << this << std::endl;
+}

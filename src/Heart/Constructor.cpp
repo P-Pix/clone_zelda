@@ -13,20 +13,18 @@
 
 // Consructor / Destructor
 
-    // Constructor
-        Heart::Heart(void)
-        {
-            initConstructor();
-            //std::cout << "heart create " << this << std::endl;
-        }
-        Heart::Heart(int frameinvulnerable)
-        {
-            m_frameinvulnerable = frameinvulnerable;
-            initConstructor();
-        }
+// Constructor
+Heart::Heart(void) {
+    initConstructor();
+    //std::cout << "heart create " << this << std::endl;
+}
 
-    // Destructor
-        Heart::~Heart(void)
-        {
-            //std::cout << "heart delete " << this << std::endl;
-        }
+Heart::Heart(int frameinvulnerable) {
+    m_frameinvulnerable = frameinvulnerable;
+    initConstructor();
+}
+
+// Destructor
+Heart::~Heart(void) {
+    //std::cout << "heart delete " << this << std::endl;
+}

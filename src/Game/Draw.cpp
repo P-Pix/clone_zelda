@@ -11,11 +11,10 @@
 
 #include "../../include/Game.hpp"
 
-void Game::allDrawWindow(void)
-{
+void Game::allDrawWindow(void) {
     m_vectorsprite.clear();
     m_vectortext.clear();
-    
+
     // Up screen
     extractSpriteFromVector(m_Player.getListSpriteHeart()); // Life bar
     drawRubis(); // Rubis number
@@ -32,34 +31,32 @@ void Game::allDrawWindow(void)
     // Over all
     drawSword(); // Sword
 }
-void Game::drawChestGain(void)
-{
+
+void Game::drawChestGain(void) {
     m_vectorsprite.push_back(m_Map.getGainSprite());
 }
-void Game::drawChest(void)
-{
-    if(m_Map.thereChest())
-    {
+
+void Game::drawChest(void) {
+    if (m_Map.thereChest()) {
         m_vectorsprite.push_back(m_Map.getChestSprite());
     }
 }
-void Game::drawSword(void)
-{
-    if(m_Sword.getExecution())
-    {
+
+void Game::drawSword(void) {
+    if (m_Sword.getExecution()) {
         m_Sword.animateAttack();
         m_vectorsprite.push_back(m_Sword.getSprite());
     }
 }
-void Game::drawRubis(void)
-{
+
+void Game::drawRubis(void) {
     m_vectorsprite.push_back(m_Player.getLogoRubis());
     m_vectortext.push_back(m_Player.getRubisHundred());
     m_vectortext.push_back(m_Player.getRubisTen());
     m_vectortext.push_back(m_Player.getRubisUnit());
 }
-void Game::drawMap(void)
-{
+
+void Game::drawMap(void) {
     extractSpriteFromVector(m_Bloc.getListSprite());
     extractSpriteFromVector(m_Cavern.getListSprite());
     extractSpriteFromVector(m_Tree.getListSprite());
@@ -74,10 +71,8 @@ void Game::drawMap(void)
     extractSpriteFromVector(m_WhiteRock.getListSprite());
 }
 
-void Game::extractSpriteFromVector(std::vector<sf::Sprite> vector)
-{
-    for(int number = 0;  number < vector.size(); number ++)
-    {
+void Game::extractSpriteFromVector(std::vector <sf::Sprite> vector) {
+    for (int number = 0; number < vector.size(); number++) {
         m_vectorsprite.push_back(vector[number]);
     }
 }

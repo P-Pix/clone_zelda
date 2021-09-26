@@ -11,20 +11,18 @@
 
 #include "../../include/Monster.hpp"
 
-void Monster::setDamage(int power)
-{
+void Monster::setDamage(int power) {
     m_Heart.setDamage(power);
-    if(m_Heart.getLife() == 0)
-    {
+    if (m_Heart.getLife() == 0) {
         dropGain();
     }
 }
-void Monster::dropGain(void)
-{
+
+void Monster::dropGain(void) {
     m_Gain.choseGain(m_Sprite.getPosition());
     m_Sprite = m_Gain.getSpriteGain();
 }
-void Monster::frameInvulnerable(void)
-{
+
+void Monster::frameInvulnerable(void) {
     m_Heart.frameInvulnerable();
 }

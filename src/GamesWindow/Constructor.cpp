@@ -13,17 +13,15 @@
 
 // Constructor / Destructor
 
-    // Constructor
-        GamesWindow::GamesWindow(void)
-        {
-            // Window size : (16* 64) * ((10 * 64) + 64) = 1024 * 704
-            this -> m_Window = nullptr;
-            this -> m_Window = new sf::RenderWindow(sf::VideoMode(m_windowwidth, m_windowheight), "Zelda Like");
-            //std::cout << "window create " << this << std::endl;
-        }
+// Constructor
+GamesWindow::GamesWindow(void) {
+    // Window size : (16* 64) * ((10 * 64) + 64) = 1024 * 704
+    this->m_Window = nullptr;
+    this->m_Window = new sf::RenderWindow(sf::VideoMode(m_windowwidth, m_windowheight), "Zelda Like");
+    //std::cout << "window create " << this << std::endl;
+}
 
-    // Destructor
-        GamesWindow::~GamesWindow(void)
-        {
-            //std::cout << "window delete " << this << std::endl;
-        }
+// Destructor
+GamesWindow::~GamesWindow(void) {
+    //std::cout << "window delete " << this << std::endl;
+}

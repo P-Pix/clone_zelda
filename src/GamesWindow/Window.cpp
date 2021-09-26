@@ -11,26 +11,24 @@
 
 #include "../../include/GamesWindow.hpp"
 
-void GamesWindow::limitFramerate(int frame)
-{
-    this -> m_Window -> setFramerateLimit(frame);
+void GamesWindow::limitFramerate(int frame) {
+    this->m_Window->setFramerateLimit(frame);
 }
-void GamesWindow::updateWindow(void)
-{
-    this -> m_Window -> clear();
+
+void GamesWindow::updateWindow(void) {
+    this->m_Window->clear();
     drawVectorSprite(m_Game.getDrawingSprite());
     drawVectorText(m_Game.getDrawingText());
-    this -> m_Window -> display();
+    this->m_Window->display();
 }
-void GamesWindow::verificationWindow(void)
-{
+
+void GamesWindow::verificationWindow(void) {
     m_Game.executionGame();
-    if(!m_Game.playerIsAlive())
-    {
-        this -> m_Window -> close();
+    if (!m_Game.playerIsAlive()) {
+        this->m_Window->close();
     }
 }
-void GamesWindow::controlWindow(void)
-{
-    this -> pollEvent();
+
+void GamesWindow::controlWindow(void) {
+    this->pollEvent();
 }

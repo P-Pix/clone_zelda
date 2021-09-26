@@ -11,38 +11,22 @@
 
 #include "../../include/GamesWindow.hpp"
 
-void GamesWindow::pollEvent(void)
-{
-    if(this -> m_Window -> pollEvent(this -> m_Event))
-    {
-        if(this -> m_Event.type == sf::Event::Closed)
-        {
-            this -> m_Window -> close();
-        }
-        else if (this -> m_Event.type == sf::Event::KeyPressed)
-        {
-            if(this -> m_Event.key.code == sf::Keyboard::Escape)
-            {
-                this -> m_Window -> close();
-            }
-            else if(this -> m_Event.key.code == sf::Keyboard::Down)
-            {
+void GamesWindow::pollEvent(void) {
+    if (this->m_Window->pollEvent(this->m_Event)) {
+        if (this->m_Event.type == sf::Event::Closed) {
+            this->m_Window->close();
+        } else if (this->m_Event.type == sf::Event::KeyPressed) {
+            if (this->m_Event.key.code == sf::Keyboard::Escape) {
+                this->m_Window->close();
+            } else if (this->m_Event.key.code == sf::Keyboard::Down) {
                 m_Game.keyDown();
-            }
-            else if(this -> m_Event.key.code == sf::Keyboard::Up)
-            {
+            } else if (this->m_Event.key.code == sf::Keyboard::Up) {
                 m_Game.keyUp();
-            }
-            else if(this -> m_Event.key.code == sf::Keyboard::Left)
-            {
+            } else if (this->m_Event.key.code == sf::Keyboard::Left) {
                 m_Game.keyLeft();
-            }
-            else if(this -> m_Event.key.code == sf::Keyboard::Right)
-            {
+            } else if (this->m_Event.key.code == sf::Keyboard::Right) {
                 m_Game.keyRight();
-            }
-            else if(this -> m_Event.key.code == sf::Keyboard::Space)
-            {
+            } else if (this->m_Event.key.code == sf::Keyboard::Space) {
                 m_Game.keySpace();
             }
         }

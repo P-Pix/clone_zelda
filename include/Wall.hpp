@@ -16,39 +16,43 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 
-class Wall
-{
-    public:
-        // Constructor / Destructor
-            Wall(void);
-            Wall(const char *nametexture);
+class Wall {
+public:
+    // Constructor / Destructor
+    Wall(void);
 
-            ~Wall(void);
+    Wall(const char *nametexture);
 
-        // Accessor 
-            sf::Sprite getSprite(void);
-            std::vector<sf::Sprite> getListSprite(void);
+    ~Wall(void);
 
-        // Function
-            void setPosition(sf::Vector2f position);
-            void setPositionVector(std::vector<sf::Vector2f> vector);
+    // Accessor
+    sf::Sprite getSprite(void);
 
-    private:
-        // Variable
-            // basic
-                const char  *m_nametexture = "image/tree.png";
+    std::vector <sf::Sprite> getListSprite(void);
 
-            // std
-                std::vector<sf::Sprite> m_ListeSprite;
+    // Function
+    void setPosition(sf::Vector2f position);
 
-            // SFML/Graphics
-                sf::Texture m_TWall;
-                sf::Sprite  m_SWall;
-        
-        // Function
-            sf::Sprite getSpritePosition(sf::Vector2f position);
-            sf::Sprite loadSprite(void);
-            void loadTexture(void);
+    void setPositionVector(std::vector <sf::Vector2f> vector);
+
+private:
+    // Variable
+    // basic
+    const char *m_nametexture = "image/tree.png";
+
+    // std
+    std::vector <sf::Sprite> m_ListeSprite;
+
+    // SFML/Graphics
+    sf::Texture m_TWall;
+    sf::Sprite m_SWall;
+
+    // Function
+    sf::Sprite getSpritePosition(sf::Vector2f position);
+
+    sf::Sprite loadSprite(void);
+
+    void loadTexture(void);
 };
 
 #endif

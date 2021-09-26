@@ -11,19 +11,17 @@
 
 #include "../../include/Gain.hpp"
 
-void Gain::loadSprite(const char *name)
-{
+void Gain::loadSprite(const char *name) {
     loadTexture(name);
     m_Sprite.setTexture(m_Texture);
 }
-void Gain::loadTexture(const char *name)
-{
-    if(!m_Texture.loadFromFile(name))
-    {
+
+void Gain::loadTexture(const char *name) {
+    if (!m_Texture.loadFromFile(name)) {
         std::cout << "error image " << name << std::endl;
     }
 }
-void Gain::setPostionSprite(sf::Vector2f position)
-{
+
+void Gain::setPostionSprite(sf::Vector2f position) {
     m_Sprite.setPosition(position);
 }

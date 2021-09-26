@@ -11,7 +11,6 @@
 
 #include "../../include/Monster.hpp"
 
-void Monster::gainIsGet(void)
-{
+void Monster::gainIsGet(void) {
     m_Gain.isGet();
 }

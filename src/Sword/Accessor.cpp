@@ -11,35 +11,34 @@
 
 #include "../../include/Sword.hpp"
 
-sf::Sprite Sword::getSprite(void)
-{
+sf::Sprite Sword::getSprite(void) {
     return m_Sprite;
 }
-sf::Vector2f Sword::getPosition(void)
-{
+
+sf::Vector2f Sword::getPosition(void) {
     return m_Sprite.getPosition();
 }
-int Sword::getPower(void)
-{
+
+int Sword::getPower(void) {
     return m_power;
 }
-bool Sword::getExecution(void)
-{
+
+bool Sword::getExecution(void) {
     return m_aniamtionexe;
 }
-bool Sword::getAttackUp(void)
-{
+
+bool Sword::getAttackUp(void) {
     return m_animationup;
 }
-bool Sword::getAttackLeft(void)
-{
+
+bool Sword::getAttackLeft(void) {
     return m_animationleft;
 }
-bool Sword::getAttackRight(void)
-{
+
+bool Sword::getAttackRight(void) {
     return m_animationright;
 }
-bool Sword::getAttackDown(void)
-{
+
+bool Sword::getAttackDown(void) {
     return m_animationdown;
 }

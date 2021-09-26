@@ -20,78 +20,97 @@
 #include "Heart.hpp"
 //#include "Ai.hpp"
 
-class Monster
-{
-    public:
-        // Constructeur / Destructeur
-            // Constructeur
-                Monster(void);
-                Monster(const char *name);
-            
-            // Destructeur
-                ~Monster(void);
-                
-        // Accessor
-                Monster* getAdress(void);
-                Monster getMonster(void);
-            // Sprite
-                sf::Sprite getSprite(void);
+class Monster {
+public:
+    // Constructeur / Destructeur
+    // Constructeur
+    Monster(void);
 
-            // Position
-                sf::Vector2f getPosition(void);
-                sf::Vector2f getNextPosition(void);
+    Monster(const char *name);
 
-            // Power
-                int getPower(void);
+    // Destructeur
+    ~Monster(void);
 
-            // alive
-                bool isAlive(void);
-                int getGainRubisValor(void);
-                int getGainLifeValor(void);
-                bool thereGain(void);
-                bool isInvulnerable(void);
+    // Accessor
+    Monster *getAdress(void);
 
-        // Function
-            // Attribution
-                void setPower(int power);
-                void moove(void);
-                void nextPosition(void);
-                void setDamage(int power);
+    Monster getMonster(void);
 
-                void recoilUp(void);
-                void recoilDown(void);
-                void recoilRight(void);
-                void recoilLeft(void);
+    // Sprite
+    sf::Sprite getSprite(void);
 
-                void createPaternRelative(void);
-                void gainIsGet(void);
-                void frameInvulnerable(void);
-    
-    private:
-        // Variable
-            // basic
-                int m_moveaction = 0,
-                    m_power = 4;
+    // Position
+    sf::Vector2f getPosition(void);
 
-                const char *m_monster = "image/monster1.png";
+    sf::Vector2f getNextPosition(void);
 
-            // std
-                std::vector<sf::Vector2f> m_Patern;
+    // Power
+    int getPower(void);
 
-            // SFML
-                sf::Sprite  m_Sprite;
-                sf::Texture m_Texture;
-            
-            // class
-                Gain m_Gain;
-                Heart m_Heart;
+    // alive
+    bool isAlive(void);
 
-        // Function
-            void loadTexture(const char *name);
-            void loadSprite(void);
-            void initSprite(void);
-            void loadPosition(void);
-            void dropGain(void);
+    int getGainRubisValor(void);
+
+    int getGainLifeValor(void);
+
+    bool thereGain(void);
+
+    bool isInvulnerable(void);
+
+    // Function
+    // Attribution
+    void setPower(int power);
+
+    void moove(void);
+
+    void nextPosition(void);
+
+    void setDamage(int power);
+
+    void recoilUp(void);
+
+    void recoilDown(void);
+
+    void recoilRight(void);
+
+    void recoilLeft(void);
+
+    void createPaternRelative(void);
+
+    void gainIsGet(void);
+
+    void frameInvulnerable(void);
+
+private:
+    // Variable
+    // basic
+    int m_moveaction = 0,
+            m_power = 4;
+
+    const char *m_monster = "image/monster1.png";
+
+    // std
+    std::vector <sf::Vector2f> m_Patern;
+
+    // SFML
+    sf::Sprite m_Sprite;
+    sf::Texture m_Texture;
+
+    // class
+    Gain m_Gain;
+    Heart m_Heart;
+
+    // Function
+    void loadTexture(const char *name);
+
+    void loadSprite(void);
+
+    void initSprite(void);
+
+    void loadPosition(void);
+
+    void dropGain(void);
 
 };
 

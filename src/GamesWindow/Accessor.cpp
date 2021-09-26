@@ -11,7 +11,6 @@
 
 #include "../../include/GamesWindow.hpp"
 
-bool GamesWindow::isRunning(void)
-{
-    return m_Window -> isOpen();
+bool GamesWindow::isRunning(void) {
+    return m_Window->isOpen();
 }

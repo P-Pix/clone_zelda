@@ -11,38 +11,30 @@
 
 #include "../../include/Joueur.hpp"
 
-bool Joueur::getOrientationDown(void)
-{
+bool Joueur::getOrientationDown(void) {
     return m_orientationdown;
 }
-bool Joueur::getOrientationLeft(void)
-{
+
+bool Joueur::getOrientationLeft(void) {
     return m_orientationleft;
 }
-bool Joueur::getOrientationRight(void)
-{
+
+bool Joueur::getOrientationRight(void) {
     return m_orientationright;
 }
-bool Joueur::getOrientationUp(void)
-{
+
+bool Joueur::getOrientationUp(void) {
     return m_orientationup;
 }
-int Joueur::getOrientationValue(void)
-{
-    if(m_orientationdown)
-    {
+
+int Joueur::getOrientationValue(void) {
+    if (m_orientationdown) {
         return 90;
-    }
-    else if(m_orientationleft)
-    {
+    } else if (m_orientationleft) {
         return 180;
-    }
-    else if(m_orientationright)
-    {
+    } else if (m_orientationright) {
         return 0;
-    }
-    else if(m_orientationup)
-    {
+    } else if (m_orientationup) {
         return 270;
     }
     return 0;

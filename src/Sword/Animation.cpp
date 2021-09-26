@@ -11,57 +11,42 @@
 
 #include "../../include/Sword.hpp"
 
-void Sword::setOrientation(void)
-{
+void Sword::setOrientation(void) {
     m_rotate -= 6;
     m_Sprite.setRotation(m_rotate);
 }
-void Sword::setBasicPosition(void)
-{
-    if(m_animationdown)
-    {
+
+void Sword::setBasicPosition(void) {
+    if (m_animationdown) {
         m_VectorAniamtor.x += 64;
-        m_VectorAniamtor.y += 0 ;
-    }
-    else if(m_animationleft)
-    {
+        m_VectorAniamtor.y += 0;
+    } else if (m_animationleft) {
         m_VectorAniamtor.x += 0;
         m_VectorAniamtor.y += 64;
-    }
-    else if(m_animationright)
-    {
+    } else if (m_animationright) {
         m_VectorAniamtor.x += 0;
         m_VectorAniamtor.y -= 64;
-    }
-    else if(m_animationup)
-    {
+    } else if (m_animationup) {
         m_VectorAniamtor.x -= 64;
         m_VectorAniamtor.y += 0;
     }
     m_Sprite.setPosition(m_VectorAniamtor);
 }
-void Sword::setPosition(void)
-{
-    if(m_animationdown)
-    {
+
+void Sword::setPosition(void) {
+    if (m_animationdown) {
         m_VectorAniamtor.x += 4;
-    }
-    else if(m_animationleft)
-    {
+    } else if (m_animationleft) {
         m_VectorAniamtor.y += 4;
-    }
-    else if(m_animationright)
-    {
+    } else if (m_animationright) {
         m_VectorAniamtor.y -= 4;
-    }
-    else if(m_animationup)
-    {
+    } else if (m_animationup) {
         m_VectorAniamtor.x -= 4;
     }
     m_Sprite.setPosition(m_VectorAniamtor);
 }
-void Sword::endAnimation(void)
-{
+
+void Sword::endAnimation(void) {
     m_aniamtionexe = false;
     m_animationdown = false;
     m_animationleft = false;
@@ -69,16 +54,14 @@ void Sword::endAnimation(void)
     m_animationup = false;
 }
 
-void Sword::animateAttack(void)
-{
-    m_animationfram ++;
-    if(m_animationfram == 15)
-    {
+void Sword::animateAttack(void) {
+    m_animationfram++;
+    if (m_animationfram == 15) {
         endAnimation();
     }
 }
-void Sword::startAnimation(sf::Vector2f positionsword,int playerorientation)
-{
+
+void Sword::startAnimation(sf::Vector2f positionsword, int playerorientation) {
     m_animationfram = 0;
     m_aniamtionexe = true;
     m_rotate = playerorientation;

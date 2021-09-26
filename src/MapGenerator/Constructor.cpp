@@ -12,12 +12,10 @@
 #include "../../include/MapGenerator.hpp"
 
 
-MapGenerator::MapGenerator(void)
-{
+MapGenerator::MapGenerator(void) {
     //std::cout << "map generator create " << this << std::endl;
 }
 
-MapGenerator::~MapGenerator(void)
-{
+MapGenerator::~MapGenerator(void) {
     //std::cout << "map generator delete " << this << std::endl;
 }

@@ -11,34 +11,22 @@
 
 #include "../../include/Monster.hpp"
 
-void Monster::createPaternRelative(void)
-{
+void Monster::createPaternRelative(void) {
     int random = std::rand() % 4;
-    if(random == 0)
-    {
-        for(int x = 0; x < 64; x ++)
-        {
+    if (random == 0) {
+        for (int x = 0; x < 64; x++) {
             m_Patern.push_back(sf::Vector2f(0.f, 1.f));
         }
-    }
-    else if(random == 1)
-    {
-        for(int x = 0; x < 64; x ++)
-        {
+    } else if (random == 1) {
+        for (int x = 0; x < 64; x++) {
             m_Patern.push_back(sf::Vector2f(0.f, -1.f));
         }
-    }
-    else if(random == 2)
-    {
-        for(int x = 0; x < 64; x ++)
-        {
+    } else if (random == 2) {
+        for (int x = 0; x < 64; x++) {
             m_Patern.push_back(sf::Vector2f(1.f, 0.f));
         }
-    }
-    else if(random == 3)
-    {
-        for(int x = 0; x < 64; x ++)
-        {
+    } else if (random == 3) {
+        for (int x = 0; x < 64; x++) {
             m_Patern.push_back(sf::Vector2f(-1.f, 0.f));
         }
     }

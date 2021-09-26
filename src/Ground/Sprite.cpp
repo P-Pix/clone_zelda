@@ -12,19 +12,17 @@
 #include "../../include/Ground.hpp"
 
 
-void Ground::initSprite(void)
-{
+void Ground::initSprite(void) {
     loadTexture();
     loadSprite();
 }
-void Ground::loadSprite(void)
-{
+
+void Ground::loadSprite(void) {
     m_Sprite.setTexture(m_Texture);
 }
-void Ground::loadTexture(void)
-{
-    if(!m_Texture.loadFromFile(m_name))
-    {
+
+void Ground::loadTexture(void) {
+    if (!m_Texture.loadFromFile(m_name)) {
         std::cout << "error image " << m_name << std::endl;
     }
 }

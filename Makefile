@@ -9,7 +9,7 @@
 ### 
 ####
 
-SRC		=	main.cpp\
+SRC		=	src/main.cpp\
 
 OBJ		=	$(SRC:.cpp = .o)
 
@@ -97,13 +97,15 @@ DATA	=	src/Chest/Accessor.cpp\
 			src/Wall/Sprite.cpp\
 			\
 
-NAME	=	ZeldaLike.o
+NAME	=	ZeldaLike.obj
+
+VERSION	=	-std=c++2a\
 
 val:
-	@(valgrind g++ -o $(NAME) $(OBJ) $(DATA) $(MODULE)) > /dev/null
+	@(valgrind g++ -o $(NAME) $(OBJ) $(DATA) $(MODULE) $(VERSION)) > /dev/null
 
 cpp:
-	@(g++ -o $(NAME) $(OBJ) $(DATA) $(MODULE)) > /dev/null
+	@(g++ -o $(NAME) $(OBJ) $(DATA) $(MODULE) $(VERSION)) > /dev/null
 
 run:
 	@(./$(NAME))

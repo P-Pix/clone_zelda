@@ -11,41 +11,33 @@
 
 #include "../../include/Game.hpp"
 
-void Game::setMapUpdate(void)
-{
+void Game::setMapUpdate(void) {
     m_Map.generateMap();
     setBackground();
     makeListMonster();
 }
-void Game::switchMap(void)
-{
-    if(m_Player.getPosition().x < 0)
-    {
+
+void Game::switchMap(void) {
+    if (m_Player.getPosition().x < 0) {
         m_Map.setMapLeft();
         setMapUpdate();
         m_Player.setPositionLeft();
-    }
-    else if(m_Player.getPosition().x > 1024)
-    {
+    } else if (m_Player.getPosition().x > 1024) {
         m_Map.setMapRight();
         setMapUpdate();
         m_Player.setPositionRight();
-    }
-    else if(m_Player.getPosition().y < 64)
-    {
+    } else if (m_Player.getPosition().y < 64) {
         m_Map.setMapUp();
         setMapUpdate();
         m_Player.setPositionUp();
-    }
-    else if(m_Player.getPosition().y > 768)
-    {
+    } else if (m_Player.getPosition().y > 768) {
         m_Map.setMapDown();
         setMapUpdate();
         m_Player.setPositionDown();
     }
 }
-void Game::setBackground(void)
-{
+
+void Game::setBackground(void) {
     m_Bloc.setPositionVector(m_Map.getListPositionWall());
     m_Cavern.setPositionVector(m_Map.getListPositionSlad());
     m_Tree.setPositionVector(m_Map.getListPositionTree());
@@ -59,10 +51,9 @@ void Game::setBackground(void)
     m_RedRock.setPositionVector(m_Map.getListPositionRedRock());
     m_WhiteRock.setPositionVector(m_Map.getListPositionWhiteRock());
 }
-void Game::gainChest(void)
-{
-    if(collideTwoSprite64x64(m_Player.getPosition(), m_Map.getGainSprite().getPosition()))
-    {
+
+void Game::gainChest(void) {
+    if (collideTwoSprite64x64(m_Player.getPosition(), m_Map.getGainSprite().getPosition())) {
         m_Player.setHeart(m_Map.getGainLife());
         m_Player.updateRubis(m_Map.getGainRubis());
         m_Map.gainIsGet();

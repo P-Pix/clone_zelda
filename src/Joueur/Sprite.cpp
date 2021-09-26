@@ -11,8 +11,7 @@
 
 #include "../../include/Joueur.hpp"
 
-sf::Sprite Joueur::loadSprite(const char *name, sf::Vector2f vector)
-{
+sf::Sprite Joueur::loadSprite(const char *name, sf::Vector2f vector) {
     sf::Sprite sprite;
     loadTexture(name);
     sprite.setTexture(m_Thero);
@@ -20,10 +19,9 @@ sf::Sprite Joueur::loadSprite(const char *name, sf::Vector2f vector)
     sprite.setScale(2, 2);
     return sprite;
 }
-void Joueur::loadTexture(const char *name)
-{
-    if(!m_Thero.loadFromFile(name))
-    {
+
+void Joueur::loadTexture(const char *name) {
+    if (!m_Thero.loadFromFile(name)) {
         std::cout << "error image " << name << std::endl;
     }
 }

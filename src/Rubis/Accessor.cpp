@@ -11,23 +11,22 @@
 
 #include "../../include/Rubis.hpp"
 
-sf::Sprite Rubis::getLogoRubis(void)
-{
+sf::Sprite Rubis::getLogoRubis(void) {
     return m_Sprite;
 }
-sf::Text Rubis::getRubisHundred(void)
-{
+
+sf::Text Rubis::getRubisHundred(void) {
     return m_Text100;
 }
-sf::Text Rubis::getRubisTen(void)
-{
+
+sf::Text Rubis::getRubisTen(void) {
     return m_Text10;
 }
-sf::Text Rubis::getRubisUnit(void)
-{
+
+sf::Text Rubis::getRubisUnit(void) {
     return m_Text1;
 }
-int Rubis::getTotalRubis(void)
-{
+
+int Rubis::getTotalRubis(void) {
     return m_totalrubis;
 }
