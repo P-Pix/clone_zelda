@@ -22,7 +22,7 @@ sudo apt-get install libsfml-dev
 ## Using
 ### Compilation
 ```
-g++ -o ZeldaLike.o main.cpp src/Chest/*.cpp src/Gain/*.cpp src/Game/*.cpp src/GamesWindow/*.cpp src/Ground/*.cpp src/Heart/*.cpp src/Joueur/*.cpp src/MakeSprite/*.cpp src/MapGenerator/*.cpp src/Monster/*.cpp src/Rubis/*.cpp src/Sword/*.cpp src/Wall/*.cpp -lsfml-window -lsfml-system -lsfml-graphics
+g++ -o ZeldaLike.o src/main.cpp src/Chest/*.cpp src/Gain/*.cpp src/Game/*.cpp src/GamesWindow/*.cpp src/Ground/*.cpp src/Heart/*.cpp src/Joueur/*.cpp src/MakeSprite/*.cpp src/MapGenerator/*.cpp src/Monster/*.cpp src/Rubis/*.cpp src/Sword/*.cpp src/Wall/*.cpp -lsfml-window -lsfml-system -lsfml-graphics
 ```
 With Makefile
 ```
