@@ -10,8 +10,6 @@
 #include <iostream>
 #include "../include/GamesWindow.hpp"
 
-using namespace std;
-
 /// execution function
 int main(void);
 
@@ -20,7 +18,7 @@ int main(void) {
     GamesWindow Window;
 
     Window.limitFramerate(60);
-    cout << "Window \x1B[33mOpen" << endl;
+    std::cout << "Window \e[33mOpen" << std::endl;
 
     while (Window.isRunning()) {
         Window.controlWindow();
@@ -28,6 +26,6 @@ int main(void) {
         Window.updateWindow();
     }
 
-    cout << "\x1B[0mWindow \x1B[33mClose" << endl;
+    std::cout << "\033[0mWindow \x1B[33mClose" << std::endl;
     return EXIT_SUCCESS;
 }
