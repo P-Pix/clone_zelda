@@ -9,37 +9,39 @@
 ### 
 ####
 
-SRC		=	src/main.cpp\
-
-OBJ		=	$(SRC:.cpp = .o)
-
 MODULE	=	-lsfml-window\
 			-lsfml-system\
 			-lsfml-graphics\
 
-DATA	=	src/Chest/*.cpp\
-			src/Gain/*.cpp\
-			src/Game/*.cpp\
-			src/GamesWindow/*.cpp\
-			src/Ground/*.cpp\
-			src/Heart/*.cpp\
-			src/Joueur/*.cpp\
-			src/MakeSprite/*.cpp\
-			src/MapGenerator/*.cpp\
-			src/Monster/*.cpp\
-			src/Rubis/*.cpp\
-			src/Sword/*.cpp\
-			src/Wall/*.cpp\
+DATA1	=	FirstVersion/src/main.cpp\
+			FirstVersion/src/Chest/*.cpp\
+			FirstVersion/src/Gain/*.cpp\
+			FirstVersion/src/Game/*.cpp\
+			FirstVersion/src/GamesWindow/*.cpp\
+			FirstVersion/src/Ground/*.cpp\
+			FirstVersion/src/Heart/*.cpp\
+			FirstVersion/src/Joueur/*.cpp\
+			FirstVersion/src/MakeSprite/*.cpp\
+			FirstVersion/src/MapGenerator/*.cpp\
+			FirstVersion/src/Monster/*.cpp\
+			FirstVersion/src/Rubis/*.cpp\
+			FirstVersion/src/Sword/*.cpp\
+			FirstVersion/src/Wall/*.cpp\
+
+DATA2	=	SecondVersion/src/main.cpp\
 
 NAME	=	ZeldaLike.obj
 
 VERSION	=	-std=c++2a\
 
-val:
-	@(valgrind g++ -o $(NAME) $(OBJ) $(DATA) $(MODULE) $(VERSION)) > /dev/null
+val1:
+	@(valgrind g++ -o $(NAME) $(DATA1) $(MODULE) $(VERSION)) > /dev/null
 
-cpp:
-	@(g++ -o $(NAME) $(OBJ) $(DATA) $(MODULE) $(VERSION)) > /dev/null
+cpp1:
+	@(g++ -o $(NAME) $(DATA1) $(MODULE) $(VERSION)) > /dev/null
+
+cpp2:
+	@(g++ -o $(NAME) $(DATA2) $(MODULE) $(VERSION)) > /dev/null
 
 run:
 	@(./$(NAME))

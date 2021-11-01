@@ -41,9 +41,6 @@ public:
 
     /// Destructor
     ~MakeSprite(void);
-
-    ////////////////////////////////////////
-    ///
 };
 
 #endif

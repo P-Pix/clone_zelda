@@ -17,14 +17,14 @@ void GamesWindow::limitFramerate(int frame) {
 
 void GamesWindow::updateWindow(void) {
     this->m_Window->clear();
-    drawVectorSprite(m_Game.getDrawingSprite());
-    drawVectorText(m_Game.getDrawingText());
+    this->drawVectorSprite(this->m_Game.getDrawingSprite());
+    this->drawVectorText(this->m_Game.getDrawingText());
     this->m_Window->display();
 }
 
 void GamesWindow::verificationWindow(void) {
-    m_Game.executionGame();
-    if (!m_Game.playerIsAlive()) {
+    this->m_Game.executionGame();
+    if (!this->m_Game.playerIsAlive()) {
         this->m_Window->close();
     }
 }
