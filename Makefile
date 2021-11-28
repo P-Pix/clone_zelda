@@ -13,20 +13,20 @@ MODULE	=	-lsfml-window\
 			-lsfml-system\
 			-lsfml-graphics\
 
-DATA1	=	FirstVersion/src/main.cpp\
-			FirstVersion/src/Chest/*.cpp\
-			FirstVersion/src/Gain/*.cpp\
-			FirstVersion/src/Game/*.cpp\
-			FirstVersion/src/GamesWindow/*.cpp\
-			FirstVersion/src/Ground/*.cpp\
-			FirstVersion/src/Heart/*.cpp\
-			FirstVersion/src/Joueur/*.cpp\
-			FirstVersion/src/MakeSprite/*.cpp\
-			FirstVersion/src/MapGenerator/*.cpp\
-			FirstVersion/src/Monster/*.cpp\
-			FirstVersion/src/Rubis/*.cpp\
-			FirstVersion/src/Sword/*.cpp\
-			FirstVersion/src/Wall/*.cpp\
+DATA1	=	src/main.cpp\
+			src/Chest/*.cpp\
+			src/Gain/*.cpp\
+			src/Game/*.cpp\
+			src/GamesWindow/*.cpp\
+			src/Ground/*.cpp\
+			src/Heart/*.cpp\
+			src/Joueur/*.cpp\
+			src/MakeSprite/*.cpp\
+			src/MapGenerator/*.cpp\
+			src/Monster/*.cpp\
+			src/Rubis/*.cpp\
+			src/Sword/*.cpp\
+			src/Wall/*.cpp\
 
 DATA2	=	SecondVersion/src/main.cpp\
 
