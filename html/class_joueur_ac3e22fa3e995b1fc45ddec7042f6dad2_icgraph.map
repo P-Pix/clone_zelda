@@ -1,0 +1,5 @@
+<map id="Joueur::getOrientationDown" name="Joueur::getOrientationDown">
+<area shape="rect" id="node1" title=" " alt="" coords="184,31,387,57"/>
+<area shape="rect" id="node2" href="$class_game.html#a477e9dc29e8fc460c72d8cd2347942da" title="Down Key event." alt="" coords="6,5,135,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a1a6ec07fd459de976168af5334e04b8c" title="Space Key event." alt="" coords="5,56,136,83"/>
+</map>

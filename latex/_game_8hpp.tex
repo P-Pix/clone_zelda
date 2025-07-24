@@ -1,0 +1,139 @@
+\doxysection{include/\+Game.hpp File Reference}
+\label{_game_8hpp}\index{include/Game.hpp@{include/Game.hpp}}
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}Joueur.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Wall.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Ground.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Monster.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Map\+Generator.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Sword.\+hpp\char`\"{}}\newline
+Include dependency graph for Game.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_game_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_game_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ Game}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ SPRITE\+\_\+\+SIZE}~64
+\begin{DoxyCompactList}\small\item\em Special library. \end{DoxyCompactList}\item 
+\#define \textbf{ LIMIT\+\_\+\+UP\+\_\+\+GAME}~64
+\begin{DoxyCompactList}\small\item\em Size \doxyref{Game}{p.}{class_game}. \end{DoxyCompactList}\item 
+\#define \textbf{ LIMIT\+\_\+\+DOWN\+\_\+\+GAME}~768
+\item 
+\#define \textbf{ LIMIT\+\_\+\+RIGHT\+\_\+\+GAME}~1024
+\item 
+\#define \textbf{ LIMIT\+\_\+\+LEFT\+\_\+\+GAME}~0
+\item 
+\#define \textbf{ NO\+\_\+\+COLLIDE}~0
+\item 
+\#define \textbf{ LEFT\+\_\+\+COLLIDE}~1
+\item 
+\#define \textbf{ RIGHT\+\_\+\+COLLIDE}~2
+\item 
+\#define \textbf{ UP\+\_\+\+COLLIDE}~3
+\item 
+\#define \textbf{ DOWN\+\_\+\+COLLIDE}~4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Guiallaume LEMONNIER 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021-\/06-\/04
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{_game_8hpp_abe9351d2fc64d521d4b408495d7447b6}} 
+\index{Game.hpp@{Game.hpp}!DOWN\_COLLIDE@{DOWN\_COLLIDE}}
+\index{DOWN\_COLLIDE@{DOWN\_COLLIDE}!Game.hpp@{Game.hpp}}
+\doxysubsubsection{DOWN\_COLLIDE}
+{\footnotesize\ttfamily \#define DOWN\+\_\+\+COLLIDE~4}
+
+\mbox{\label{_game_8hpp_a6054543cab1653325b19f84315381a35}} 
+\index{Game.hpp@{Game.hpp}!LEFT\_COLLIDE@{LEFT\_COLLIDE}}
+\index{LEFT\_COLLIDE@{LEFT\_COLLIDE}!Game.hpp@{Game.hpp}}
+\doxysubsubsection{LEFT\_COLLIDE}
+{\footnotesize\ttfamily \#define LEFT\+\_\+\+COLLIDE~1}
+
+\mbox{\label{_game_8hpp_a8358ebad9068c46b7f114b236a41f394}} 
+\index{Game.hpp@{Game.hpp}!LIMIT\_DOWN\_GAME@{LIMIT\_DOWN\_GAME}}
+\index{LIMIT\_DOWN\_GAME@{LIMIT\_DOWN\_GAME}!Game.hpp@{Game.hpp}}
+\doxysubsubsection{LIMIT\_DOWN\_GAME}
+{\footnotesize\ttfamily \#define LIMIT\+\_\+\+DOWN\+\_\+\+GAME~768}
+
+\mbox{\label{_game_8hpp_ad089e80f7596c32c7f5cb0f9b0684236}} 
+\index{Game.hpp@{Game.hpp}!LIMIT\_LEFT\_GAME@{LIMIT\_LEFT\_GAME}}
+\index{LIMIT\_LEFT\_GAME@{LIMIT\_LEFT\_GAME}!Game.hpp@{Game.hpp}}
+\doxysubsubsection{LIMIT\_LEFT\_GAME}
+{\footnotesize\ttfamily \#define LIMIT\+\_\+\+LEFT\+\_\+\+GAME~0}
+
+\mbox{\label{_game_8hpp_a087a07d1d7cb82f38800049981d95537}} 
+\index{Game.hpp@{Game.hpp}!LIMIT\_RIGHT\_GAME@{LIMIT\_RIGHT\_GAME}}
+\index{LIMIT\_RIGHT\_GAME@{LIMIT\_RIGHT\_GAME}!Game.hpp@{Game.hpp}}
+\doxysubsubsection{LIMIT\_RIGHT\_GAME}
+{\footnotesize\ttfamily \#define LIMIT\+\_\+\+RIGHT\+\_\+\+GAME~1024}
+
+\mbox{\label{_game_8hpp_a3e3a31e7d2a54205fa6892c6297205f0}} 
+\index{Game.hpp@{Game.hpp}!LIMIT\_UP\_GAME@{LIMIT\_UP\_GAME}}
+\index{LIMIT\_UP\_GAME@{LIMIT\_UP\_GAME}!Game.hpp@{Game.hpp}}
+\doxysubsubsection{LIMIT\_UP\_GAME}
+{\footnotesize\ttfamily \#define LIMIT\+\_\+\+UP\+\_\+\+GAME~64}
+
+
+
+Size \doxyref{Game}{p.}{class_game}. 
+
+\mbox{\label{_game_8hpp_a03bad4a00727dfcde46b9dd37c65e24a}} 
+\index{Game.hpp@{Game.hpp}!NO\_COLLIDE@{NO\_COLLIDE}}
+\index{NO\_COLLIDE@{NO\_COLLIDE}!Game.hpp@{Game.hpp}}
+\doxysubsubsection{NO\_COLLIDE}
+{\footnotesize\ttfamily \#define NO\+\_\+\+COLLIDE~0}
+
+\mbox{\label{_game_8hpp_a0c25d7ff9f65c384884cea1a09da2577}} 
+\index{Game.hpp@{Game.hpp}!RIGHT\_COLLIDE@{RIGHT\_COLLIDE}}
+\index{RIGHT\_COLLIDE@{RIGHT\_COLLIDE}!Game.hpp@{Game.hpp}}
+\doxysubsubsection{RIGHT\_COLLIDE}
+{\footnotesize\ttfamily \#define RIGHT\+\_\+\+COLLIDE~2}
+
+\mbox{\label{_game_8hpp_ae3611cd7caad34521610ef1f7c116772}} 
+\index{Game.hpp@{Game.hpp}!SPRITE\_SIZE@{SPRITE\_SIZE}}
+\index{SPRITE\_SIZE@{SPRITE\_SIZE}!Game.hpp@{Game.hpp}}
+\doxysubsubsection{SPRITE\_SIZE}
+{\footnotesize\ttfamily \#define SPRITE\+\_\+\+SIZE~64}
+
+
+
+Special library. 
+
+STL Header create Size Sprite \mbox{\label{_game_8hpp_aa3a3760a9ba2c7ad0d2aa652178389e8}} 
+\index{Game.hpp@{Game.hpp}!UP\_COLLIDE@{UP\_COLLIDE}}
+\index{UP\_COLLIDE@{UP\_COLLIDE}!Game.hpp@{Game.hpp}}
+\doxysubsubsection{UP\_COLLIDE}
+{\footnotesize\ttfamily \#define UP\+\_\+\+COLLIDE~3}
+

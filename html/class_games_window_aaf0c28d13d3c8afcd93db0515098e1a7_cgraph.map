@@ -1,0 +1,13 @@
+<map id="GamesWindow::verificationWindow" name="GamesWindow::verificationWindow">
+<area shape="rect" id="node1" title=" " alt="" coords="5,150,205,191"/>
+<area shape="rect" id="node2" href="$class_game.html#a6e453c644c7c595bf828f49cb653b87f" title="Start the game." alt="" coords="253,107,424,133"/>
+<area shape="rect" id="node9" href="$class_game.html#a32ecf92c72d7db1b029dc2c51fed4fe5" title=" " alt="" coords="261,183,416,209"/>
+<area shape="rect" id="node3" href="$class_joueur.html#af8a7986e657de14f433604cabb22b0c6" title=" " alt="" coords="478,5,669,32"/>
+<area shape="rect" id="node5" href="$class_monster.html#a9b892ded33fe419dd1c74b9537b7092e" title=" " alt="" coords="472,56,675,83"/>
+<area shape="rect" id="node6" href="$class_joueur.html#a07a4ac914a40985906195a056fb41138" title=" " alt="" coords="492,107,655,133"/>
+<area shape="rect" id="node8" href="$class_monster.html#a3170dcab56ae59ef70e20576514098a2" title=" " alt="" coords="486,157,661,184"/>
+<area shape="rect" id="node4" href="$class_heart.html#a9015fd24531af96e178ca035306ce441" title=" " alt="" coords="723,31,909,57"/>
+<area shape="rect" id="node7" href="$class_heart.html#a18fb5defb31f6d49f65baeb8f2cbafcc" title=" " alt="" coords="737,132,895,159"/>
+<area shape="rect" id="node10" href="$class_joueur.html#af5c55cb0a92b80400acb9858b383fc92" title=" " alt="" coords="516,208,631,235"/>
+<area shape="rect" id="node11" href="$class_heart.html#a80d0c315a95e7a83c0a08d763a5398e2" title=" " alt="" coords="761,208,871,235"/>
+</map>

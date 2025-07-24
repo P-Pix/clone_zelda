@@ -1,0 +1,9 @@
+<map id="Game::keyUp" name="Game::keyUp">
+<area shape="rect" id="node1" title="Up Key event." alt="" coords="5,132,116,159"/>
+<area shape="rect" id="node2" href="$class_joueur.html#a1523b5a912b38c7312d8e77024bc60fe" title=" " alt="" coords="164,5,355,32"/>
+<area shape="rect" id="node3" href="$class_sword.html#a65084c7b4b435272a3ce0dd7ec71b27e" title=" " alt="" coords="182,56,337,83"/>
+<area shape="rect" id="node4" href="$class_joueur.html#a4b7b6335c268e330b1942d20f7b84c46" title=" " alt="" coords="168,107,351,133"/>
+<area shape="rect" id="node5" href="$class_joueur.html#af6cc1c1565d37a1f047355876d9ff1b7" title=" " alt="" coords="187,157,331,184"/>
+<area shape="rect" id="node6" href="$class_joueur.html#aed081b7148ec286be613ba408766a98a" title=" " alt="" coords="193,208,325,235"/>
+<area shape="rect" id="node7" href="$class_joueur.html#a7e0d51e76e10595472431ed02b1bdcd2" title=" " alt="" coords="168,259,351,285"/>
+</map>

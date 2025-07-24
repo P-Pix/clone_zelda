@@ -1,0 +1,9 @@
+<map id="Heart::updateHeart" name="Heart::updateHeart">
+<area shape="rect" id="node1" title=" " alt="" coords="401,56,548,83"/>
+<area shape="rect" id="node2" href="$class_joueur.html#ac43d25df2a38e682abd32e050eb38cbd" title=" " alt="" coords="227,5,339,32"/>
+<area shape="rect" id="node3" href="$class_heart.html#a73d2c7d4a93d4dc7c1287600d329cb19" title=" " alt="" coords="212,56,353,83"/>
+<area shape="rect" id="node6" href="$class_heart.html#ac66a0af437e77f619cd39593591b0c1e" title=" " alt="" coords="221,107,344,133"/>
+<area shape="rect" id="node4" href="$class_joueur.html#aee419ef19e8e8298ac36b22e282a7cfa" title=" " alt="" coords="11,5,158,32"/>
+<area shape="rect" id="node5" href="$class_monster.html#ae567a0dc43362eff30d390ef832500a7" title=" " alt="" coords="5,56,164,83"/>
+<area shape="rect" id="node7" href="$class_joueur.html#ae70fd2ae09f7bbbc5b569990440a2021" title=" " alt="" coords="21,107,148,133"/>
+</map>

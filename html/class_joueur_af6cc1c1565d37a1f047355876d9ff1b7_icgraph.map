@@ -1,0 +1,7 @@
+<map id="Joueur::getPosition" name="Joueur::getPosition">
+<area shape="rect" id="node1" title=" " alt="" coords="183,81,327,108"/>
+<area shape="rect" id="node2" href="$class_game.html#a477e9dc29e8fc460c72d8cd2347942da" title="Down Key event." alt="" coords="5,5,135,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a24c176c684ded8bdecfea4d394b8bb90" title="Left Key event." alt="" coords="12,56,128,83"/>
+<area shape="rect" id="node4" href="$class_game.html#ae7f750f77546ee81095af6ef1a4fa92b" title="Right Key event." alt="" coords="7,107,133,133"/>
+<area shape="rect" id="node5" href="$class_game.html#aafa89398e094d83e505ad5728712ad9a" title="Up Key event." alt="" coords="15,157,125,184"/>
+</map>

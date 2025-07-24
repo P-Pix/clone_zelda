@@ -1,0 +1,6 @@
+<map id="Gain::getValorGainLife" name="Gain::getValorGainLife">
+<area shape="rect" id="node1" title=" " alt="" coords="491,31,659,57"/>
+<area shape="rect" id="node2" href="$class_monster.html#ab68f94064cca7e994fbee4469fecac69" title=" " alt="" coords="252,5,443,32"/>
+<area shape="rect" id="node3" href="$class_chest.html#ae0f2922cb47bb65611cc6667206f5ee3" title=" " alt="" coords="275,56,420,83"/>
+<area shape="rect" id="node4" href="$class_map_generator.html#a95d4c19cd763b37aeaa829c9c1968f8a" title=" " alt="" coords="5,56,204,83"/>
+</map>

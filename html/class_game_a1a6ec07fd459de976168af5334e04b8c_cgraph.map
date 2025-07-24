@@ -1,0 +1,15 @@
+<map id="Game::keySpace" name="Game::keySpace">
+<area shape="rect" id="node1" title="Space Key event." alt="" coords="5,284,136,311"/>
+<area shape="rect" id="node2" href="$class_sword.html#a65084c7b4b435272a3ce0dd7ec71b27e" title=" " alt="" coords="208,5,363,32"/>
+<area shape="rect" id="node3" href="$class_joueur.html#ac3e22fa3e995b1fc45ddec7042f6dad2" title=" " alt="" coords="184,56,387,83"/>
+<area shape="rect" id="node4" href="$class_joueur.html#a66b798f6ad8febf8927adf1fd4b618fc" title=" " alt="" coords="191,107,380,133"/>
+<area shape="rect" id="node5" href="$class_joueur.html#aa4dd32401e36a1da35273f2bcbac2624" title=" " alt="" coords="186,157,385,184"/>
+<area shape="rect" id="node6" href="$class_joueur.html#a4b7b6335c268e330b1942d20f7b84c46" title=" " alt="" coords="194,208,377,235"/>
+<area shape="rect" id="node7" href="$class_joueur.html#a782ec3b7e9fde44b834c4581718c62b2" title=" " alt="" coords="185,259,386,285"/>
+<area shape="rect" id="node8" href="$class_joueur.html#aad21ce535e12fa41b676cc4d7a4bd827" title=" " alt="" coords="193,309,377,336"/>
+<area shape="rect" id="node9" href="$class_sword.html#a8ab8536f61eb467a4807748de26c48ef" title=" " alt="" coords="185,360,385,387"/>
+<area shape="rect" id="node10" href="$class_sword.html#a790b9a10e7130d0e518a2972e12258db" title=" " alt="" coords="192,411,379,437"/>
+<area shape="rect" id="node11" href="$class_sword.html#addee139821bb81b64dba4af79e37c0d0" title=" " alt="" coords="187,461,384,488"/>
+<area shape="rect" id="node12" href="$class_sword.html#a1bf9586dee9c5477b20d5ce24c49cfc9" title=" " alt="" coords="195,512,376,539"/>
+<area shape="rect" id="node13" href="$class_sword.html#a4ff2c8008635a0e9e2c712501cb34e2c" title=" " alt="" coords="202,563,369,589"/>
+</map>

@@ -1,0 +1,518 @@
+\doxysection{Map\+Generator Class Reference}
+\label{class_map_generator}\index{MapGenerator@{MapGenerator}}
+
+
+{\ttfamily \#include $<$Map\+Generator.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Map\+Generator} (void)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Map\+Generator} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \textbf{ get\+List\+Position\+Tree} (void)
+\item 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \textbf{ get\+List\+Position\+Orange\+Tree} (void)
+\item 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \textbf{ get\+List\+Position\+White\+Tree} (void)
+\item 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \textbf{ get\+List\+Position\+Water} (void)
+\item 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \textbf{ get\+List\+Position\+Wall} (void)
+\item 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \textbf{ get\+List\+Position\+Rock} (void)
+\item 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \textbf{ get\+List\+Position\+Red\+Rock} (void)
+\item 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \textbf{ get\+List\+Position\+White\+Rock} (void)
+\item 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \textbf{ get\+List\+Position\+Bridge} (void)
+\item 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \textbf{ get\+List\+Position\+Dust} (void)
+\item 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \textbf{ get\+List\+Position\+Slad} (void)
+\item 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \textbf{ get\+List\+Position\+Grey\+Dust} (void)
+\item 
+std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \textbf{ get\+Map} (void)
+\item 
+bool \textbf{ has\+Dust} (void)
+\item 
+bool \textbf{ has\+Slad} (void)
+\item 
+bool \textbf{ has\+Bridge} (void)
+\item 
+bool \textbf{ has\+Grey\+Dust} (void)
+\item 
+bool \textbf{ has\+Wall} (void)
+\item 
+bool \textbf{ has\+Water} (void)
+\item 
+bool \textbf{ has\+Orange\+Tree} (void)
+\item 
+bool \textbf{ has\+White\+Tree} (void)
+\item 
+bool \textbf{ has\+Tree} (void)
+\item 
+bool \textbf{ has\+Rock} (void)
+\item 
+bool \textbf{ has\+Red\+Rock} (void)
+\item 
+bool \textbf{ has\+White\+Rock} (void)
+\item 
+int \textbf{ get\+MapX} (void)
+\item 
+int \textbf{ get\+MapY} (void)
+\item 
+sf\+::\+Sprite \textbf{ get\+Chest\+Sprite} (void)
+\item 
+bool \textbf{ there\+Chest} (void)
+\item 
+sf\+::\+Sprite \textbf{ get\+Gain\+Sprite} (void)
+\item 
+int \textbf{ get\+Gain\+Life} (void)
+\item 
+int \textbf{ get\+Gain\+Rubis} (void)
+\item 
+void \textbf{ generate\+Map} (void)
+\item 
+void \textbf{ set\+Map\+Up} (void)
+\item 
+void \textbf{ set\+Map\+Down} (void)
+\item 
+void \textbf{ set\+Map\+Right} (void)
+\item 
+void \textbf{ set\+Map\+Left} (void)
+\item 
+void \textbf{ opren\+Chest} (void)
+\item 
+void \textbf{ gain\+Is\+Get} (void)
+\item 
+void \textbf{ go\+To\+Grotte} (void)
+\item 
+void \textbf{ go\+To\+Donjon} (unsigned int x, unsigned int y)
+\item 
+void \textbf{ go\+To\+Exterior} (unsigned int x, unsigned int y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_map_generator_aac618d4b2441a822c3d3e0a3c25cf473}} 
+\index{MapGenerator@{MapGenerator}!MapGenerator@{MapGenerator}}
+\index{MapGenerator@{MapGenerator}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{MapGenerator()}
+{\footnotesize\ttfamily Map\+Generator\+::\+Map\+Generator (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\mbox{\label{class_map_generator_af94c0f0d9c7c91938ae857877ad108be}} 
+\index{MapGenerator@{MapGenerator}!````~MapGenerator@{$\sim$MapGenerator}}
+\index{````~MapGenerator@{$\sim$MapGenerator}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{$\sim$MapGenerator()}
+{\footnotesize\ttfamily Map\+Generator\+::$\sim$\+Map\+Generator (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_map_generator_ab00f38fddbcfab0d11e2d2b8bd0cc6a1}} 
+\index{MapGenerator@{MapGenerator}!gainIsGet@{gainIsGet}}
+\index{gainIsGet@{gainIsGet}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{gainIsGet()}
+{\footnotesize\ttfamily void Map\+Generator\+::gain\+Is\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_generator_ab00f38fddbcfab0d11e2d2b8bd0cc6a1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_map_generator_aaa1e33c057464f5b9f3242c56feb3930}} 
+\index{MapGenerator@{MapGenerator}!generateMap@{generateMap}}
+\index{generateMap@{generateMap}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{generateMap()}
+{\footnotesize\ttfamily void Map\+Generator\+::generate\+Map (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_map_generator_a03dc38f828f8e312a251bde2da14dbc7}} 
+\index{MapGenerator@{MapGenerator}!getChestSprite@{getChestSprite}}
+\index{getChestSprite@{getChestSprite}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getChestSprite()}
+{\footnotesize\ttfamily sf\+::\+Sprite Map\+Generator\+::get\+Chest\+Sprite (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_generator_a03dc38f828f8e312a251bde2da14dbc7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_map_generator_a95d4c19cd763b37aeaa829c9c1968f8a}} 
+\index{MapGenerator@{MapGenerator}!getGainLife@{getGainLife}}
+\index{getGainLife@{getGainLife}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getGainLife()}
+{\footnotesize\ttfamily int Map\+Generator\+::get\+Gain\+Life (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_generator_a95d4c19cd763b37aeaa829c9c1968f8a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_map_generator_a122efbdf113f4eef06db1fce0739bf77}} 
+\index{MapGenerator@{MapGenerator}!getGainRubis@{getGainRubis}}
+\index{getGainRubis@{getGainRubis}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getGainRubis()}
+{\footnotesize\ttfamily int Map\+Generator\+::get\+Gain\+Rubis (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_generator_a122efbdf113f4eef06db1fce0739bf77_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_map_generator_ac2c4615e69c09142c065b355755cada6}} 
+\index{MapGenerator@{MapGenerator}!getGainSprite@{getGainSprite}}
+\index{getGainSprite@{getGainSprite}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getGainSprite()}
+{\footnotesize\ttfamily sf\+::\+Sprite Map\+Generator\+::get\+Gain\+Sprite (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_generator_ac2c4615e69c09142c065b355755cada6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_map_generator_a9c6b7dcfcb27fb3e2c5f9f3cf4753d79}} 
+\index{MapGenerator@{MapGenerator}!getListPositionBridge@{getListPositionBridge}}
+\index{getListPositionBridge@{getListPositionBridge}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getListPositionBridge()}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Vector2f $>$ Map\+Generator\+::get\+List\+Position\+Bridge (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+position Bridge list 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a7235ae3b8cce64eaa58ab00616b70fd1}} 
+\index{MapGenerator@{MapGenerator}!getListPositionDust@{getListPositionDust}}
+\index{getListPositionDust@{getListPositionDust}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getListPositionDust()}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Vector2f $>$ Map\+Generator\+::get\+List\+Position\+Dust (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+position Dust list 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a17170fa5085abd31950c51487600a733}} 
+\index{MapGenerator@{MapGenerator}!getListPositionGreyDust@{getListPositionGreyDust}}
+\index{getListPositionGreyDust@{getListPositionGreyDust}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getListPositionGreyDust()}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Vector2f $>$ Map\+Generator\+::get\+List\+Position\+Grey\+Dust (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_map_generator_a329e145e795985045b97dbf1a4e86981}} 
+\index{MapGenerator@{MapGenerator}!getListPositionOrangeTree@{getListPositionOrangeTree}}
+\index{getListPositionOrangeTree@{getListPositionOrangeTree}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getListPositionOrangeTree()}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Vector2f $>$ Map\+Generator\+::get\+List\+Position\+Orange\+Tree (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+position Orange Tree list 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a27e77ed56546511475d83af44e55330e}} 
+\index{MapGenerator@{MapGenerator}!getListPositionRedRock@{getListPositionRedRock}}
+\index{getListPositionRedRock@{getListPositionRedRock}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getListPositionRedRock()}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Vector2f $>$ Map\+Generator\+::get\+List\+Position\+Red\+Rock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+position Red Rock list 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a8e335c6e5979f7d72652410c5cbd906b}} 
+\index{MapGenerator@{MapGenerator}!getListPositionRock@{getListPositionRock}}
+\index{getListPositionRock@{getListPositionRock}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getListPositionRock()}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Vector2f $>$ Map\+Generator\+::get\+List\+Position\+Rock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+position Rock list 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a7067f65932a5c9c8dc449cb1436a6def}} 
+\index{MapGenerator@{MapGenerator}!getListPositionSlad@{getListPositionSlad}}
+\index{getListPositionSlad@{getListPositionSlad}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getListPositionSlad()}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Vector2f $>$ Map\+Generator\+::get\+List\+Position\+Slad (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+position Slad list 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_abba97b2b7dcc87b09653cc52d3230a58}} 
+\index{MapGenerator@{MapGenerator}!getListPositionTree@{getListPositionTree}}
+\index{getListPositionTree@{getListPositionTree}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getListPositionTree()}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Vector2f $>$ Map\+Generator\+::get\+List\+Position\+Tree (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+position Tree list 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a597a91bf1322f6cd0fc556d37ca9afe5}} 
+\index{MapGenerator@{MapGenerator}!getListPositionWall@{getListPositionWall}}
+\index{getListPositionWall@{getListPositionWall}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getListPositionWall()}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Vector2f $>$ Map\+Generator\+::get\+List\+Position\+Wall (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+position \doxyref{Wall}{p.}{class_wall} list 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a5e0ca6eafed1cc84373a8e882cd6a15c}} 
+\index{MapGenerator@{MapGenerator}!getListPositionWater@{getListPositionWater}}
+\index{getListPositionWater@{getListPositionWater}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getListPositionWater()}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Vector2f $>$ Map\+Generator\+::get\+List\+Position\+Water (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+position Water list 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a34f46212e73b93b951f7b8d54b7a03f9}} 
+\index{MapGenerator@{MapGenerator}!getListPositionWhiteRock@{getListPositionWhiteRock}}
+\index{getListPositionWhiteRock@{getListPositionWhiteRock}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getListPositionWhiteRock()}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Vector2f $>$ Map\+Generator\+::get\+List\+Position\+White\+Rock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+position White Rock list 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a0795e44e8f15e928e2f344edd88a102e}} 
+\index{MapGenerator@{MapGenerator}!getListPositionWhiteTree@{getListPositionWhiteTree}}
+\index{getListPositionWhiteTree@{getListPositionWhiteTree}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getListPositionWhiteTree()}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Vector2f $>$ Map\+Generator\+::get\+List\+Position\+White\+Tree (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+position White Tree list 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a4489293c4bf1d50c39d27b7a232982da}} 
+\index{MapGenerator@{MapGenerator}!getMap@{getMap}}
+\index{getMap@{getMap}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getMap()}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ char $>$ $>$ Map\+Generator\+::get\+Map (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+map matrix 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a16f84c7a3f9d1b9a38b5e0834f2db529}} 
+\index{MapGenerator@{MapGenerator}!getMapX@{getMapX}}
+\index{getMapX@{getMapX}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getMapX()}
+{\footnotesize\ttfamily int Map\+Generator\+::get\+MapX (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the X map value 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a85412b33e3cdd422287aa2879e8c6f16}} 
+\index{MapGenerator@{MapGenerator}!getMapY@{getMapY}}
+\index{getMapY@{getMapY}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{getMapY()}
+{\footnotesize\ttfamily int Map\+Generator\+::get\+MapY (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the Y map value 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_ae704d4565ca5a14c44512356bd4407ce}} 
+\index{MapGenerator@{MapGenerator}!goToDonjon@{goToDonjon}}
+\index{goToDonjon@{goToDonjon}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{goToDonjon()}
+{\footnotesize\ttfamily void Map\+Generator\+::go\+To\+Donjon (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\label{class_map_generator_a84724cce28cac55a966751c4f24d5c76}} 
+\index{MapGenerator@{MapGenerator}!goToExterior@{goToExterior}}
+\index{goToExterior@{goToExterior}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{goToExterior()}
+{\footnotesize\ttfamily void Map\+Generator\+::go\+To\+Exterior (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\label{class_map_generator_ac6a29062b03224a07b40d75d3a86bb56}} 
+\index{MapGenerator@{MapGenerator}!goToGrotte@{goToGrotte}}
+\index{goToGrotte@{goToGrotte}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{goToGrotte()}
+{\footnotesize\ttfamily void Map\+Generator\+::go\+To\+Grotte (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_map_generator_ab89ae10c54a98f962f1064e2e12468b1}} 
+\index{MapGenerator@{MapGenerator}!hasBridge@{hasBridge}}
+\index{hasBridge@{hasBridge}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{hasBridge()}
+{\footnotesize\ttfamily bool Map\+Generator\+::has\+Bridge (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the map has Bridge 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a657a380d72b2d3a0e3411a113640fe6a}} 
+\index{MapGenerator@{MapGenerator}!hasDust@{hasDust}}
+\index{hasDust@{hasDust}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{hasDust()}
+{\footnotesize\ttfamily bool Map\+Generator\+::has\+Dust (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the map has Dust 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_ac2fbc2a0cd591f3e8f60b3068c426909}} 
+\index{MapGenerator@{MapGenerator}!hasGreyDust@{hasGreyDust}}
+\index{hasGreyDust@{hasGreyDust}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{hasGreyDust()}
+{\footnotesize\ttfamily bool Map\+Generator\+::has\+Grey\+Dust (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the maphas Grey Dust 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a95119e0eeab1e2985292cc721a818e5f}} 
+\index{MapGenerator@{MapGenerator}!hasOrangeTree@{hasOrangeTree}}
+\index{hasOrangeTree@{hasOrangeTree}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{hasOrangeTree()}
+{\footnotesize\ttfamily bool Map\+Generator\+::has\+Orange\+Tree (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the map has Orange Tree 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a800374a64310d948d80cb5ab17adf537}} 
+\index{MapGenerator@{MapGenerator}!hasRedRock@{hasRedRock}}
+\index{hasRedRock@{hasRedRock}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{hasRedRock()}
+{\footnotesize\ttfamily bool Map\+Generator\+::has\+Red\+Rock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the map has Red Rock 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_aab73d913e93b192df58c163086c76b28}} 
+\index{MapGenerator@{MapGenerator}!hasRock@{hasRock}}
+\index{hasRock@{hasRock}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{hasRock()}
+{\footnotesize\ttfamily bool Map\+Generator\+::has\+Rock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the map has Rock 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a24f49f6bf4262abb12b69c3bbbc279dd}} 
+\index{MapGenerator@{MapGenerator}!hasSlad@{hasSlad}}
+\index{hasSlad@{hasSlad}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{hasSlad()}
+{\footnotesize\ttfamily bool Map\+Generator\+::has\+Slad (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the map has Sald 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a326bc0d138534f646ae502f83659575d}} 
+\index{MapGenerator@{MapGenerator}!hasTree@{hasTree}}
+\index{hasTree@{hasTree}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{hasTree()}
+{\footnotesize\ttfamily bool Map\+Generator\+::has\+Tree (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the map has Tree 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a5bc391684142afca616a0434d3922aae}} 
+\index{MapGenerator@{MapGenerator}!hasWall@{hasWall}}
+\index{hasWall@{hasWall}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{hasWall()}
+{\footnotesize\ttfamily bool Map\+Generator\+::has\+Wall (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the map has \doxyref{Wall}{p.}{class_wall} 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a14757f60e342e4930a5e69ced0940074}} 
+\index{MapGenerator@{MapGenerator}!hasWater@{hasWater}}
+\index{hasWater@{hasWater}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{hasWater()}
+{\footnotesize\ttfamily bool Map\+Generator\+::has\+Water (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the map has Water 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_af74560e87cf1f88412b66196aa08ffb0}} 
+\index{MapGenerator@{MapGenerator}!hasWhiteRock@{hasWhiteRock}}
+\index{hasWhiteRock@{hasWhiteRock}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{hasWhiteRock()}
+{\footnotesize\ttfamily bool Map\+Generator\+::has\+White\+Rock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the maphas White Rock 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_acaf9aa071b3557259c92d20c3e6b186d}} 
+\index{MapGenerator@{MapGenerator}!hasWhiteTree@{hasWhiteTree}}
+\index{hasWhiteTree@{hasWhiteTree}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{hasWhiteTree()}
+{\footnotesize\ttfamily bool Map\+Generator\+::has\+White\+Tree (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if the map has White Tree 
+\end{DoxyReturn}
+\mbox{\label{class_map_generator_a2b2527d113e0b445df9bfb5cffdf8f75}} 
+\index{MapGenerator@{MapGenerator}!oprenChest@{oprenChest}}
+\index{oprenChest@{oprenChest}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{oprenChest()}
+{\footnotesize\ttfamily void Map\+Generator\+::opren\+Chest (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_generator_a2b2527d113e0b445df9bfb5cffdf8f75_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_map_generator_a76563875facefe0dbf351c23c0f66d2f}} 
+\index{MapGenerator@{MapGenerator}!setMapDown@{setMapDown}}
+\index{setMapDown@{setMapDown}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{setMapDown()}
+{\footnotesize\ttfamily void Map\+Generator\+::set\+Map\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_map_generator_a5a031ccfd5df49a0f0d554418a30363d}} 
+\index{MapGenerator@{MapGenerator}!setMapLeft@{setMapLeft}}
+\index{setMapLeft@{setMapLeft}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{setMapLeft()}
+{\footnotesize\ttfamily void Map\+Generator\+::set\+Map\+Left (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_map_generator_a3575bf733eca13729eeb6baf69607bf8}} 
+\index{MapGenerator@{MapGenerator}!setMapRight@{setMapRight}}
+\index{setMapRight@{setMapRight}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{setMapRight()}
+{\footnotesize\ttfamily void Map\+Generator\+::set\+Map\+Right (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_map_generator_ad7d65dfc13c976dbb4ffc4dbecab92ed}} 
+\index{MapGenerator@{MapGenerator}!setMapUp@{setMapUp}}
+\index{setMapUp@{setMapUp}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{setMapUp()}
+{\footnotesize\ttfamily void Map\+Generator\+::set\+Map\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_map_generator_a04eaa219ba6757cec6dac76430c7d84a}} 
+\index{MapGenerator@{MapGenerator}!thereChest@{thereChest}}
+\index{thereChest@{thereChest}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{thereChest()}
+{\footnotesize\ttfamily bool Map\+Generator\+::there\+Chest (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_generator_a04eaa219ba6757cec6dac76430c7d84a_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\textbf{ Map\+Generator.\+hpp}\item 
+src/\+Map\+Generator/\textbf{ Accessor.\+cpp}\item 
+src/\+Map\+Generator/\textbf{ Chest.\+cpp}\item 
+src/\+Map\+Generator/\textbf{ Constructor.\+cpp}\item 
+src/\+Map\+Generator/\textbf{ Create\+Map.\+cpp}\end{DoxyCompactItemize}

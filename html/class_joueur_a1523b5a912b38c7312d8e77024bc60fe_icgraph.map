@@ -1,0 +1,4 @@
+<map id="Joueur::animationMoveUp" name="Joueur::animationMoveUp">
+<area shape="rect" id="node1" title=" " alt="" coords="164,5,355,32"/>
+<area shape="rect" id="node2" href="$class_game.html#aafa89398e094d83e505ad5728712ad9a" title="Up Key event." alt="" coords="5,5,116,32"/>
+</map>

@@ -1,0 +1,671 @@
+\doxysection{Joueur Class Reference}
+\label{class_joueur}\index{Joueur@{Joueur}}
+
+
+{\ttfamily \#include $<$Joueur.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Joueur} (void)
+\item 
+\textbf{ $\sim$\+Joueur} (void)
+\item 
+sf\+::\+Sprite \textbf{ get\+Sprite} (void)
+\item 
+sf\+::\+Vector2f \textbf{ get\+Position} (void)
+\item 
+sf\+::\+Vector2f \textbf{ get\+Position\+Sword} (void)
+\item 
+\textbf{ Joueur} $\ast$ \textbf{ get\+Adress} (void)
+\item 
+int \textbf{ get\+Life} (void)
+\item 
+int \textbf{ get\+Max\+Life} (void)
+\item 
+bool \textbf{ is\+Alive} (void)
+\item 
+bool \textbf{ is\+Invulnerable} (void)
+\item 
+int \textbf{ get\+Speed} (void)
+\item 
+bool \textbf{ get\+Orientation\+Up} (void)
+\item 
+bool \textbf{ get\+Orientation\+Down} (void)
+\item 
+bool \textbf{ get\+Orientation\+Left} (void)
+\item 
+bool \textbf{ get\+Orientation\+Right} (void)
+\item 
+int \textbf{ get\+Orientation\+Value} (void)
+\item 
+std\+::vector$<$ sf\+::\+Sprite $>$ \textbf{ get\+List\+Sprite\+Heart} (void)
+\item 
+sf\+::\+Sprite \textbf{ get\+Sprite\+Heart} (int number)
+\item 
+sf\+::\+Sprite \textbf{ get\+Logo\+Rubis} (void)
+\item 
+sf\+::\+Text \textbf{ get\+Rubis\+Hundred} (void)
+\item 
+sf\+::\+Text \textbf{ get\+Rubis\+Ten} (void)
+\item 
+sf\+::\+Text \textbf{ get\+Rubis\+Unit} (void)
+\item 
+int \textbf{ get\+Total\+Rubis} (void)
+\item 
+void \textbf{ set\+Orientation\+Up} (void)
+\item 
+void \textbf{ set\+Orientation\+Down} (void)
+\item 
+void \textbf{ set\+Orientation\+Right} (void)
+\item 
+void \textbf{ set\+Orientation\+Left} (void)
+\item 
+void \textbf{ set\+Max\+Life\+Up} (void)
+\item 
+void \textbf{ set\+Heart} (int life)
+\item 
+void \textbf{ set\+Damage} (int power)
+\item 
+void \textbf{ frame\+Invulnerable} (void)
+\item 
+void \textbf{ set\+Position\+Up} (void)
+\item 
+void \textbf{ set\+Position\+Down} (void)
+\item 
+void \textbf{ set\+Position\+Left} (void)
+\item 
+void \textbf{ set\+Position\+Right} (void)
+\item 
+void \textbf{ animation\+Move\+Down} (void)
+\item 
+void \textbf{ animation\+Move\+Up} (void)
+\item 
+void \textbf{ animation\+Move\+Left} (void)
+\item 
+void \textbf{ animation\+Move\+Right} (void)
+\item 
+void \textbf{ recoil\+Down} (void)
+\item 
+void \textbf{ recoil\+Up} (void)
+\item 
+void \textbf{ recoil\+Right} (void)
+\item 
+void \textbf{ recoil\+Left} (void)
+\item 
+void \textbf{ update\+Rubis} (int valor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_joueur_ac43d25df2a38e682abd32e050eb38cbd}} 
+\index{Joueur@{Joueur}!Joueur@{Joueur}}
+\index{Joueur@{Joueur}!Joueur@{Joueur}}
+\doxysubsubsection{Joueur()}
+{\footnotesize\ttfamily Joueur\+::\+Joueur (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_joueur_ac43d25df2a38e682abd32e050eb38cbd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a1d9b44e6ec16012f925fbd1be0bb678a}} 
+\index{Joueur@{Joueur}!````~Joueur@{$\sim$Joueur}}
+\index{````~Joueur@{$\sim$Joueur}!Joueur@{Joueur}}
+\doxysubsubsection{$\sim$Joueur()}
+{\footnotesize\ttfamily Joueur\+::$\sim$\+Joueur (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_joueur_ac2c72d4bf5451242928d9551f442a64f}} 
+\index{Joueur@{Joueur}!animationMoveDown@{animationMoveDown}}
+\index{animationMoveDown@{animationMoveDown}!Joueur@{Joueur}}
+\doxysubsubsection{animationMoveDown()}
+{\footnotesize\ttfamily void Joueur\+::animation\+Move\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_ac2c72d4bf5451242928d9551f442a64f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_abb92f92ee3141f40991c754ef2b8f9ca}} 
+\index{Joueur@{Joueur}!animationMoveLeft@{animationMoveLeft}}
+\index{animationMoveLeft@{animationMoveLeft}!Joueur@{Joueur}}
+\doxysubsubsection{animationMoveLeft()}
+{\footnotesize\ttfamily void Joueur\+::animation\+Move\+Left (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_abb92f92ee3141f40991c754ef2b8f9ca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_ad59359174f36b073b66968992cb313f5}} 
+\index{Joueur@{Joueur}!animationMoveRight@{animationMoveRight}}
+\index{animationMoveRight@{animationMoveRight}!Joueur@{Joueur}}
+\doxysubsubsection{animationMoveRight()}
+{\footnotesize\ttfamily void Joueur\+::animation\+Move\+Right (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_ad59359174f36b073b66968992cb313f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a1523b5a912b38c7312d8e77024bc60fe}} 
+\index{Joueur@{Joueur}!animationMoveUp@{animationMoveUp}}
+\index{animationMoveUp@{animationMoveUp}!Joueur@{Joueur}}
+\doxysubsubsection{animationMoveUp()}
+{\footnotesize\ttfamily void Joueur\+::animation\+Move\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_joueur_a1523b5a912b38c7312d8e77024bc60fe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_af8a7986e657de14f433604cabb22b0c6}} 
+\index{Joueur@{Joueur}!frameInvulnerable@{frameInvulnerable}}
+\index{frameInvulnerable@{frameInvulnerable}!Joueur@{Joueur}}
+\doxysubsubsection{frameInvulnerable()}
+{\footnotesize\ttfamily void Joueur\+::frame\+Invulnerable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_af8a7986e657de14f433604cabb22b0c6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_af8a7986e657de14f433604cabb22b0c6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a0fb4672f5a20d24efb265950010db991}} 
+\index{Joueur@{Joueur}!getAdress@{getAdress}}
+\index{getAdress@{getAdress}!Joueur@{Joueur}}
+\doxysubsubsection{getAdress()}
+{\footnotesize\ttfamily \textbf{ Joueur} $\ast$ Joueur\+::get\+Adress (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_joueur_a6bb9a9308bbecfb1e9067ae2d17546b1}} 
+\index{Joueur@{Joueur}!getLife@{getLife}}
+\index{getLife@{getLife}!Joueur@{Joueur}}
+\doxysubsubsection{getLife()}
+{\footnotesize\ttfamily int Joueur\+::get\+Life (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{class_joueur_a6bb9a9308bbecfb1e9067ae2d17546b1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a2fb4b619e95e211ad554fedd135852e9}} 
+\index{Joueur@{Joueur}!getListSpriteHeart@{getListSpriteHeart}}
+\index{getListSpriteHeart@{getListSpriteHeart}!Joueur@{Joueur}}
+\doxysubsubsection{getListSpriteHeart()}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Sprite $>$ Joueur\+::get\+List\+Sprite\+Heart (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_a2fb4b619e95e211ad554fedd135852e9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a651482b01457406e99c42a2d190b2ac2}} 
+\index{Joueur@{Joueur}!getLogoRubis@{getLogoRubis}}
+\index{getLogoRubis@{getLogoRubis}!Joueur@{Joueur}}
+\doxysubsubsection{getLogoRubis()}
+{\footnotesize\ttfamily sf\+::\+Sprite Joueur\+::get\+Logo\+Rubis (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_a651482b01457406e99c42a2d190b2ac2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a2b87f9518fbf7988868aca1b16f2d3a9}} 
+\index{Joueur@{Joueur}!getMaxLife@{getMaxLife}}
+\index{getMaxLife@{getMaxLife}!Joueur@{Joueur}}
+\doxysubsubsection{getMaxLife()}
+{\footnotesize\ttfamily int Joueur\+::get\+Max\+Life (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_joueur_a2b87f9518fbf7988868aca1b16f2d3a9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_ac3e22fa3e995b1fc45ddec7042f6dad2}} 
+\index{Joueur@{Joueur}!getOrientationDown@{getOrientationDown}}
+\index{getOrientationDown@{getOrientationDown}!Joueur@{Joueur}}
+\doxysubsubsection{getOrientationDown()}
+{\footnotesize\ttfamily bool Joueur\+::get\+Orientation\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_ac3e22fa3e995b1fc45ddec7042f6dad2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a66b798f6ad8febf8927adf1fd4b618fc}} 
+\index{Joueur@{Joueur}!getOrientationLeft@{getOrientationLeft}}
+\index{getOrientationLeft@{getOrientationLeft}!Joueur@{Joueur}}
+\doxysubsubsection{getOrientationLeft()}
+{\footnotesize\ttfamily bool Joueur\+::get\+Orientation\+Left (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_a66b798f6ad8febf8927adf1fd4b618fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_aa4dd32401e36a1da35273f2bcbac2624}} 
+\index{Joueur@{Joueur}!getOrientationRight@{getOrientationRight}}
+\index{getOrientationRight@{getOrientationRight}!Joueur@{Joueur}}
+\doxysubsubsection{getOrientationRight()}
+{\footnotesize\ttfamily bool Joueur\+::get\+Orientation\+Right (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_aa4dd32401e36a1da35273f2bcbac2624_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a4b7b6335c268e330b1942d20f7b84c46}} 
+\index{Joueur@{Joueur}!getOrientationUp@{getOrientationUp}}
+\index{getOrientationUp@{getOrientationUp}!Joueur@{Joueur}}
+\doxysubsubsection{getOrientationUp()}
+{\footnotesize\ttfamily bool Joueur\+::get\+Orientation\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_a4b7b6335c268e330b1942d20f7b84c46_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a782ec3b7e9fde44b834c4581718c62b2}} 
+\index{Joueur@{Joueur}!getOrientationValue@{getOrientationValue}}
+\index{getOrientationValue@{getOrientationValue}!Joueur@{Joueur}}
+\doxysubsubsection{getOrientationValue()}
+{\footnotesize\ttfamily int Joueur\+::get\+Orientation\+Value (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_a782ec3b7e9fde44b834c4581718c62b2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_af6cc1c1565d37a1f047355876d9ff1b7}} 
+\index{Joueur@{Joueur}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Joueur@{Joueur}}
+\doxysubsubsection{getPosition()}
+{\footnotesize\ttfamily sf\+::\+Vector2f Joueur\+::get\+Position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{class_joueur_af6cc1c1565d37a1f047355876d9ff1b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_aad21ce535e12fa41b676cc4d7a4bd827}} 
+\index{Joueur@{Joueur}!getPositionSword@{getPositionSword}}
+\index{getPositionSword@{getPositionSword}!Joueur@{Joueur}}
+\doxysubsubsection{getPositionSword()}
+{\footnotesize\ttfamily sf\+::\+Vector2f Joueur\+::get\+Position\+Sword (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_aad21ce535e12fa41b676cc4d7a4bd827_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_af615fd5cbfd1204325c5aff39f36723b}} 
+\index{Joueur@{Joueur}!getRubisHundred@{getRubisHundred}}
+\index{getRubisHundred@{getRubisHundred}!Joueur@{Joueur}}
+\doxysubsubsection{getRubisHundred()}
+{\footnotesize\ttfamily sf\+::\+Text Joueur\+::get\+Rubis\+Hundred (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_af615fd5cbfd1204325c5aff39f36723b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_acb9ffa5ce85572ea44a49b40e6c82011}} 
+\index{Joueur@{Joueur}!getRubisTen@{getRubisTen}}
+\index{getRubisTen@{getRubisTen}!Joueur@{Joueur}}
+\doxysubsubsection{getRubisTen()}
+{\footnotesize\ttfamily sf\+::\+Text Joueur\+::get\+Rubis\+Ten (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_joueur_acb9ffa5ce85572ea44a49b40e6c82011_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_ad4b104371f4050fb266a3e450ea2a6bc}} 
+\index{Joueur@{Joueur}!getRubisUnit@{getRubisUnit}}
+\index{getRubisUnit@{getRubisUnit}!Joueur@{Joueur}}
+\doxysubsubsection{getRubisUnit()}
+{\footnotesize\ttfamily sf\+::\+Text Joueur\+::get\+Rubis\+Unit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{class_joueur_ad4b104371f4050fb266a3e450ea2a6bc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_aed081b7148ec286be613ba408766a98a}} 
+\index{Joueur@{Joueur}!getSpeed@{getSpeed}}
+\index{getSpeed@{getSpeed}!Joueur@{Joueur}}
+\doxysubsubsection{getSpeed()}
+{\footnotesize\ttfamily int Joueur\+::get\+Speed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{class_joueur_aed081b7148ec286be613ba408766a98a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a91f860b18fb3be7b717ac1ead1d6618d}} 
+\index{Joueur@{Joueur}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!Joueur@{Joueur}}
+\doxysubsubsection{getSprite()}
+{\footnotesize\ttfamily sf\+::\+Sprite Joueur\+::get\+Sprite (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_joueur_aff11b3079ba1989629fb989bc322a04d}} 
+\index{Joueur@{Joueur}!getSpriteHeart@{getSpriteHeart}}
+\index{getSpriteHeart@{getSpriteHeart}!Joueur@{Joueur}}
+\doxysubsubsection{getSpriteHeart()}
+{\footnotesize\ttfamily sf\+::\+Sprite Joueur\+::get\+Sprite\+Heart (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{class_joueur_aff11b3079ba1989629fb989bc322a04d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a36fe419fab84cc9a44284ad7436ce54d}} 
+\index{Joueur@{Joueur}!getTotalRubis@{getTotalRubis}}
+\index{getTotalRubis@{getTotalRubis}!Joueur@{Joueur}}
+\doxysubsubsection{getTotalRubis()}
+{\footnotesize\ttfamily int Joueur\+::get\+Total\+Rubis (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_a36fe419fab84cc9a44284ad7436ce54d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_af5c55cb0a92b80400acb9858b383fc92}} 
+\index{Joueur@{Joueur}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!Joueur@{Joueur}}
+\doxysubsubsection{isAlive()}
+{\footnotesize\ttfamily bool Joueur\+::is\+Alive (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_joueur_af5c55cb0a92b80400acb9858b383fc92_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_af5c55cb0a92b80400acb9858b383fc92_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a07a4ac914a40985906195a056fb41138}} 
+\index{Joueur@{Joueur}!isInvulnerable@{isInvulnerable}}
+\index{isInvulnerable@{isInvulnerable}!Joueur@{Joueur}}
+\doxysubsubsection{isInvulnerable()}
+{\footnotesize\ttfamily bool Joueur\+::is\+Invulnerable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_a07a4ac914a40985906195a056fb41138_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_a07a4ac914a40985906195a056fb41138_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a921f1507f4f45e70b68f302e0de6da7d}} 
+\index{Joueur@{Joueur}!recoilDown@{recoilDown}}
+\index{recoilDown@{recoilDown}!Joueur@{Joueur}}
+\doxysubsubsection{recoilDown()}
+{\footnotesize\ttfamily void Joueur\+::recoil\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_joueur_ae0e419e122f2f33dfded60368b5644fc}} 
+\index{Joueur@{Joueur}!recoilLeft@{recoilLeft}}
+\index{recoilLeft@{recoilLeft}!Joueur@{Joueur}}
+\doxysubsubsection{recoilLeft()}
+{\footnotesize\ttfamily void Joueur\+::recoil\+Left (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_joueur_aeb80b23f93f02bf3aa3350af57a33c62}} 
+\index{Joueur@{Joueur}!recoilRight@{recoilRight}}
+\index{recoilRight@{recoilRight}!Joueur@{Joueur}}
+\doxysubsubsection{recoilRight()}
+{\footnotesize\ttfamily void Joueur\+::recoil\+Right (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_joueur_aab4552475f987295ecdb57fdcfb9dac5}} 
+\index{Joueur@{Joueur}!recoilUp@{recoilUp}}
+\index{recoilUp@{recoilUp}!Joueur@{Joueur}}
+\doxysubsubsection{recoilUp()}
+{\footnotesize\ttfamily void Joueur\+::recoil\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_joueur_aee419ef19e8e8298ac36b22e282a7cfa}} 
+\index{Joueur@{Joueur}!setDamage@{setDamage}}
+\index{setDamage@{setDamage}!Joueur@{Joueur}}
+\doxysubsubsection{setDamage()}
+{\footnotesize\ttfamily void Joueur\+::set\+Damage (\begin{DoxyParamCaption}\item[{int}]{power }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_aee419ef19e8e8298ac36b22e282a7cfa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_ae70fd2ae09f7bbbc5b569990440a2021}} 
+\index{Joueur@{Joueur}!setHeart@{setHeart}}
+\index{setHeart@{setHeart}!Joueur@{Joueur}}
+\doxysubsubsection{setHeart()}
+{\footnotesize\ttfamily void Joueur\+::set\+Heart (\begin{DoxyParamCaption}\item[{int}]{life }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_ae70fd2ae09f7bbbc5b569990440a2021_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_afd9f4f60f8174fb8956a9bdc19ae36de}} 
+\index{Joueur@{Joueur}!setMaxLifeUp@{setMaxLifeUp}}
+\index{setMaxLifeUp@{setMaxLifeUp}!Joueur@{Joueur}}
+\doxysubsubsection{setMaxLifeUp()}
+{\footnotesize\ttfamily void Joueur\+::set\+Max\+Life\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_afd9f4f60f8174fb8956a9bdc19ae36de_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_af11fd3211304731f4fa095260326cc52}} 
+\index{Joueur@{Joueur}!setOrientationDown@{setOrientationDown}}
+\index{setOrientationDown@{setOrientationDown}!Joueur@{Joueur}}
+\doxysubsubsection{setOrientationDown()}
+{\footnotesize\ttfamily void Joueur\+::set\+Orientation\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_af11fd3211304731f4fa095260326cc52_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_ae9f91d970fb39d4fdbfa99bdda95f5dd}} 
+\index{Joueur@{Joueur}!setOrientationLeft@{setOrientationLeft}}
+\index{setOrientationLeft@{setOrientationLeft}!Joueur@{Joueur}}
+\doxysubsubsection{setOrientationLeft()}
+{\footnotesize\ttfamily void Joueur\+::set\+Orientation\+Left (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_joueur_ae9f91d970fb39d4fdbfa99bdda95f5dd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a5f3bc11e3352902d5326845008d809c8}} 
+\index{Joueur@{Joueur}!setOrientationRight@{setOrientationRight}}
+\index{setOrientationRight@{setOrientationRight}!Joueur@{Joueur}}
+\doxysubsubsection{setOrientationRight()}
+{\footnotesize\ttfamily void Joueur\+::set\+Orientation\+Right (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joueur_a5f3bc11e3352902d5326845008d809c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_a7e0d51e76e10595472431ed02b1bdcd2}} 
+\index{Joueur@{Joueur}!setOrientationUp@{setOrientationUp}}
+\index{setOrientationUp@{setOrientationUp}!Joueur@{Joueur}}
+\doxysubsubsection{setOrientationUp()}
+{\footnotesize\ttfamily void Joueur\+::set\+Orientation\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_joueur_a7e0d51e76e10595472431ed02b1bdcd2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_joueur_ac42ac3f04d35937140241fb9c57478da}} 
+\index{Joueur@{Joueur}!setPositionDown@{setPositionDown}}
+\index{setPositionDown@{setPositionDown}!Joueur@{Joueur}}
+\doxysubsubsection{setPositionDown()}
+{\footnotesize\ttfamily void Joueur\+::set\+Position\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_joueur_aa45d13d87d5dfbcce8ab3636083295c2}} 
+\index{Joueur@{Joueur}!setPositionLeft@{setPositionLeft}}
+\index{setPositionLeft@{setPositionLeft}!Joueur@{Joueur}}
+\doxysubsubsection{setPositionLeft()}
+{\footnotesize\ttfamily void Joueur\+::set\+Position\+Left (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_joueur_ac0aa6f1ce0290a37cbe953053d2d8378}} 
+\index{Joueur@{Joueur}!setPositionRight@{setPositionRight}}
+\index{setPositionRight@{setPositionRight}!Joueur@{Joueur}}
+\doxysubsubsection{setPositionRight()}
+{\footnotesize\ttfamily void Joueur\+::set\+Position\+Right (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_joueur_a252018e78388417f66d8446fb9f34df2}} 
+\index{Joueur@{Joueur}!setPositionUp@{setPositionUp}}
+\index{setPositionUp@{setPositionUp}!Joueur@{Joueur}}
+\doxysubsubsection{setPositionUp()}
+{\footnotesize\ttfamily void Joueur\+::set\+Position\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_joueur_af1458b6bcd395ba92e9b835ba2525e70}} 
+\index{Joueur@{Joueur}!updateRubis@{updateRubis}}
+\index{updateRubis@{updateRubis}!Joueur@{Joueur}}
+\doxysubsubsection{updateRubis()}
+{\footnotesize\ttfamily void Joueur\+::update\+Rubis (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{class_joueur_af1458b6bcd395ba92e9b835ba2525e70_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\textbf{ Joueur.\+hpp}\item 
+src/\+Joueur/\textbf{ Accessor\+Life.\+cpp}\item 
+src/\+Joueur/\textbf{ Accessor\+Orientation.\+cpp}\item 
+src/\+Joueur/\textbf{ Accessor\+Position.\+cpp}\item 
+src/\+Joueur/\textbf{ Accessor\+Rubis.\+cpp}\item 
+src/\+Joueur/\textbf{ Animation.\+cpp}\item 
+src/\+Joueur/\textbf{ Constructor.\+cpp}\item 
+src/\+Joueur/\textbf{ Life.\+cpp}\item 
+src/\+Joueur/\textbf{ Move.\+cpp}\item 
+src/\+Joueur/\textbf{ Orientation.\+cpp}\item 
+src/\+Joueur/\textbf{ Rubis.\+cpp}\item 
+src/\+Joueur/\textbf{ Sprite.\+cpp}\end{DoxyCompactItemize}

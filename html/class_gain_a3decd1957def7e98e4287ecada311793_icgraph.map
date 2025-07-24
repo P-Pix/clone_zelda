@@ -1,0 +1,9 @@
+<map id="Gain::isGet" name="Gain::isGet">
+<area shape="rect" id="node1" title=" " alt="" coords="677,56,772,83"/>
+<area shape="rect" id="node2" href="$class_gain.html#a9c5010ffdc981ee1ae3a462cc4607ec3" title=" " alt="" coords="493,5,621,32"/>
+<area shape="rect" id="node5" href="$class_monster.html#a4fb5ab090a7cb4dc833814702230e5e9" title=" " alt="" coords="484,56,629,83"/>
+<area shape="rect" id="node6" href="$class_chest.html#ae56dcb58acb0d29e9ce0f110d899d923" title=" " alt="" coords="506,107,607,133"/>
+<area shape="rect" id="node3" href="$class_chest.html#a45631db5e3a8835e1ec2f9ce15b5ff04" title=" " alt="" coords="275,5,411,32"/>
+<area shape="rect" id="node4" href="$class_map_generator.html#a2b2527d113e0b445df9bfb5cffdf8f75" title=" " alt="" coords="5,5,203,32"/>
+<area shape="rect" id="node7" href="$class_map_generator.html#ab00f38fddbcfab0d11e2d2b8bd0cc6a1" title=" " alt="" coords="251,107,436,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="MapGenerator::thereChest" name="MapGenerator::thereChest">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,200,32"/>
+<area shape="rect" id="node2" href="$class_chest.html#a57aad68571c70f770a5003080f83487f" title=" " alt="" coords="248,5,373,32"/>
+</map>

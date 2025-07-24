@@ -1,0 +1,4 @@
+<map id="Joueur::animationMoveRight" name="Joueur::animationMoveRight">
+<area shape="rect" id="node1" title=" " alt="" coords="180,5,387,32"/>
+<area shape="rect" id="node2" href="$class_game.html#ae7f750f77546ee81095af6ef1a4fa92b" title="Right Key event." alt="" coords="5,5,132,32"/>
+</map>

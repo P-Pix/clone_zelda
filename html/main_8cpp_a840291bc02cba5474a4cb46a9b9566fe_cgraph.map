@@ -1,0 +1,20 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="execution function" alt="" coords="5,107,60,133"/>
+<area shape="rect" id="node2" href="$class_games_window.html#aac8307e2dc0ec51a8c0bb1c78610c93f" title=" " alt="" coords="108,5,332,32"/>
+<area shape="rect" id="node3" href="$class_games_window.html#a1b79c1a97d5e9413d6a6f55eb2b6b883" title=" " alt="" coords="125,56,315,83"/>
+<area shape="rect" id="node4" href="$class_games_window.html#a9660a9cb60ac92b686f0a203b0742404" title=" " alt="" coords="108,107,332,133"/>
+<area shape="rect" id="node5" href="$class_games_window.html#a33628c68fae7a2a11666d8d281045a4a" title=" " alt="" coords="108,157,332,184"/>
+<area shape="rect" id="node8" href="$class_games_window.html#aaf0c28d13d3c8afcd93db0515098e1a7" title=" " alt="" coords="120,209,320,250"/>
+<area shape="rect" id="node6" href="$class_game.html#affc51d21440ba641426291a1452f3120" title=" " alt="" coords="380,108,563,135"/>
+<area shape="rect" id="node7" href="$class_game.html#aa35d170e7d2517bc03c38f4c133e9a28" title=" " alt="" coords="386,159,557,185"/>
+<area shape="rect" id="node9" href="$class_game.html#a6e453c644c7c595bf828f49cb653b87f" title="Start the game." alt="" coords="386,213,557,240"/>
+<area shape="rect" id="node16" href="$class_game.html#a32ecf92c72d7db1b029dc2c51fed4fe5" title=" " alt="" coords="394,289,549,316"/>
+<area shape="rect" id="node10" href="$class_joueur.html#af8a7986e657de14f433604cabb22b0c6" title=" " alt="" coords="617,112,807,139"/>
+<area shape="rect" id="node12" href="$class_monster.html#a9b892ded33fe419dd1c74b9537b7092e" title=" " alt="" coords="611,163,813,189"/>
+<area shape="rect" id="node13" href="$class_joueur.html#a07a4ac914a40985906195a056fb41138" title=" " alt="" coords="631,213,793,240"/>
+<area shape="rect" id="node15" href="$class_monster.html#a3170dcab56ae59ef70e20576514098a2" title=" " alt="" coords="625,264,799,291"/>
+<area shape="rect" id="node11" href="$class_heart.html#a9015fd24531af96e178ca035306ce441" title=" " alt="" coords="861,151,1048,177"/>
+<area shape="rect" id="node14" href="$class_heart.html#a18fb5defb31f6d49f65baeb8f2cbafcc" title=" " alt="" coords="875,227,1034,253"/>
+<area shape="rect" id="node17" href="$class_joueur.html#af5c55cb0a92b80400acb9858b383fc92" title=" " alt="" coords="655,315,769,341"/>
+<area shape="rect" id="node18" href="$class_heart.html#a80d0c315a95e7a83c0a08d763a5398e2" title=" " alt="" coords="899,315,1010,341"/>
+</map>

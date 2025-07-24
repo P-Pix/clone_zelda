@@ -1,0 +1,5 @@
+<map id="Heart::setDamage" name="Heart::setDamage">
+<area shape="rect" id="node1" title=" " alt="" coords="212,31,353,57"/>
+<area shape="rect" id="node2" href="$class_joueur.html#aee419ef19e8e8298ac36b22e282a7cfa" title=" " alt="" coords="11,5,158,32"/>
+<area shape="rect" id="node3" href="$class_monster.html#ae567a0dc43362eff30d390ef832500a7" title=" " alt="" coords="5,56,164,83"/>
+</map>

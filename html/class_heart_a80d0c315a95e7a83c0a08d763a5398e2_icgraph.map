@@ -1,0 +1,8 @@
+<map id="Heart::isAlive" name="Heart::isAlive">
+<area shape="rect" id="node1" title=" " alt="" coords="733,38,844,65"/>
+<area shape="rect" id="node2" href="$class_joueur.html#af5c55cb0a92b80400acb9858b383fc92" title=" " alt="" coords="565,13,679,39"/>
+<area shape="rect" id="node6" href="$class_monster.html#ab1a3a7fcc4329fcd52c0c9dcfbedc109" title=" " alt="" coords="559,63,685,90"/>
+<area shape="rect" id="node3" href="$class_game.html#a32ecf92c72d7db1b029dc2c51fed4fe5" title=" " alt="" coords="356,13,511,39"/>
+<area shape="rect" id="node4" href="$class_games_window.html#aaf0c28d13d3c8afcd93db0515098e1a7" title=" " alt="" coords="108,5,308,47"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="execution function" alt="" coords="5,13,60,39"/>
+</map>

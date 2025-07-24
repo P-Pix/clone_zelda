@@ -1,0 +1,5 @@
+<map id="MapGenerator::gainIsGet" name="MapGenerator::gainIsGet">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,191,32"/>
+<area shape="rect" id="node2" href="$class_chest.html#ae56dcb58acb0d29e9ce0f110d899d923" title=" " alt="" coords="239,5,340,32"/>
+<area shape="rect" id="node3" href="$class_gain.html#a3decd1957def7e98e4287ecada311793" title=" " alt="" coords="388,5,483,32"/>
+</map>

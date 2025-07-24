@@ -1,0 +1,5 @@
+<map id="MapGenerator::getGainSprite" name="MapGenerator::getGainSprite">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,217,32"/>
+<area shape="rect" id="node2" href="$class_chest.html#a94d7d8b6514773136a93c271b2e3cb15" title=" " alt="" coords="265,5,421,32"/>
+<area shape="rect" id="node3" href="$class_gain.html#a167d3e13396cb97749e32322050fd443" title=" " alt="" coords="469,5,619,32"/>
+</map>

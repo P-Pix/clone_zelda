@@ -1,0 +1,9 @@
+<map id="Game::executionGame" name="Game::executionGame">
+<area shape="rect" id="node1" title="Start the game." alt="" coords="5,81,176,108"/>
+<area shape="rect" id="node2" href="$class_joueur.html#af8a7986e657de14f433604cabb22b0c6" title=" " alt="" coords="230,5,421,32"/>
+<area shape="rect" id="node4" href="$class_monster.html#a9b892ded33fe419dd1c74b9537b7092e" title=" " alt="" coords="224,56,427,83"/>
+<area shape="rect" id="node5" href="$class_joueur.html#a07a4ac914a40985906195a056fb41138" title=" " alt="" coords="244,107,407,133"/>
+<area shape="rect" id="node7" href="$class_monster.html#a3170dcab56ae59ef70e20576514098a2" title=" " alt="" coords="238,157,413,184"/>
+<area shape="rect" id="node3" href="$class_heart.html#a9015fd24531af96e178ca035306ce441" title=" " alt="" coords="475,44,661,71"/>
+<area shape="rect" id="node6" href="$class_heart.html#a18fb5defb31f6d49f65baeb8f2cbafcc" title=" " alt="" coords="489,120,647,147"/>
+</map>

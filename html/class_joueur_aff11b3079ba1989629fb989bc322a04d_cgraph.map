@@ -1,0 +1,4 @@
+<map id="Joueur::getSpriteHeart" name="Joueur::getSpriteHeart">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,172,32"/>
+<area shape="rect" id="node2" href="$class_heart.html#a955cd53f6b8f8ac38513d4ea936d7855" title=" " alt="" coords="220,5,345,32"/>
+</map>

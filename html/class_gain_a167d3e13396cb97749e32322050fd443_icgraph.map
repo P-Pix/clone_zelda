@@ -1,0 +1,7 @@
+<map id="Gain::getSpriteGain" name="Gain::getSpriteGain">
+<area shape="rect" id="node1" title=" " alt="" coords="469,31,619,57"/>
+<area shape="rect" id="node2" href="$class_chest.html#a94d7d8b6514773136a93c271b2e3cb15" title=" " alt="" coords="265,5,421,32"/>
+<area shape="rect" id="node4" href="$class_chest.html#a45631db5e3a8835e1ec2f9ce15b5ff04" title=" " alt="" coords="275,56,411,83"/>
+<area shape="rect" id="node3" href="$class_map_generator.html#ac2c4615e69c09142c065b355755cada6" title=" " alt="" coords="5,5,217,32"/>
+<area shape="rect" id="node5" href="$class_map_generator.html#a2b2527d113e0b445df9bfb5cffdf8f75" title=" " alt="" coords="13,56,210,83"/>
+</map>

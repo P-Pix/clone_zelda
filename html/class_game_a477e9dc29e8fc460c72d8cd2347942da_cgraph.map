@@ -1,0 +1,9 @@
+<map id="Game::keyDown" name="Game::keyDown">
+<area shape="rect" id="node1" title="Down Key event." alt="" coords="5,132,135,159"/>
+<area shape="rect" id="node2" href="$class_joueur.html#ac2c72d4bf5451242928d9551f442a64f" title=" " alt="" coords="183,5,393,32"/>
+<area shape="rect" id="node3" href="$class_sword.html#a65084c7b4b435272a3ce0dd7ec71b27e" title=" " alt="" coords="211,56,365,83"/>
+<area shape="rect" id="node4" href="$class_joueur.html#ac3e22fa3e995b1fc45ddec7042f6dad2" title=" " alt="" coords="187,107,389,133"/>
+<area shape="rect" id="node5" href="$class_joueur.html#af6cc1c1565d37a1f047355876d9ff1b7" title=" " alt="" coords="216,157,360,184"/>
+<area shape="rect" id="node6" href="$class_joueur.html#aed081b7148ec286be613ba408766a98a" title=" " alt="" coords="222,208,354,235"/>
+<area shape="rect" id="node7" href="$class_joueur.html#af11fd3211304731f4fa095260326cc52" title=" " alt="" coords="187,259,389,285"/>
+</map>

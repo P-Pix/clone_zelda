@@ -1,0 +1,9 @@
+<map id="Game::keyLeft" name="Game::keyLeft">
+<area shape="rect" id="node1" title="Left Key event." alt="" coords="5,132,121,159"/>
+<area shape="rect" id="node2" href="$class_joueur.html#abb92f92ee3141f40991c754ef2b8f9ca" title=" " alt="" coords="169,5,367,32"/>
+<area shape="rect" id="node3" href="$class_sword.html#a65084c7b4b435272a3ce0dd7ec71b27e" title=" " alt="" coords="191,56,345,83"/>
+<area shape="rect" id="node4" href="$class_joueur.html#a66b798f6ad8febf8927adf1fd4b618fc" title=" " alt="" coords="173,107,363,133"/>
+<area shape="rect" id="node5" href="$class_joueur.html#af6cc1c1565d37a1f047355876d9ff1b7" title=" " alt="" coords="196,157,340,184"/>
+<area shape="rect" id="node6" href="$class_joueur.html#aed081b7148ec286be613ba408766a98a" title=" " alt="" coords="202,208,334,235"/>
+<area shape="rect" id="node7" href="$class_joueur.html#ae9f91d970fb39d4fdbfa99bdda95f5dd" title=" " alt="" coords="174,259,362,285"/>
+</map>

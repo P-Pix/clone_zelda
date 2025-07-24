@@ -1,0 +1,8 @@
+<map id="Heart::isInvulnerable" name="Heart::isInvulnerable">
+<area shape="rect" id="node1" title=" " alt="" coords="797,31,956,57"/>
+<area shape="rect" id="node2" href="$class_joueur.html#a07a4ac914a40985906195a056fb41138" title=" " alt="" coords="581,5,743,32"/>
+<area shape="rect" id="node6" href="$class_monster.html#a3170dcab56ae59ef70e20576514098a2" title=" " alt="" coords="575,56,749,83"/>
+<area shape="rect" id="node3" href="$class_game.html#a6e453c644c7c595bf828f49cb653b87f" title="Start the game." alt="" coords="356,31,527,57"/>
+<area shape="rect" id="node4" href="$class_games_window.html#aaf0c28d13d3c8afcd93db0515098e1a7" title=" " alt="" coords="108,23,308,65"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="execution function" alt="" coords="5,31,60,57"/>
+</map>

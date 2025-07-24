@@ -1,0 +1,5 @@
+<map id="Joueur::getOrientationRight" name="Joueur::getOrientationRight">
+<area shape="rect" id="node1" title=" " alt="" coords="184,31,383,57"/>
+<area shape="rect" id="node2" href="$class_game.html#ae7f750f77546ee81095af6ef1a4fa92b" title="Right Key event." alt="" coords="7,5,134,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a1a6ec07fd459de976168af5334e04b8c" title="Space Key event." alt="" coords="5,56,136,83"/>
+</map>
