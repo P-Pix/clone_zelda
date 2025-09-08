@@ -99,7 +99,7 @@ bool Game::collideSword(sf::Vector2f target) {
 }
 
 bool Game::collideWall(sf::Vector2f sprite, std::vector <sf::Vector2f> wall) {
-    for (int x = 0; x < wall.size(); x++) {
+    for (size_t x = 0; x < wall.size(); x++) {
         if (collideTwoSprite64x64(sprite, wall[x])) {
             return true;
         }

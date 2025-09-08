@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Joueur.hpp"
+#include "../../include/JoueurLegacy.hpp"
 
 void Joueur::updateRubis(int valor) {
     m_Rubis.updateRubis(valor);

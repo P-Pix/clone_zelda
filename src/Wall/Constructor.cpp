@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Wall.hpp"
+#include "../../include/WallLegacy.hpp"
 
 // Constructor / Destructor
 

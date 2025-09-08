@@ -20,13 +20,13 @@ void GamesWindow::drawText(sf::Text text) {
 }
 
 void GamesWindow::drawVectorSprite(std::vector <sf::Sprite> vector) {
-    for (int number = 0; number < vector.size(); number++) {
+    for (size_t number = 0; number < vector.size(); number++) {
         drawSprite(vector[number]);
     }
 }
 
 void GamesWindow::drawVectorText(std::vector <sf::Text> vector) {
-    for (int number = 0; number < vector.size(); number++) {
+    for (size_t number = 0; number < vector.size(); number++) {
         drawText(vector[number]);
     }
 }

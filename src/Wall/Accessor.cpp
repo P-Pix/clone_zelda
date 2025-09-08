@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Wall.hpp"
+#include "../../include/WallLegacy.hpp"
 
 sf::Sprite Wall::getSprite(void) {
     return m_SWall;

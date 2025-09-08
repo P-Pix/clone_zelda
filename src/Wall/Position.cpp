@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Wall.hpp"
+#include "../../include/WallLegacy.hpp"
 
 void Wall::setPosition(sf::Vector2f POSITION) {
     this->m_SWall.setPosition(POSITION);

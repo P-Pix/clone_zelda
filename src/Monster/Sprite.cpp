@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Monster.hpp"
+#include "../../include/MonsterLegacy.hpp"
 
 void Monster::initSprite(void) {
     loadTexture(m_monster);

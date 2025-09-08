@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Joueur.hpp"
+#include "../../include/JoueurLegacy.hpp"
 
 void Joueur::setMaxLifeUp(void) {
     m_Heart.setMaxLifeUp();

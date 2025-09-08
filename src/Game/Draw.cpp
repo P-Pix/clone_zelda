@@ -72,7 +72,7 @@ void Game::drawMap(void) {
 }
 
 void Game::extractSpriteFromVector(std::vector <sf::Sprite> vector) {
-    for (int number = 0; number < vector.size(); number++) {
+    for (size_t number = 0; number < vector.size(); number++) {
         m_vectorsprite.push_back(vector[number]);
     }
 }

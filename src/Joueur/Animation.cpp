@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Joueur.hpp"
+#include "../../include/JoueurLegacy.hpp"
 
 void Joueur::animationMoveRight(void) {
     moveAniamtion(m_moveright, m_AnimationRight);

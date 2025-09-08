@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Joueur.hpp"
+#include "../../include/JoueurLegacy.hpp"
 
 sf::Sprite Joueur::loadSprite(const char *name, sf::Vector2f vector) {
     sf::Sprite sprite;

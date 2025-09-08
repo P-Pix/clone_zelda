@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Joueur.hpp"
+#include "../../include/JoueurLegacy.hpp"
 
 sf::Sprite Joueur::getLogoRubis(void) {
     return m_Rubis.getLogoRubis();

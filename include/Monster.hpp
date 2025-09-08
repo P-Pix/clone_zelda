@@ -1,116 +1,145 @@
 /**
  * @file Monster.hpp
  * @author Guillaume LEMONNIER
- * @brief 
- * @version 0.1
- * @date 2021-05-31
+ * @brief Classe Monster modernisée avec héritage
+ * @version 2.0
+ * @date 2025-07-26
  * 
- * @copyright Copyright (c) 2021
- * 
+ * @copyright Copyright (c) 2021-2025
  */
 
-#ifndef _MONSTER_HPP_
-#define _MONSTER_HPP_
+#ifndef MONSTER_HPP
+#define MONSTER_HPP
 
-#include <SFML/Graphics.hpp>
-#include <iostream>
-#include <vector>
-
+#include "Character.hpp"
 #include "Gain.hpp"
 #include "Heart.hpp"
-//#include "Ai.hpp"
+#include <vector>
+#include <memory>
+#include <random>
 
-class Monster {
+enum class MonsterType {
+    BASIC,
+    FAST,
+    STRONG,
+    BOSS
+};
+
+enum class AIState {
+    PATROLLING,
+    CHASING,
+    ATTACKING,
+    RETURNING,
+    STUNNED
+};
+
+/**
+ * @class Monster
+ * @brief Classe représentant un monstre ennemi
+ * 
+ * Hérite de Character et ajoute l'IA, les patterns de mouvement,
+ * et la gestion des gains
+ */
+class Monster : public Character {
 public:
-    // Constructeur / Destructeur
-    // Constructeur
-    Monster(void);
+    // Constructeurs / Destructeur
+    Monster();
+    Monster(MonsterType type, const sf::Vector2f& position = sf::Vector2f(0, 0));
+    Monster(const std::string& texturePath, float health = 50.0f);
+    virtual ~Monster() = default;
 
-    Monster(const char *name);
+    // Interface Entity
+    std::unique_ptr<Entity> clone() const override;
 
-    // Destructeur
-    ~Monster(void);
+    // Interface IUpdatable 
+    void update(float deltaTime) override;
 
-    // Accessor
-    Monster *getAdress(void);
+    // Accesseurs modernes
+    int getPower() const { return m_power; }
+    void setPower(int power) { m_power = power; }
+    
+    MonsterType getMonsterType() const { return m_monsterType; }
+    AIState getAIState() const { return m_aiState; }
 
-    Monster getMonster(void);
+    // IA et mouvement
+    void setTarget(const sf::Vector2f& targetPosition);
+    void setPatrolPattern(const std::vector<sf::Vector2f>& pattern);
+    float getDetectionRange() const { return m_detectionRange; }
+    void setDetectionRange(float range) { m_detectionRange = range; }
 
-    // Sprite
-    sf::Sprite getSprite(void);
+    // Combat
+    void attack();
+    bool canAttack() const;
+    float getAttackCooldown() const { return m_attackCooldown; }
 
-    // Position
-    sf::Vector2f getPosition(void);
+    // Gains et récompenses
+    bool hasGain() const { return m_hasGain; }
+    void dropGains();
+    int getRubisValue() const;
+    int getLifeValue() const;
 
-    sf::Vector2f getNextPosition(void);
+    // Invulnérabilité
+    bool isInvulnerable() const { return m_invulnerabilityTimer > 0.0f; }
+    void makeInvulnerable(float duration = 1.0f);
 
-    // Power
-    int getPower(void);
+    // Recul après dégâts
+    void applyKnockback(Direction direction, float force = 50.0f);
 
-    // alive
-    bool isAlive(void);
-
-    int getGainRubisValor(void);
-
-    int getGainLifeValor(void);
-
-    bool thereGain(void);
-
-    bool isInvulnerable(void);
-
-    // Function
-    // Attribution
-    void setPower(int power);
-
-    void moove(void);
-
-    void nextPosition(void);
-
-    void setDamage(int power);
-
-    void recoilUp(void);
-
-    void recoilDown(void);
-
-    void recoilRight(void);
-
-    void recoilLeft(void);
-
-    void createPaternRelative(void);
-
-    void gainIsGet(void);
-
-    void frameInvulnerable(void);
+protected:
+    // Surcharges Character
+    void onDeath() override;
+    void onDamage(float damage) override;
+    void onStateChange(CharacterState oldState, CharacterState newState) override;
 
 private:
-    // Variable
-    // basic
-    int m_moveaction = 0,
-            m_power = 4;
-
-    const char *m_monster = "image/monster1.png";
-
-    // std
-    std::vector <sf::Vector2f> m_Patern;
-
-    // SFML
-    sf::Sprite m_Sprite;
-    sf::Texture m_Texture;
-
-    // class
-    Gain m_Gain;
-    Heart m_Heart;
-
-    // Function
-    void loadTexture(const char *name);
-
-    void loadSprite(void);
-
-    void initSprite(void);
-
-    void loadPosition(void);
-
-    void dropGain(void);
+    // Propriétés du monstre
+    MonsterType m_monsterType;
+    int m_power;
+    
+    // IA
+    AIState m_aiState;
+    sf::Vector2f m_targetPosition;
+    std::vector<sf::Vector2f> m_patrolPattern;
+    size_t m_currentPatrolIndex;
+    float m_detectionRange;
+    float m_returnToPatrolTimer;
+    
+    // Combat
+    float m_attackCooldown;
+    float m_attackTimer;
+    
+    // Effets temporaires
+    float m_invulnerabilityTimer;
+    sf::Vector2f m_knockbackVelocity;
+    float m_knockbackTimer;
+    
+    // Gains
+    bool m_hasGain;
+    std::unique_ptr<Gain> m_gain;
+    std::unique_ptr<Heart> m_heart;
+    
+    // Générateur aléatoire pour l'IA
+    mutable std::mt19937 m_randomEngine;
+    
+    // Méthodes privées
+    void initializeByType(MonsterType type);
+    void updateAI(float deltaTime);
+    void updatePatrolling(float deltaTime);
+    void updateChasing(float deltaTime);
+    void updateAttacking(float deltaTime);
+    void updateReturning(float deltaTime);
+    void updateStunned(float deltaTime);
+    
+    void updateTimers(float deltaTime);
+    void updateKnockback(float deltaTime);
+    
+    bool isPlayerInRange(const sf::Vector2f& playerPosition) const;
+    sf::Vector2f getDirectionToTarget() const;
+    void moveTowardsTarget(float deltaTime);
+    void patrolMove(float deltaTime);
+    
+    void createRandomGain();
+    sf::Vector2f getRandomPatrolPoint() const;
 
 };
 

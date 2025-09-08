@@ -11,18 +11,19 @@
 
 #include "../../include/Game.hpp"
 
-Game::Game(void) : m_Bloc(m_blocname),
+Game::Game(void) : m_Tree(),
                    m_OrangeTree(m_orangetreename),
-                   m_Water(m_watername),
                    m_WhiteTree(m_whitetreename),
+                   m_Water(m_watername),
                    m_Rock(m_rockname),
                    m_RedRock(m_redrockname),
                    m_WhiteRock(m_whiterockname),
-
-                   m_Bridge(m_bridgename),
+                   m_Bloc(m_blocname),
+                   
+                   m_Ground(m_groundname),
                    m_GreyGround(m_greygroundname),
-                   m_Cavern(m_cavernname),
-                   m_Ground(m_groundname) {
+                   m_Bridge(m_bridgename),
+                   m_Cavern(m_cavernname) {
     setMapUpdate();
 }
 

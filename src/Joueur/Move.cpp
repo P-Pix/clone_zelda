@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Joueur.hpp"
+#include "../../include/JoueurLegacy.hpp"
 
 void Joueur::setPositionDown(void) {
     float x = m_Shero.getPosition().x,

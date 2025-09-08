@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Monster.hpp"
+#include "../../include/MonsterLegacy.hpp"
 
 void Monster::moove(void) {
     m_Sprite.move(m_Patern[m_moveaction]);

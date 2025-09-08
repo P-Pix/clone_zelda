@@ -2,10 +2,11 @@
  * @file GamesWindow.hpp
  * @author Guillaume LEMONNIER
  * @brief 
- * @version 0.1
+ * @version 1.1
  * @date 2021-05-31
+ * @updated 2025-07-26
  * 
- * @copyright Copyright (c) 2021
+ * @copyright Copyright (c) 2021-2025
  * 
  */
 
@@ -13,16 +14,19 @@
 #define _GAMESWINDOW_HPP_
 
 #include <SFML/Graphics.hpp>
+#include <memory>
 
 #include "Game.hpp"
+#include "Config.hpp"
+#include "Logger.hpp"
 
 /// Window class and start the game
 class GamesWindow {
 private:
-    const int m_windowwidth = 1024,
-            m_windowheight = 768;
+    const int m_windowwidth = Config::WINDOW_WIDTH;
+    const int m_windowheight = Config::WINDOW_HEIGHT;
 
-    sf::RenderWindow *m_Window;
+    std::unique_ptr<sf::RenderWindow> m_Window;
     sf::Event m_Event;
     sf::VideoMode m_VideoMode;
 
@@ -34,9 +38,9 @@ private:
 
     void drawText(sf::Text Text);
 
-    void drawVectorSprite(std::vector <sf::Sprite> vector);
+    void drawVectorSprite(std::vector<sf::Sprite> vector);
 
-    void drawVectorText(std::vector <sf::Text> vector);
+    void drawVectorText(std::vector<sf::Text> vector);
 
 public:
     ////////////////////////////////////////

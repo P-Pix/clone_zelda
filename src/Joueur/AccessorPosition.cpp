@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Joueur.hpp"
+#include "../../include/JoueurLegacy.hpp"
 
 sf::Vector2f Joueur::getPosition(void) {
     return m_Shero.getPosition();

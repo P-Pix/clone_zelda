@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Monster.hpp"
+#include "../../include/MonsterLegacy.hpp"
 
 // Constructor / Desttructor
 // Constructor

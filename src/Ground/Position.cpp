@@ -16,10 +16,9 @@ void Ground::setPosition(sf::Vector2f position) {
 }
 
 void Ground::setPositionVector(std::vector <sf::Vector2f> vector) {
-    int size = 0;
     this->m_ListeSprite.clear();
 
-    for (size = 0; size < vector.size(); size++) {
+    for (size_t size = 0; size < vector.size(); size++) {
         setPosition(vector[size]);
         m_ListeSprite.push_back(getSprite());
     }

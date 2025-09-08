@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Joueur.hpp"
+#include "../../include/JoueurLegacy.hpp"
 
 bool Joueur::getOrientationDown(void) {
     return m_orientationdown;

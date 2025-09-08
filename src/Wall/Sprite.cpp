@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Wall.hpp"
+#include "../../include/WallLegacy.hpp"
 
 sf::Sprite Wall::getSpritePosition(sf::Vector2f position) {
     this->m_SWall.setPosition(position);

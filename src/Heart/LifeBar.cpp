@@ -25,7 +25,7 @@ void Heart::updateHeart(void) {
             listeheart(taillist, m_S0Heart);
 
     // full heart
-    for (size = 0; size < listelife.size(); size++) {
+    for (size = 0; size < (int)listelife.size(); size++) {
         this->m_List.push_back(setSpritePosition(m_S4Heart, sf::Vector2f(positionx * 32.f, positiony * 32.f)));
         positionx++;
         if (positionx == 10) {
@@ -44,7 +44,7 @@ void Heart::updateHeart(void) {
     }
 
     // empty heart
-    for (size = size; size < listeheart.size(); size++) {
+    for (size = size; size < (int)listeheart.size(); size++) {
         this->m_List.push_back(setSpritePosition(m_S0Heart, sf::Vector2f(positionx * 32.f, positiony * 32.f)));
         positionx++;
         if (positionx == 10) {

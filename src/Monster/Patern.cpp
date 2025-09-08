@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Monster.hpp"
+#include "../../include/MonsterLegacy.hpp"
 
 void Monster::createPaternRelative(void) {
     int random = std::rand() % 4;

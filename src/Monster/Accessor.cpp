@@ -9,7 +9,7 @@
  * 
  */
 
-#include "../../include/Monster.hpp"
+#include "../../include/MonsterLegacy.hpp"
 
 sf::Sprite Monster::getSprite(void) {
     return m_Sprite;

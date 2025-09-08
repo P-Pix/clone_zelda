@@ -19,27 +19,25 @@
 #include <string>
 
 /// Header create
-#include "Joueur.hpp"
-#include "Wall.hpp"
+#include "JoueurLegacy.hpp"
+#include "WallLegacy.hpp"
 #include "Ground.hpp"
-#include "Monster.hpp"
+#include "MonsterLegacy.hpp"
 #include "MapGenerator.hpp"
 #include "Sword.hpp"
+#include "Config.hpp"
 
-/// Size Sprite
-#define SPRITE_SIZE             64
-
-/// Size Game
-#define LIMIT_UP_GAME           64
-#define LIMIT_DOWN_GAME         768
-#define LIMIT_RIGHT_GAME        1024
-#define LIMIT_LEFT_GAME         0
-
-#define NO_COLLIDE              0
-#define LEFT_COLLIDE            1
-#define RIGHT_COLLIDE           2
-#define UP_COLLIDE              3
-#define DOWN_COLLIDE            4
+// Utilisation des constantes de Config pour compatibilité
+using Config::SPRITE_SIZE;
+using Config::LIMIT_UP_GAME;
+using Config::LIMIT_DOWN_GAME;
+using Config::LIMIT_RIGHT_GAME;
+using Config::LIMIT_LEFT_GAME;
+using Config::NO_COLLIDE;
+using Config::LEFT_COLLIDE;
+using Config::RIGHT_COLLIDE;
+using Config::UP_COLLIDE;
+using Config::DOWN_COLLIDE;
 
 class Game {
 private:
